@@ -60,5 +60,5 @@ $(TARGETOMP) : $(OBJECTS)
 # clean will simply remove test and all object files
 .PHONY: clean all
 clean :
-	rm  $(BUILDDIR)/*.o $(TARGET)
+	rm -f $(BUILDDIR)/*.o $(TARGET) $(TARGETOMP)
 

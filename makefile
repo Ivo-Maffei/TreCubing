@@ -41,9 +41,11 @@ OBJECTS := $(subst $(SRCDIR),$(BUILDDIR),$(SOURCES:%.c=%.o))
 
 
 # build objects in the BUILDIR using the source files in SRCDIR
-$(BUILDDIR)/%.o: $(SRCDIR)/%.c
+$(BUILDDIR)/%.o: $(SRCDIR)/%.c | $(BUILDDIR)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
+$(BUILDDIR):
+	mkdir -p $@
 
 # to create the test program we need all objects and we simply link them
 $(TARGET) : $(OBJECTS)

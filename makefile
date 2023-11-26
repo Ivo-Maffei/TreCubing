@@ -47,10 +47,10 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.c
 
 # to create the test program we need all objects and we simply link them
 $(TARGET) : $(OBJECTS)
-	$(CC) $(CLFAGS) $(LIBRARIES) -o $(TARGET) $(OBJECTS)
+	$(CC) $(CLFAGS)  -o $(TARGET) $(OBJECTS) $(LIBRARIES)
 
 $(TARGETOMP) : $(OBJECTS)
-	$(CC) $(CFLAGS) -fopenmp $(LIBRARIESOMP) -o $(TARGETOMP) $(OBJECTS)
+	$(CC) $(CFLAGS) -fopenmp -o $(TARGETOMP) $(OBJECTS) $(LIBRARIESOMP)
 
 
 

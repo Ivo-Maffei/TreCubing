@@ -1,0 +1,6325 @@
+ivomaffei@MacBook-Pro-di-Ivo testTRE % ./test      
+Running 30 iterations
+Found p prime 1
+Size of prime found 1001
+p has 1001 bits
+
+
+using R = 1 and N of size 1001
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+mean and std Thorp time 0.000933333ms (0.001209224ms)
+mean and std Swap-Or-Not time 0.001066667ms (0.000891939ms) 
+mean and std Sometimes Recurse time 0.001733333ms (0.001123487ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 1001
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.021ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.021ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.017ms 
+Sometimes Recurse took 0.017ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.019ms 
+Sometimes Recurse took 0.033ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.018ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.019ms 
+Sometimes Recurse took 0.012ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.011ms 
+Sometimes Recurse took 0.070ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.013ms 
+Sometimes Recurse took 0.024ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.026ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.019ms 
+Sometimes Recurse took 0.017ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.037ms 
+Thorpe took 0.016ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.029ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.014ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.031ms 
+Sometimes Recurse took 0.014ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.012ms 
+Sometimes Recurse took 0.010ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.013ms 
+Sometimes Recurse took 0.012ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.013ms 
+Sometimes Recurse took 0.021ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.014ms 
+Sometimes Recurse took 0.023ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.021ms 
+Sometimes Recurse took 0.039ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.012ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.014ms 
+Sometimes Recurse took 0.010ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.011ms 
+Sometimes Recurse took 0.021ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.013ms 
+Sometimes Recurse took 0.012ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.010ms 
+Sometimes Recurse took 0.013ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.012ms 
+Sometimes Recurse took 0.014ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.009ms 
+Sometimes Recurse took 0.024ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.013ms 
+Sometimes Recurse took 0.022ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.012ms 
+Sometimes Recurse took 0.040ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.011ms 
+Sometimes Recurse took 0.028ms 
+mean and std Thorp time 0.004933333ms (0.002351359ms)
+mean and std Swap-Or-Not time 0.014900000ms (0.004109745ms) 
+mean and std Sometimes Recurse time 0.022300000ms (0.012179628ms) 
+--------------------------------------------------
+
+using R = 250 and N of size 1001
+Thorpe took 0.011ms 
+Swap-Or-Not took 0.031ms 
+Sometimes Recurse took 0.153ms 
+Thorpe took 0.015ms 
+Swap-Or-Not took 0.032ms 
+Sometimes Recurse took 0.074ms 
+Thorpe took 0.008ms 
+Swap-Or-Not took 0.027ms 
+Sometimes Recurse took 0.023ms 
+Thorpe took 0.008ms 
+Swap-Or-Not took 0.026ms 
+Sometimes Recurse took 0.024ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.025ms 
+Sometimes Recurse took 0.029ms 
+Thorpe took 0.013ms 
+Swap-Or-Not took 0.039ms 
+Sometimes Recurse took 0.049ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.028ms 
+Sometimes Recurse took 0.047ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.026ms 
+Sometimes Recurse took 0.026ms 
+Thorpe took 0.008ms 
+Swap-Or-Not took 0.027ms 
+Sometimes Recurse took 0.096ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.028ms 
+Sometimes Recurse took 0.027ms 
+Thorpe took 0.008ms 
+Swap-Or-Not took 0.026ms 
+Sometimes Recurse took 0.025ms 
+Thorpe took 0.008ms 
+Swap-Or-Not took 0.025ms 
+Sometimes Recurse took 0.097ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.024ms 
+Sometimes Recurse took 0.028ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.027ms 
+Sometimes Recurse took 0.025ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.027ms 
+Sometimes Recurse took 0.026ms 
+Thorpe took 0.008ms 
+Swap-Or-Not took 0.026ms 
+Sometimes Recurse took 0.072ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.026ms 
+Sometimes Recurse took 0.049ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.025ms 
+Sometimes Recurse took 0.028ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.026ms 
+Sometimes Recurse took 0.025ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.024ms 
+Sometimes Recurse took 0.069ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.024ms 
+Sometimes Recurse took 0.030ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.049ms 
+Sometimes Recurse took 0.050ms 
+Thorpe took 0.011ms 
+Swap-Or-Not took 0.039ms 
+Sometimes Recurse took 0.044ms 
+Thorpe took 0.016ms 
+Swap-Or-Not took 0.041ms 
+Sometimes Recurse took 0.043ms 
+Thorpe took 0.014ms 
+Swap-Or-Not took 0.044ms 
+Sometimes Recurse took 0.197ms 
+Thorpe took 0.014ms 
+Swap-Or-Not took 0.040ms 
+Sometimes Recurse took 0.043ms 
+Thorpe took 0.013ms 
+Swap-Or-Not took 0.039ms 
+Sometimes Recurse took 0.171ms 
+Thorpe took 0.015ms 
+Swap-Or-Not took 0.028ms 
+Sometimes Recurse took 0.095ms 
+Thorpe took 0.014ms 
+Swap-Or-Not took 0.038ms 
+Sometimes Recurse took 0.053ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.027ms 
+Sometimes Recurse took 0.042ms 
+mean and std Thorp time 0.010500000ms (0.002446085ms)
+mean and std Swap-Or-Not time 0.030466667ms (0.006878630ms) 
+mean and std Sometimes Recurse time 0.058666667ms (0.044483955ms) 
+--------------------------------------------------
+
+using R = 500 and N of size 1001
+Thorpe took 0.026ms 
+Swap-Or-Not took 0.072ms 
+Sometimes Recurse took 0.331ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.061ms 
+Sometimes Recurse took 0.141ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.076ms 
+Sometimes Recurse took 0.080ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.075ms 
+Sometimes Recurse took 0.155ms 
+Thorpe took 0.026ms 
+Swap-Or-Not took 0.074ms 
+Sometimes Recurse took 0.077ms 
+Thorpe took 0.034ms 
+Swap-Or-Not took 0.052ms 
+Sometimes Recurse took 0.280ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.045ms 
+Sometimes Recurse took 0.052ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.048ms 
+Sometimes Recurse took 0.046ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.049ms 
+Sometimes Recurse took 0.147ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.048ms 
+Sometimes Recurse took 0.048ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.052ms 
+Sometimes Recurse took 0.048ms 
+Thorpe took 0.016ms 
+Swap-Or-Not took 0.046ms 
+Sometimes Recurse took 0.093ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.068ms 
+Sometimes Recurse took 0.152ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.053ms 
+Sometimes Recurse took 0.153ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.052ms 
+Sometimes Recurse took 0.104ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.052ms 
+Sometimes Recurse took 0.075ms 
+Thorpe took 0.082ms 
+Swap-Or-Not took 0.061ms 
+Sometimes Recurse took 0.052ms 
+Thorpe took 0.019ms 
+Swap-Or-Not took 0.061ms 
+Sometimes Recurse took 0.087ms 
+Thorpe took 0.039ms 
+Swap-Or-Not took 0.088ms 
+Sometimes Recurse took 0.148ms 
+Thorpe took 0.028ms 
+Swap-Or-Not took 0.088ms 
+Sometimes Recurse took 0.087ms 
+Thorpe took 0.027ms 
+Swap-Or-Not took 0.081ms 
+Sometimes Recurse took 0.103ms 
+Thorpe took 0.029ms 
+Swap-Or-Not took 0.087ms 
+Sometimes Recurse took 0.122ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.050ms 
+Sometimes Recurse took 0.052ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.053ms 
+Sometimes Recurse took 0.074ms 
+Thorpe took 0.019ms 
+Swap-Or-Not took 0.055ms 
+Sometimes Recurse took 0.055ms 
+Thorpe took 0.019ms 
+Swap-Or-Not took 0.066ms 
+Sometimes Recurse took 0.147ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.095ms 
+Sometimes Recurse took 0.431ms 
+Thorpe took 0.021ms 
+Swap-Or-Not took 0.074ms 
+Sometimes Recurse took 0.517ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.086ms 
+Sometimes Recurse took 0.193ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.057ms 
+Sometimes Recurse took 0.301ms 
+mean and std Thorp time 0.024033333ms (0.012106426ms)
+mean and std Swap-Or-Not time 0.064166667ms (0.014783061ms) 
+mean and std Sometimes Recurse time 0.145033333ms (0.114709629ms) 
+--------------------------------------------------
+
+using R = 1001 and N of size 1001
+Thorpe took 0.055ms 
+Swap-Or-Not took 0.187ms 
+Sometimes Recurse took 0.126ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.132ms 
+Sometimes Recurse took 0.106ms 
+Thorpe took 0.035ms 
+Swap-Or-Not took 0.136ms 
+Sometimes Recurse took 0.120ms 
+Thorpe took 0.045ms 
+Swap-Or-Not took 0.129ms 
+Sometimes Recurse took 0.312ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.102ms 
+Sometimes Recurse took 0.249ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.155ms 
+Sometimes Recurse took 0.405ms 
+Thorpe took 0.062ms 
+Swap-Or-Not took 0.144ms 
+Sometimes Recurse took 0.183ms 
+Thorpe took 0.063ms 
+Swap-Or-Not took 0.166ms 
+Sometimes Recurse took 0.186ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.110ms 
+Sometimes Recurse took 0.148ms 
+Thorpe took 0.037ms 
+Swap-Or-Not took 0.129ms 
+Sometimes Recurse took 0.126ms 
+Thorpe took 0.045ms 
+Swap-Or-Not took 0.135ms 
+Sometimes Recurse took 0.295ms 
+Thorpe took 0.053ms 
+Swap-Or-Not took 0.123ms 
+Sometimes Recurse took 0.343ms 
+Thorpe took 0.039ms 
+Swap-Or-Not took 0.106ms 
+Sometimes Recurse took 0.315ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.107ms 
+Sometimes Recurse took 0.267ms 
+Thorpe took 0.055ms 
+Swap-Or-Not took 0.123ms 
+Sometimes Recurse took 0.217ms 
+Thorpe took 0.037ms 
+Swap-Or-Not took 0.112ms 
+Sometimes Recurse took 0.225ms 
+Thorpe took 0.064ms 
+Swap-Or-Not took 0.115ms 
+Sometimes Recurse took 0.107ms 
+Thorpe took 0.036ms 
+Swap-Or-Not took 0.110ms 
+Sometimes Recurse took 0.446ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.113ms 
+Sometimes Recurse took 0.111ms 
+Thorpe took 0.037ms 
+Swap-Or-Not took 0.224ms 
+Sometimes Recurse took 0.108ms 
+Thorpe took 0.039ms 
+Swap-Or-Not took 0.114ms 
+Sometimes Recurse took 0.358ms 
+Thorpe took 0.041ms 
+Swap-Or-Not took 0.133ms 
+Sometimes Recurse took 0.180ms 
+Thorpe took 0.068ms 
+Swap-Or-Not took 0.186ms 
+Sometimes Recurse took 0.762ms 
+Thorpe took 0.069ms 
+Swap-Or-Not took 0.134ms 
+Sometimes Recurse took 0.121ms 
+Thorpe took 0.039ms 
+Swap-Or-Not took 0.115ms 
+Sometimes Recurse took 0.227ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.116ms 
+Sometimes Recurse took 0.114ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.110ms 
+Sometimes Recurse took 0.548ms 
+Thorpe took 0.069ms 
+Swap-Or-Not took 0.193ms 
+Sometimes Recurse took 0.486ms 
+Thorpe took 0.058ms 
+Swap-Or-Not took 0.151ms 
+Sometimes Recurse took 0.208ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.117ms 
+Sometimes Recurse took 0.128ms 
+mean and std Thorp time 0.046600000ms (0.011415195ms)
+mean and std Swap-Or-Not time 0.134233333ms (0.029537189ms) 
+mean and std Sometimes Recurse time 0.250900000ms (0.153405421ms) 
+--------------------------------------------------
+
+
+==================================================
+
+Found p prime 1
+Size of prime found 2001
+p has 2001 bits
+
+
+using R = 1 and N of size 2001
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.000ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.000ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.000ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.000ms 
+mean and std Thorp time 0.000666667ms (0.000977525ms)
+mean and std Swap-Or-Not time 0.001033333ms (0.000546707ms) 
+mean and std Sometimes Recurse time 0.001300000ms (0.000822598ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 2001
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.018ms 
+Sometimes Recurse took 0.037ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.057ms 
+Sometimes Recurse took 0.022ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.017ms 
+Sometimes Recurse took 0.034ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.020ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.021ms 
+Sometimes Recurse took 0.018ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.023ms 
+Sometimes Recurse took 0.035ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.020ms 
+Sometimes Recurse took 0.019ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.022ms 
+Sometimes Recurse took 0.018ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.020ms 
+Sometimes Recurse took 0.017ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.019ms 
+Sometimes Recurse took 0.018ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.052ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.018ms 
+Sometimes Recurse took 0.020ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.018ms 
+Sometimes Recurse took 0.070ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.022ms 
+Sometimes Recurse took 0.020ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.019ms 
+Sometimes Recurse took 0.022ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.020ms 
+Sometimes Recurse took 0.037ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.073ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.019ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.021ms 
+Sometimes Recurse took 0.038ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.018ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.017ms 
+Sometimes Recurse took 0.037ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.022ms 
+Sometimes Recurse took 0.034ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.017ms 
+Sometimes Recurse took 0.022ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.020ms 
+Sometimes Recurse took 0.125ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.019ms 
+Sometimes Recurse took 0.017ms 
+Thorpe took 0.005ms 
+Swap-Or-Not took 0.017ms 
+Sometimes Recurse took 0.018ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.053ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.021ms 
+Sometimes Recurse took 0.053ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.021ms 
+Thorpe took 0.004ms 
+Swap-Or-Not took 0.023ms 
+Sometimes Recurse took 0.208ms 
+mean and std Thorp time 0.005066667ms (0.002322834ms)
+mean and std Swap-Or-Not time 0.020133333ms (0.007214492ms) 
+mean and std Sometimes Recurse time 0.039733333ms (0.038764187ms) 
+--------------------------------------------------
+
+using R = 500 and N of size 2001
+Thorpe took 0.021ms 
+Swap-Or-Not took 0.153ms 
+Sometimes Recurse took 0.112ms 
+Thorpe took 0.034ms 
+Swap-Or-Not took 0.135ms 
+Sometimes Recurse took 0.104ms 
+Thorpe took 0.053ms 
+Swap-Or-Not took 0.154ms 
+Sometimes Recurse took 0.091ms 
+Thorpe took 0.047ms 
+Swap-Or-Not took 0.099ms 
+Sometimes Recurse took 0.090ms 
+Thorpe took 0.020ms 
+Swap-Or-Not took 0.139ms 
+Sometimes Recurse took 0.186ms 
+Thorpe took 0.019ms 
+Swap-Or-Not took 0.090ms 
+Sometimes Recurse took 0.284ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.134ms 
+Sometimes Recurse took 0.273ms 
+Thorpe took 0.046ms 
+Swap-Or-Not took 0.132ms 
+Sometimes Recurse took 0.134ms 
+Thorpe took 0.039ms 
+Swap-Or-Not took 0.144ms 
+Sometimes Recurse took 0.347ms 
+Thorpe took 0.052ms 
+Swap-Or-Not took 0.145ms 
+Sometimes Recurse took 0.091ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.142ms 
+Sometimes Recurse took 0.278ms 
+Thorpe took 0.019ms 
+Swap-Or-Not took 0.123ms 
+Sometimes Recurse took 0.186ms 
+Thorpe took 0.019ms 
+Swap-Or-Not took 0.124ms 
+Sometimes Recurse took 0.530ms 
+Thorpe took 0.021ms 
+Swap-Or-Not took 0.093ms 
+Sometimes Recurse took 0.175ms 
+Thorpe took 0.021ms 
+Swap-Or-Not took 0.095ms 
+Sometimes Recurse took 0.082ms 
+Thorpe took 0.021ms 
+Swap-Or-Not took 0.098ms 
+Sometimes Recurse took 0.266ms 
+Thorpe took 0.021ms 
+Swap-Or-Not took 0.097ms 
+Sometimes Recurse took 0.222ms 
+Thorpe took 0.021ms 
+Swap-Or-Not took 0.090ms 
+Sometimes Recurse took 0.541ms 
+Thorpe took 0.019ms 
+Swap-Or-Not took 0.124ms 
+Sometimes Recurse took 0.083ms 
+Thorpe took 0.020ms 
+Swap-Or-Not took 0.112ms 
+Sometimes Recurse took 0.204ms 
+Thorpe took 0.061ms 
+Swap-Or-Not took 0.110ms 
+Sometimes Recurse took 0.083ms 
+Thorpe took 0.021ms 
+Swap-Or-Not took 0.144ms 
+Sometimes Recurse took 0.088ms 
+Thorpe took 0.020ms 
+Swap-Or-Not took 0.119ms 
+Sometimes Recurse took 0.405ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.141ms 
+Sometimes Recurse took 0.253ms 
+Thorpe took 0.021ms 
+Swap-Or-Not took 0.150ms 
+Sometimes Recurse took 0.229ms 
+Thorpe took 0.047ms 
+Swap-Or-Not took 0.123ms 
+Sometimes Recurse took 0.096ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.117ms 
+Sometimes Recurse took 0.084ms 
+Thorpe took 0.020ms 
+Swap-Or-Not took 0.157ms 
+Sometimes Recurse took 0.195ms 
+Thorpe took 0.046ms 
+Swap-Or-Not took 0.114ms 
+Sometimes Recurse took 0.151ms 
+Thorpe took 0.021ms 
+Swap-Or-Not took 0.137ms 
+Sometimes Recurse took 0.196ms 
+mean and std Thorp time 0.030900000ms (0.013179150ms)
+mean and std Swap-Or-Not time 0.124500000ms (0.020568179ms) 
+mean and std Sometimes Recurse time 0.201966667ms (0.123075717ms) 
+--------------------------------------------------
+
+using R = 1000 and N of size 2001
+Thorpe took 0.081ms 
+Swap-Or-Not took 0.203ms 
+Sometimes Recurse took 0.210ms 
+Thorpe took 0.070ms 
+Swap-Or-Not took 0.186ms 
+Sometimes Recurse took 0.156ms 
+Thorpe took 0.043ms 
+Swap-Or-Not took 0.172ms 
+Sometimes Recurse took 0.622ms 
+Thorpe took 0.043ms 
+Swap-Or-Not took 0.171ms 
+Sometimes Recurse took 0.804ms 
+Thorpe took 0.041ms 
+Swap-Or-Not took 0.164ms 
+Sometimes Recurse took 0.160ms 
+Thorpe took 0.042ms 
+Swap-Or-Not took 0.150ms 
+Sometimes Recurse took 0.168ms 
+Thorpe took 0.043ms 
+Swap-Or-Not took 0.157ms 
+Sometimes Recurse took 0.316ms 
+Thorpe took 0.042ms 
+Swap-Or-Not took 0.159ms 
+Sometimes Recurse took 0.316ms 
+Thorpe took 0.043ms 
+Swap-Or-Not took 0.162ms 
+Sometimes Recurse took 0.489ms 
+Thorpe took 0.043ms 
+Swap-Or-Not took 0.172ms 
+Sometimes Recurse took 0.314ms 
+Thorpe took 0.042ms 
+Swap-Or-Not took 0.155ms 
+Sometimes Recurse took 0.639ms 
+Thorpe took 0.043ms 
+Swap-Or-Not took 0.154ms 
+Sometimes Recurse took 0.331ms 
+Thorpe took 0.042ms 
+Swap-Or-Not took 0.164ms 
+Sometimes Recurse took 0.643ms 
+Thorpe took 0.042ms 
+Swap-Or-Not took 0.160ms 
+Sometimes Recurse took 0.169ms 
+Thorpe took 0.088ms 
+Swap-Or-Not took 0.234ms 
+Sometimes Recurse took 0.214ms 
+Thorpe took 0.075ms 
+Swap-Or-Not took 0.173ms 
+Sometimes Recurse took 0.166ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.155ms 
+Sometimes Recurse took 0.321ms 
+Thorpe took 0.043ms 
+Swap-Or-Not took 0.213ms 
+Sometimes Recurse took 0.223ms 
+Thorpe took 0.074ms 
+Swap-Or-Not took 0.175ms 
+Sometimes Recurse took 0.324ms 
+Thorpe took 0.042ms 
+Swap-Or-Not took 0.156ms 
+Sometimes Recurse took 0.148ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.221ms 
+Sometimes Recurse took 0.189ms 
+Thorpe took 0.077ms 
+Swap-Or-Not took 0.184ms 
+Sometimes Recurse took 0.153ms 
+Thorpe took 0.041ms 
+Swap-Or-Not took 0.161ms 
+Sometimes Recurse took 0.347ms 
+Thorpe took 0.075ms 
+Swap-Or-Not took 0.169ms 
+Sometimes Recurse took 0.168ms 
+Thorpe took 0.097ms 
+Swap-Or-Not took 0.172ms 
+Sometimes Recurse took 0.557ms 
+Thorpe took 0.069ms 
+Swap-Or-Not took 0.193ms 
+Sometimes Recurse took 0.189ms 
+Thorpe took 0.074ms 
+Swap-Or-Not took 0.229ms 
+Sometimes Recurse took 0.812ms 
+Thorpe took 0.058ms 
+Swap-Or-Not took 0.208ms 
+Sometimes Recurse took 0.205ms 
+Thorpe took 0.074ms 
+Swap-Or-Not took 0.213ms 
+Sometimes Recurse took 0.187ms 
+Thorpe took 0.072ms 
+Swap-Or-Not took 0.178ms 
+Sometimes Recurse took 0.332ms 
+mean and std Thorp time 0.056633333ms (0.017700251ms)
+mean and std Swap-Or-Not time 0.178766667ms (0.023878419ms) 
+mean and std Sometimes Recurse time 0.329066667ms (0.196437595ms) 
+--------------------------------------------------
+
+using R = 2001 and N of size 2001
+Thorpe took 0.119ms 
+Swap-Or-Not took 0.327ms 
+Sometimes Recurse took 0.344ms 
+Thorpe took 0.105ms 
+Swap-Or-Not took 0.353ms 
+Sometimes Recurse took 0.341ms 
+Thorpe took 0.118ms 
+Swap-Or-Not took 0.328ms 
+Sometimes Recurse took 0.916ms 
+Thorpe took 0.103ms 
+Swap-Or-Not took 0.334ms 
+Sometimes Recurse took 1.918ms 
+Thorpe took 0.092ms 
+Swap-Or-Not took 0.340ms 
+Sometimes Recurse took 0.630ms 
+Thorpe took 0.078ms 
+Swap-Or-Not took 0.307ms 
+Sometimes Recurse took 1.239ms 
+Thorpe took 0.080ms 
+Swap-Or-Not took 0.380ms 
+Sometimes Recurse took 1.586ms 
+Thorpe took 0.079ms 
+Swap-Or-Not took 0.311ms 
+Sometimes Recurse took 0.309ms 
+Thorpe took 0.080ms 
+Swap-Or-Not took 0.319ms 
+Sometimes Recurse took 2.212ms 
+Thorpe took 0.080ms 
+Swap-Or-Not took 0.309ms 
+Sometimes Recurse took 1.678ms 
+Thorpe took 0.142ms 
+Swap-Or-Not took 0.393ms 
+Sometimes Recurse took 0.360ms 
+Thorpe took 0.143ms 
+Swap-Or-Not took 0.319ms 
+Sometimes Recurse took 0.940ms 
+Thorpe took 0.141ms 
+Swap-Or-Not took 0.386ms 
+Sometimes Recurse took 0.953ms 
+Thorpe took 0.143ms 
+Swap-Or-Not took 0.361ms 
+Sometimes Recurse took 1.268ms 
+Thorpe took 0.142ms 
+Swap-Or-Not took 0.428ms 
+Sometimes Recurse took 0.672ms 
+Thorpe took 0.142ms 
+Swap-Or-Not took 0.372ms 
+Sometimes Recurse took 1.261ms 
+Thorpe took 0.156ms 
+Swap-Or-Not took 0.387ms 
+Sometimes Recurse took 0.686ms 
+Thorpe took 0.143ms 
+Swap-Or-Not took 0.320ms 
+Sometimes Recurse took 0.362ms 
+Thorpe took 0.141ms 
+Swap-Or-Not took 0.338ms 
+Sometimes Recurse took 0.380ms 
+Thorpe took 0.128ms 
+Swap-Or-Not took 0.344ms 
+Sometimes Recurse took 0.668ms 
+Thorpe took 0.143ms 
+Swap-Or-Not took 0.377ms 
+Sometimes Recurse took 0.947ms 
+Thorpe took 0.164ms 
+Swap-Or-Not took 0.380ms 
+Sometimes Recurse took 1.446ms 
+Thorpe took 0.159ms 
+Swap-Or-Not took 0.417ms 
+Sometimes Recurse took 1.462ms 
+Thorpe took 0.126ms 
+Swap-Or-Not took 0.446ms 
+Sometimes Recurse took 0.753ms 
+Thorpe took 0.154ms 
+Swap-Or-Not took 0.464ms 
+Sometimes Recurse took 0.416ms 
+Thorpe took 0.141ms 
+Swap-Or-Not took 0.393ms 
+Sometimes Recurse took 0.732ms 
+Thorpe took 0.141ms 
+Swap-Or-Not took 0.333ms 
+Sometimes Recurse took 0.728ms 
+Thorpe took 0.136ms 
+Swap-Or-Not took 0.436ms 
+Sometimes Recurse took 0.462ms 
+Thorpe took 0.138ms 
+Swap-Or-Not took 0.334ms 
+Sometimes Recurse took 0.647ms 
+Thorpe took 0.138ms 
+Swap-Or-Not took 0.337ms 
+Sometimes Recurse took 0.968ms 
+mean and std Thorp time 0.126500000ms (0.026156898ms)
+mean and std Swap-Or-Not time 0.362433333ms (0.042889535ms) 
+mean and std Sometimes Recurse time 0.909466667ms (0.498442757ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 5024 bits
+
+
+using R = 1 and N of size 5024
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.000ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.000ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+mean and std Thorp time 0.000433333ms (0.000558768ms)
+mean and std Swap-Or-Not time 0.001233333ms (0.000803465ms) 
+mean and std Sometimes Recurse time 0.001433333ms (0.000803465ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 5024
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.036ms 
+Sometimes Recurse took 0.087ms 
+Thorpe took 0.019ms 
+Swap-Or-Not took 0.021ms 
+Sometimes Recurse took 0.019ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.018ms 
+Sometimes Recurse took 0.018ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.045ms 
+Sometimes Recurse took 0.021ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.020ms 
+Sometimes Recurse took 0.017ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.054ms 
+Sometimes Recurse took 0.021ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.018ms 
+Sometimes Recurse took 0.067ms 
+Thorpe took 0.020ms 
+Swap-Or-Not took 0.037ms 
+Sometimes Recurse took 0.019ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.021ms 
+Sometimes Recurse took 0.020ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.020ms 
+Sometimes Recurse took 0.021ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.054ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.020ms 
+Sometimes Recurse took 0.115ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.068ms 
+Sometimes Recurse took 0.061ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.021ms 
+Sometimes Recurse took 0.161ms 
+Thorpe took 0.008ms 
+Swap-Or-Not took 0.051ms 
+Sometimes Recurse took 0.032ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.052ms 
+Sometimes Recurse took 0.073ms 
+Thorpe took 0.027ms 
+Swap-Or-Not took 0.019ms 
+Sometimes Recurse took 0.035ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.033ms 
+Sometimes Recurse took 0.033ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.036ms 
+Sometimes Recurse took 0.035ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.021ms 
+Sometimes Recurse took 0.021ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.047ms 
+Sometimes Recurse took 0.055ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.020ms 
+Sometimes Recurse took 0.037ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.019ms 
+Sometimes Recurse took 0.044ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.017ms 
+Sometimes Recurse took 0.061ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.021ms 
+Sometimes Recurse took 0.074ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.061ms 
+Sometimes Recurse took 0.128ms 
+Thorpe took 0.008ms 
+Swap-Or-Not took 0.061ms 
+Sometimes Recurse took 0.097ms 
+Thorpe took 0.007ms 
+Swap-Or-Not took 0.018ms 
+Sometimes Recurse took 0.055ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.020ms 
+Thorpe took 0.008ms 
+Swap-Or-Not took 0.046ms 
+Sometimes Recurse took 0.020ms 
+mean and std Thorp time 0.008900000ms (0.005527808ms)
+mean and std Swap-Or-Not time 0.031766667ms (0.016034719ms) 
+mean and std Sometimes Recurse time 0.050700000ms (0.036176558ms) 
+--------------------------------------------------
+
+using R = 1256 and N of size 5024
+Thorpe took 0.075ms 
+Swap-Or-Not took 0.359ms 
+Sometimes Recurse took 0.519ms 
+Thorpe took 0.109ms 
+Swap-Or-Not took 0.345ms 
+Sometimes Recurse took 0.531ms 
+Thorpe took 0.110ms 
+Swap-Or-Not took 0.265ms 
+Sometimes Recurse took 0.307ms 
+Thorpe took 0.132ms 
+Swap-Or-Not took 0.276ms 
+Sometimes Recurse took 0.248ms 
+Thorpe took 0.077ms 
+Swap-Or-Not took 0.260ms 
+Sometimes Recurse took 0.745ms 
+Thorpe took 0.076ms 
+Swap-Or-Not took 0.255ms 
+Sometimes Recurse took 0.258ms 
+Thorpe took 0.076ms 
+Swap-Or-Not took 0.248ms 
+Sometimes Recurse took 1.271ms 
+Thorpe took 0.077ms 
+Swap-Or-Not took 0.237ms 
+Sometimes Recurse took 0.262ms 
+Thorpe took 0.076ms 
+Swap-Or-Not took 0.258ms 
+Sometimes Recurse took 1.799ms 
+Thorpe took 0.077ms 
+Swap-Or-Not took 0.262ms 
+Sometimes Recurse took 1.247ms 
+Thorpe took 0.078ms 
+Swap-Or-Not took 0.255ms 
+Sometimes Recurse took 0.746ms 
+Thorpe took 0.075ms 
+Swap-Or-Not took 0.246ms 
+Sometimes Recurse took 0.311ms 
+Thorpe took 0.087ms 
+Swap-Or-Not took 0.366ms 
+Sometimes Recurse took 0.579ms 
+Thorpe took 0.139ms 
+Swap-Or-Not took 0.243ms 
+Sometimes Recurse took 1.356ms 
+Thorpe took 0.153ms 
+Swap-Or-Not took 0.288ms 
+Sometimes Recurse took 0.316ms 
+Thorpe took 0.142ms 
+Swap-Or-Not took 0.283ms 
+Sometimes Recurse took 1.020ms 
+Thorpe took 0.142ms 
+Swap-Or-Not took 0.258ms 
+Sometimes Recurse took 0.308ms 
+Thorpe took 0.143ms 
+Swap-Or-Not took 0.397ms 
+Sometimes Recurse took 0.540ms 
+Thorpe took 0.161ms 
+Swap-Or-Not took 0.359ms 
+Sometimes Recurse took 0.664ms 
+Thorpe took 0.173ms 
+Swap-Or-Not took 0.301ms 
+Sometimes Recurse took 2.592ms 
+Thorpe took 0.141ms 
+Swap-Or-Not took 0.289ms 
+Sometimes Recurse took 0.553ms 
+Thorpe took 0.140ms 
+Swap-Or-Not took 0.242ms 
+Sometimes Recurse took 0.327ms 
+Thorpe took 0.152ms 
+Swap-Or-Not took 0.269ms 
+Sometimes Recurse took 1.812ms 
+Thorpe took 0.140ms 
+Swap-Or-Not took 0.269ms 
+Sometimes Recurse took 0.296ms 
+Thorpe took 0.140ms 
+Swap-Or-Not took 0.374ms 
+Sometimes Recurse took 0.324ms 
+Thorpe took 0.124ms 
+Swap-Or-Not took 0.271ms 
+Sometimes Recurse took 0.951ms 
+Thorpe took 0.142ms 
+Swap-Or-Not took 0.280ms 
+Sometimes Recurse took 0.546ms 
+Thorpe took 0.139ms 
+Swap-Or-Not took 0.270ms 
+Sometimes Recurse took 0.293ms 
+Thorpe took 0.138ms 
+Swap-Or-Not took 0.288ms 
+Sometimes Recurse took 0.318ms 
+Thorpe took 0.139ms 
+Swap-Or-Not took 0.346ms 
+Sometimes Recurse took 3.180ms 
+mean and std Thorp time 0.119100000ms (0.031752533ms)
+mean and std Swap-Or-Not time 0.288633333ms (0.044667276ms) 
+mean and std Sometimes Recurse time 0.807300000ms (0.710774655ms) 
+--------------------------------------------------
+
+using R = 2512 and N of size 5024
+Thorpe took 0.160ms 
+Swap-Or-Not took 0.490ms 
+Sometimes Recurse took 1.431ms 
+Thorpe took 0.158ms 
+Swap-Or-Not took 0.478ms 
+Sometimes Recurse took 0.963ms 
+Thorpe took 0.158ms 
+Swap-Or-Not took 0.472ms 
+Sometimes Recurse took 1.424ms 
+Thorpe took 0.158ms 
+Swap-Or-Not took 0.490ms 
+Sometimes Recurse took 0.478ms 
+Thorpe took 0.159ms 
+Swap-Or-Not took 0.454ms 
+Sometimes Recurse took 0.493ms 
+Thorpe took 0.159ms 
+Swap-Or-Not took 0.475ms 
+Sometimes Recurse took 0.502ms 
+Thorpe took 0.158ms 
+Swap-Or-Not took 0.461ms 
+Sometimes Recurse took 0.474ms 
+Thorpe took 0.159ms 
+Swap-Or-Not took 0.491ms 
+Sometimes Recurse took 0.947ms 
+Thorpe took 0.160ms 
+Swap-Or-Not took 0.472ms 
+Sometimes Recurse took 0.483ms 
+Thorpe took 0.159ms 
+Swap-Or-Not took 0.499ms 
+Sometimes Recurse took 0.466ms 
+Thorpe took 0.161ms 
+Swap-Or-Not took 0.493ms 
+Sometimes Recurse took 1.463ms 
+Thorpe took 0.158ms 
+Swap-Or-Not took 0.480ms 
+Sometimes Recurse took 0.481ms 
+Thorpe took 0.158ms 
+Swap-Or-Not took 0.481ms 
+Sometimes Recurse took 0.479ms 
+Thorpe took 0.160ms 
+Swap-Or-Not took 0.483ms 
+Sometimes Recurse took 0.549ms 
+Thorpe took 0.160ms 
+Swap-Or-Not took 0.524ms 
+Sometimes Recurse took 0.523ms 
+Thorpe took 0.161ms 
+Swap-Or-Not took 0.507ms 
+Sometimes Recurse took 0.512ms 
+Thorpe took 0.157ms 
+Swap-Or-Not took 0.518ms 
+Sometimes Recurse took 0.514ms 
+Thorpe took 0.159ms 
+Swap-Or-Not took 0.519ms 
+Sometimes Recurse took 1.028ms 
+Thorpe took 0.159ms 
+Swap-Or-Not took 0.507ms 
+Sometimes Recurse took 1.568ms 
+Thorpe took 0.157ms 
+Swap-Or-Not took 0.525ms 
+Sometimes Recurse took 0.510ms 
+Thorpe took 0.156ms 
+Swap-Or-Not took 0.530ms 
+Sometimes Recurse took 0.531ms 
+Thorpe took 0.158ms 
+Swap-Or-Not took 0.514ms 
+Sometimes Recurse took 1.030ms 
+Thorpe took 0.159ms 
+Swap-Or-Not took 0.513ms 
+Sometimes Recurse took 0.972ms 
+Thorpe took 0.158ms 
+Swap-Or-Not took 0.471ms 
+Sometimes Recurse took 0.494ms 
+Thorpe took 0.170ms 
+Swap-Or-Not took 0.504ms 
+Sometimes Recurse took 0.480ms 
+Thorpe took 0.158ms 
+Swap-Or-Not took 0.483ms 
+Sometimes Recurse took 0.481ms 
+Thorpe took 0.159ms 
+Swap-Or-Not took 0.482ms 
+Sometimes Recurse took 0.956ms 
+Thorpe took 0.159ms 
+Swap-Or-Not took 0.468ms 
+Sometimes Recurse took 1.428ms 
+Thorpe took 0.158ms 
+Swap-Or-Not took 0.479ms 
+Sometimes Recurse took 0.484ms 
+Thorpe took 0.156ms 
+Swap-Or-Not took 0.475ms 
+Sometimes Recurse took 0.483ms 
+mean and std Thorp time 0.158966667ms (0.002373230ms)
+mean and std Swap-Or-Not time 0.491266667ms (0.020179087ms) 
+mean and std Sometimes Recurse time 0.754233333ms (0.370782567ms) 
+--------------------------------------------------
+
+using R = 5024 and N of size 5024
+Thorpe took 0.318ms 
+Swap-Or-Not took 0.953ms 
+Sometimes Recurse took 0.938ms 
+Thorpe took 0.317ms 
+Swap-Or-Not took 0.957ms 
+Sometimes Recurse took 0.938ms 
+Thorpe took 0.317ms 
+Swap-Or-Not took 0.972ms 
+Sometimes Recurse took 1.904ms 
+Thorpe took 0.313ms 
+Swap-Or-Not took 0.954ms 
+Sometimes Recurse took 0.942ms 
+Thorpe took 0.317ms 
+Swap-Or-Not took 0.957ms 
+Sometimes Recurse took 0.983ms 
+Thorpe took 0.314ms 
+Swap-Or-Not took 0.963ms 
+Sometimes Recurse took 0.961ms 
+Thorpe took 0.325ms 
+Swap-Or-Not took 0.971ms 
+Sometimes Recurse took 0.972ms 
+Thorpe took 0.315ms 
+Swap-Or-Not took 0.946ms 
+Sometimes Recurse took 3.096ms 
+Thorpe took 0.319ms 
+Swap-Or-Not took 1.052ms 
+Sometimes Recurse took 3.947ms 
+Thorpe took 0.314ms 
+Swap-Or-Not took 1.035ms 
+Sometimes Recurse took 1.042ms 
+Thorpe took 0.314ms 
+Swap-Or-Not took 1.019ms 
+Sometimes Recurse took 2.090ms 
+Thorpe took 0.317ms 
+Swap-Or-Not took 1.031ms 
+Sometimes Recurse took 1.057ms 
+Thorpe took 0.320ms 
+Swap-Or-Not took 1.013ms 
+Sometimes Recurse took 1.074ms 
+Thorpe took 0.341ms 
+Swap-Or-Not took 1.040ms 
+Sometimes Recurse took 0.965ms 
+Thorpe took 0.317ms 
+Swap-Or-Not took 0.971ms 
+Sometimes Recurse took 2.844ms 
+Thorpe took 0.317ms 
+Swap-Or-Not took 0.954ms 
+Sometimes Recurse took 2.865ms 
+Thorpe took 0.318ms 
+Swap-Or-Not took 0.963ms 
+Sometimes Recurse took 0.942ms 
+Thorpe took 0.318ms 
+Swap-Or-Not took 0.952ms 
+Sometimes Recurse took 4.798ms 
+Thorpe took 0.321ms 
+Swap-Or-Not took 0.937ms 
+Sometimes Recurse took 0.966ms 
+Thorpe took 0.317ms 
+Swap-Or-Not took 0.925ms 
+Sometimes Recurse took 1.052ms 
+Thorpe took 0.316ms 
+Swap-Or-Not took 1.048ms 
+Sometimes Recurse took 1.056ms 
+Thorpe took 0.315ms 
+Swap-Or-Not took 1.059ms 
+Sometimes Recurse took 1.035ms 
+Thorpe took 0.307ms 
+Swap-Or-Not took 1.019ms 
+Sometimes Recurse took 1.052ms 
+Thorpe took 0.304ms 
+Swap-Or-Not took 1.011ms 
+Sometimes Recurse took 3.037ms 
+Thorpe took 0.341ms 
+Swap-Or-Not took 1.014ms 
+Sometimes Recurse took 1.038ms 
+Thorpe took 0.343ms 
+Swap-Or-Not took 1.053ms 
+Sometimes Recurse took 2.028ms 
+Thorpe took 0.306ms 
+Swap-Or-Not took 1.039ms 
+Sometimes Recurse took 1.994ms 
+Thorpe took 0.305ms 
+Swap-Or-Not took 1.003ms 
+Sometimes Recurse took 2.014ms 
+Thorpe took 0.385ms 
+Swap-Or-Not took 0.996ms 
+Sometimes Recurse took 5.041ms 
+Thorpe took 0.304ms 
+Swap-Or-Not took 1.006ms 
+Sometimes Recurse took 1.057ms 
+mean and std Thorp time 0.319833333ms (0.015342932ms)
+mean and std Swap-Or-Not time 0.993766667ms (0.039524409ms) 
+mean and std Sometimes Recurse time 1.790933333ms (1.172118422ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 9999 bits
+
+
+using R = 1 and N of size 9999
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.010ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.000ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.000ms 
+mean and std Thorp time 0.000833333ms (0.000778175ms)
+mean and std Swap-Or-Not time 0.001866667ms (0.001765094ms) 
+mean and std Sometimes Recurse time 0.002633333ms (0.001353596ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 9999
+Thorpe took 0.011ms 
+Swap-Or-Not took 0.038ms 
+Sometimes Recurse took 0.076ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.038ms 
+Sometimes Recurse took 0.125ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.047ms 
+Sometimes Recurse took 0.176ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.094ms 
+Sometimes Recurse took 0.083ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.056ms 
+Sometimes Recurse took 0.042ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.042ms 
+Sometimes Recurse took 0.079ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.038ms 
+Sometimes Recurse took 0.087ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.037ms 
+Sometimes Recurse took 0.122ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.048ms 
+Sometimes Recurse took 0.080ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.048ms 
+Sometimes Recurse took 0.048ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.032ms 
+Sometimes Recurse took 0.160ms 
+Thorpe took 0.011ms 
+Swap-Or-Not took 0.039ms 
+Sometimes Recurse took 0.045ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.043ms 
+Sometimes Recurse took 0.090ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.047ms 
+Sometimes Recurse took 0.081ms 
+Thorpe took 0.011ms 
+Swap-Or-Not took 0.046ms 
+Sometimes Recurse took 0.191ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.041ms 
+Sometimes Recurse took 0.045ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.041ms 
+Sometimes Recurse took 0.041ms 
+Thorpe took 0.011ms 
+Swap-Or-Not took 0.039ms 
+Sometimes Recurse took 0.079ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.034ms 
+Sometimes Recurse took 0.043ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.043ms 
+Sometimes Recurse took 0.043ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.042ms 
+Sometimes Recurse took 0.108ms 
+Thorpe took 0.009ms 
+Swap-Or-Not took 0.042ms 
+Sometimes Recurse took 0.293ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.061ms 
+Sometimes Recurse took 0.123ms 
+Thorpe took 0.011ms 
+Swap-Or-Not took 0.044ms 
+Sometimes Recurse took 0.032ms 
+Thorpe took 0.010ms 
+Swap-Or-Not took 0.033ms 
+Sometimes Recurse took 0.194ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.061ms 
+Sometimes Recurse took 0.123ms 
+Thorpe took 0.012ms 
+Swap-Or-Not took 0.079ms 
+Sometimes Recurse took 0.239ms 
+Thorpe took 0.015ms 
+Swap-Or-Not took 0.053ms 
+Sometimes Recurse took 0.058ms 
+Thorpe took 0.019ms 
+Swap-Or-Not took 0.073ms 
+Sometimes Recurse took 0.077ms 
+Thorpe took 0.019ms 
+Swap-Or-Not took 0.068ms 
+Sometimes Recurse took 0.070ms 
+mean and std Thorp time 0.011100000ms (0.002761038ms)
+mean and std Swap-Or-Not time 0.048233333ms (0.014218962ms) 
+mean and std Sometimes Recurse time 0.101766667ms (0.062687417ms) 
+--------------------------------------------------
+
+using R = 2499 and N of size 9999
+Thorpe took 0.374ms 
+Swap-Or-Not took 1.355ms 
+Sometimes Recurse took 2.612ms 
+Thorpe took 0.300ms 
+Swap-Or-Not took 1.198ms 
+Sometimes Recurse took 1.128ms 
+Thorpe took 0.258ms 
+Swap-Or-Not took 1.030ms 
+Sometimes Recurse took 0.912ms 
+Thorpe took 0.274ms 
+Swap-Or-Not took 0.864ms 
+Sometimes Recurse took 2.698ms 
+Thorpe took 0.238ms 
+Swap-Or-Not took 0.903ms 
+Sometimes Recurse took 0.897ms 
+Thorpe took 0.238ms 
+Swap-Or-Not took 0.914ms 
+Sometimes Recurse took 2.603ms 
+Thorpe took 0.235ms 
+Swap-Or-Not took 0.886ms 
+Sometimes Recurse took 0.891ms 
+Thorpe took 0.236ms 
+Swap-Or-Not took 0.883ms 
+Sometimes Recurse took 0.864ms 
+Thorpe took 0.235ms 
+Swap-Or-Not took 0.877ms 
+Sometimes Recurse took 1.757ms 
+Thorpe took 0.236ms 
+Swap-Or-Not took 0.900ms 
+Sometimes Recurse took 1.763ms 
+Thorpe took 0.235ms 
+Swap-Or-Not took 0.906ms 
+Sometimes Recurse took 0.888ms 
+Thorpe took 0.235ms 
+Swap-Or-Not took 0.895ms 
+Sometimes Recurse took 3.583ms 
+Thorpe took 0.235ms 
+Swap-Or-Not took 0.959ms 
+Sometimes Recurse took 1.001ms 
+Thorpe took 0.236ms 
+Swap-Or-Not took 0.882ms 
+Sometimes Recurse took 0.949ms 
+Thorpe took 0.241ms 
+Swap-Or-Not took 0.899ms 
+Sometimes Recurse took 0.883ms 
+Thorpe took 0.236ms 
+Swap-Or-Not took 0.891ms 
+Sometimes Recurse took 1.057ms 
+Thorpe took 0.236ms 
+Swap-Or-Not took 0.987ms 
+Sometimes Recurse took 1.933ms 
+Thorpe took 0.235ms 
+Swap-Or-Not took 0.973ms 
+Sometimes Recurse took 0.929ms 
+Thorpe took 0.236ms 
+Swap-Or-Not took 0.946ms 
+Sometimes Recurse took 1.926ms 
+Thorpe took 0.233ms 
+Swap-Or-Not took 0.982ms 
+Sometimes Recurse took 0.980ms 
+Thorpe took 0.235ms 
+Swap-Or-Not took 1.089ms 
+Sometimes Recurse took 0.986ms 
+Thorpe took 0.236ms 
+Swap-Or-Not took 1.016ms 
+Sometimes Recurse took 0.978ms 
+Thorpe took 0.237ms 
+Swap-Or-Not took 0.990ms 
+Sometimes Recurse took 1.001ms 
+Thorpe took 0.270ms 
+Swap-Or-Not took 0.960ms 
+Sometimes Recurse took 0.996ms 
+Thorpe took 0.235ms 
+Swap-Or-Not took 0.947ms 
+Sometimes Recurse took 0.996ms 
+Thorpe took 0.273ms 
+Swap-Or-Not took 0.973ms 
+Sometimes Recurse took 0.938ms 
+Thorpe took 0.235ms 
+Swap-Or-Not took 0.995ms 
+Sometimes Recurse took 2.941ms 
+Thorpe took 0.236ms 
+Swap-Or-Not took 0.963ms 
+Sometimes Recurse took 1.015ms 
+Thorpe took 0.240ms 
+Swap-Or-Not took 1.026ms 
+Sometimes Recurse took 0.990ms 
+Thorpe took 0.240ms 
+Swap-Or-Not took 0.983ms 
+Sometimes Recurse took 1.026ms 
+mean and std Thorp time 0.247300000ms (0.028193557ms)
+mean and std Swap-Or-Not time 0.969066667ms (0.100332425ms) 
+mean and std Sometimes Recurse time 1.404033333ms (0.743523570ms) 
+--------------------------------------------------
+
+using R = 4999 and N of size 9999
+Thorpe took 0.485ms 
+Swap-Or-Not took 2.002ms 
+Sometimes Recurse took 5.878ms 
+Thorpe took 0.485ms 
+Swap-Or-Not took 1.870ms 
+Sometimes Recurse took 3.673ms 
+Thorpe took 0.486ms 
+Swap-Or-Not took 1.847ms 
+Sometimes Recurse took 3.740ms 
+Thorpe took 0.533ms 
+Swap-Or-Not took 1.833ms 
+Sometimes Recurse took 5.525ms 
+Thorpe took 0.543ms 
+Swap-Or-Not took 1.849ms 
+Sometimes Recurse took 1.862ms 
+Thorpe took 0.486ms 
+Swap-Or-Not took 2.043ms 
+Sometimes Recurse took 4.013ms 
+Thorpe took 0.482ms 
+Swap-Or-Not took 2.022ms 
+Sometimes Recurse took 2.013ms 
+Thorpe took 0.490ms 
+Swap-Or-Not took 1.991ms 
+Sometimes Recurse took 1.967ms 
+Thorpe took 0.484ms 
+Swap-Or-Not took 1.809ms 
+Sometimes Recurse took 1.812ms 
+Thorpe took 0.486ms 
+Swap-Or-Not took 1.824ms 
+Sometimes Recurse took 7.434ms 
+Thorpe took 0.484ms 
+Swap-Or-Not took 1.795ms 
+Sometimes Recurse took 18.487ms 
+Thorpe took 0.486ms 
+Swap-Or-Not took 1.850ms 
+Sometimes Recurse took 1.847ms 
+Thorpe took 0.485ms 
+Swap-Or-Not took 1.967ms 
+Sometimes Recurse took 5.964ms 
+Thorpe took 0.483ms 
+Swap-Or-Not took 2.026ms 
+Sometimes Recurse took 1.968ms 
+Thorpe took 0.490ms 
+Swap-Or-Not took 2.008ms 
+Sometimes Recurse took 4.009ms 
+Thorpe took 0.506ms 
+Swap-Or-Not took 1.949ms 
+Sometimes Recurse took 5.794ms 
+Thorpe took 0.503ms 
+Swap-Or-Not took 2.051ms 
+Sometimes Recurse took 1.999ms 
+Thorpe took 0.504ms 
+Swap-Or-Not took 1.891ms 
+Sometimes Recurse took 7.868ms 
+Thorpe took 0.583ms 
+Swap-Or-Not took 1.759ms 
+Sometimes Recurse took 1.810ms 
+Thorpe took 0.468ms 
+Swap-Or-Not took 1.797ms 
+Sometimes Recurse took 1.796ms 
+Thorpe took 0.471ms 
+Swap-Or-Not took 1.803ms 
+Sometimes Recurse took 7.160ms 
+Thorpe took 0.537ms 
+Swap-Or-Not took 1.795ms 
+Sometimes Recurse took 1.787ms 
+Thorpe took 0.471ms 
+Swap-Or-Not took 1.805ms 
+Sometimes Recurse took 5.340ms 
+Thorpe took 0.471ms 
+Swap-Or-Not took 1.771ms 
+Sometimes Recurse took 3.662ms 
+Thorpe took 0.472ms 
+Swap-Or-Not took 1.820ms 
+Sometimes Recurse took 15.405ms 
+Thorpe took 0.474ms 
+Swap-Or-Not took 1.945ms 
+Sometimes Recurse took 1.979ms 
+Thorpe took 0.556ms 
+Swap-Or-Not took 2.215ms 
+Sometimes Recurse took 7.789ms 
+Thorpe took 0.667ms 
+Swap-Or-Not took 2.212ms 
+Sometimes Recurse took 5.471ms 
+Thorpe took 0.472ms 
+Swap-Or-Not took 1.829ms 
+Sometimes Recurse took 7.523ms 
+Thorpe took 0.498ms 
+Swap-Or-Not took 2.082ms 
+Sometimes Recurse took 5.670ms 
+mean and std Thorp time 0.501366667ms (0.041152143ms)
+mean and std Swap-Or-Not time 1.915333333ms (0.124151341ms) 
+mean and std Sometimes Recurse time 5.041500000ms (3.828499129ms) 
+--------------------------------------------------
+
+using R = 9999 and N of size 9999
+Thorpe took 0.950ms 
+Swap-Or-Not took 3.565ms 
+Sometimes Recurse took 3.571ms 
+Thorpe took 1.108ms 
+Swap-Or-Not took 3.583ms 
+Sometimes Recurse took 22.075ms 
+Thorpe took 0.949ms 
+Swap-Or-Not took 3.537ms 
+Sometimes Recurse took 3.706ms 
+Thorpe took 1.160ms 
+Swap-Or-Not took 3.882ms 
+Sometimes Recurse took 3.924ms 
+Thorpe took 0.956ms 
+Swap-Or-Not took 3.905ms 
+Sometimes Recurse took 7.700ms 
+Thorpe took 0.950ms 
+Swap-Or-Not took 3.584ms 
+Sometimes Recurse took 3.763ms 
+Thorpe took 0.954ms 
+Swap-Or-Not took 4.003ms 
+Sometimes Recurse took 3.925ms 
+Thorpe took 0.954ms 
+Swap-Or-Not took 3.917ms 
+Sometimes Recurse took 8.034ms 
+Thorpe took 0.953ms 
+Swap-Or-Not took 3.881ms 
+Sometimes Recurse took 7.921ms 
+Thorpe took 0.973ms 
+Swap-Or-Not took 3.673ms 
+Sometimes Recurse took 7.508ms 
+Thorpe took 0.988ms 
+Swap-Or-Not took 4.049ms 
+Sometimes Recurse took 11.892ms 
+Thorpe took 0.952ms 
+Swap-Or-Not took 3.921ms 
+Sometimes Recurse took 7.312ms 
+Thorpe took 0.992ms 
+Swap-Or-Not took 3.684ms 
+Sometimes Recurse took 7.679ms 
+Thorpe took 0.951ms 
+Swap-Or-Not took 3.912ms 
+Sometimes Recurse took 11.695ms 
+Thorpe took 0.952ms 
+Swap-Or-Not took 3.850ms 
+Sometimes Recurse took 3.869ms 
+Thorpe took 0.949ms 
+Swap-Or-Not took 3.887ms 
+Sometimes Recurse took 4.113ms 
+Thorpe took 0.966ms 
+Swap-Or-Not took 3.690ms 
+Sometimes Recurse took 3.635ms 
+Thorpe took 0.955ms 
+Swap-Or-Not took 3.805ms 
+Sometimes Recurse took 4.003ms 
+Thorpe took 0.967ms 
+Swap-Or-Not took 3.996ms 
+Sometimes Recurse took 15.503ms 
+Thorpe took 0.945ms 
+Swap-Or-Not took 3.673ms 
+Sometimes Recurse took 3.726ms 
+Thorpe took 1.074ms 
+Swap-Or-Not took 3.602ms 
+Sometimes Recurse took 10.812ms 
+Thorpe took 0.950ms 
+Swap-Or-Not took 3.867ms 
+Sometimes Recurse took 3.590ms 
+Thorpe took 0.954ms 
+Swap-Or-Not took 3.578ms 
+Sometimes Recurse took 10.854ms 
+Thorpe took 0.952ms 
+Swap-Or-Not took 3.915ms 
+Sometimes Recurse took 3.904ms 
+Thorpe took 0.952ms 
+Swap-Or-Not took 4.167ms 
+Sometimes Recurse took 3.672ms 
+Thorpe took 0.958ms 
+Swap-Or-Not took 3.505ms 
+Sometimes Recurse took 3.567ms 
+Thorpe took 0.980ms 
+Swap-Or-Not took 3.999ms 
+Sometimes Recurse took 3.951ms 
+Thorpe took 1.007ms 
+Swap-Or-Not took 4.028ms 
+Sometimes Recurse took 15.467ms 
+Thorpe took 0.952ms 
+Swap-Or-Not took 3.594ms 
+Sometimes Recurse took 4.103ms 
+Thorpe took 0.964ms 
+Swap-Or-Not took 3.948ms 
+Sometimes Recurse took 7.835ms 
+mean and std Thorp time 0.975566667ms (0.049560524ms)
+mean and std Swap-Or-Not time 3.806666667ms (0.180311274ms) 
+mean and std Sometimes Recurse time 7.110300000ms (4.520663101ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 20016 bits
+
+
+using R = 1 and N of size 20016
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.011ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.018ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.017ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.016ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.009ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.020ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.008ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.014ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+mean and std Thorp time 0.001633333ms (0.002401157ms)
+mean and std Swap-Or-Not time 0.003300000ms (0.003707200ms) 
+mean and std Sometimes Recurse time 0.005233333ms (0.004341147ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 20016
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.114ms 
+Sometimes Recurse took 0.097ms 
+Thorpe took 0.036ms 
+Swap-Or-Not took 0.090ms 
+Sometimes Recurse took 0.071ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.088ms 
+Sometimes Recurse took 0.214ms 
+Thorpe took 0.079ms 
+Swap-Or-Not took 0.106ms 
+Sometimes Recurse took 0.162ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.097ms 
+Sometimes Recurse took 0.074ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.066ms 
+Sometimes Recurse took 0.682ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.070ms 
+Sometimes Recurse took 0.160ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.079ms 
+Sometimes Recurse took 0.073ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.080ms 
+Sometimes Recurse took 0.372ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.082ms 
+Sometimes Recurse took 0.440ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.072ms 
+Sometimes Recurse took 0.106ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.099ms 
+Sometimes Recurse took 0.086ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.084ms 
+Sometimes Recurse took 0.078ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.065ms 
+Sometimes Recurse took 0.407ms 
+Thorpe took 0.016ms 
+Swap-Or-Not took 0.098ms 
+Sometimes Recurse took 0.165ms 
+Thorpe took 0.016ms 
+Swap-Or-Not took 0.066ms 
+Sometimes Recurse took 0.078ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.075ms 
+Sometimes Recurse took 0.268ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.097ms 
+Sometimes Recurse took 0.083ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.095ms 
+Sometimes Recurse took 0.172ms 
+Thorpe took 0.016ms 
+Swap-Or-Not took 0.082ms 
+Sometimes Recurse took 0.625ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.100ms 
+Sometimes Recurse took 0.084ms 
+Thorpe took 0.015ms 
+Swap-Or-Not took 0.068ms 
+Sometimes Recurse took 0.088ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.083ms 
+Sometimes Recurse took 0.085ms 
+Thorpe took 0.016ms 
+Swap-Or-Not took 0.074ms 
+Sometimes Recurse took 0.229ms 
+Thorpe took 0.018ms 
+Swap-Or-Not took 0.091ms 
+Sometimes Recurse took 0.091ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.089ms 
+Sometimes Recurse took 0.163ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.082ms 
+Sometimes Recurse took 0.177ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.082ms 
+Sometimes Recurse took 0.225ms 
+Thorpe took 0.031ms 
+Swap-Or-Not took 0.070ms 
+Sometimes Recurse took 0.156ms 
+Thorpe took 0.017ms 
+Swap-Or-Not took 0.081ms 
+Sometimes Recurse took 0.147ms 
+mean and std Thorp time 0.020200000ms (0.011702991ms)
+mean and std Swap-Or-Not time 0.084166667ms (0.012508886ms) 
+mean and std Sometimes Recurse time 0.195266667ms (0.156625016ms) 
+--------------------------------------------------
+
+using R = 5004 and N of size 20016
+Thorpe took 0.828ms 
+Swap-Or-Not took 3.640ms 
+Sometimes Recurse took 3.889ms 
+Thorpe took 0.831ms 
+Swap-Or-Not took 3.996ms 
+Sometimes Recurse took 4.047ms 
+Thorpe took 0.821ms 
+Swap-Or-Not took 3.918ms 
+Sometimes Recurse took 4.062ms 
+Thorpe took 0.974ms 
+Swap-Or-Not took 3.998ms 
+Sometimes Recurse took 3.824ms 
+Thorpe took 0.820ms 
+Swap-Or-Not took 3.841ms 
+Sometimes Recurse took 26.000ms 
+Thorpe took 0.818ms 
+Swap-Or-Not took 3.772ms 
+Sometimes Recurse took 3.877ms 
+Thorpe took 0.822ms 
+Swap-Or-Not took 3.821ms 
+Sometimes Recurse took 3.846ms 
+Thorpe took 0.825ms 
+Swap-Or-Not took 4.018ms 
+Sometimes Recurse took 4.140ms 
+Thorpe took 0.992ms 
+Swap-Or-Not took 3.727ms 
+Sometimes Recurse took 7.461ms 
+Thorpe took 0.821ms 
+Swap-Or-Not took 3.712ms 
+Sometimes Recurse took 3.793ms 
+Thorpe took 0.824ms 
+Swap-Or-Not took 3.724ms 
+Sometimes Recurse took 7.720ms 
+Thorpe took 0.957ms 
+Swap-Or-Not took 3.710ms 
+Sometimes Recurse took 3.687ms 
+Thorpe took 0.823ms 
+Swap-Or-Not took 3.728ms 
+Sometimes Recurse took 7.608ms 
+Thorpe took 0.823ms 
+Swap-Or-Not took 3.634ms 
+Sometimes Recurse took 3.672ms 
+Thorpe took 0.823ms 
+Swap-Or-Not took 3.756ms 
+Sometimes Recurse took 8.177ms 
+Thorpe took 0.819ms 
+Swap-Or-Not took 3.750ms 
+Sometimes Recurse took 14.759ms 
+Thorpe took 0.826ms 
+Swap-Or-Not took 3.741ms 
+Sometimes Recurse took 15.809ms 
+Thorpe took 0.827ms 
+Swap-Or-Not took 4.050ms 
+Sometimes Recurse took 3.705ms 
+Thorpe took 0.821ms 
+Swap-Or-Not took 3.679ms 
+Sometimes Recurse took 7.496ms 
+Thorpe took 0.823ms 
+Swap-Or-Not took 3.690ms 
+Sometimes Recurse took 3.750ms 
+Thorpe took 0.814ms 
+Swap-Or-Not took 3.837ms 
+Sometimes Recurse took 3.802ms 
+Thorpe took 0.888ms 
+Swap-Or-Not took 4.231ms 
+Sometimes Recurse took 3.940ms 
+Thorpe took 0.837ms 
+Swap-Or-Not took 3.676ms 
+Sometimes Recurse took 4.030ms 
+Thorpe took 0.823ms 
+Swap-Or-Not took 3.665ms 
+Sometimes Recurse took 14.893ms 
+Thorpe took 0.821ms 
+Swap-Or-Not took 3.923ms 
+Sometimes Recurse took 3.744ms 
+Thorpe took 0.888ms 
+Swap-Or-Not took 4.122ms 
+Sometimes Recurse took 7.362ms 
+Thorpe took 0.823ms 
+Swap-Or-Not took 3.845ms 
+Sometimes Recurse took 3.648ms 
+Thorpe took 0.904ms 
+Swap-Or-Not took 3.675ms 
+Sometimes Recurse took 7.407ms 
+Thorpe took 0.827ms 
+Swap-Or-Not took 3.981ms 
+Sometimes Recurse took 3.706ms 
+Thorpe took 0.917ms 
+Swap-Or-Not took 3.746ms 
+Sometimes Recurse took 7.542ms 
+mean and std Thorp time 0.848666667ms (0.049625486ms)
+mean and std Swap-Or-Not time 3.820200000ms (0.153302620ms) 
+mean and std Sometimes Recurse time 6.713200000ms (4.972618602ms) 
+--------------------------------------------------
+
+using R = 10008 and N of size 20016
+Thorpe took 1.686ms 
+Swap-Or-Not took 7.365ms 
+Sometimes Recurse took 7.890ms 
+Thorpe took 1.675ms 
+Swap-Or-Not took 8.055ms 
+Sometimes Recurse took 7.981ms 
+Thorpe took 1.676ms 
+Swap-Or-Not took 7.435ms 
+Sometimes Recurse took 15.225ms 
+Thorpe took 1.717ms 
+Swap-Or-Not took 8.189ms 
+Sometimes Recurse took 15.746ms 
+Thorpe took 1.677ms 
+Swap-Or-Not took 7.416ms 
+Sometimes Recurse took 22.689ms 
+Thorpe took 1.712ms 
+Swap-Or-Not took 7.976ms 
+Sometimes Recurse took 38.548ms 
+Thorpe took 1.831ms 
+Swap-Or-Not took 7.991ms 
+Sometimes Recurse took 8.184ms 
+Thorpe took 1.674ms 
+Swap-Or-Not took 7.311ms 
+Sometimes Recurse took 15.093ms 
+Thorpe took 1.678ms 
+Swap-Or-Not took 7.667ms 
+Sometimes Recurse took 7.368ms 
+Thorpe took 1.706ms 
+Swap-Or-Not took 7.472ms 
+Sometimes Recurse took 7.437ms 
+Thorpe took 1.709ms 
+Swap-Or-Not took 7.840ms 
+Sometimes Recurse took 22.981ms 
+Thorpe took 1.700ms 
+Swap-Or-Not took 7.870ms 
+Sometimes Recurse took 14.897ms 
+Thorpe took 1.673ms 
+Swap-Or-Not took 7.474ms 
+Sometimes Recurse took 7.644ms 
+Thorpe took 1.676ms 
+Swap-Or-Not took 8.022ms 
+Sometimes Recurse took 15.844ms 
+Thorpe took 1.686ms 
+Swap-Or-Not took 8.292ms 
+Sometimes Recurse took 22.872ms 
+Thorpe took 1.705ms 
+Swap-Or-Not took 8.571ms 
+Sometimes Recurse took 16.568ms 
+Thorpe took 1.679ms 
+Swap-Or-Not took 7.362ms 
+Sometimes Recurse took 7.996ms 
+Thorpe took 1.730ms 
+Swap-Or-Not took 7.957ms 
+Sometimes Recurse took 22.585ms 
+Thorpe took 1.675ms 
+Swap-Or-Not took 7.318ms 
+Sometimes Recurse took 8.133ms 
+Thorpe took 1.677ms 
+Swap-Or-Not took 7.343ms 
+Sometimes Recurse took 7.723ms 
+Thorpe took 1.722ms 
+Swap-Or-Not took 7.542ms 
+Sometimes Recurse took 7.624ms 
+Thorpe took 1.724ms 
+Swap-Or-Not took 7.631ms 
+Sometimes Recurse took 24.003ms 
+Thorpe took 1.737ms 
+Swap-Or-Not took 7.523ms 
+Sometimes Recurse took 16.302ms 
+Thorpe took 1.717ms 
+Swap-Or-Not took 7.570ms 
+Sometimes Recurse took 7.542ms 
+Thorpe took 1.724ms 
+Swap-Or-Not took 7.811ms 
+Sometimes Recurse took 7.818ms 
+Thorpe took 1.797ms 
+Swap-Or-Not took 7.437ms 
+Sometimes Recurse took 45.317ms 
+Thorpe took 1.706ms 
+Swap-Or-Not took 7.453ms 
+Sometimes Recurse took 16.151ms 
+Thorpe took 1.702ms 
+Swap-Or-Not took 8.280ms 
+Sometimes Recurse took 15.980ms 
+Thorpe took 1.714ms 
+Swap-Or-Not took 8.018ms 
+Sometimes Recurse took 7.930ms 
+Thorpe took 1.670ms 
+Swap-Or-Not took 7.372ms 
+Sometimes Recurse took 8.046ms 
+mean and std Thorp time 1.705166667ms (0.035522841ms)
+mean and std Swap-Or-Not time 7.718766667ms (0.342273252ms) 
+mean and std Sometimes Recurse time 15.003900000ms (9.182826291ms) 
+--------------------------------------------------
+
+using R = 20016 and N of size 20016
+Thorpe took 3.385ms 
+Swap-Or-Not took 15.736ms 
+Sometimes Recurse took 61.475ms 
+Thorpe took 3.411ms 
+Swap-Or-Not took 14.653ms 
+Sometimes Recurse took 74.230ms 
+Thorpe took 3.416ms 
+Swap-Or-Not took 14.754ms 
+Sometimes Recurse took 14.636ms 
+Thorpe took 3.505ms 
+Swap-Or-Not took 15.011ms 
+Sometimes Recurse took 15.916ms 
+Thorpe took 3.685ms 
+Swap-Or-Not took 14.926ms 
+Sometimes Recurse took 31.492ms 
+Thorpe took 3.514ms 
+Swap-Or-Not took 15.214ms 
+Sometimes Recurse took 15.154ms 
+Thorpe took 3.545ms 
+Swap-Or-Not took 16.873ms 
+Sometimes Recurse took 31.079ms 
+Thorpe took 3.448ms 
+Swap-Or-Not took 15.115ms 
+Sometimes Recurse took 15.125ms 
+Thorpe took 3.451ms 
+Swap-Or-Not took 14.918ms 
+Sometimes Recurse took 15.100ms 
+Thorpe took 3.428ms 
+Swap-Or-Not took 15.795ms 
+Sometimes Recurse took 15.073ms 
+Thorpe took 3.371ms 
+Swap-Or-Not took 14.625ms 
+Sometimes Recurse took 61.014ms 
+Thorpe took 3.368ms 
+Swap-Or-Not took 14.859ms 
+Sometimes Recurse took 44.784ms 
+Thorpe took 3.547ms 
+Swap-Or-Not took 14.410ms 
+Sometimes Recurse took 30.168ms 
+Thorpe took 3.384ms 
+Swap-Or-Not took 14.975ms 
+Sometimes Recurse took 151.125ms 
+Thorpe took 3.536ms 
+Swap-Or-Not took 15.050ms 
+Sometimes Recurse took 14.660ms 
+Thorpe took 3.720ms 
+Swap-Or-Not took 15.657ms 
+Sometimes Recurse took 31.600ms 
+Thorpe took 3.431ms 
+Swap-Or-Not took 14.785ms 
+Sometimes Recurse took 61.884ms 
+Thorpe took 3.384ms 
+Swap-Or-Not took 15.126ms 
+Sometimes Recurse took 31.366ms 
+Thorpe took 3.571ms 
+Swap-Or-Not took 14.737ms 
+Sometimes Recurse took 75.941ms 
+Thorpe took 3.376ms 
+Swap-Or-Not took 14.834ms 
+Sometimes Recurse took 29.895ms 
+Thorpe took 3.381ms 
+Swap-Or-Not took 14.938ms 
+Sometimes Recurse took 30.207ms 
+Thorpe took 3.376ms 
+Swap-Or-Not took 14.832ms 
+Sometimes Recurse took 15.654ms 
+Thorpe took 3.547ms 
+Swap-Or-Not took 15.259ms 
+Sometimes Recurse took 14.929ms 
+Thorpe took 3.416ms 
+Swap-Or-Not took 15.898ms 
+Sometimes Recurse took 31.401ms 
+Thorpe took 3.481ms 
+Swap-Or-Not took 15.852ms 
+Sometimes Recurse took 15.397ms 
+Thorpe took 3.378ms 
+Swap-Or-Not took 15.233ms 
+Sometimes Recurse took 31.721ms 
+Thorpe took 3.458ms 
+Swap-Or-Not took 15.345ms 
+Sometimes Recurse took 15.670ms 
+Thorpe took 3.365ms 
+Swap-Or-Not took 15.081ms 
+Sometimes Recurse took 14.837ms 
+Thorpe took 3.378ms 
+Swap-Or-Not took 14.810ms 
+Sometimes Recurse took 46.130ms 
+Thorpe took 3.372ms 
+Swap-Or-Not took 15.004ms 
+Sometimes Recurse took 29.872ms 
+mean and std Thorp time 3.454266667ms (0.092300211ms)
+mean and std Swap-Or-Not time 15.143500000ms (0.492138311ms) 
+mean and std Sometimes Recurse time 35.584500000ms (28.225832538ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 30072 bits
+
+
+using R = 1 and N of size 30072
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.013ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.010ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.008ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.010ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.002ms 
+mean and std Thorp time 0.000866667ms (0.000718022ms)
+mean and std Swap-Or-Not time 0.001966667ms (0.001139688ms) 
+mean and std Sometimes Recurse time 0.004166667ms (0.002978628ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 30072
+Thorpe took 0.023ms 
+Swap-Or-Not took 0.097ms 
+Sometimes Recurse took 0.232ms 
+Thorpe took 0.023ms 
+Swap-Or-Not took 0.107ms 
+Sometimes Recurse took 0.089ms 
+Thorpe took 0.066ms 
+Swap-Or-Not took 0.137ms 
+Sometimes Recurse took 0.592ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.160ms 
+Sometimes Recurse took 0.322ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.106ms 
+Sometimes Recurse took 0.110ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.104ms 
+Sometimes Recurse took 0.104ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.118ms 
+Sometimes Recurse took 0.627ms 
+Thorpe took 0.023ms 
+Swap-Or-Not took 0.109ms 
+Sometimes Recurse took 0.102ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.124ms 
+Sometimes Recurse took 0.109ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.151ms 
+Sometimes Recurse took 0.336ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.197ms 
+Sometimes Recurse took 0.474ms 
+Thorpe took 0.023ms 
+Swap-Or-Not took 0.161ms 
+Sometimes Recurse took 0.583ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.146ms 
+Sometimes Recurse took 0.235ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.125ms 
+Sometimes Recurse took 0.353ms 
+Thorpe took 0.023ms 
+Swap-Or-Not took 0.105ms 
+Sometimes Recurse took 0.099ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.117ms 
+Sometimes Recurse took 0.128ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.099ms 
+Sometimes Recurse took 0.458ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.099ms 
+Sometimes Recurse took 0.125ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.105ms 
+Sometimes Recurse took 0.104ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.106ms 
+Sometimes Recurse took 0.263ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.141ms 
+Sometimes Recurse took 0.155ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.153ms 
+Sometimes Recurse took 0.155ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.167ms 
+Sometimes Recurse took 0.233ms 
+Thorpe took 0.054ms 
+Swap-Or-Not took 0.153ms 
+Sometimes Recurse took 0.303ms 
+Thorpe took 0.053ms 
+Swap-Or-Not took 0.124ms 
+Sometimes Recurse took 0.305ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.148ms 
+Sometimes Recurse took 0.184ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.119ms 
+Sometimes Recurse took 0.591ms 
+Thorpe took 0.025ms 
+Swap-Or-Not took 0.154ms 
+Sometimes Recurse took 0.153ms 
+Thorpe took 0.024ms 
+Swap-Or-Not took 0.167ms 
+Sometimes Recurse took 0.119ms 
+Thorpe took 0.053ms 
+Swap-Or-Not took 0.116ms 
+Sometimes Recurse took 0.108ms 
+mean and std Thorp time 0.028433333ms (0.011209173ms)
+mean and std Swap-Or-Not time 0.130500000ms (0.025619979ms) 
+mean and std Sometimes Recurse time 0.258366667ms (0.169314399ms) 
+--------------------------------------------------
+
+using R = 7518 and N of size 30072
+Thorpe took 1.816ms 
+Swap-Or-Not took 9.251ms 
+Sometimes Recurse took 9.280ms 
+Thorpe took 1.863ms 
+Swap-Or-Not took 9.612ms 
+Sometimes Recurse took 18.090ms 
+Thorpe took 1.805ms 
+Swap-Or-Not took 9.037ms 
+Sometimes Recurse took 9.458ms 
+Thorpe took 1.951ms 
+Swap-Or-Not took 9.533ms 
+Sometimes Recurse took 18.301ms 
+Thorpe took 1.795ms 
+Swap-Or-Not took 8.863ms 
+Sometimes Recurse took 28.041ms 
+Thorpe took 1.800ms 
+Swap-Or-Not took 9.422ms 
+Sometimes Recurse took 9.203ms 
+Thorpe took 1.798ms 
+Swap-Or-Not took 9.556ms 
+Sometimes Recurse took 9.416ms 
+Thorpe took 1.906ms 
+Swap-Or-Not took 9.196ms 
+Sometimes Recurse took 39.446ms 
+Thorpe took 1.883ms 
+Swap-Or-Not took 9.501ms 
+Sometimes Recurse took 20.084ms 
+Thorpe took 1.796ms 
+Swap-Or-Not took 9.390ms 
+Sometimes Recurse took 9.454ms 
+Thorpe took 1.877ms 
+Swap-Or-Not took 9.111ms 
+Sometimes Recurse took 18.469ms 
+Thorpe took 1.798ms 
+Swap-Or-Not took 9.971ms 
+Sometimes Recurse took 9.341ms 
+Thorpe took 1.795ms 
+Swap-Or-Not took 8.919ms 
+Sometimes Recurse took 8.881ms 
+Thorpe took 1.804ms 
+Swap-Or-Not took 9.755ms 
+Sometimes Recurse took 28.331ms 
+Thorpe took 1.923ms 
+Swap-Or-Not took 9.106ms 
+Sometimes Recurse took 9.470ms 
+Thorpe took 1.801ms 
+Swap-Or-Not took 9.008ms 
+Sometimes Recurse took 9.367ms 
+Thorpe took 1.799ms 
+Swap-Or-Not took 9.488ms 
+Sometimes Recurse took 9.456ms 
+Thorpe took 1.804ms 
+Swap-Or-Not took 9.700ms 
+Sometimes Recurse took 9.786ms 
+Thorpe took 1.917ms 
+Swap-Or-Not took 9.168ms 
+Sometimes Recurse took 10.104ms 
+Thorpe took 1.793ms 
+Swap-Or-Not took 9.792ms 
+Sometimes Recurse took 9.345ms 
+Thorpe took 1.802ms 
+Swap-Or-Not took 9.595ms 
+Sometimes Recurse took 18.476ms 
+Thorpe took 1.792ms 
+Swap-Or-Not took 8.909ms 
+Sometimes Recurse took 9.325ms 
+Thorpe took 1.795ms 
+Swap-Or-Not took 9.431ms 
+Sometimes Recurse took 9.079ms 
+Thorpe took 1.788ms 
+Swap-Or-Not took 9.487ms 
+Sometimes Recurse took 10.154ms 
+Thorpe took 1.859ms 
+Swap-Or-Not took 9.354ms 
+Sometimes Recurse took 9.211ms 
+Thorpe took 1.798ms 
+Swap-Or-Not took 9.166ms 
+Sometimes Recurse took 18.378ms 
+Thorpe took 1.958ms 
+Swap-Or-Not took 9.927ms 
+Sometimes Recurse took 10.071ms 
+Thorpe took 1.851ms 
+Swap-Or-Not took 9.188ms 
+Sometimes Recurse took 19.019ms 
+Thorpe took 1.899ms 
+Swap-Or-Not took 8.871ms 
+Sometimes Recurse took 47.823ms 
+Thorpe took 1.795ms 
+Swap-Or-Not took 9.150ms 
+Sometimes Recurse took 8.992ms 
+mean and std Thorp time 1.835366667ms (0.052810658ms)
+mean and std Swap-Or-Not time 9.348566667ms (0.306819674ms) 
+mean and std Sometimes Recurse time 15.128366667ms (9.503497677ms) 
+--------------------------------------------------
+
+using R = 15036 and N of size 30072
+Thorpe took 3.711ms 
+Swap-Or-Not took 18.692ms 
+Sometimes Recurse took 36.240ms 
+Thorpe took 3.696ms 
+Swap-Or-Not took 18.689ms 
+Sometimes Recurse took 18.292ms 
+Thorpe took 3.928ms 
+Swap-Or-Not took 18.724ms 
+Sometimes Recurse took 18.356ms 
+Thorpe took 3.722ms 
+Swap-Or-Not took 18.143ms 
+Sometimes Recurse took 18.439ms 
+Thorpe took 3.828ms 
+Swap-Or-Not took 18.393ms 
+Sometimes Recurse took 56.358ms 
+Thorpe took 3.621ms 
+Swap-Or-Not took 18.489ms 
+Sometimes Recurse took 37.249ms 
+Thorpe took 3.641ms 
+Swap-Or-Not took 18.858ms 
+Sometimes Recurse took 56.743ms 
+Thorpe took 3.824ms 
+Swap-Or-Not took 18.361ms 
+Sometimes Recurse took 18.494ms 
+Thorpe took 3.865ms 
+Swap-Or-Not took 18.269ms 
+Sometimes Recurse took 19.457ms 
+Thorpe took 3.996ms 
+Swap-Or-Not took 20.131ms 
+Sometimes Recurse took 37.211ms 
+Thorpe took 3.624ms 
+Swap-Or-Not took 18.028ms 
+Sometimes Recurse took 56.337ms 
+Thorpe took 3.629ms 
+Swap-Or-Not took 18.479ms 
+Sometimes Recurse took 19.312ms 
+Thorpe took 3.729ms 
+Swap-Or-Not took 18.645ms 
+Sometimes Recurse took 38.130ms 
+Thorpe took 3.628ms 
+Swap-Or-Not took 18.415ms 
+Sometimes Recurse took 36.317ms 
+Thorpe took 3.674ms 
+Swap-Or-Not took 18.391ms 
+Sometimes Recurse took 18.394ms 
+Thorpe took 3.706ms 
+Swap-Or-Not took 18.618ms 
+Sometimes Recurse took 18.502ms 
+Thorpe took 3.725ms 
+Swap-Or-Not took 18.976ms 
+Sometimes Recurse took 38.510ms 
+Thorpe took 3.631ms 
+Swap-Or-Not took 18.360ms 
+Sometimes Recurse took 37.159ms 
+Thorpe took 3.814ms 
+Swap-Or-Not took 18.589ms 
+Sometimes Recurse took 55.663ms 
+Thorpe took 3.624ms 
+Swap-Or-Not took 18.425ms 
+Sometimes Recurse took 37.474ms 
+Thorpe took 3.623ms 
+Swap-Or-Not took 19.417ms 
+Sometimes Recurse took 37.483ms 
+Thorpe took 3.619ms 
+Swap-Or-Not took 18.749ms 
+Sometimes Recurse took 38.462ms 
+Thorpe took 3.668ms 
+Swap-Or-Not took 18.174ms 
+Sometimes Recurse took 18.531ms 
+Thorpe took 3.708ms 
+Swap-Or-Not took 19.379ms 
+Sometimes Recurse took 18.717ms 
+Thorpe took 3.769ms 
+Swap-Or-Not took 20.013ms 
+Sometimes Recurse took 18.395ms 
+Thorpe took 3.683ms 
+Swap-Or-Not took 19.640ms 
+Sometimes Recurse took 110.336ms 
+Thorpe took 3.620ms 
+Swap-Or-Not took 18.223ms 
+Sometimes Recurse took 94.338ms 
+Thorpe took 3.622ms 
+Swap-Or-Not took 18.435ms 
+Sometimes Recurse took 55.590ms 
+Thorpe took 3.696ms 
+Swap-Or-Not took 18.319ms 
+Sometimes Recurse took 128.015ms 
+Thorpe took 3.675ms 
+Swap-Or-Not took 18.648ms 
+Sometimes Recurse took 19.773ms 
+mean and std Thorp time 3.709966667ms (0.096507852ms)
+mean and std Swap-Or-Not time 18.689066667ms (0.519409853ms) 
+mean and std Sometimes Recurse time 40.409233333ms (27.357120190ms) 
+--------------------------------------------------
+
+using R = 30072 and N of size 30072
+Thorpe took 7.410ms 
+Swap-Or-Not took 36.995ms 
+Sometimes Recurse took 37.203ms 
+Thorpe took 7.357ms 
+Swap-Or-Not took 37.531ms 
+Sometimes Recurse took 74.987ms 
+Thorpe took 7.411ms 
+Swap-Or-Not took 36.683ms 
+Sometimes Recurse took 37.272ms 
+Thorpe took 7.495ms 
+Swap-Or-Not took 38.529ms 
+Sometimes Recurse took 36.770ms 
+Thorpe took 7.368ms 
+Swap-Or-Not took 38.811ms 
+Sometimes Recurse took 74.430ms 
+Thorpe took 7.477ms 
+Swap-Or-Not took 37.644ms 
+Sometimes Recurse took 37.743ms 
+Thorpe took 7.665ms 
+Swap-Or-Not took 36.965ms 
+Sometimes Recurse took 146.071ms 
+Thorpe took 7.326ms 
+Swap-Or-Not took 36.557ms 
+Sometimes Recurse took 37.077ms 
+Thorpe took 7.375ms 
+Swap-Or-Not took 38.444ms 
+Sometimes Recurse took 73.127ms 
+Thorpe took 7.276ms 
+Swap-Or-Not took 39.073ms 
+Sometimes Recurse took 74.315ms 
+Thorpe took 7.371ms 
+Swap-Or-Not took 36.808ms 
+Sometimes Recurse took 72.776ms 
+Thorpe took 7.433ms 
+Swap-Or-Not took 37.079ms 
+Sometimes Recurse took 37.756ms 
+Thorpe took 7.496ms 
+Swap-Or-Not took 36.499ms 
+Sometimes Recurse took 39.071ms 
+Thorpe took 7.538ms 
+Swap-Or-Not took 37.830ms 
+Sometimes Recurse took 149.081ms 
+Thorpe took 7.261ms 
+Swap-Or-Not took 36.803ms 
+Sometimes Recurse took 38.686ms 
+Thorpe took 7.340ms 
+Swap-Or-Not took 37.218ms 
+Sometimes Recurse took 109.404ms 
+Thorpe took 7.298ms 
+Swap-Or-Not took 38.293ms 
+Sometimes Recurse took 36.801ms 
+Thorpe took 7.522ms 
+Swap-Or-Not took 38.010ms 
+Sometimes Recurse took 73.842ms 
+Thorpe took 7.674ms 
+Swap-Or-Not took 37.844ms 
+Sometimes Recurse took 37.482ms 
+Thorpe took 7.686ms 
+Swap-Or-Not took 37.517ms 
+Sometimes Recurse took 36.589ms 
+Thorpe took 7.802ms 
+Swap-Or-Not took 38.034ms 
+Sometimes Recurse took 150.717ms 
+Thorpe took 7.288ms 
+Swap-Or-Not took 38.125ms 
+Sometimes Recurse took 74.729ms 
+Thorpe took 7.669ms 
+Swap-Or-Not took 38.533ms 
+Sometimes Recurse took 111.320ms 
+Thorpe took 7.299ms 
+Swap-Or-Not took 36.786ms 
+Sometimes Recurse took 37.666ms 
+Thorpe took 7.349ms 
+Swap-Or-Not took 37.872ms 
+Sometimes Recurse took 110.277ms 
+Thorpe took 7.361ms 
+Swap-Or-Not took 38.119ms 
+Sometimes Recurse took 75.280ms 
+Thorpe took 7.613ms 
+Swap-Or-Not took 36.827ms 
+Sometimes Recurse took 38.077ms 
+Thorpe took 7.462ms 
+Swap-Or-Not took 36.933ms 
+Sometimes Recurse took 37.543ms 
+Thorpe took 7.711ms 
+Swap-Or-Not took 37.251ms 
+Sometimes Recurse took 36.877ms 
+Thorpe took 7.422ms 
+Swap-Or-Not took 36.957ms 
+Sometimes Recurse took 75.373ms 
+mean and std Thorp time 7.458500000ms (0.147151113ms)
+mean and std Swap-Or-Not time 37.552333333ms (0.717076023ms) 
+mean and std Sometimes Recurse time 66.944733333ms (36.136706403ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 40991 bits
+
+
+using R = 1 and N of size 40991
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.012ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.018ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.013ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.014ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.012ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.014ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.003ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.012ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.013ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.014ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.001ms 
+mean and std Thorp time 0.000866667ms (0.000669992ms)
+mean and std Swap-Or-Not time 0.002000000ms (0.001527525ms) 
+mean and std Sometimes Recurse time 0.007100000ms (0.005387331ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 40991
+Thorpe took 0.032ms 
+Swap-Or-Not took 0.176ms 
+Sometimes Recurse took 0.155ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.175ms 
+Sometimes Recurse took 0.395ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.206ms 
+Sometimes Recurse took 0.179ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.212ms 
+Sometimes Recurse took 0.571ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.168ms 
+Sometimes Recurse took 0.139ms 
+Thorpe took 0.030ms 
+Swap-Or-Not took 0.292ms 
+Sometimes Recurse took 0.364ms 
+Thorpe took 0.034ms 
+Swap-Or-Not took 0.181ms 
+Sometimes Recurse took 0.181ms 
+Thorpe took 0.032ms 
+Swap-Or-Not took 0.173ms 
+Sometimes Recurse took 0.582ms 
+Thorpe took 0.032ms 
+Swap-Or-Not took 0.208ms 
+Sometimes Recurse took 0.162ms 
+Thorpe took 0.030ms 
+Swap-Or-Not took 0.190ms 
+Sometimes Recurse took 0.359ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.211ms 
+Sometimes Recurse took 0.229ms 
+Thorpe took 0.030ms 
+Swap-Or-Not took 0.213ms 
+Sometimes Recurse took 0.670ms 
+Thorpe took 0.032ms 
+Swap-Or-Not took 0.224ms 
+Sometimes Recurse took 0.576ms 
+Thorpe took 0.031ms 
+Swap-Or-Not took 0.211ms 
+Sometimes Recurse took 0.244ms 
+Thorpe took 0.074ms 
+Swap-Or-Not took 0.221ms 
+Sometimes Recurse took 1.183ms 
+Thorpe took 0.032ms 
+Swap-Or-Not took 0.158ms 
+Sometimes Recurse took 0.190ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.178ms 
+Sometimes Recurse took 0.181ms 
+Thorpe took 0.032ms 
+Swap-Or-Not took 0.196ms 
+Sometimes Recurse took 0.185ms 
+Thorpe took 0.032ms 
+Swap-Or-Not took 0.167ms 
+Sometimes Recurse took 0.403ms 
+Thorpe took 0.035ms 
+Swap-Or-Not took 0.181ms 
+Sometimes Recurse took 0.166ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.183ms 
+Sometimes Recurse took 0.178ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.216ms 
+Sometimes Recurse took 0.161ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.181ms 
+Sometimes Recurse took 0.156ms 
+Thorpe took 0.034ms 
+Swap-Or-Not took 0.178ms 
+Sometimes Recurse took 0.149ms 
+Thorpe took 0.032ms 
+Swap-Or-Not took 0.180ms 
+Sometimes Recurse took 0.730ms 
+Thorpe took 0.033ms 
+Swap-Or-Not took 0.162ms 
+Sometimes Recurse took 0.138ms 
+Thorpe took 0.032ms 
+Swap-Or-Not took 0.141ms 
+Sometimes Recurse took 0.150ms 
+Thorpe took 0.034ms 
+Swap-Or-Not took 0.219ms 
+Sometimes Recurse took 0.161ms 
+Thorpe took 0.034ms 
+Swap-Or-Not took 0.179ms 
+Sometimes Recurse took 0.198ms 
+Thorpe took 0.032ms 
+Swap-Or-Not took 0.166ms 
+Sometimes Recurse took 0.186ms 
+mean and std Thorp time 0.033866667ms (0.007544240ms)
+mean and std Swap-Or-Not time 0.191533333ms (0.028158756ms) 
+mean and std Sometimes Recurse time 0.310700000ms (0.236926451ms) 
+--------------------------------------------------
+
+using R = 10247 and N of size 40991
+Thorpe took 3.339ms 
+Swap-Or-Not took 19.285ms 
+Sometimes Recurse took 37.096ms 
+Thorpe took 3.280ms 
+Swap-Or-Not took 18.841ms 
+Sometimes Recurse took 39.114ms 
+Thorpe took 3.268ms 
+Swap-Or-Not took 19.593ms 
+Sometimes Recurse took 39.196ms 
+Thorpe took 3.490ms 
+Swap-Or-Not took 18.825ms 
+Sometimes Recurse took 39.758ms 
+Thorpe took 3.277ms 
+Swap-Or-Not took 18.750ms 
+Sometimes Recurse took 57.039ms 
+Thorpe took 3.273ms 
+Swap-Or-Not took 18.330ms 
+Sometimes Recurse took 39.937ms 
+Thorpe took 3.264ms 
+Swap-Or-Not took 18.114ms 
+Sometimes Recurse took 19.680ms 
+Thorpe took 3.374ms 
+Swap-Or-Not took 18.724ms 
+Sometimes Recurse took 37.493ms 
+Thorpe took 3.266ms 
+Swap-Or-Not took 19.128ms 
+Sometimes Recurse took 57.263ms 
+Thorpe took 3.260ms 
+Swap-Or-Not took 18.537ms 
+Sometimes Recurse took 19.154ms 
+Thorpe took 3.427ms 
+Swap-Or-Not took 19.771ms 
+Sometimes Recurse took 75.871ms 
+Thorpe took 3.263ms 
+Swap-Or-Not took 19.488ms 
+Sometimes Recurse took 38.236ms 
+Thorpe took 3.275ms 
+Swap-Or-Not took 18.319ms 
+Sometimes Recurse took 55.920ms 
+Thorpe took 3.415ms 
+Swap-Or-Not took 18.505ms 
+Sometimes Recurse took 37.056ms 
+Thorpe took 3.391ms 
+Swap-Or-Not took 18.682ms 
+Sometimes Recurse took 18.450ms 
+Thorpe took 3.470ms 
+Swap-Or-Not took 18.540ms 
+Sometimes Recurse took 19.120ms 
+Thorpe took 3.377ms 
+Swap-Or-Not took 18.278ms 
+Sometimes Recurse took 74.505ms 
+Thorpe took 3.278ms 
+Swap-Or-Not took 19.272ms 
+Sometimes Recurse took 19.752ms 
+Thorpe took 3.344ms 
+Swap-Or-Not took 19.109ms 
+Sometimes Recurse took 115.686ms 
+Thorpe took 3.273ms 
+Swap-Or-Not took 18.806ms 
+Sometimes Recurse took 18.775ms 
+Thorpe took 3.348ms 
+Swap-Or-Not took 19.208ms 
+Sometimes Recurse took 18.267ms 
+Thorpe took 3.585ms 
+Swap-Or-Not took 18.386ms 
+Sometimes Recurse took 37.087ms 
+Thorpe took 3.293ms 
+Swap-Or-Not took 18.640ms 
+Sometimes Recurse took 57.119ms 
+Thorpe took 3.279ms 
+Swap-Or-Not took 18.446ms 
+Sometimes Recurse took 19.335ms 
+Thorpe took 3.419ms 
+Swap-Or-Not took 18.576ms 
+Sometimes Recurse took 37.341ms 
+Thorpe took 3.277ms 
+Swap-Or-Not took 18.827ms 
+Sometimes Recurse took 58.338ms 
+Thorpe took 3.262ms 
+Swap-Or-Not took 18.285ms 
+Sometimes Recurse took 37.210ms 
+Thorpe took 3.301ms 
+Swap-Or-Not took 18.311ms 
+Sometimes Recurse took 94.512ms 
+Thorpe took 3.286ms 
+Swap-Or-Not took 18.881ms 
+Sometimes Recurse took 37.678ms 
+Thorpe took 3.325ms 
+Swap-Or-Not took 18.526ms 
+Sometimes Recurse took 55.561ms 
+mean and std Thorp time 3.332633333ms (0.080924855ms)
+mean and std Swap-Or-Not time 18.766100000ms (0.417970202ms) 
+mean and std Sometimes Recurse time 43.718300000ms (23.122973648ms) 
+--------------------------------------------------
+
+using R = 20495 and N of size 40991
+Thorpe took 6.813ms 
+Swap-Or-Not took 36.758ms 
+Sometimes Recurse took 115.850ms 
+Thorpe took 6.568ms 
+Swap-Or-Not took 38.832ms 
+Sometimes Recurse took 76.787ms 
+Thorpe took 6.566ms 
+Swap-Or-Not took 37.691ms 
+Sometimes Recurse took 38.911ms 
+Thorpe took 6.936ms 
+Swap-Or-Not took 37.169ms 
+Sometimes Recurse took 77.176ms 
+Thorpe took 6.570ms 
+Swap-Or-Not took 38.757ms 
+Sometimes Recurse took 74.935ms 
+Thorpe took 6.629ms 
+Swap-Or-Not took 38.071ms 
+Sometimes Recurse took 75.674ms 
+Thorpe took 6.699ms 
+Swap-Or-Not took 37.549ms 
+Sometimes Recurse took 149.775ms 
+Thorpe took 6.581ms 
+Swap-Or-Not took 38.973ms 
+Sometimes Recurse took 36.740ms 
+Thorpe took 6.670ms 
+Swap-Or-Not took 37.555ms 
+Sometimes Recurse took 37.245ms 
+Thorpe took 6.748ms 
+Swap-Or-Not took 39.706ms 
+Sometimes Recurse took 114.410ms 
+Thorpe took 6.666ms 
+Swap-Or-Not took 37.102ms 
+Sometimes Recurse took 37.278ms 
+Thorpe took 7.091ms 
+Swap-Or-Not took 37.621ms 
+Sometimes Recurse took 37.318ms 
+Thorpe took 6.796ms 
+Swap-Or-Not took 37.320ms 
+Sometimes Recurse took 37.963ms 
+Thorpe took 7.057ms 
+Swap-Or-Not took 38.204ms 
+Sometimes Recurse took 37.688ms 
+Thorpe took 6.794ms 
+Swap-Or-Not took 38.971ms 
+Sometimes Recurse took 39.843ms 
+Thorpe took 7.012ms 
+Swap-Or-Not took 37.727ms 
+Sometimes Recurse took 75.319ms 
+Thorpe took 6.604ms 
+Swap-Or-Not took 37.542ms 
+Sometimes Recurse took 77.951ms 
+Thorpe took 6.748ms 
+Swap-Or-Not took 37.641ms 
+Sometimes Recurse took 76.139ms 
+Thorpe took 6.892ms 
+Swap-Or-Not took 36.965ms 
+Sometimes Recurse took 37.575ms 
+Thorpe took 6.911ms 
+Swap-Or-Not took 38.283ms 
+Sometimes Recurse took 76.620ms 
+Thorpe took 6.584ms 
+Swap-Or-Not took 38.186ms 
+Sometimes Recurse took 39.035ms 
+Thorpe took 6.637ms 
+Swap-Or-Not took 37.494ms 
+Sometimes Recurse took 37.396ms 
+Thorpe took 6.856ms 
+Swap-Or-Not took 38.490ms 
+Sometimes Recurse took 73.409ms 
+Thorpe took 6.634ms 
+Swap-Or-Not took 37.096ms 
+Sometimes Recurse took 76.966ms 
+Thorpe took 6.586ms 
+Swap-Or-Not took 37.307ms 
+Sometimes Recurse took 266.065ms 
+Thorpe took 6.745ms 
+Swap-Or-Not took 37.298ms 
+Sometimes Recurse took 37.543ms 
+Thorpe took 6.719ms 
+Swap-Or-Not took 37.219ms 
+Sometimes Recurse took 37.148ms 
+Thorpe took 6.852ms 
+Swap-Or-Not took 40.209ms 
+Sometimes Recurse took 75.627ms 
+Thorpe took 6.644ms 
+Swap-Or-Not took 38.534ms 
+Sometimes Recurse took 37.271ms 
+Thorpe took 6.782ms 
+Swap-Or-Not took 37.667ms 
+Sometimes Recurse took 222.012ms 
+mean and std Thorp time 6.746333333ms (0.148660538ms)
+mean and std Swap-Or-Not time 37.931233333ms (0.814119634ms) 
+mean and std Sometimes Recurse time 74.455633333ms (53.650880084ms) 
+--------------------------------------------------
+
+using R = 40991 and N of size 40991
+Thorpe took 13.365ms 
+Swap-Or-Not took 74.405ms 
+Sometimes Recurse took 226.344ms 
+Thorpe took 13.357ms 
+Swap-Or-Not took 75.359ms 
+Sometimes Recurse took 149.783ms 
+Thorpe took 13.262ms 
+Swap-Or-Not took 73.909ms 
+Sometimes Recurse took 74.553ms 
+Thorpe took 13.316ms 
+Swap-Or-Not took 74.840ms 
+Sometimes Recurse took 74.656ms 
+Thorpe took 13.226ms 
+Swap-Or-Not took 75.731ms 
+Sometimes Recurse took 75.212ms 
+Thorpe took 13.379ms 
+Swap-Or-Not took 75.846ms 
+Sometimes Recurse took 226.739ms 
+Thorpe took 12.976ms 
+Swap-Or-Not took 74.505ms 
+Sometimes Recurse took 445.161ms 
+Thorpe took 13.276ms 
+Swap-Or-Not took 75.470ms 
+Sometimes Recurse took 150.638ms 
+Thorpe took 13.581ms 
+Swap-Or-Not took 75.362ms 
+Sometimes Recurse took 77.136ms 
+Thorpe took 13.529ms 
+Swap-Or-Not took 74.084ms 
+Sometimes Recurse took 75.296ms 
+Thorpe took 13.448ms 
+Swap-Or-Not took 74.625ms 
+Sometimes Recurse took 76.869ms 
+Thorpe took 13.484ms 
+Swap-Or-Not took 75.944ms 
+Sometimes Recurse took 75.798ms 
+Thorpe took 13.432ms 
+Swap-Or-Not took 74.660ms 
+Sometimes Recurse took 300.069ms 
+Thorpe took 13.270ms 
+Swap-Or-Not took 78.710ms 
+Sometimes Recurse took 225.287ms 
+Thorpe took 13.413ms 
+Swap-Or-Not took 76.943ms 
+Sometimes Recurse took 75.466ms 
+Thorpe took 13.401ms 
+Swap-Or-Not took 75.158ms 
+Sometimes Recurse took 224.622ms 
+Thorpe took 13.292ms 
+Swap-Or-Not took 76.895ms 
+Sometimes Recurse took 76.122ms 
+Thorpe took 13.316ms 
+Swap-Or-Not took 77.324ms 
+Sometimes Recurse took 74.611ms 
+Thorpe took 13.323ms 
+Swap-Or-Not took 75.887ms 
+Sometimes Recurse took 74.554ms 
+Thorpe took 13.372ms 
+Swap-Or-Not took 76.159ms 
+Sometimes Recurse took 222.937ms 
+Thorpe took 13.566ms 
+Swap-Or-Not took 76.130ms 
+Sometimes Recurse took 76.824ms 
+Thorpe took 13.484ms 
+Swap-Or-Not took 75.868ms 
+Sometimes Recurse took 73.710ms 
+Thorpe took 13.247ms 
+Swap-Or-Not took 76.775ms 
+Sometimes Recurse took 75.542ms 
+Thorpe took 13.268ms 
+Swap-Or-Not took 74.575ms 
+Sometimes Recurse took 74.130ms 
+Thorpe took 13.367ms 
+Swap-Or-Not took 77.566ms 
+Sometimes Recurse took 150.547ms 
+Thorpe took 13.454ms 
+Swap-Or-Not took 76.304ms 
+Sometimes Recurse took 74.820ms 
+Thorpe took 13.414ms 
+Swap-Or-Not took 74.725ms 
+Sometimes Recurse took 149.010ms 
+Thorpe took 13.508ms 
+Swap-Or-Not took 77.230ms 
+Sometimes Recurse took 77.112ms 
+Thorpe took 13.510ms 
+Swap-Or-Not took 74.388ms 
+Sometimes Recurse took 75.343ms 
+Thorpe took 13.381ms 
+Swap-Or-Not took 74.412ms 
+Sometimes Recurse took 75.838ms 
+mean and std Thorp time 13.373900000ms (0.121197731ms)
+mean and std Swap-Or-Not time 75.659633333ms (1.163046129ms) 
+mean and std Sometimes Recurse time 130.157633333ms (87.884973000ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 50034 bits
+
+
+using R = 1 and N of size 50034
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.010ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.010ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.004ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.008ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.001ms 
+mean and std Thorp time 0.001100000ms (0.000538516ms)
+mean and std Swap-Or-Not time 0.002900000ms (0.001868154ms) 
+mean and std Sometimes Recurse time 0.004233333ms (0.003211265ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 50034
+Thorpe took 0.039ms 
+Swap-Or-Not took 0.206ms 
+Sometimes Recurse took 0.344ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.162ms 
+Sometimes Recurse took 0.173ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.194ms 
+Sometimes Recurse took 0.190ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.172ms 
+Sometimes Recurse took 0.501ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.148ms 
+Sometimes Recurse took 0.322ms 
+Thorpe took 0.037ms 
+Swap-Or-Not took 0.187ms 
+Sometimes Recurse took 0.334ms 
+Thorpe took 0.039ms 
+Swap-Or-Not took 0.208ms 
+Sometimes Recurse took 0.526ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.178ms 
+Sometimes Recurse took 0.197ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.159ms 
+Sometimes Recurse took 1.921ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.148ms 
+Sometimes Recurse took 0.177ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.152ms 
+Sometimes Recurse took 0.151ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.228ms 
+Sometimes Recurse took 1.476ms 
+Thorpe took 0.039ms 
+Swap-Or-Not took 0.278ms 
+Sometimes Recurse took 0.399ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.204ms 
+Sometimes Recurse took 0.459ms 
+Thorpe took 0.042ms 
+Swap-Or-Not took 0.293ms 
+Sometimes Recurse took 0.208ms 
+Thorpe took 0.087ms 
+Swap-Or-Not took 0.273ms 
+Sometimes Recurse took 0.218ms 
+Thorpe took 0.039ms 
+Swap-Or-Not took 0.257ms 
+Sometimes Recurse took 0.242ms 
+Thorpe took 0.071ms 
+Swap-Or-Not took 0.228ms 
+Sometimes Recurse took 0.389ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.262ms 
+Sometimes Recurse took 0.807ms 
+Thorpe took 0.082ms 
+Swap-Or-Not took 0.225ms 
+Sometimes Recurse took 0.454ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.213ms 
+Sometimes Recurse took 0.214ms 
+Thorpe took 0.036ms 
+Swap-Or-Not took 0.218ms 
+Sometimes Recurse took 0.181ms 
+Thorpe took 0.041ms 
+Swap-Or-Not took 0.203ms 
+Sometimes Recurse took 0.740ms 
+Thorpe took 0.041ms 
+Swap-Or-Not took 0.180ms 
+Sometimes Recurse took 0.195ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.194ms 
+Sometimes Recurse took 0.710ms 
+Thorpe took 0.038ms 
+Swap-Or-Not took 0.219ms 
+Sometimes Recurse took 0.170ms 
+Thorpe took 0.041ms 
+Swap-Or-Not took 0.168ms 
+Sometimes Recurse took 0.198ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.213ms 
+Sometimes Recurse took 0.164ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.185ms 
+Sometimes Recurse took 0.362ms 
+Thorpe took 0.040ms 
+Swap-Or-Not took 0.195ms 
+Sometimes Recurse took 0.196ms 
+mean and std Thorp time 0.043333333ms (0.012469518ms)
+mean and std Swap-Or-Not time 0.205000000ms (0.038195113ms) 
+mean and std Sometimes Recurse time 0.420600000ms (0.389125909ms) 
+--------------------------------------------------
+
+using R = 12508 and N of size 50034
+Thorpe took 5.146ms 
+Swap-Or-Not took 21.807ms 
+Sometimes Recurse took 22.143ms 
+Thorpe took 5.058ms 
+Swap-Or-Not took 22.314ms 
+Sometimes Recurse took 21.339ms 
+Thorpe took 5.057ms 
+Swap-Or-Not took 21.582ms 
+Sometimes Recurse took 62.737ms 
+Thorpe took 5.099ms 
+Swap-Or-Not took 22.127ms 
+Sometimes Recurse took 64.188ms 
+Thorpe took 4.944ms 
+Swap-Or-Not took 21.314ms 
+Sometimes Recurse took 21.963ms 
+Thorpe took 4.957ms 
+Swap-Or-Not took 21.902ms 
+Sometimes Recurse took 21.555ms 
+Thorpe took 4.966ms 
+Swap-Or-Not took 21.385ms 
+Sometimes Recurse took 65.224ms 
+Thorpe took 5.013ms 
+Swap-Or-Not took 21.242ms 
+Sometimes Recurse took 44.041ms 
+Thorpe took 4.947ms 
+Swap-Or-Not took 20.884ms 
+Sometimes Recurse took 64.237ms 
+Thorpe took 4.939ms 
+Swap-Or-Not took 21.372ms 
+Sometimes Recurse took 44.857ms 
+Thorpe took 5.053ms 
+Swap-Or-Not took 21.761ms 
+Sometimes Recurse took 21.256ms 
+Thorpe took 5.098ms 
+Swap-Or-Not took 21.277ms 
+Sometimes Recurse took 42.841ms 
+Thorpe took 5.229ms 
+Swap-Or-Not took 22.435ms 
+Sometimes Recurse took 66.655ms 
+Thorpe took 4.948ms 
+Swap-Or-Not took 21.632ms 
+Sometimes Recurse took 22.325ms 
+Thorpe took 4.962ms 
+Swap-Or-Not took 22.100ms 
+Sometimes Recurse took 21.305ms 
+Thorpe took 4.978ms 
+Swap-Or-Not took 21.531ms 
+Sometimes Recurse took 21.371ms 
+Thorpe took 5.184ms 
+Swap-Or-Not took 20.725ms 
+Sometimes Recurse took 21.521ms 
+Thorpe took 5.002ms 
+Swap-Or-Not took 22.676ms 
+Sometimes Recurse took 42.394ms 
+Thorpe took 4.998ms 
+Swap-Or-Not took 20.855ms 
+Sometimes Recurse took 21.433ms 
+Thorpe took 4.968ms 
+Swap-Or-Not took 21.283ms 
+Sometimes Recurse took 21.750ms 
+Thorpe took 4.977ms 
+Swap-Or-Not took 21.986ms 
+Sometimes Recurse took 129.984ms 
+Thorpe took 4.946ms 
+Swap-Or-Not took 21.101ms 
+Sometimes Recurse took 65.514ms 
+Thorpe took 5.070ms 
+Swap-Or-Not took 21.938ms 
+Sometimes Recurse took 22.495ms 
+Thorpe took 5.001ms 
+Swap-Or-Not took 23.073ms 
+Sometimes Recurse took 66.596ms 
+Thorpe took 5.120ms 
+Swap-Or-Not took 21.206ms 
+Sometimes Recurse took 21.343ms 
+Thorpe took 4.947ms 
+Swap-Or-Not took 21.081ms 
+Sometimes Recurse took 86.970ms 
+Thorpe took 4.969ms 
+Swap-Or-Not took 21.195ms 
+Sometimes Recurse took 42.553ms 
+Thorpe took 5.017ms 
+Swap-Or-Not took 21.400ms 
+Sometimes Recurse took 43.152ms 
+Thorpe took 5.020ms 
+Swap-Or-Not took 21.568ms 
+Sometimes Recurse took 44.949ms 
+Thorpe took 4.954ms 
+Swap-Or-Not took 21.198ms 
+Sometimes Recurse took 21.471ms 
+mean and std Thorp time 5.018900000ms (0.076058903ms)
+mean and std Swap-Or-Not time 21.598333333ms (0.543998734ms) 
+mean and std Sometimes Recurse time 42.672066667ms (25.356346306ms) 
+--------------------------------------------------
+
+using R = 25017 and N of size 50034
+Thorpe took 10.161ms 
+Swap-Or-Not took 42.549ms 
+Sometimes Recurse took 42.374ms 
+Thorpe took 10.274ms 
+Swap-Or-Not took 43.248ms 
+Sometimes Recurse took 84.269ms 
+Thorpe took 10.026ms 
+Swap-Or-Not took 43.322ms 
+Sometimes Recurse took 86.907ms 
+Thorpe took 10.040ms 
+Swap-Or-Not took 42.754ms 
+Sometimes Recurse took 127.153ms 
+Thorpe took 9.953ms 
+Swap-Or-Not took 43.102ms 
+Sometimes Recurse took 85.549ms 
+Thorpe took 10.201ms 
+Swap-Or-Not took 43.013ms 
+Sometimes Recurse took 256.286ms 
+Thorpe took 10.000ms 
+Swap-Or-Not took 42.672ms 
+Sometimes Recurse took 130.193ms 
+Thorpe took 10.043ms 
+Swap-Or-Not took 42.556ms 
+Sometimes Recurse took 42.983ms 
+Thorpe took 10.007ms 
+Swap-Or-Not took 42.874ms 
+Sometimes Recurse took 44.813ms 
+Thorpe took 10.159ms 
+Swap-Or-Not took 42.682ms 
+Sometimes Recurse took 43.435ms 
+Thorpe took 10.050ms 
+Swap-Or-Not took 43.692ms 
+Sometimes Recurse took 86.093ms 
+Thorpe took 10.029ms 
+Swap-Or-Not took 44.348ms 
+Sometimes Recurse took 42.415ms 
+Thorpe took 10.025ms 
+Swap-Or-Not took 43.108ms 
+Sometimes Recurse took 42.444ms 
+Thorpe took 10.138ms 
+Swap-Or-Not took 44.479ms 
+Sometimes Recurse took 85.939ms 
+Thorpe took 9.949ms 
+Swap-Or-Not took 43.133ms 
+Sometimes Recurse took 169.917ms 
+Thorpe took 9.875ms 
+Swap-Or-Not took 41.574ms 
+Sometimes Recurse took 47.166ms 
+Thorpe took 10.203ms 
+Swap-Or-Not took 43.074ms 
+Sometimes Recurse took 44.000ms 
+Thorpe took 10.089ms 
+Swap-Or-Not took 42.902ms 
+Sometimes Recurse took 85.303ms 
+Thorpe took 10.099ms 
+Swap-Or-Not took 42.376ms 
+Sometimes Recurse took 42.509ms 
+Thorpe took 10.110ms 
+Swap-Or-Not took 42.504ms 
+Sometimes Recurse took 85.525ms 
+Thorpe took 10.103ms 
+Swap-Or-Not took 42.887ms 
+Sometimes Recurse took 44.679ms 
+Thorpe took 10.420ms 
+Swap-Or-Not took 42.611ms 
+Sometimes Recurse took 88.648ms 
+Thorpe took 9.986ms 
+Swap-Or-Not took 42.405ms 
+Sometimes Recurse took 42.190ms 
+Thorpe took 10.005ms 
+Swap-Or-Not took 44.149ms 
+Sometimes Recurse took 84.869ms 
+Thorpe took 10.153ms 
+Swap-Or-Not took 44.174ms 
+Sometimes Recurse took 87.836ms 
+Thorpe took 10.234ms 
+Swap-Or-Not took 43.439ms 
+Sometimes Recurse took 43.001ms 
+Thorpe took 10.319ms 
+Swap-Or-Not took 43.059ms 
+Sometimes Recurse took 43.702ms 
+Thorpe took 10.169ms 
+Swap-Or-Not took 43.308ms 
+Sometimes Recurse took 127.875ms 
+Thorpe took 10.014ms 
+Swap-Or-Not took 41.754ms 
+Sometimes Recurse took 44.095ms 
+Thorpe took 10.087ms 
+Swap-Or-Not took 45.412ms 
+Sometimes Recurse took 43.645ms 
+mean and std Thorp time 10.097366667ms (0.116103828ms)
+mean and std Swap-Or-Not time 43.105333333ms (0.787467939ms) 
+mean and std Sometimes Recurse time 77.527100000ms (47.024501225ms) 
+--------------------------------------------------
+
+using R = 50034 and N of size 50034
+Thorpe took 20.050ms 
+Swap-Or-Not took 105.139ms 
+Sometimes Recurse took 436.589ms 
+Thorpe took 20.747ms 
+Swap-Or-Not took 85.731ms 
+Sometimes Recurse took 344.525ms 
+Thorpe took 20.333ms 
+Swap-Or-Not took 84.831ms 
+Sometimes Recurse took 86.758ms 
+Thorpe took 20.253ms 
+Swap-Or-Not took 86.833ms 
+Sometimes Recurse took 85.148ms 
+Thorpe took 20.169ms 
+Swap-Or-Not took 84.427ms 
+Sometimes Recurse took 258.905ms 
+Thorpe took 20.316ms 
+Swap-Or-Not took 87.767ms 
+Sometimes Recurse took 428.897ms 
+Thorpe took 20.228ms 
+Swap-Or-Not took 86.731ms 
+Sometimes Recurse took 86.866ms 
+Thorpe took 20.344ms 
+Swap-Or-Not took 85.998ms 
+Sometimes Recurse took 254.133ms 
+Thorpe took 20.343ms 
+Swap-Or-Not took 86.875ms 
+Sometimes Recurse took 86.054ms 
+Thorpe took 20.016ms 
+Swap-Or-Not took 85.817ms 
+Sometimes Recurse took 86.290ms 
+Thorpe took 20.276ms 
+Swap-Or-Not took 85.105ms 
+Sometimes Recurse took 86.456ms 
+Thorpe took 20.311ms 
+Swap-Or-Not took 84.346ms 
+Sometimes Recurse took 87.819ms 
+Thorpe took 20.126ms 
+Swap-Or-Not took 85.101ms 
+Sometimes Recurse took 86.288ms 
+Thorpe took 20.078ms 
+Swap-Or-Not took 85.049ms 
+Sometimes Recurse took 85.795ms 
+Thorpe took 20.123ms 
+Swap-Or-Not took 86.104ms 
+Sometimes Recurse took 85.136ms 
+Thorpe took 20.093ms 
+Swap-Or-Not took 85.030ms 
+Sometimes Recurse took 258.975ms 
+Thorpe took 20.150ms 
+Swap-Or-Not took 85.374ms 
+Sometimes Recurse took 169.970ms 
+Thorpe took 20.426ms 
+Swap-Or-Not took 85.099ms 
+Sometimes Recurse took 84.544ms 
+Thorpe took 20.195ms 
+Swap-Or-Not took 84.549ms 
+Sometimes Recurse took 253.581ms 
+Thorpe took 20.135ms 
+Swap-Or-Not took 88.037ms 
+Sometimes Recurse took 431.070ms 
+Thorpe took 20.254ms 
+Swap-Or-Not took 86.479ms 
+Sometimes Recurse took 171.562ms 
+Thorpe took 19.953ms 
+Swap-Or-Not took 84.639ms 
+Sometimes Recurse took 257.011ms 
+Thorpe took 20.044ms 
+Swap-Or-Not took 84.530ms 
+Sometimes Recurse took 258.730ms 
+Thorpe took 20.121ms 
+Swap-Or-Not took 88.531ms 
+Sometimes Recurse took 84.277ms 
+Thorpe took 20.127ms 
+Swap-Or-Not took 84.887ms 
+Sometimes Recurse took 85.819ms 
+Thorpe took 20.199ms 
+Swap-Or-Not took 86.493ms 
+Sometimes Recurse took 344.206ms 
+Thorpe took 19.984ms 
+Swap-Or-Not took 84.662ms 
+Sometimes Recurse took 169.714ms 
+Thorpe took 20.227ms 
+Swap-Or-Not took 86.527ms 
+Sometimes Recurse took 170.665ms 
+Thorpe took 20.155ms 
+Swap-Or-Not took 87.798ms 
+Sometimes Recurse took 84.540ms 
+Thorpe took 20.088ms 
+Swap-Or-Not took 84.834ms 
+Sometimes Recurse took 342.302ms 
+mean and std Thorp time 20.195466667ms (0.153544724ms)
+mean and std Swap-Or-Not time 86.444100000ms (3.660135538ms) 
+mean and std Sometimes Recurse time 191.754166667ms (119.310940262ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 60043 bits
+
+
+using R = 1 and N of size 60043
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.007ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.016ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.011ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.011ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.011ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.005ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.014ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.001ms 
+mean and std Thorp time 0.001233333ms (0.000760847ms)
+mean and std Swap-Or-Not time 0.003433333ms (0.002216353ms) 
+mean and std Sometimes Recurse time 0.006200000ms (0.004019950ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 60043
+Thorpe took 0.049ms 
+Swap-Or-Not took 0.267ms 
+Sometimes Recurse took 1.045ms 
+Thorpe took 0.047ms 
+Swap-Or-Not took 0.242ms 
+Sometimes Recurse took 0.502ms 
+Thorpe took 0.047ms 
+Swap-Or-Not took 0.267ms 
+Sometimes Recurse took 0.250ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.255ms 
+Sometimes Recurse took 0.220ms 
+Thorpe took 0.045ms 
+Swap-Or-Not took 0.227ms 
+Sometimes Recurse took 0.229ms 
+Thorpe took 0.047ms 
+Swap-Or-Not took 0.244ms 
+Sometimes Recurse took 0.565ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.241ms 
+Sometimes Recurse took 0.454ms 
+Thorpe took 0.046ms 
+Swap-Or-Not took 0.277ms 
+Sometimes Recurse took 1.318ms 
+Thorpe took 0.049ms 
+Swap-Or-Not took 0.228ms 
+Sometimes Recurse took 0.278ms 
+Thorpe took 0.046ms 
+Swap-Or-Not took 0.298ms 
+Sometimes Recurse took 0.238ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.245ms 
+Sometimes Recurse took 0.791ms 
+Thorpe took 0.049ms 
+Swap-Or-Not took 0.220ms 
+Sometimes Recurse took 1.060ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.200ms 
+Sometimes Recurse took 0.233ms 
+Thorpe took 0.047ms 
+Swap-Or-Not took 0.251ms 
+Sometimes Recurse took 0.271ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.267ms 
+Sometimes Recurse took 0.273ms 
+Thorpe took 0.066ms 
+Swap-Or-Not took 0.213ms 
+Sometimes Recurse took 0.497ms 
+Thorpe took 0.066ms 
+Swap-Or-Not took 0.270ms 
+Sometimes Recurse took 0.460ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.204ms 
+Sometimes Recurse took 1.884ms 
+Thorpe took 0.046ms 
+Swap-Or-Not took 0.219ms 
+Sometimes Recurse took 0.220ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.205ms 
+Sometimes Recurse took 0.176ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.219ms 
+Sometimes Recurse took 0.453ms 
+Thorpe took 0.047ms 
+Swap-Or-Not took 0.229ms 
+Sometimes Recurse took 0.236ms 
+Thorpe took 0.048ms 
+Swap-Or-Not took 0.168ms 
+Sometimes Recurse took 0.208ms 
+Thorpe took 0.049ms 
+Swap-Or-Not took 0.224ms 
+Sometimes Recurse took 0.238ms 
+Thorpe took 0.046ms 
+Swap-Or-Not took 0.220ms 
+Sometimes Recurse took 0.236ms 
+Thorpe took 0.047ms 
+Swap-Or-Not took 0.191ms 
+Sometimes Recurse took 0.465ms 
+Thorpe took 0.044ms 
+Swap-Or-Not took 0.276ms 
+Sometimes Recurse took 0.758ms 
+Thorpe took 0.049ms 
+Swap-Or-Not took 0.256ms 
+Sometimes Recurse took 0.486ms 
+Thorpe took 0.050ms 
+Swap-Or-Not took 0.213ms 
+Sometimes Recurse took 0.229ms 
+Thorpe took 0.050ms 
+Swap-Or-Not took 0.244ms 
+Sometimes Recurse took 0.241ms 
+mean and std Thorp time 0.048800000ms (0.004791659ms)
+mean and std Swap-Or-Not time 0.236000000ms (0.028772672ms) 
+mean and std Sometimes Recurse time 0.483800000ms (0.386216123ms) 
+--------------------------------------------------
+
+using R = 15010 and N of size 60043
+Thorpe took 7.301ms 
+Swap-Or-Not took 35.511ms 
+Sometimes Recurse took 70.791ms 
+Thorpe took 7.263ms 
+Swap-Or-Not took 35.102ms 
+Sometimes Recurse took 37.191ms 
+Thorpe took 7.203ms 
+Swap-Or-Not took 33.400ms 
+Sometimes Recurse took 103.404ms 
+Thorpe took 7.189ms 
+Swap-Or-Not took 35.576ms 
+Sometimes Recurse took 70.767ms 
+Thorpe took 7.131ms 
+Swap-Or-Not took 34.122ms 
+Sometimes Recurse took 35.826ms 
+Thorpe took 7.161ms 
+Swap-Or-Not took 33.820ms 
+Sometimes Recurse took 69.405ms 
+Thorpe took 7.352ms 
+Swap-Or-Not took 35.037ms 
+Sometimes Recurse took 68.960ms 
+Thorpe took 7.172ms 
+Swap-Or-Not took 35.559ms 
+Sometimes Recurse took 70.665ms 
+Thorpe took 7.144ms 
+Swap-Or-Not took 34.250ms 
+Sometimes Recurse took 36.300ms 
+Thorpe took 7.171ms 
+Swap-Or-Not took 36.092ms 
+Sometimes Recurse took 71.051ms 
+Thorpe took 7.075ms 
+Swap-Or-Not took 34.151ms 
+Sometimes Recurse took 68.177ms 
+Thorpe took 7.317ms 
+Swap-Or-Not took 34.398ms 
+Sometimes Recurse took 34.045ms 
+Thorpe took 7.335ms 
+Swap-Or-Not took 33.537ms 
+Sometimes Recurse took 34.282ms 
+Thorpe took 7.166ms 
+Swap-Or-Not took 34.451ms 
+Sometimes Recurse took 70.524ms 
+Thorpe took 7.190ms 
+Swap-Or-Not took 34.260ms 
+Sometimes Recurse took 34.264ms 
+Thorpe took 7.270ms 
+Swap-Or-Not took 33.428ms 
+Sometimes Recurse took 34.738ms 
+Thorpe took 7.178ms 
+Swap-Or-Not took 35.158ms 
+Sometimes Recurse took 69.468ms 
+Thorpe took 7.044ms 
+Swap-Or-Not took 35.373ms 
+Sometimes Recurse took 35.961ms 
+Thorpe took 7.141ms 
+Swap-Or-Not took 35.362ms 
+Sometimes Recurse took 108.261ms 
+Thorpe took 7.119ms 
+Swap-Or-Not took 34.847ms 
+Sometimes Recurse took 104.376ms 
+Thorpe took 7.153ms 
+Swap-Or-Not took 34.239ms 
+Sometimes Recurse took 68.579ms 
+Thorpe took 7.217ms 
+Swap-Or-Not took 34.264ms 
+Sometimes Recurse took 33.787ms 
+Thorpe took 7.262ms 
+Swap-Or-Not took 35.791ms 
+Sometimes Recurse took 34.413ms 
+Thorpe took 7.221ms 
+Swap-Or-Not took 34.967ms 
+Sometimes Recurse took 34.781ms 
+Thorpe took 7.276ms 
+Swap-Or-Not took 34.024ms 
+Sometimes Recurse took 104.338ms 
+Thorpe took 7.083ms 
+Swap-Or-Not took 33.871ms 
+Sometimes Recurse took 68.652ms 
+Thorpe took 7.301ms 
+Swap-Or-Not took 33.920ms 
+Sometimes Recurse took 34.094ms 
+Thorpe took 7.177ms 
+Swap-Or-Not took 36.501ms 
+Sometimes Recurse took 70.100ms 
+Thorpe took 7.045ms 
+Swap-Or-Not took 34.129ms 
+Sometimes Recurse took 34.104ms 
+Thorpe took 7.602ms 
+Swap-Or-Not took 34.606ms 
+Sometimes Recurse took 35.119ms 
+mean and std Thorp time 7.208633333ms (0.109144395ms)
+mean and std Swap-Or-Not time 34.658200000ms (0.797098254ms) 
+mean and std Sometimes Recurse time 58.214100000ms (24.512259087ms) 
+--------------------------------------------------
+
+using R = 30021 and N of size 60043
+Thorpe took 14.258ms 
+Swap-Or-Not took 67.630ms 
+Sometimes Recurse took 69.278ms 
+Thorpe took 14.440ms 
+Swap-Or-Not took 68.426ms 
+Sometimes Recurse took 212.102ms 
+Thorpe took 14.442ms 
+Swap-Or-Not took 69.444ms 
+Sometimes Recurse took 138.026ms 
+Thorpe took 14.367ms 
+Swap-Or-Not took 70.443ms 
+Sometimes Recurse took 139.062ms 
+Thorpe took 14.281ms 
+Swap-Or-Not took 69.780ms 
+Sometimes Recurse took 137.119ms 
+Thorpe took 14.302ms 
+Swap-Or-Not took 70.804ms 
+Sometimes Recurse took 68.594ms 
+Thorpe took 14.267ms 
+Swap-Or-Not took 70.743ms 
+Sometimes Recurse took 483.834ms 
+Thorpe took 14.531ms 
+Swap-Or-Not took 69.237ms 
+Sometimes Recurse took 140.778ms 
+Thorpe took 14.333ms 
+Swap-Or-Not took 70.657ms 
+Sometimes Recurse took 137.776ms 
+Thorpe took 14.425ms 
+Swap-Or-Not took 67.752ms 
+Sometimes Recurse took 67.705ms 
+Thorpe took 14.173ms 
+Swap-Or-Not took 71.222ms 
+Sometimes Recurse took 67.891ms 
+Thorpe took 14.259ms 
+Swap-Or-Not took 67.833ms 
+Sometimes Recurse took 69.205ms 
+Thorpe took 14.489ms 
+Swap-Or-Not took 68.638ms 
+Sometimes Recurse took 72.852ms 
+Thorpe took 14.205ms 
+Swap-Or-Not took 68.468ms 
+Sometimes Recurse took 417.611ms 
+Thorpe took 14.158ms 
+Swap-Or-Not took 67.954ms 
+Sometimes Recurse took 70.613ms 
+Thorpe took 14.280ms 
+Swap-Or-Not took 69.078ms 
+Sometimes Recurse took 68.912ms 
+Thorpe took 14.332ms 
+Swap-Or-Not took 68.237ms 
+Sometimes Recurse took 69.726ms 
+Thorpe took 14.273ms 
+Swap-Or-Not took 69.419ms 
+Sometimes Recurse took 140.114ms 
+Thorpe took 14.526ms 
+Swap-Or-Not took 68.572ms 
+Sometimes Recurse took 276.446ms 
+Thorpe took 14.462ms 
+Swap-Or-Not took 69.529ms 
+Sometimes Recurse took 68.861ms 
+Thorpe took 14.363ms 
+Swap-Or-Not took 69.076ms 
+Sometimes Recurse took 136.343ms 
+Thorpe took 14.427ms 
+Swap-Or-Not took 71.832ms 
+Sometimes Recurse took 69.215ms 
+Thorpe took 14.380ms 
+Swap-Or-Not took 70.207ms 
+Sometimes Recurse took 69.005ms 
+Thorpe took 14.331ms 
+Swap-Or-Not took 68.201ms 
+Sometimes Recurse took 69.064ms 
+Thorpe took 14.569ms 
+Swap-Or-Not took 68.605ms 
+Sometimes Recurse took 278.662ms 
+Thorpe took 14.530ms 
+Swap-Or-Not took 69.961ms 
+Sometimes Recurse took 69.863ms 
+Thorpe took 14.323ms 
+Swap-Or-Not took 70.837ms 
+Sometimes Recurse took 69.850ms 
+Thorpe took 14.271ms 
+Swap-Or-Not took 67.779ms 
+Sometimes Recurse took 276.981ms 
+Thorpe took 14.506ms 
+Swap-Or-Not took 71.849ms 
+Sometimes Recurse took 273.068ms 
+Thorpe took 14.517ms 
+Swap-Or-Not took 70.289ms 
+Sometimes Recurse took 210.942ms 
+mean and std Thorp time 14.367333333ms (0.113628146ms)
+mean and std Swap-Or-Not time 69.416733333ms (1.230374900ms) 
+mean and std Sometimes Recurse time 147.983266667ms (108.442675126ms) 
+--------------------------------------------------
+
+using R = 60043 and N of size 60043
+Thorpe took 28.900ms 
+Swap-Or-Not took 136.062ms 
+Sometimes Recurse took 274.921ms 
+Thorpe took 28.680ms 
+Swap-Or-Not took 142.137ms 
+Sometimes Recurse took 275.566ms 
+Thorpe took 28.796ms 
+Swap-Or-Not took 138.985ms 
+Sometimes Recurse took 141.340ms 
+Thorpe took 28.679ms 
+Swap-Or-Not took 138.834ms 
+Sometimes Recurse took 416.949ms 
+Thorpe took 28.621ms 
+Swap-Or-Not took 138.292ms 
+Sometimes Recurse took 276.418ms 
+Thorpe took 28.464ms 
+Swap-Or-Not took 138.676ms 
+Sometimes Recurse took 139.209ms 
+Thorpe took 28.635ms 
+Swap-Or-Not took 137.168ms 
+Sometimes Recurse took 137.835ms 
+Thorpe took 29.082ms 
+Swap-Or-Not took 138.922ms 
+Sometimes Recurse took 824.701ms 
+Thorpe took 29.194ms 
+Swap-Or-Not took 139.193ms 
+Sometimes Recurse took 138.130ms 
+Thorpe took 28.626ms 
+Swap-Or-Not took 138.774ms 
+Sometimes Recurse took 139.134ms 
+Thorpe took 28.841ms 
+Swap-Or-Not took 140.735ms 
+Sometimes Recurse took 553.566ms 
+Thorpe took 28.613ms 
+Swap-Or-Not took 137.818ms 
+Sometimes Recurse took 138.021ms 
+Thorpe took 28.771ms 
+Swap-Or-Not took 136.890ms 
+Sometimes Recurse took 137.183ms 
+Thorpe took 28.748ms 
+Swap-Or-Not took 139.317ms 
+Sometimes Recurse took 140.363ms 
+Thorpe took 28.688ms 
+Swap-Or-Not took 138.256ms 
+Sometimes Recurse took 137.915ms 
+Thorpe took 28.734ms 
+Swap-Or-Not took 137.875ms 
+Sometimes Recurse took 137.328ms 
+Thorpe took 28.312ms 
+Swap-Or-Not took 138.490ms 
+Sometimes Recurse took 279.263ms 
+Thorpe took 28.788ms 
+Swap-Or-Not took 140.671ms 
+Sometimes Recurse took 414.667ms 
+Thorpe took 28.588ms 
+Swap-Or-Not took 141.561ms 
+Sometimes Recurse took 416.567ms 
+Thorpe took 28.983ms 
+Swap-Or-Not took 138.316ms 
+Sometimes Recurse took 139.122ms 
+Thorpe took 28.897ms 
+Swap-Or-Not took 140.815ms 
+Sometimes Recurse took 140.162ms 
+Thorpe took 28.872ms 
+Swap-Or-Not took 137.360ms 
+Sometimes Recurse took 415.482ms 
+Thorpe took 28.666ms 
+Swap-Or-Not took 138.511ms 
+Sometimes Recurse took 277.275ms 
+Thorpe took 28.841ms 
+Swap-Or-Not took 139.260ms 
+Sometimes Recurse took 139.168ms 
+Thorpe took 28.601ms 
+Swap-Or-Not took 139.742ms 
+Sometimes Recurse took 139.210ms 
+Thorpe took 29.092ms 
+Swap-Or-Not took 139.099ms 
+Sometimes Recurse took 137.280ms 
+Thorpe took 28.930ms 
+Swap-Or-Not took 160.389ms 
+Sometimes Recurse took 276.918ms 
+Thorpe took 28.836ms 
+Swap-Or-Not took 137.343ms 
+Sometimes Recurse took 275.324ms 
+Thorpe took 28.708ms 
+Swap-Or-Not took 140.725ms 
+Sometimes Recurse took 139.705ms 
+Thorpe took 28.568ms 
+Swap-Or-Not took 137.278ms 
+Sometimes Recurse took 276.737ms 
+mean and std Thorp time 28.758466667ms (0.186001744ms)
+mean and std Swap-Or-Not time 139.583133333ms (4.107881609ms) 
+mean and std Sometimes Recurse time 249.181966667ms (156.629545897ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 70034 bits
+
+
+using R = 1 and N of size 70034
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.033ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.034ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.011ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.009ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.031ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.008ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.030ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.053ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.021ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.026ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.006ms 
+mean and std Thorp time 0.001100000ms (0.000597216ms)
+mean and std Swap-Or-Not time 0.002900000ms (0.004784349ms) 
+mean and std Sometimes Recurse time 0.011933333ms (0.012249989ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 70034
+Thorpe took 0.051ms 
+Swap-Or-Not took 0.377ms 
+Sometimes Recurse took 1.234ms 
+Thorpe took 0.054ms 
+Swap-Or-Not took 0.502ms 
+Sometimes Recurse took 0.579ms 
+Thorpe took 0.052ms 
+Swap-Or-Not took 0.501ms 
+Sometimes Recurse took 0.770ms 
+Thorpe took 0.053ms 
+Swap-Or-Not took 0.452ms 
+Sometimes Recurse took 0.340ms 
+Thorpe took 0.053ms 
+Swap-Or-Not took 0.365ms 
+Sometimes Recurse took 1.149ms 
+Thorpe took 0.050ms 
+Swap-Or-Not took 0.430ms 
+Sometimes Recurse took 0.824ms 
+Thorpe took 0.056ms 
+Swap-Or-Not took 0.374ms 
+Sometimes Recurse took 0.759ms 
+Thorpe took 0.052ms 
+Swap-Or-Not took 0.526ms 
+Sometimes Recurse took 0.426ms 
+Thorpe took 0.051ms 
+Swap-Or-Not took 0.339ms 
+Sometimes Recurse took 0.377ms 
+Thorpe took 0.053ms 
+Swap-Or-Not took 0.519ms 
+Sometimes Recurse took 1.480ms 
+Thorpe took 0.053ms 
+Swap-Or-Not took 0.355ms 
+Sometimes Recurse took 0.355ms 
+Thorpe took 0.053ms 
+Swap-Or-Not took 0.444ms 
+Sometimes Recurse took 0.336ms 
+Thorpe took 0.054ms 
+Swap-Or-Not took 0.410ms 
+Sometimes Recurse took 0.744ms 
+Thorpe took 0.053ms 
+Swap-Or-Not took 0.457ms 
+Sometimes Recurse took 0.380ms 
+Thorpe took 0.055ms 
+Swap-Or-Not took 0.552ms 
+Sometimes Recurse took 0.822ms 
+Thorpe took 0.078ms 
+Swap-Or-Not took 0.440ms 
+Sometimes Recurse took 0.399ms 
+Thorpe took 0.051ms 
+Swap-Or-Not took 0.477ms 
+Sometimes Recurse took 0.346ms 
+Thorpe took 0.055ms 
+Swap-Or-Not took 0.484ms 
+Sometimes Recurse took 0.320ms 
+Thorpe took 0.051ms 
+Swap-Or-Not took 0.365ms 
+Sometimes Recurse took 0.417ms 
+Thorpe took 0.051ms 
+Swap-Or-Not took 0.357ms 
+Sometimes Recurse took 0.427ms 
+Thorpe took 0.073ms 
+Swap-Or-Not took 0.433ms 
+Sometimes Recurse took 0.376ms 
+Thorpe took 0.055ms 
+Swap-Or-Not took 0.420ms 
+Sometimes Recurse took 0.413ms 
+Thorpe took 0.051ms 
+Swap-Or-Not took 0.421ms 
+Sometimes Recurse took 1.761ms 
+Thorpe took 0.073ms 
+Swap-Or-Not took 0.489ms 
+Sometimes Recurse took 0.365ms 
+Thorpe took 0.092ms 
+Swap-Or-Not took 0.383ms 
+Sometimes Recurse took 1.149ms 
+Thorpe took 0.049ms 
+Swap-Or-Not took 0.395ms 
+Sometimes Recurse took 1.923ms 
+Thorpe took 0.054ms 
+Swap-Or-Not took 0.365ms 
+Sometimes Recurse took 1.116ms 
+Thorpe took 0.050ms 
+Swap-Or-Not took 0.471ms 
+Sometimes Recurse took 0.319ms 
+Thorpe took 0.073ms 
+Swap-Or-Not took 0.300ms 
+Sometimes Recurse took 0.765ms 
+Thorpe took 0.066ms 
+Swap-Or-Not took 0.569ms 
+Sometimes Recurse took 0.451ms 
+mean and std Thorp time 0.057166667ms (0.010129440ms)
+mean and std Swap-Or-Not time 0.432400000ms (0.066324757ms) 
+mean and std Sometimes Recurse time 0.704066667ms (0.441014129ms) 
+--------------------------------------------------
+
+using R = 17508 and N of size 70034
+Thorpe took 9.854ms 
+Swap-Or-Not took 64.810ms 
+Sometimes Recurse took 130.389ms 
+Thorpe took 9.650ms 
+Swap-Or-Not took 65.504ms 
+Sometimes Recurse took 198.880ms 
+Thorpe took 9.579ms 
+Swap-Or-Not took 65.519ms 
+Sometimes Recurse took 262.521ms 
+Thorpe took 9.508ms 
+Swap-Or-Not took 64.904ms 
+Sometimes Recurse took 131.871ms 
+Thorpe took 9.810ms 
+Swap-Or-Not took 63.697ms 
+Sometimes Recurse took 128.798ms 
+Thorpe took 9.795ms 
+Swap-Or-Not took 68.190ms 
+Sometimes Recurse took 64.241ms 
+Thorpe took 9.590ms 
+Swap-Or-Not took 64.921ms 
+Sometimes Recurse took 193.765ms 
+Thorpe took 9.588ms 
+Swap-Or-Not took 65.812ms 
+Sometimes Recurse took 66.409ms 
+Thorpe took 9.562ms 
+Swap-Or-Not took 64.793ms 
+Sometimes Recurse took 65.783ms 
+Thorpe took 9.843ms 
+Swap-Or-Not took 64.392ms 
+Sometimes Recurse took 126.841ms 
+Thorpe took 9.726ms 
+Swap-Or-Not took 65.081ms 
+Sometimes Recurse took 131.727ms 
+Thorpe took 9.497ms 
+Swap-Or-Not took 66.177ms 
+Sometimes Recurse took 67.745ms 
+Thorpe took 9.614ms 
+Swap-Or-Not took 64.966ms 
+Sometimes Recurse took 65.660ms 
+Thorpe took 9.520ms 
+Swap-Or-Not took 65.199ms 
+Sometimes Recurse took 68.344ms 
+Thorpe took 9.888ms 
+Swap-Or-Not took 65.483ms 
+Sometimes Recurse took 65.079ms 
+Thorpe took 9.564ms 
+Swap-Or-Not took 64.721ms 
+Sometimes Recurse took 65.253ms 
+Thorpe took 9.633ms 
+Swap-Or-Not took 63.730ms 
+Sometimes Recurse took 66.122ms 
+Thorpe took 9.534ms 
+Swap-Or-Not took 65.480ms 
+Sometimes Recurse took 196.129ms 
+Thorpe took 9.975ms 
+Swap-Or-Not took 63.371ms 
+Sometimes Recurse took 129.806ms 
+Thorpe took 9.733ms 
+Swap-Or-Not took 64.825ms 
+Sometimes Recurse took 263.484ms 
+Thorpe took 9.593ms 
+Swap-Or-Not took 65.311ms 
+Sometimes Recurse took 325.804ms 
+Thorpe took 9.489ms 
+Swap-Or-Not took 65.263ms 
+Sometimes Recurse took 65.087ms 
+Thorpe took 9.506ms 
+Swap-Or-Not took 64.100ms 
+Sometimes Recurse took 65.360ms 
+Thorpe took 9.528ms 
+Swap-Or-Not took 65.455ms 
+Sometimes Recurse took 67.222ms 
+Thorpe took 9.795ms 
+Swap-Or-Not took 64.671ms 
+Sometimes Recurse took 64.274ms 
+Thorpe took 10.039ms 
+Swap-Or-Not took 65.337ms 
+Sometimes Recurse took 65.839ms 
+Thorpe took 9.650ms 
+Swap-Or-Not took 65.728ms 
+Sometimes Recurse took 259.715ms 
+Thorpe took 9.640ms 
+Swap-Or-Not took 66.385ms 
+Sometimes Recurse took 193.305ms 
+Thorpe took 9.677ms 
+Swap-Or-Not took 65.702ms 
+Sometimes Recurse took 64.159ms 
+Thorpe took 9.572ms 
+Swap-Or-Not took 64.558ms 
+Sometimes Recurse took 257.592ms 
+mean and std Thorp time 9.665066667ms (0.146150820ms)
+mean and std Swap-Or-Not time 65.136166667ms (0.890260340ms) 
+mean and std Sometimes Recurse time 130.573466667ms (78.724114616ms) 
+--------------------------------------------------
+
+using R = 35017 and N of size 70034
+Thorpe took 19.291ms 
+Swap-Or-Not took 127.525ms 
+Sometimes Recurse took 129.175ms 
+Thorpe took 19.698ms 
+Swap-Or-Not took 127.924ms 
+Sometimes Recurse took 128.258ms 
+Thorpe took 19.625ms 
+Swap-Or-Not took 128.863ms 
+Sometimes Recurse took 258.852ms 
+Thorpe took 19.291ms 
+Swap-Or-Not took 131.071ms 
+Sometimes Recurse took 128.491ms 
+Thorpe took 19.356ms 
+Swap-Or-Not took 127.161ms 
+Sometimes Recurse took 128.563ms 
+Thorpe took 19.284ms 
+Swap-Or-Not took 129.186ms 
+Sometimes Recurse took 388.715ms 
+Thorpe took 19.504ms 
+Swap-Or-Not took 127.704ms 
+Sometimes Recurse took 259.543ms 
+Thorpe took 19.329ms 
+Swap-Or-Not took 128.962ms 
+Sometimes Recurse took 127.204ms 
+Thorpe took 19.344ms 
+Swap-Or-Not took 129.048ms 
+Sometimes Recurse took 130.679ms 
+Thorpe took 19.141ms 
+Swap-Or-Not took 129.006ms 
+Sometimes Recurse took 389.722ms 
+Thorpe took 19.647ms 
+Swap-Or-Not took 131.200ms 
+Sometimes Recurse took 391.876ms 
+Thorpe took 19.487ms 
+Swap-Or-Not took 131.378ms 
+Sometimes Recurse took 128.641ms 
+Thorpe took 19.154ms 
+Swap-Or-Not took 130.368ms 
+Sometimes Recurse took 258.410ms 
+Thorpe took 19.361ms 
+Swap-Or-Not took 131.429ms 
+Sometimes Recurse took 130.511ms 
+Thorpe took 19.179ms 
+Swap-Or-Not took 130.317ms 
+Sometimes Recurse took 126.946ms 
+Thorpe took 19.198ms 
+Swap-Or-Not took 130.916ms 
+Sometimes Recurse took 131.207ms 
+Thorpe took 19.320ms 
+Swap-Or-Not took 128.899ms 
+Sometimes Recurse took 125.546ms 
+Thorpe took 19.186ms 
+Swap-Or-Not took 130.602ms 
+Sometimes Recurse took 128.581ms 
+Thorpe took 19.610ms 
+Swap-Or-Not took 130.040ms 
+Sometimes Recurse took 130.715ms 
+Thorpe took 19.451ms 
+Swap-Or-Not took 130.848ms 
+Sometimes Recurse took 127.238ms 
+Thorpe took 19.259ms 
+Swap-Or-Not took 132.261ms 
+Sometimes Recurse took 128.849ms 
+Thorpe took 19.457ms 
+Swap-Or-Not took 132.226ms 
+Sometimes Recurse took 390.808ms 
+Thorpe took 19.153ms 
+Swap-Or-Not took 129.585ms 
+Sometimes Recurse took 257.974ms 
+Thorpe took 19.188ms 
+Swap-Or-Not took 128.109ms 
+Sometimes Recurse took 258.562ms 
+Thorpe took 19.218ms 
+Swap-Or-Not took 129.450ms 
+Sometimes Recurse took 779.071ms 
+Thorpe took 19.297ms 
+Swap-Or-Not took 127.962ms 
+Sometimes Recurse took 129.159ms 
+Thorpe took 19.408ms 
+Swap-Or-Not took 130.716ms 
+Sometimes Recurse took 389.147ms 
+Thorpe took 19.129ms 
+Swap-Or-Not took 128.422ms 
+Sometimes Recurse took 130.845ms 
+Thorpe took 19.339ms 
+Swap-Or-Not took 129.773ms 
+Sometimes Recurse took 258.504ms 
+Thorpe took 19.236ms 
+Swap-Or-Not took 127.208ms 
+Sometimes Recurse took 262.431ms 
+mean and std Thorp time 19.338000000ms (0.157631638ms)
+mean and std Swap-Or-Not time 129.605300000ms (1.449591532ms) 
+mean and std Sometimes Recurse time 224.474100000ms (142.427827892ms) 
+--------------------------------------------------
+
+using R = 70034 and N of size 70034
+Thorpe took 38.678ms 
+Swap-Or-Not took 252.684ms 
+Sometimes Recurse took 1032.122ms 
+Thorpe took 38.986ms 
+Swap-Or-Not took 258.846ms 
+Sometimes Recurse took 777.115ms 
+Thorpe took 38.631ms 
+Swap-Or-Not took 259.957ms 
+Sometimes Recurse took 261.111ms 
+Thorpe took 38.477ms 
+Swap-Or-Not took 259.291ms 
+Sometimes Recurse took 516.525ms 
+Thorpe took 38.960ms 
+Swap-Or-Not took 255.393ms 
+Sometimes Recurse took 261.420ms 
+Thorpe took 38.670ms 
+Swap-Or-Not took 256.260ms 
+Sometimes Recurse took 257.465ms 
+Thorpe took 38.704ms 
+Swap-Or-Not took 257.855ms 
+Sometimes Recurse took 516.231ms 
+Thorpe took 38.543ms 
+Swap-Or-Not took 258.534ms 
+Sometimes Recurse took 771.347ms 
+Thorpe took 39.147ms 
+Swap-Or-Not took 259.210ms 
+Sometimes Recurse took 256.952ms 
+Thorpe took 38.640ms 
+Swap-Or-Not took 257.013ms 
+Sometimes Recurse took 517.120ms 
+Thorpe took 38.976ms 
+Swap-Or-Not took 260.401ms 
+Sometimes Recurse took 258.167ms 
+Thorpe took 38.675ms 
+Swap-Or-Not took 258.601ms 
+Sometimes Recurse took 261.529ms 
+Thorpe took 39.023ms 
+Swap-Or-Not took 263.071ms 
+Sometimes Recurse took 519.964ms 
+Thorpe took 38.705ms 
+Swap-Or-Not took 257.866ms 
+Sometimes Recurse took 254.552ms 
+Thorpe took 39.022ms 
+Swap-Or-Not took 258.580ms 
+Sometimes Recurse took 278.634ms 
+Thorpe took 38.634ms 
+Swap-Or-Not took 255.653ms 
+Sometimes Recurse took 257.619ms 
+Thorpe took 39.580ms 
+Swap-Or-Not took 257.665ms 
+Sometimes Recurse took 1030.382ms 
+Thorpe took 38.855ms 
+Swap-Or-Not took 257.466ms 
+Sometimes Recurse took 257.965ms 
+Thorpe took 38.831ms 
+Swap-Or-Not took 259.657ms 
+Sometimes Recurse took 257.075ms 
+Thorpe took 38.597ms 
+Swap-Or-Not took 257.036ms 
+Sometimes Recurse took 260.259ms 
+Thorpe took 39.448ms 
+Swap-Or-Not took 260.662ms 
+Sometimes Recurse took 517.930ms 
+Thorpe took 38.691ms 
+Swap-Or-Not took 257.985ms 
+Sometimes Recurse took 516.554ms 
+Thorpe took 38.738ms 
+Swap-Or-Not took 254.341ms 
+Sometimes Recurse took 515.029ms 
+Thorpe took 38.599ms 
+Swap-Or-Not took 261.267ms 
+Sometimes Recurse took 258.868ms 
+Thorpe took 39.441ms 
+Swap-Or-Not took 256.396ms 
+Sometimes Recurse took 258.787ms 
+Thorpe took 38.652ms 
+Swap-Or-Not took 260.278ms 
+Sometimes Recurse took 255.292ms 
+Thorpe took 38.764ms 
+Swap-Or-Not took 261.182ms 
+Sometimes Recurse took 516.401ms 
+Thorpe took 38.720ms 
+Swap-Or-Not took 263.933ms 
+Sometimes Recurse took 254.237ms 
+Thorpe took 39.475ms 
+Swap-Or-Not took 258.697ms 
+Sometimes Recurse took 260.057ms 
+Thorpe took 38.953ms 
+Swap-Or-Not took 259.536ms 
+Sometimes Recurse took 258.902ms 
+mean and std Thorp time 38.860500000ms (0.292556063ms)
+mean and std Swap-Or-Not time 258.510533333ms (2.366983055ms) 
+mean and std Sometimes Recurse time 413.853700000ms (226.360735721ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 81163 bits
+
+
+using R = 1 and N of size 81163
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.014ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.019ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.009ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.014ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.010ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.007ms 
+Sometimes Recurse took 0.006ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.008ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.008ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.013ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.008ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.005ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.007ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.007ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.007ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.008ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.006ms 
+Sometimes Recurse took 0.014ms 
+mean and std Thorp time 0.001433333ms (0.000615540ms)
+mean and std Swap-Or-Not time 0.002866667ms (0.002565584ms) 
+mean and std Sometimes Recurse time 0.006500000ms (0.004709919ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 81163
+Thorpe took 0.058ms 
+Swap-Or-Not took 0.434ms 
+Sometimes Recurse took 0.515ms 
+Thorpe took 0.127ms 
+Swap-Or-Not took 0.505ms 
+Sometimes Recurse took 0.377ms 
+Thorpe took 0.061ms 
+Swap-Or-Not took 0.551ms 
+Sometimes Recurse took 0.411ms 
+Thorpe took 0.057ms 
+Swap-Or-Not took 0.433ms 
+Sometimes Recurse took 0.834ms 
+Thorpe took 0.061ms 
+Swap-Or-Not took 0.473ms 
+Sometimes Recurse took 0.754ms 
+Thorpe took 0.059ms 
+Swap-Or-Not took 0.508ms 
+Sometimes Recurse took 0.915ms 
+Thorpe took 0.057ms 
+Swap-Or-Not took 0.402ms 
+Sometimes Recurse took 0.484ms 
+Thorpe took 0.063ms 
+Swap-Or-Not took 0.429ms 
+Sometimes Recurse took 0.437ms 
+Thorpe took 0.061ms 
+Swap-Or-Not took 0.474ms 
+Sometimes Recurse took 0.488ms 
+Thorpe took 0.061ms 
+Swap-Or-Not took 0.479ms 
+Sometimes Recurse took 2.180ms 
+Thorpe took 0.062ms 
+Swap-Or-Not took 0.523ms 
+Sometimes Recurse took 1.355ms 
+Thorpe took 0.059ms 
+Swap-Or-Not took 0.409ms 
+Sometimes Recurse took 0.427ms 
+Thorpe took 0.059ms 
+Swap-Or-Not took 0.492ms 
+Sometimes Recurse took 0.459ms 
+Thorpe took 0.058ms 
+Swap-Or-Not took 0.478ms 
+Sometimes Recurse took 0.426ms 
+Thorpe took 0.062ms 
+Swap-Or-Not took 0.471ms 
+Sometimes Recurse took 0.397ms 
+Thorpe took 0.078ms 
+Swap-Or-Not took 0.573ms 
+Sometimes Recurse took 3.107ms 
+Thorpe took 0.062ms 
+Swap-Or-Not took 0.528ms 
+Sometimes Recurse took 0.449ms 
+Thorpe took 0.060ms 
+Swap-Or-Not took 0.527ms 
+Sometimes Recurse took 0.907ms 
+Thorpe took 0.058ms 
+Swap-Or-Not took 0.473ms 
+Sometimes Recurse took 0.596ms 
+Thorpe took 0.064ms 
+Swap-Or-Not took 0.445ms 
+Sometimes Recurse took 1.053ms 
+Thorpe took 0.061ms 
+Swap-Or-Not took 0.375ms 
+Sometimes Recurse took 0.426ms 
+Thorpe took 0.061ms 
+Swap-Or-Not took 0.438ms 
+Sometimes Recurse took 1.306ms 
+Thorpe took 0.060ms 
+Swap-Or-Not took 0.503ms 
+Sometimes Recurse took 0.809ms 
+Thorpe took 0.058ms 
+Swap-Or-Not took 0.408ms 
+Sometimes Recurse took 0.834ms 
+Thorpe took 0.062ms 
+Swap-Or-Not took 0.555ms 
+Sometimes Recurse took 0.903ms 
+Thorpe took 0.060ms 
+Swap-Or-Not took 0.407ms 
+Sometimes Recurse took 2.698ms 
+Thorpe took 0.060ms 
+Swap-Or-Not took 0.526ms 
+Sometimes Recurse took 0.452ms 
+Thorpe took 0.063ms 
+Swap-Or-Not took 0.441ms 
+Sometimes Recurse took 0.347ms 
+Thorpe took 0.058ms 
+Swap-Or-Not took 0.580ms 
+Sometimes Recurse took 0.957ms 
+Thorpe took 0.059ms 
+Swap-Or-Not took 0.479ms 
+Sometimes Recurse took 0.526ms 
+mean and std Thorp time 0.062966667ms (0.012445838ms)
+mean and std Swap-Or-Not time 0.477300000ms (0.052907561ms) 
+mean and std Sometimes Recurse time 0.860966667ms (0.668687196ms) 
+--------------------------------------------------
+
+using R = 20290 and N of size 81163
+Thorpe took 13.048ms 
+Swap-Or-Not took 90.807ms 
+Sometimes Recurse took 275.972ms 
+Thorpe took 12.735ms 
+Swap-Or-Not took 91.898ms 
+Sometimes Recurse took 91.444ms 
+Thorpe took 12.721ms 
+Swap-Or-Not took 91.670ms 
+Sometimes Recurse took 364.369ms 
+Thorpe took 12.847ms 
+Swap-Or-Not took 89.873ms 
+Sometimes Recurse took 91.034ms 
+Thorpe took 12.860ms 
+Swap-Or-Not took 90.118ms 
+Sometimes Recurse took 91.457ms 
+Thorpe took 12.747ms 
+Swap-Or-Not took 91.234ms 
+Sometimes Recurse took 92.053ms 
+Thorpe took 12.736ms 
+Swap-Or-Not took 91.206ms 
+Sometimes Recurse took 457.348ms 
+Thorpe took 12.993ms 
+Swap-Or-Not took 89.114ms 
+Sometimes Recurse took 181.436ms 
+Thorpe took 12.812ms 
+Swap-Or-Not took 89.213ms 
+Sometimes Recurse took 92.353ms 
+Thorpe took 12.799ms 
+Swap-Or-Not took 89.408ms 
+Sometimes Recurse took 91.395ms 
+Thorpe took 12.731ms 
+Swap-Or-Not took 93.329ms 
+Sometimes Recurse took 91.725ms 
+Thorpe took 12.792ms 
+Swap-Or-Not took 90.146ms 
+Sometimes Recurse took 91.171ms 
+Thorpe took 13.101ms 
+Swap-Or-Not took 91.531ms 
+Sometimes Recurse took 92.027ms 
+Thorpe took 12.970ms 
+Swap-Or-Not took 91.270ms 
+Sometimes Recurse took 457.072ms 
+Thorpe took 12.930ms 
+Swap-Or-Not took 90.746ms 
+Sometimes Recurse took 182.069ms 
+Thorpe took 12.771ms 
+Swap-Or-Not took 91.090ms 
+Sometimes Recurse took 89.395ms 
+Thorpe took 12.983ms 
+Swap-Or-Not took 95.062ms 
+Sometimes Recurse took 90.317ms 
+Thorpe took 12.665ms 
+Swap-Or-Not took 93.577ms 
+Sometimes Recurse took 183.131ms 
+Thorpe took 13.025ms 
+Swap-Or-Not took 91.043ms 
+Sometimes Recurse took 181.219ms 
+Thorpe took 12.705ms 
+Swap-Or-Not took 92.218ms 
+Sometimes Recurse took 92.371ms 
+Thorpe took 12.722ms 
+Swap-Or-Not took 91.069ms 
+Sometimes Recurse took 91.901ms 
+Thorpe took 12.724ms 
+Swap-Or-Not took 90.087ms 
+Sometimes Recurse took 92.720ms 
+Thorpe took 12.756ms 
+Swap-Or-Not took 89.749ms 
+Sometimes Recurse took 90.410ms 
+Thorpe took 12.713ms 
+Swap-Or-Not took 91.976ms 
+Sometimes Recurse took 90.620ms 
+Thorpe took 12.815ms 
+Swap-Or-Not took 91.865ms 
+Sometimes Recurse took 271.521ms 
+Thorpe took 12.779ms 
+Swap-Or-Not took 92.381ms 
+Sometimes Recurse took 272.847ms 
+Thorpe took 12.978ms 
+Swap-Or-Not took 90.140ms 
+Sometimes Recurse took 183.682ms 
+Thorpe took 12.790ms 
+Swap-Or-Not took 90.960ms 
+Sometimes Recurse took 90.841ms 
+Thorpe took 12.776ms 
+Swap-Or-Not took 90.172ms 
+Sometimes Recurse took 177.985ms 
+Thorpe took 12.859ms 
+Swap-Or-Not took 90.954ms 
+Sometimes Recurse took 90.773ms 
+mean and std Thorp time 12.829433333ms (0.116532022ms)
+mean and std Swap-Or-Not time 91.130200000ms (1.302068083ms) 
+mean and std Sometimes Recurse time 161.088600000ms (107.194397204ms) 
+--------------------------------------------------
+
+using R = 40581 and N of size 81163
+Thorpe took 25.609ms 
+Swap-Or-Not took 181.976ms 
+Sometimes Recurse took 362.150ms 
+Thorpe took 25.620ms 
+Swap-Or-Not took 178.145ms 
+Sometimes Recurse took 181.379ms 
+Thorpe took 25.610ms 
+Swap-Or-Not took 181.596ms 
+Sometimes Recurse took 184.665ms 
+Thorpe took 26.142ms 
+Swap-Or-Not took 183.315ms 
+Sometimes Recurse took 183.612ms 
+Thorpe took 25.617ms 
+Swap-Or-Not took 183.080ms 
+Sometimes Recurse took 184.328ms 
+Thorpe took 25.743ms 
+Swap-Or-Not took 185.419ms 
+Sometimes Recurse took 730.571ms 
+Thorpe took 25.569ms 
+Swap-Or-Not took 182.164ms 
+Sometimes Recurse took 182.480ms 
+Thorpe took 25.885ms 
+Swap-Or-Not took 184.906ms 
+Sometimes Recurse took 185.003ms 
+Thorpe took 26.040ms 
+Swap-Or-Not took 182.958ms 
+Sometimes Recurse took 181.841ms 
+Thorpe took 25.646ms 
+Swap-Or-Not took 181.863ms 
+Sometimes Recurse took 180.164ms 
+Thorpe took 25.662ms 
+Swap-Or-Not took 180.455ms 
+Sometimes Recurse took 181.385ms 
+Thorpe took 25.811ms 
+Swap-Or-Not took 181.170ms 
+Sometimes Recurse took 184.499ms 
+Thorpe took 25.923ms 
+Swap-Or-Not took 181.406ms 
+Sometimes Recurse took 362.518ms 
+Thorpe took 25.708ms 
+Swap-Or-Not took 181.679ms 
+Sometimes Recurse took 180.547ms 
+Thorpe took 25.748ms 
+Swap-Or-Not took 180.452ms 
+Sometimes Recurse took 362.543ms 
+Thorpe took 25.723ms 
+Swap-Or-Not took 183.135ms 
+Sometimes Recurse took 180.248ms 
+Thorpe took 26.087ms 
+Swap-Or-Not took 184.667ms 
+Sometimes Recurse took 1090.844ms 
+Thorpe took 25.611ms 
+Swap-Or-Not took 182.003ms 
+Sometimes Recurse took 183.282ms 
+Thorpe took 26.073ms 
+Swap-Or-Not took 183.540ms 
+Sometimes Recurse took 364.084ms 
+Thorpe took 25.696ms 
+Swap-Or-Not took 179.138ms 
+Sometimes Recurse took 185.324ms 
+Thorpe took 25.747ms 
+Swap-Or-Not took 183.519ms 
+Sometimes Recurse took 184.867ms 
+Thorpe took 25.692ms 
+Swap-Or-Not took 181.084ms 
+Sometimes Recurse took 359.216ms 
+Thorpe took 25.745ms 
+Swap-Or-Not took 186.790ms 
+Sometimes Recurse took 181.190ms 
+Thorpe took 25.485ms 
+Swap-Or-Not took 196.283ms 
+Sometimes Recurse took 190.440ms 
+Thorpe took 25.664ms 
+Swap-Or-Not took 183.787ms 
+Sometimes Recurse took 364.494ms 
+Thorpe took 25.927ms 
+Swap-Or-Not took 180.287ms 
+Sometimes Recurse took 182.003ms 
+Thorpe took 25.856ms 
+Swap-Or-Not took 183.330ms 
+Sometimes Recurse took 912.224ms 
+Thorpe took 25.834ms 
+Swap-Or-Not took 182.999ms 
+Sometimes Recurse took 182.735ms 
+Thorpe took 25.435ms 
+Swap-Or-Not took 181.673ms 
+Sometimes Recurse took 181.934ms 
+Thorpe took 25.668ms 
+Swap-Or-Not took 182.168ms 
+Sometimes Recurse took 362.418ms 
+mean and std Thorp time 25.752533333ms (0.172637140ms)
+mean and std Swap-Or-Not time 182.832900000ms (3.067153222ms) 
+mean and std Sometimes Recurse time 297.766266667ms (222.582153280ms) 
+--------------------------------------------------
+
+using R = 81163 and N of size 81163
+Thorpe took 51.689ms 
+Swap-Or-Not took 366.818ms 
+Sometimes Recurse took 368.826ms 
+Thorpe took 51.585ms 
+Swap-Or-Not took 366.138ms 
+Sometimes Recurse took 366.662ms 
+Thorpe took 51.187ms 
+Swap-Or-Not took 365.371ms 
+Sometimes Recurse took 367.068ms 
+Thorpe took 52.222ms 
+Swap-Or-Not took 366.224ms 
+Sometimes Recurse took 1467.625ms 
+Thorpe took 51.971ms 
+Swap-Or-Not took 360.843ms 
+Sometimes Recurse took 363.243ms 
+Thorpe took 51.323ms 
+Swap-Or-Not took 367.551ms 
+Sometimes Recurse took 732.179ms 
+Thorpe took 51.782ms 
+Swap-Or-Not took 365.669ms 
+Sometimes Recurse took 2194.324ms 
+Thorpe took 52.404ms 
+Swap-Or-Not took 364.864ms 
+Sometimes Recurse took 361.332ms 
+Thorpe took 53.083ms 
+Swap-Or-Not took 364.422ms 
+Sometimes Recurse took 1834.082ms 
+Thorpe took 51.710ms 
+Swap-Or-Not took 362.895ms 
+Sometimes Recurse took 730.353ms 
+Thorpe took 51.447ms 
+Swap-Or-Not took 367.557ms 
+Sometimes Recurse took 2552.947ms 
+Thorpe took 51.791ms 
+Swap-Or-Not took 368.510ms 
+Sometimes Recurse took 363.536ms 
+Thorpe took 51.660ms 
+Swap-Or-Not took 367.142ms 
+Sometimes Recurse took 735.142ms 
+Thorpe took 52.180ms 
+Swap-Or-Not took 367.577ms 
+Sometimes Recurse took 733.223ms 
+Thorpe took 52.261ms 
+Swap-Or-Not took 366.414ms 
+Sometimes Recurse took 1455.938ms 
+Thorpe took 51.368ms 
+Swap-Or-Not took 368.029ms 
+Sometimes Recurse took 1097.714ms 
+Thorpe took 51.922ms 
+Swap-Or-Not took 364.669ms 
+Sometimes Recurse took 728.831ms 
+Thorpe took 51.411ms 
+Swap-Or-Not took 367.543ms 
+Sometimes Recurse took 1101.934ms 
+Thorpe took 52.300ms 
+Swap-Or-Not took 365.299ms 
+Sometimes Recurse took 362.531ms 
+Thorpe took 51.749ms 
+Swap-Or-Not took 417.801ms 
+Sometimes Recurse took 381.259ms 
+Thorpe took 52.587ms 
+Swap-Or-Not took 364.488ms 
+Sometimes Recurse took 737.652ms 
+Thorpe took 51.744ms 
+Swap-Or-Not took 362.087ms 
+Sometimes Recurse took 735.344ms 
+Thorpe took 52.007ms 
+Swap-Or-Not took 362.803ms 
+Sometimes Recurse took 366.699ms 
+Thorpe took 51.791ms 
+Swap-Or-Not took 363.836ms 
+Sometimes Recurse took 1094.217ms 
+Thorpe took 51.472ms 
+Swap-Or-Not took 365.024ms 
+Sometimes Recurse took 363.892ms 
+Thorpe took 52.347ms 
+Swap-Or-Not took 365.044ms 
+Sometimes Recurse took 728.465ms 
+Thorpe took 51.689ms 
+Swap-Or-Not took 364.724ms 
+Sometimes Recurse took 1831.852ms 
+Thorpe took 52.286ms 
+Swap-Or-Not took 360.059ms 
+Sometimes Recurse took 1099.041ms 
+Thorpe took 51.821ms 
+Swap-Or-Not took 365.130ms 
+Sometimes Recurse took 365.691ms 
+Thorpe took 51.756ms 
+Swap-Or-Not took 367.487ms 
+Sometimes Recurse took 369.500ms 
+mean and std Thorp time 51.884833333ms (0.412405956ms)
+mean and std Swap-Or-Not time 367.067266667ms (9.641134795ms) 
+mean and std Sometimes Recurse time 866.370066667ms (592.745467875ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 88921 bits
+
+
+using R = 1 and N of size 88921
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.012ms 
+Sometimes Recurse took 0.009ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.018ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.013ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.012ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.015ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.012ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.013ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.012ms 
+Sometimes Recurse took 0.027ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.027ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.012ms 
+Sometimes Recurse took 0.026ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.027ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.012ms 
+Sometimes Recurse took 0.036ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.026ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.046ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.019ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.012ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.013ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.035ms 
+Sometimes Recurse took 0.013ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.014ms 
+Sometimes Recurse took 0.008ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.013ms 
+Sometimes Recurse took 0.013ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.018ms 
+Thorpe took 0.006ms 
+Swap-Or-Not took 0.026ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.014ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.013ms 
+Sometimes Recurse took 0.013ms 
+mean and std Thorp time 0.002000000ms (0.002658320ms)
+mean and std Swap-Or-Not time 0.008233333ms (0.008931903ms) 
+mean and std Sometimes Recurse time 0.012366667ms (0.011600239ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 88921
+Thorpe took 0.069ms 
+Swap-Or-Not took 0.492ms 
+Sometimes Recurse took 0.391ms 
+Thorpe took 0.065ms 
+Swap-Or-Not took 0.501ms 
+Sometimes Recurse took 1.143ms 
+Thorpe took 0.067ms 
+Swap-Or-Not took 0.440ms 
+Sometimes Recurse took 0.393ms 
+Thorpe took 0.069ms 
+Swap-Or-Not took 0.482ms 
+Sometimes Recurse took 0.360ms 
+Thorpe took 0.060ms 
+Swap-Or-Not took 0.527ms 
+Sometimes Recurse took 0.855ms 
+Thorpe took 0.065ms 
+Swap-Or-Not took 0.570ms 
+Sometimes Recurse took 1.654ms 
+Thorpe took 0.063ms 
+Swap-Or-Not took 0.438ms 
+Sometimes Recurse took 0.417ms 
+Thorpe took 0.068ms 
+Swap-Or-Not took 0.458ms 
+Sometimes Recurse took 0.350ms 
+Thorpe took 0.065ms 
+Swap-Or-Not took 0.529ms 
+Sometimes Recurse took 1.811ms 
+Thorpe took 0.065ms 
+Swap-Or-Not took 0.510ms 
+Sometimes Recurse took 0.386ms 
+Thorpe took 0.068ms 
+Swap-Or-Not took 0.432ms 
+Sometimes Recurse took 0.392ms 
+Thorpe took 0.146ms 
+Swap-Or-Not took 0.381ms 
+Sometimes Recurse took 0.340ms 
+Thorpe took 0.067ms 
+Swap-Or-Not took 0.381ms 
+Sometimes Recurse took 0.324ms 
+Thorpe took 0.064ms 
+Swap-Or-Not took 0.364ms 
+Sometimes Recurse took 0.347ms 
+Thorpe took 0.067ms 
+Swap-Or-Not took 0.428ms 
+Sometimes Recurse took 0.650ms 
+Thorpe took 0.061ms 
+Swap-Or-Not took 0.345ms 
+Sometimes Recurse took 1.840ms 
+Thorpe took 0.068ms 
+Swap-Or-Not took 0.448ms 
+Sometimes Recurse took 0.725ms 
+Thorpe took 0.064ms 
+Swap-Or-Not took 0.445ms 
+Sometimes Recurse took 0.814ms 
+Thorpe took 0.069ms 
+Swap-Or-Not took 0.444ms 
+Sometimes Recurse took 0.602ms 
+Thorpe took 0.066ms 
+Swap-Or-Not took 0.364ms 
+Sometimes Recurse took 0.784ms 
+Thorpe took 0.066ms 
+Swap-Or-Not took 0.404ms 
+Sometimes Recurse took 0.322ms 
+Thorpe took 0.063ms 
+Swap-Or-Not took 0.400ms 
+Sometimes Recurse took 0.384ms 
+Thorpe took 0.064ms 
+Swap-Or-Not took 0.348ms 
+Sometimes Recurse took 0.443ms 
+Thorpe took 0.066ms 
+Swap-Or-Not took 0.406ms 
+Sometimes Recurse took 0.323ms 
+Thorpe took 0.066ms 
+Swap-Or-Not took 0.441ms 
+Sometimes Recurse took 0.769ms 
+Thorpe took 0.069ms 
+Swap-Or-Not took 0.334ms 
+Sometimes Recurse took 0.441ms 
+Thorpe took 0.066ms 
+Swap-Or-Not took 0.398ms 
+Sometimes Recurse took 1.120ms 
+Thorpe took 0.100ms 
+Swap-Or-Not took 0.529ms 
+Sometimes Recurse took 0.804ms 
+Thorpe took 0.066ms 
+Swap-Or-Not took 0.417ms 
+Sometimes Recurse took 1.127ms 
+Thorpe took 0.067ms 
+Swap-Or-Not took 0.461ms 
+Sometimes Recurse took 0.414ms 
+mean and std Thorp time 0.069633333ms (0.015606587ms)
+mean and std Swap-Or-Not time 0.437233333ms (0.059954807ms) 
+mean and std Sometimes Recurse time 0.690833333ms (0.438392372ms) 
+--------------------------------------------------
+
+using R = 22230 and N of size 88921
+Thorpe took 15.494ms 
+Swap-Or-Not took 83.422ms 
+Sometimes Recurse took 566.662ms 
+Thorpe took 15.171ms 
+Swap-Or-Not took 80.694ms 
+Sometimes Recurse took 82.853ms 
+Thorpe took 15.358ms 
+Swap-Or-Not took 81.958ms 
+Sometimes Recurse took 242.160ms 
+Thorpe took 15.170ms 
+Swap-Or-Not took 82.280ms 
+Sometimes Recurse took 81.617ms 
+Thorpe took 15.753ms 
+Swap-Or-Not took 83.308ms 
+Sometimes Recurse took 162.826ms 
+Thorpe took 15.193ms 
+Swap-Or-Not took 81.247ms 
+Sometimes Recurse took 83.010ms 
+Thorpe took 15.185ms 
+Swap-Or-Not took 83.800ms 
+Sometimes Recurse took 81.781ms 
+Thorpe took 15.401ms 
+Swap-Or-Not took 81.727ms 
+Sometimes Recurse took 81.071ms 
+Thorpe took 15.288ms 
+Swap-Or-Not took 81.091ms 
+Sometimes Recurse took 327.924ms 
+Thorpe took 15.242ms 
+Swap-Or-Not took 80.554ms 
+Sometimes Recurse took 251.468ms 
+Thorpe took 15.680ms 
+Swap-Or-Not took 84.007ms 
+Sometimes Recurse took 82.168ms 
+Thorpe took 15.415ms 
+Swap-Or-Not took 81.313ms 
+Sometimes Recurse took 82.586ms 
+Thorpe took 15.282ms 
+Swap-Or-Not took 82.685ms 
+Sometimes Recurse took 651.500ms 
+Thorpe took 15.502ms 
+Swap-Or-Not took 82.779ms 
+Sometimes Recurse took 82.596ms 
+Thorpe took 15.246ms 
+Swap-Or-Not took 80.921ms 
+Sometimes Recurse took 484.618ms 
+Thorpe took 15.369ms 
+Swap-Or-Not took 80.844ms 
+Sometimes Recurse took 81.869ms 
+Thorpe took 15.204ms 
+Swap-Or-Not took 81.870ms 
+Sometimes Recurse took 408.525ms 
+Thorpe took 15.137ms 
+Swap-Or-Not took 84.796ms 
+Sometimes Recurse took 164.178ms 
+Thorpe took 15.201ms 
+Swap-Or-Not took 82.181ms 
+Sometimes Recurse took 83.456ms 
+Thorpe took 15.397ms 
+Swap-Or-Not took 83.887ms 
+Sometimes Recurse took 164.295ms 
+Thorpe took 15.345ms 
+Swap-Or-Not took 80.616ms 
+Sometimes Recurse took 82.416ms 
+Thorpe took 15.260ms 
+Swap-Or-Not took 81.394ms 
+Sometimes Recurse took 165.415ms 
+Thorpe took 15.388ms 
+Swap-Or-Not took 84.196ms 
+Sometimes Recurse took 82.885ms 
+Thorpe took 15.290ms 
+Swap-Or-Not took 81.324ms 
+Sometimes Recurse took 81.577ms 
+Thorpe took 15.634ms 
+Swap-Or-Not took 80.715ms 
+Sometimes Recurse took 80.984ms 
+Thorpe took 15.431ms 
+Swap-Or-Not took 82.003ms 
+Sometimes Recurse took 402.045ms 
+Thorpe took 15.314ms 
+Swap-Or-Not took 82.825ms 
+Sometimes Recurse took 245.338ms 
+Thorpe took 15.320ms 
+Swap-Or-Not took 81.211ms 
+Sometimes Recurse took 242.587ms 
+Thorpe took 15.440ms 
+Swap-Or-Not took 82.607ms 
+Sometimes Recurse took 82.688ms 
+Thorpe took 15.284ms 
+Swap-Or-Not took 83.794ms 
+Sometimes Recurse took 165.382ms 
+mean and std Thorp time 15.346466667ms (0.150046822ms)
+mean and std Swap-Or-Not time 82.201633333ms (1.220735556ms) 
+mean and std Sometimes Recurse time 195.949333333ms (157.282846203ms) 
+--------------------------------------------------
+
+using R = 44460 and N of size 88921
+Thorpe took 30.630ms 
+Swap-Or-Not took 162.823ms 
+Sometimes Recurse took 160.065ms 
+Thorpe took 30.824ms 
+Swap-Or-Not took 166.904ms 
+Sometimes Recurse took 327.433ms 
+Thorpe took 30.640ms 
+Swap-Or-Not took 167.682ms 
+Sometimes Recurse took 162.991ms 
+Thorpe took 30.802ms 
+Swap-Or-Not took 164.879ms 
+Sometimes Recurse took 164.988ms 
+Thorpe took 30.667ms 
+Swap-Or-Not took 163.138ms 
+Sometimes Recurse took 161.565ms 
+Thorpe took 30.742ms 
+Swap-Or-Not took 164.171ms 
+Sometimes Recurse took 164.932ms 
+Thorpe took 30.609ms 
+Swap-Or-Not took 162.041ms 
+Sometimes Recurse took 815.781ms 
+Thorpe took 30.602ms 
+Swap-Or-Not took 160.065ms 
+Sometimes Recurse took 489.672ms 
+Thorpe took 31.128ms 
+Swap-Or-Not took 164.567ms 
+Sometimes Recurse took 163.842ms 
+Thorpe took 30.684ms 
+Swap-Or-Not took 161.936ms 
+Sometimes Recurse took 164.741ms 
+Thorpe took 30.685ms 
+Swap-Or-Not took 163.687ms 
+Sometimes Recurse took 163.488ms 
+Thorpe took 30.893ms 
+Swap-Or-Not took 161.709ms 
+Sometimes Recurse took 166.071ms 
+Thorpe took 30.695ms 
+Swap-Or-Not took 167.732ms 
+Sometimes Recurse took 162.159ms 
+Thorpe took 30.642ms 
+Swap-Or-Not took 162.542ms 
+Sometimes Recurse took 327.016ms 
+Thorpe took 30.841ms 
+Swap-Or-Not took 162.587ms 
+Sometimes Recurse took 162.256ms 
+Thorpe took 30.647ms 
+Swap-Or-Not took 161.224ms 
+Sometimes Recurse took 160.745ms 
+Thorpe took 30.637ms 
+Swap-Or-Not took 160.944ms 
+Sometimes Recurse took 165.452ms 
+Thorpe took 30.675ms 
+Swap-Or-Not took 162.781ms 
+Sometimes Recurse took 487.116ms 
+Thorpe took 30.879ms 
+Swap-Or-Not took 161.952ms 
+Sometimes Recurse took 564.197ms 
+Thorpe took 30.705ms 
+Swap-Or-Not took 163.619ms 
+Sometimes Recurse took 309.754ms 
+Thorpe took 28.688ms 
+Swap-Or-Not took 159.919ms 
+Sometimes Recurse took 792.899ms 
+Thorpe took 32.567ms 
+Swap-Or-Not took 173.697ms 
+Sometimes Recurse took 331.972ms 
+Thorpe took 33.346ms 
+Swap-Or-Not took 167.450ms 
+Sometimes Recurse took 343.326ms 
+Thorpe took 31.354ms 
+Swap-Or-Not took 164.121ms 
+Sometimes Recurse took 336.591ms 
+Thorpe took 31.233ms 
+Swap-Or-Not took 177.586ms 
+Sometimes Recurse took 165.871ms 
+Thorpe took 31.324ms 
+Swap-Or-Not took 167.429ms 
+Sometimes Recurse took 499.890ms 
+Thorpe took 32.192ms 
+Swap-Or-Not took 167.011ms 
+Sometimes Recurse took 332.740ms 
+Thorpe took 31.226ms 
+Swap-Or-Not took 161.248ms 
+Sometimes Recurse took 170.059ms 
+Thorpe took 30.474ms 
+Swap-Or-Not took 160.504ms 
+Sometimes Recurse took 510.209ms 
+Thorpe took 31.046ms 
+Swap-Or-Not took 168.792ms 
+Sometimes Recurse took 170.462ms 
+mean and std Thorp time 30.935900000ms (0.752309083ms)
+mean and std Swap-Or-Not time 164.491333333ms (3.909881629ms) 
+mean and std Sometimes Recurse time 303.276100000ms (185.741452051ms) 
+--------------------------------------------------
+
+using R = 88921 and N of size 88921
+Thorpe took 61.618ms 
+Swap-Or-Not took 339.574ms 
+Sometimes Recurse took 313.902ms 
+Thorpe took 59.844ms 
+Swap-Or-Not took 331.901ms 
+Sometimes Recurse took 325.293ms 
+Thorpe took 61.035ms 
+Swap-Or-Not took 313.545ms 
+Sometimes Recurse took 663.853ms 
+Thorpe took 61.335ms 
+Swap-Or-Not took 319.724ms 
+Sometimes Recurse took 642.909ms 
+Thorpe took 62.043ms 
+Swap-Or-Not took 317.641ms 
+Sometimes Recurse took 318.269ms 
+Thorpe took 61.727ms 
+Swap-Or-Not took 322.501ms 
+Sometimes Recurse took 314.416ms 
+Thorpe took 60.939ms 
+Swap-Or-Not took 316.488ms 
+Sometimes Recurse took 316.230ms 
+Thorpe took 61.351ms 
+Swap-Or-Not took 335.833ms 
+Sometimes Recurse took 351.481ms 
+Thorpe took 62.649ms 
+Swap-Or-Not took 327.299ms 
+Sometimes Recurse took 957.803ms 
+Thorpe took 60.873ms 
+Swap-Or-Not took 317.218ms 
+Sometimes Recurse took 650.727ms 
+Thorpe took 61.878ms 
+Swap-Or-Not took 317.445ms 
+Sometimes Recurse took 318.255ms 
+Thorpe took 60.682ms 
+Swap-Or-Not took 320.257ms 
+Sometimes Recurse took 334.747ms 
+Thorpe took 78.434ms 
+Swap-Or-Not took 336.214ms 
+Sometimes Recurse took 1849.872ms 
+Thorpe took 57.984ms 
+Swap-Or-Not took 345.807ms 
+Sometimes Recurse took 1725.809ms 
+Thorpe took 60.000ms 
+Swap-Or-Not took 311.385ms 
+Sometimes Recurse took 306.769ms 
+Thorpe took 59.300ms 
+Swap-Or-Not took 323.411ms 
+Sometimes Recurse took 312.634ms 
+Thorpe took 60.456ms 
+Swap-Or-Not took 309.995ms 
+Sometimes Recurse took 1516.349ms 
+Thorpe took 59.045ms 
+Swap-Or-Not took 306.880ms 
+Sometimes Recurse took 307.988ms 
+Thorpe took 59.626ms 
+Swap-Or-Not took 309.643ms 
+Sometimes Recurse took 1537.492ms 
+Thorpe took 58.511ms 
+Swap-Or-Not took 321.125ms 
+Sometimes Recurse took 623.511ms 
+Thorpe took 60.463ms 
+Swap-Or-Not took 339.518ms 
+Sometimes Recurse took 647.389ms 
+Thorpe took 59.996ms 
+Swap-Or-Not took 317.041ms 
+Sometimes Recurse took 309.054ms 
+Thorpe took 59.027ms 
+Swap-Or-Not took 311.604ms 
+Sometimes Recurse took 1859.564ms 
+Thorpe took 59.516ms 
+Swap-Or-Not took 310.631ms 
+Sometimes Recurse took 309.584ms 
+Thorpe took 59.231ms 
+Swap-Or-Not took 308.586ms 
+Sometimes Recurse took 612.961ms 
+Thorpe took 59.279ms 
+Swap-Or-Not took 347.350ms 
+Sometimes Recurse took 1284.634ms 
+Thorpe took 61.877ms 
+Swap-Or-Not took 322.415ms 
+Sometimes Recurse took 323.732ms 
+Thorpe took 61.830ms 
+Swap-Or-Not took 321.026ms 
+Sometimes Recurse took 330.138ms 
+Thorpe took 61.869ms 
+Swap-Or-Not took 322.606ms 
+Sometimes Recurse took 696.017ms 
+Thorpe took 64.877ms 
+Swap-Or-Not took 343.255ms 
+Sometimes Recurse took 1021.587ms 
+mean and std Thorp time 61.243166667ms (3.489350026ms)
+mean and std Swap-Or-Not time 322.930600000ms (11.586746209ms) 
+mean and std Sometimes Recurse time 702.765633333ms (509.748264194ms) 
+--------------------------------------------------
+
+
+==================================================
+
+p has 100037 bits
+
+
+using R = 1 and N of size 100037
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.010ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.029ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.014ms 
+Sometimes Recurse took 0.016ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.016ms 
+Thorpe took 0.000ms 
+Swap-Or-Not took 0.016ms 
+Sometimes Recurse took 0.034ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.014ms 
+Sometimes Recurse took 0.020ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.024ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.014ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.048ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.014ms 
+Sometimes Recurse took 0.013ms 
+Thorpe took 0.003ms 
+Swap-Or-Not took 0.014ms 
+Sometimes Recurse took 0.003ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.029ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.067ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.043ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.034ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.029ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.026ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.049ms 
+Sometimes Recurse took 0.004ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.000ms 
+Sometimes Recurse took 0.016ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.046ms 
+Sometimes Recurse took 0.029ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.002ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.047ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.002ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.015ms 
+Sometimes Recurse took 0.001ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.001ms 
+Sometimes Recurse took 0.015ms 
+Thorpe took 0.001ms 
+Swap-Or-Not took 0.002ms 
+Sometimes Recurse took 0.017ms 
+mean and std Thorp time 0.001466667ms (0.000669992ms)
+mean and std Swap-Or-Not time 0.013033333ms (0.014046312ms) 
+mean and std Sometimes Recurse time 0.017466667ms (0.015730508ms) 
+--------------------------------------------------
+
+using R = 100 and N of size 100037
+Thorpe took 0.069ms 
+Swap-Or-Not took 0.763ms 
+Sometimes Recurse took 0.770ms 
+Thorpe took 0.126ms 
+Swap-Or-Not took 0.765ms 
+Sometimes Recurse took 0.666ms 
+Thorpe took 0.183ms 
+Swap-Or-Not took 0.733ms 
+Sometimes Recurse took 1.278ms 
+Thorpe took 0.103ms 
+Swap-Or-Not took 0.749ms 
+Sometimes Recurse took 0.655ms 
+Thorpe took 0.123ms 
+Swap-Or-Not took 0.622ms 
+Sometimes Recurse took 0.637ms 
+Thorpe took 0.118ms 
+Swap-Or-Not took 0.652ms 
+Sometimes Recurse took 1.146ms 
+Thorpe took 0.100ms 
+Swap-Or-Not took 0.569ms 
+Sometimes Recurse took 0.743ms 
+Thorpe took 0.118ms 
+Swap-Or-Not took 0.639ms 
+Sometimes Recurse took 1.341ms 
+Thorpe took 0.072ms 
+Swap-Or-Not took 0.716ms 
+Sometimes Recurse took 1.303ms 
+Thorpe took 0.083ms 
+Swap-Or-Not took 0.660ms 
+Sometimes Recurse took 0.599ms 
+Thorpe took 0.076ms 
+Swap-Or-Not took 0.599ms 
+Sometimes Recurse took 0.673ms 
+Thorpe took 0.076ms 
+Swap-Or-Not took 0.669ms 
+Sometimes Recurse took 1.348ms 
+Thorpe took 0.072ms 
+Swap-Or-Not took 0.515ms 
+Sometimes Recurse took 0.804ms 
+Thorpe took 0.076ms 
+Swap-Or-Not took 0.681ms 
+Sometimes Recurse took 1.022ms 
+Thorpe took 0.135ms 
+Swap-Or-Not took 0.592ms 
+Sometimes Recurse took 0.707ms 
+Thorpe took 0.082ms 
+Swap-Or-Not took 0.595ms 
+Sometimes Recurse took 0.614ms 
+Thorpe took 0.076ms 
+Swap-Or-Not took 0.637ms 
+Sometimes Recurse took 3.390ms 
+Thorpe took 0.098ms 
+Swap-Or-Not took 0.949ms 
+Sometimes Recurse took 2.787ms 
+Thorpe took 0.077ms 
+Swap-Or-Not took 0.649ms 
+Sometimes Recurse took 1.657ms 
+Thorpe took 0.075ms 
+Swap-Or-Not took 1.041ms 
+Sometimes Recurse took 2.145ms 
+Thorpe took 0.143ms 
+Swap-Or-Not took 1.216ms 
+Sometimes Recurse took 1.016ms 
+Thorpe took 0.104ms 
+Swap-Or-Not took 0.592ms 
+Sometimes Recurse took 0.621ms 
+Thorpe took 0.077ms 
+Swap-Or-Not took 0.679ms 
+Sometimes Recurse took 1.171ms 
+Thorpe took 0.098ms 
+Swap-Or-Not took 0.635ms 
+Sometimes Recurse took 2.441ms 
+Thorpe took 0.125ms 
+Swap-Or-Not took 0.693ms 
+Sometimes Recurse took 2.454ms 
+Thorpe took 0.116ms 
+Swap-Or-Not took 0.635ms 
+Sometimes Recurse took 2.069ms 
+Thorpe took 0.108ms 
+Swap-Or-Not took 0.633ms 
+Sometimes Recurse took 0.684ms 
+Thorpe took 0.146ms 
+Swap-Or-Not took 0.633ms 
+Sometimes Recurse took 1.008ms 
+Thorpe took 0.119ms 
+Swap-Or-Not took 0.606ms 
+Sometimes Recurse took 1.644ms 
+Thorpe took 0.136ms 
+Swap-Or-Not took 0.575ms 
+Sometimes Recurse took 0.627ms 
+mean and std Thorp time 0.103666667ms (0.027864354ms)
+mean and std Swap-Or-Not time 0.689733333ms (0.142972709ms) 
+mean and std Sometimes Recurse time 1.267333333ms (0.732916063ms) 
+--------------------------------------------------
+
+using R = 25009 and N of size 100037
+Thorpe took 24.076ms 
+Swap-Or-Not took 152.545ms 
+Sometimes Recurse took 158.134ms 
+Thorpe took 19.218ms 
+Swap-Or-Not took 153.137ms 
+Sometimes Recurse took 478.258ms 
+Thorpe took 19.546ms 
+Swap-Or-Not took 169.371ms 
+Sometimes Recurse took 1039.676ms 
+Thorpe took 19.228ms 
+Swap-Or-Not took 155.398ms 
+Sometimes Recurse took 585.567ms 
+Thorpe took 19.043ms 
+Swap-Or-Not took 152.311ms 
+Sometimes Recurse took 156.638ms 
+Thorpe took 21.583ms 
+Swap-Or-Not took 151.291ms 
+Sometimes Recurse took 148.103ms 
+Thorpe took 18.814ms 
+Swap-Or-Not took 142.845ms 
+Sometimes Recurse took 142.401ms 
+Thorpe took 18.059ms 
+Swap-Or-Not took 141.757ms 
+Sometimes Recurse took 147.024ms 
+Thorpe took 19.279ms 
+Swap-Or-Not took 152.416ms 
+Sometimes Recurse took 890.085ms 
+Thorpe took 19.333ms 
+Swap-Or-Not took 157.263ms 
+Sometimes Recurse took 1172.180ms 
+Thorpe took 19.929ms 
+Swap-Or-Not took 145.708ms 
+Sometimes Recurse took 291.198ms 
+Thorpe took 19.830ms 
+Swap-Or-Not took 160.736ms 
+Sometimes Recurse took 298.523ms 
+Thorpe took 19.198ms 
+Swap-Or-Not took 146.128ms 
+Sometimes Recurse took 592.962ms 
+Thorpe took 19.261ms 
+Swap-Or-Not took 155.335ms 
+Sometimes Recurse took 140.292ms 
+Thorpe took 18.193ms 
+Swap-Or-Not took 139.650ms 
+Sometimes Recurse took 162.023ms 
+Thorpe took 19.682ms 
+Swap-Or-Not took 147.284ms 
+Sometimes Recurse took 437.414ms 
+Thorpe took 17.911ms 
+Swap-Or-Not took 155.148ms 
+Sometimes Recurse took 151.421ms 
+Thorpe took 19.379ms 
+Swap-Or-Not took 146.001ms 
+Sometimes Recurse took 163.675ms 
+Thorpe took 19.844ms 
+Swap-Or-Not took 164.337ms 
+Sometimes Recurse took 631.729ms 
+Thorpe took 20.253ms 
+Swap-Or-Not took 146.449ms 
+Sometimes Recurse took 298.250ms 
+Thorpe took 19.108ms 
+Swap-Or-Not took 148.405ms 
+Sometimes Recurse took 440.767ms 
+Thorpe took 18.748ms 
+Swap-Or-Not took 147.380ms 
+Sometimes Recurse took 300.266ms 
+Thorpe took 19.195ms 
+Swap-Or-Not took 146.768ms 
+Sometimes Recurse took 155.240ms 
+Thorpe took 19.002ms 
+Swap-Or-Not took 148.844ms 
+Sometimes Recurse took 148.338ms 
+Thorpe took 19.183ms 
+Swap-Or-Not took 157.522ms 
+Sometimes Recurse took 332.511ms 
+Thorpe took 19.206ms 
+Swap-Or-Not took 160.816ms 
+Sometimes Recurse took 442.990ms 
+Thorpe took 19.204ms 
+Swap-Or-Not took 148.165ms 
+Sometimes Recurse took 295.402ms 
+Thorpe took 18.862ms 
+Swap-Or-Not took 156.965ms 
+Sometimes Recurse took 294.188ms 
+Thorpe took 19.829ms 
+Swap-Or-Not took 147.133ms 
+Sometimes Recurse took 145.320ms 
+Thorpe took 18.839ms 
+Swap-Or-Not took 155.121ms 
+Sometimes Recurse took 143.665ms 
+mean and std Thorp time 19.427833333ms (1.092477218ms)
+mean and std Swap-Or-Not time 151.740966667ms (6.702907571ms) 
+mean and std Sometimes Recurse time 359.474666667ms (271.351809050ms) 
+--------------------------------------------------
+
+using R = 50018 and N of size 100037
+Thorpe took 36.693ms 
+Swap-Or-Not took 301.495ms 
+Sometimes Recurse took 871.572ms 
+Thorpe took 37.235ms 
+Swap-Or-Not took 291.813ms 
+Sometimes Recurse took 288.566ms 
+Thorpe took 37.318ms 
+Swap-Or-Not took 291.702ms 
+Sometimes Recurse took 834.475ms 
+Thorpe took 36.288ms 
+Swap-Or-Not took 309.569ms 
+Sometimes Recurse took 598.535ms 
+Thorpe took 37.952ms 
+Swap-Or-Not took 299.636ms 
+Sometimes Recurse took 305.298ms 
+Thorpe took 36.612ms 
+Swap-Or-Not took 289.047ms 
+Sometimes Recurse took 280.615ms 
+Thorpe took 45.637ms 
+Swap-Or-Not took 290.186ms 
+Sometimes Recurse took 293.443ms 
+Thorpe took 37.017ms 
+Swap-Or-Not took 305.268ms 
+Sometimes Recurse took 1442.635ms 
+Thorpe took 37.014ms 
+Swap-Or-Not took 296.405ms 
+Sometimes Recurse took 560.761ms 
+Thorpe took 36.308ms 
+Swap-Or-Not took 283.841ms 
+Sometimes Recurse took 561.532ms 
+Thorpe took 36.939ms 
+Swap-Or-Not took 285.555ms 
+Sometimes Recurse took 859.856ms 
+Thorpe took 37.011ms 
+Swap-Or-Not took 284.438ms 
+Sometimes Recurse took 1744.166ms 
+Thorpe took 36.854ms 
+Swap-Or-Not took 307.520ms 
+Sometimes Recurse took 293.726ms 
+Thorpe took 37.077ms 
+Swap-Or-Not took 305.141ms 
+Sometimes Recurse took 1827.314ms 
+Thorpe took 41.284ms 
+Swap-Or-Not took 293.093ms 
+Sometimes Recurse took 300.966ms 
+Thorpe took 38.286ms 
+Swap-Or-Not took 295.558ms 
+Sometimes Recurse took 301.792ms 
+Thorpe took 38.278ms 
+Swap-Or-Not took 300.077ms 
+Sometimes Recurse took 598.765ms 
+Thorpe took 38.367ms 
+Swap-Or-Not took 293.829ms 
+Sometimes Recurse took 592.506ms 
+Thorpe took 38.704ms 
+Swap-Or-Not took 306.603ms 
+Sometimes Recurse took 294.215ms 
+Thorpe took 35.920ms 
+Swap-Or-Not took 278.789ms 
+Sometimes Recurse took 274.206ms 
+Thorpe took 35.879ms 
+Swap-Or-Not took 279.910ms 
+Sometimes Recurse took 1704.634ms 
+Thorpe took 36.051ms 
+Swap-Or-Not took 274.234ms 
+Sometimes Recurse took 550.110ms 
+Thorpe took 35.921ms 
+Swap-Or-Not took 279.962ms 
+Sometimes Recurse took 274.105ms 
+Thorpe took 36.119ms 
+Swap-Or-Not took 280.164ms 
+Sometimes Recurse took 1989.026ms 
+Thorpe took 35.929ms 
+Swap-Or-Not took 282.583ms 
+Sometimes Recurse took 561.464ms 
+Thorpe took 36.036ms 
+Swap-Or-Not took 274.837ms 
+Sometimes Recurse took 1661.444ms 
+Thorpe took 35.745ms 
+Swap-Or-Not took 295.386ms 
+Sometimes Recurse took 285.239ms 
+Thorpe took 36.025ms 
+Swap-Or-Not took 278.391ms 
+Sometimes Recurse took 280.750ms 
+Thorpe took 36.076ms 
+Swap-Or-Not took 288.744ms 
+Sometimes Recurse took 298.575ms 
+Thorpe took 38.347ms 
+Swap-Or-Not took 288.685ms 
+Sometimes Recurse took 289.447ms 
+mean and std Thorp time 37.297400000ms (1.942639521ms)
+mean and std Swap-Or-Not time 291.082033333ms (10.061157755ms) 
+mean and std Sometimes Recurse time 700.657933333ms (549.156819263ms) 
+--------------------------------------------------
+
+using R = 100037 and N of size 100037
+Thorpe took 76.590ms 
+Swap-Or-Not took 606.306ms 
+Sometimes Recurse took 1100.978ms 
+Thorpe took 72.722ms 
+Swap-Or-Not took 569.521ms 
+Sometimes Recurse took 1120.252ms 
+Thorpe took 72.212ms 
+Swap-Or-Not took 620.488ms 
+Sometimes Recurse took 1154.945ms 
+Thorpe took 72.457ms 
+Swap-Or-Not took 599.884ms 
+Sometimes Recurse took 593.147ms 
+Thorpe took 73.143ms 
+Swap-Or-Not took 558.995ms 
+Sometimes Recurse took 1144.543ms 
+Thorpe took 72.319ms 
+Swap-Or-Not took 545.125ms 
+Sometimes Recurse took 1644.885ms 
+Thorpe took 72.365ms 
+Swap-Or-Not took 553.571ms 
+Sometimes Recurse took 575.038ms 
+Thorpe took 75.711ms 
+Swap-Or-Not took 595.981ms 
+Sometimes Recurse took 2199.481ms 
+Thorpe took 72.244ms 
+Swap-Or-Not took 593.446ms 
+Sometimes Recurse took 1697.452ms 
+Thorpe took 77.919ms 
+Swap-Or-Not took 624.701ms 
+Sometimes Recurse took 2301.064ms 
+Thorpe took 72.238ms 
+Swap-Or-Not took 564.575ms 
+Sometimes Recurse took 553.737ms 
+Thorpe took 72.195ms 
+Swap-Or-Not took 552.076ms 
+Sometimes Recurse took 1649.377ms 
+Thorpe took 72.273ms 
+Swap-Or-Not took 589.293ms 
+Sometimes Recurse took 549.869ms 
+Thorpe took 72.668ms 
+Swap-Or-Not took 561.652ms 
+Sometimes Recurse took 2765.818ms 
+Thorpe took 72.577ms 
+Swap-Or-Not took 595.934ms 
+Sometimes Recurse took 1101.770ms 
+Thorpe took 75.474ms 
+Swap-Or-Not took 577.135ms 
+Sometimes Recurse took 1160.191ms 
+Thorpe took 72.501ms 
+Swap-Or-Not took 556.220ms 
+Sometimes Recurse took 2271.247ms 
+Thorpe took 72.410ms 
+Swap-Or-Not took 553.489ms 
+Sometimes Recurse took 554.854ms 
+Thorpe took 75.762ms 
+Swap-Or-Not took 595.818ms 
+Sometimes Recurse took 1145.716ms 
+Thorpe took 74.152ms 
+Swap-Or-Not took 555.279ms 
+Sometimes Recurse took 556.550ms 
+Thorpe took 73.269ms 
+Swap-Or-Not took 594.592ms 
+Sometimes Recurse took 1153.369ms 
+Thorpe took 72.283ms 
+Swap-Or-Not took 591.352ms 
+Sometimes Recurse took 583.046ms 
+Thorpe took 73.151ms 
+Swap-Or-Not took 556.261ms 
+Sometimes Recurse took 1683.216ms 
+Thorpe took 72.305ms 
+Swap-Or-Not took 552.710ms 
+Sometimes Recurse took 586.614ms 
+Thorpe took 72.344ms 
+Swap-Or-Not took 592.012ms 
+Sometimes Recurse took 564.565ms 
+Thorpe took 74.860ms 
+Swap-Or-Not took 580.636ms 
+Sometimes Recurse took 548.435ms 
+Thorpe took 74.938ms 
+Swap-Or-Not took 559.360ms 
+Sometimes Recurse took 1099.763ms 
+Thorpe took 72.252ms 
+Swap-Or-Not took 551.774ms 
+Sometimes Recurse took 554.554ms 
+Thorpe took 73.152ms 
+Swap-Or-Not took 596.134ms 
+Sometimes Recurse took 599.333ms 
+Thorpe took 72.292ms 
+Swap-Or-Not took 542.301ms 
+Sometimes Recurse took 553.591ms 
+mean and std Thorp time 73.359266667ms (1.533578146ms)
+mean and std Swap-Or-Not time 576.220700000ms (22.898154710ms) 
+mean and std Sometimes Recurse time 1125.580000000ms (626.707070913ms) 
+--------------------------------------------------
+
+
+==================================================
+
+ivomaffei@MacBook-Pro-di-Ivo testTRE % 

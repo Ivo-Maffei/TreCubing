@@ -300,11 +300,13 @@ int main(int argc, char **argv) {
 	    printf("Tested delay\n");
 	}
 
+
+	if (numR > 1){ // populate N/2 and N in rounds
+	    Rs[1] = N / 2l;
+	    Rs[2] = N;
+	}
+
 	if (input.delayThorp) { // test overall delay
-	    if (numR > 1){ // populate N/2 and N in rounds
-		Rs[1] = N / 2l;
-		Rs[2] = N;
-	    }
 	    for (int ri = 0; ri < numR; ++ri) {
 		for (int ci = 0; ci < numC; ++ci) {
 		    testTimesAll(p, Rs[ri], Cs[ci], input.nIters, fileptr);

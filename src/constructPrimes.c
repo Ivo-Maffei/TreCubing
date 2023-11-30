@@ -5,7 +5,9 @@
 
 
 const unsigned long availablePrimeSizes[] = {
+    512,
     1000,
+    1024,
     2000,
     5000,
     10000,
@@ -186,6 +188,8 @@ void findPseudoSafePrime(mpz_t p, const unsigned long Nbits) {
 // p should already be initialised with the correct size
 void constructPrime(mpz_t p, const unsigned long N) {
     switch (N) {
+    case 512:
+    case 1024:
     case 1000l: // fall trough to 2000l
     case 2000l:
 	return findPseudoSafePrime(p, N);

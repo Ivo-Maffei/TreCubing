@@ -221,13 +221,16 @@ void constructPrime(mpz_t p, const unsigned long N) {
 
 // assuming secpar is not crazt high, we just compute a random number of secpar bits and find the next prime
 // use this as the basis for q
+// MUST ENSURE p=2 mod 3 otherwise cubing is not invertible in ZZ_q^*
 void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const unsigned long N){
 
     unsigned long t;
 
     // get a random number of exactly secpar bits
     randomNumber(p, secpar);
-    mpz_nextprime(p, p); // p is now prime
+    do {
+	mpz_nextprime(p, p); // p is now prime
+    } while (mpz_fdiv_ui(p, 3l) != 2l); // try again untill we get a prime congruent 2 modulo 3
 
     t = mpz_sizeinbase(p, 2); // actual bitsize of p
     t = (N + t -1) / t; // ceil (N/t)

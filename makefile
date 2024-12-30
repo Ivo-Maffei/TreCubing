@@ -1,23 +1,21 @@
 # define some variables
 
 TARGET = trecubing # name of executable
-TARGETOMP := $(addsuffix omp, $(TARGET))
 
-# folders 
+# folders
 BUILDDIR = build
 SRCDIR = src
 
 
 # initialise some vairables for implicit C compilations
-CC = gcc-13
+CC = gcc-14
 CFLAGS = -Ofast -march=native -I/usr/local/include -pedantic
 LIBRARIES = -L/usr/local/lib -lgmp -largp -lcrypto
-LIBRARIESOMP = -L/usr/local/lib -largp -lcrypto -lgmpomp
 
 
 # here we would put extra dependencies if needed.
 # example main.o : main.c testTimes.o --> meaning that we need to rebuild main.o every ttime main.c or testTimes.o changes
-all: $(TARGET) $(TARGETOMP)
+all: $(TARGET)
 
 testTimes.o : $(apprefix $(SRCDIR)/, fpe.h delay.h enc.h rand.h)
 
@@ -51,14 +49,9 @@ $(BUILDDIR):
 $(TARGET) : $(OBJECTS)
 	$(CC) $(CLFAGS)  -o $(TARGET) $(OBJECTS) $(LIBRARIES)
 
-$(TARGETOMP) : $(OBJECTS)
-	$(CC) $(CFLAGS) -fopenmp -o $(TARGETOMP) $(OBJECTS) $(LIBRARIESOMP)
-
-
 
 # we have a "phony" target clean (menaing that clean is not a file to be created
 # clean will simply remove test and all object files
 .PHONY: clean all
 clean :
 	rm -f $(BUILDDIR)/*.o $(TARGET) $(TARGETOMP)
-

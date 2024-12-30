@@ -8,7 +8,7 @@
 // picks a random message m, computes m^3 mod p and then (m^3)^b mod p
 // prints out the time taken and stores the time as well
 // repeate for nIters and outputs means and std
-void testTimesSq(mpz_t p, const unsigned long N, const int nIters, FILE * const fileptr);
+void testTimesSq(mpz_t p, mpz_t b, const unsigned long N, const int nIters, FILE * const fileptr);
 
 // picks random numbers modulo p and encrypts them with R rounds of various FPE schemes
 void testTimesFpe(const mpz_t p, const unsigned long R, const bool t, const bool son, const bool sr, const int nIters, FILE * const fileptr);

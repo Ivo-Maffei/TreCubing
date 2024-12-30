@@ -60,37 +60,31 @@ void writeTimestamp(FILE* const fileptr) {
 // picks a random message m, computes m^3 mod p and then (m^3)^b mod p
 // prints out the time taken and stores the time as well
 // repeate for nIters and outputs means and std
-void testTimesSq(mpz_t p, const unsigned long N, const int nIters, FILE * const fileptr) {
-    
+void testTimesSq(mpz_t p, mpz_t b, const unsigned long N, const int nIters, FILE * const fileptr) {
+
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
     fprintf(fileptr, "Testing cubing using a prime of %lu bits\n", N);
-    
+
     // variable for timing
 
     TIMER_INIT(Enc, nIters);
     TIMER_INIT(Dec, nIters);
     TIMER_INIT(SqGMP, nIters);
-	
+
+
 
     // variables for the computation
-    mpz_t m, m2, c, fexp, b;
-    
+    mpz_t m, m2, c, fexp;
+
 
     // initialse variables
     mpz_init2(m, N+1);
     mpz_init2(m2, N+1);
     mpz_init2(c, N+1);
     mpz_init2(fexp, N+1);
-    mpz_init2(b, N+1);
-    
 
-    // compute b = 1/3 (2p-1))
-    mpz_mul_2exp(b, p, 1l);
-    mpz_sub_ui(b, b, 1l);
-    mpz_fdiv_q_ui(b, b, 3l);
-
-    const unsigned long nSquarings = mpz_sizeinbase(b, 2) - 1l;    
+    const unsigned long nSquarings = mpz_sizeinbase(b, 2) - 1l;
 
     // fast exponent
     mpz_set_ui(fexp, 1l);
@@ -105,12 +99,12 @@ void testTimesSq(mpz_t p, const unsigned long N, const int nIters, FILE * const 
 
         // decryption
 	TIMER_TIME(Dec, mpz_powm(m2, c, b, p), fileptr);
-	
+
 	//check correctness
         if (mpz_cmp(m2, m) != 0){
             fprintf(fileptr, "ERROR: decryption is wrong!!!!");
             fprintf(fileptr, "-> %i\n", mpz_cmp(m2, m));
-	    fprintf(stderr, "ERROR: repeated squaring failed\n");  
+	    fprintf(stderr, "ERROR: repeated squaring failed\n");
         }
 
 	// repeated squarings only
@@ -123,24 +117,24 @@ void testTimesSq(mpz_t p, const unsigned long N, const int nIters, FILE * const 
     TIMER_REPORT(SqGMP, fileptr);
 
     writelineSep(fileptr);
-    
-    mpz_clears(m, m2, c, fexp, b, NULL);
+
+    mpz_clears(m, m2, c, fexp, NULL);
     clearRandomness();
 }
 
 
 void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool son, const bool sr, const int nIters, FILE * const fileptr){
-    
+
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
-    
+
     fprintf(fileptr, "Testing FPE methods assuming a modulus of %lu bits and with %lu rounds\n", mpz_sizeinbase(N, 2), R);
 
      // variable for timing
     TIMER_INIT(Th, nIters);
     TIMER_INIT(Sw, nIters);
     TIMER_INIT(SR, nIters);
-    
+
     mpz_t m;
 
     mpz_init2(m, mpz_sizeinbase(N, 2));
@@ -161,16 +155,16 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
 
 	if(sr){
 	    TIMER_TIME(SR, sometimesRecurse(m, N, R), fileptr);
-	}	
+	}
     }
 
-    
+
     TIMER_REPORT(Th, fileptr);
     TIMER_REPORT(Sw, fileptr);
     TIMER_REPORT(SR, fileptr);
 
     writelineSep(fileptr);
-	
+
     mpz_clears(m, NULL);
     clearRandomness();
 }
@@ -191,7 +185,7 @@ void testTimesAll(const mpz_t p, const unsigned long R, const unsigned long C, c
     mpz_t m, m2, c;
     uint64_t randSeed;
     uint8_t *key;
-  
+
     TIMER_INIT(delay, nIters);
     TIMER_INIT(open, nIters);
 
@@ -204,7 +198,7 @@ void testTimesAll(const mpz_t p, const unsigned long R, const unsigned long C, c
 	key = NULL;
     } else { // using both-ends encryption -> create key
 	key = malloc(32*sizeof(uint8_t));
-	
+
 	for (int word=0; word < 4; ++word) {
 	    randSeed = xorshf64();
 	    memcpy(key + word*8, &randSeed, 8);
@@ -244,7 +238,7 @@ void testTimesEnc(const mpz_t p, const int nIters, FILE * const fileptr) {
 
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
-    
+
     fprintf(fileptr, "Testing both-ends encryption with a prime of size %lu\n", mpz_sizeinbase(p, 2));
 
     mpz_t m, m2, c;
@@ -261,10 +255,10 @@ void testTimesEnc(const mpz_t p, const int nIters, FILE * const fileptr) {
 	fprintf(fileptr, "Failed to initialise OpenSSL\n");
 	goto free;
     }
-    
+
     for (int i = 0; i < nIters; ++i) {
 	randomMessage(m, p);
-	
+
 	// construct random key of 256 bits (32 bytes or 4 64-bits words)
 	uint8_t key[32];
 	for (int i = 0; i < 4; ++i) {
@@ -284,7 +278,7 @@ void testTimesEnc(const mpz_t p, const int nIters, FILE * const fileptr) {
 
     TIMER_REPORT(encryption, fileptr);
     TIMER_REPORT(decryption, fileptr);
-    
+
     writelineSep(fileptr);
 
  free:

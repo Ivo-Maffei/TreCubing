@@ -262,8 +262,6 @@ int main(int argc, char **argv) {
     fflush(fileptr);
 
 
-
-
     for(unsigned long i=0; i < nPrimes; ++i) {
 	constructPrime(p, primeSizes[i]);
 	N = mpz_sizeinbase(p, 2);
@@ -271,7 +269,22 @@ int main(int argc, char **argv) {
 	printf("Testing a prime of size %lu\n", N);
 
 	if (input.cubing) { // test repeated squarings
-	    testTimesSq(p, N, input.nIters, fileptr);
+	    mpz_t b;
+	    mpz_init(b);
+
+	    // set b to be order of group
+	    mpz_sub_ui(b, p, 1l);
+
+	    // compute inverse of 3
+	    if (mpz_fdiv_ui(b, 3l) == 1)
+		mpz_mul_2exp(b, b, 1l); // multiply b by 2
+	    // otherwise b = 2 mod 3 and there is no need to multiply by 2
+	    mpz_add_ui(b, b, 1l); // b <- b+1
+	    mpz_divexact_ui(b, b, 3l); // b <- b/3 = (1+b*((2b)%3))/3
+
+	    testTimesSq(p, b, N, input.nIters, fileptr);
+
+	    mpz_clear(b);
 	    fflush(fileptr);
 	    printf("Tested cubing\n");
 	}

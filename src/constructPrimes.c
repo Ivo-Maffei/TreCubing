@@ -2,7 +2,7 @@
 
 #include <stdbool.h> // for bool
 #include <stdio.h>
-
+#include "rand.h"
 
 const unsigned long availablePrimeSizes[] = {
     512,
@@ -99,7 +99,7 @@ void constructPrime70k(mpz_t p) {
 }
 
 // p = 1213822389 * 2^{81132} - 1
-// bits: 
+// bits:
 void constructPrime80k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 81132l);
@@ -108,7 +108,7 @@ void constructPrime80k(mpz_t p) {
 }
 
 // p = 3364553235* 2^{88889} - 1
-// bits: 
+// bits:
 void constructPrime90k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 88889l);
@@ -117,7 +117,7 @@ void constructPrime90k(mpz_t p) {
 }
 
 // p = 35909079387* 2^{100001} - 1
-// bits: 
+// bits:
 void constructPrime100k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 100001l);
@@ -133,7 +133,7 @@ void findPseudoSafePrime(mpz_t p, const unsigned long Nbits) {
     bool isPrime = false;
     int primeCheck = -1;
     const unsigned long precision = 100l;
- 
+
     mpz_inits(q, NULL);
 
 
@@ -142,7 +142,7 @@ void findPseudoSafePrime(mpz_t p, const unsigned long Nbits) {
 
     isPrime = false;
     while (!isPrime){
-	
+
 	mpz_nextprime(p, p); // supposedly finds the next prime
         mpz_mod_ui(q, p, 3l); // compute q = p % 3
 	// both p and q must be 2 modulo 3
@@ -174,8 +174,8 @@ void findPseudoSafePrime(mpz_t p, const unsigned long Nbits) {
 		mpz_set(p, q);
 		//printf("Found p prime %i\n", primeCheck);
 	    }
-	} 
-	
+	}
+
     }
 
     //printf("Size of prime found %lu\n", mpz_sizeinbase(p, 2));
@@ -218,3 +218,19 @@ void constructPrime(mpz_t p, const unsigned long N) {
     }
 }
 
+
+// assuming secpar is not crazt high, we just compute a random number of secpar bits and find the next prime
+// use this as the basis for q
+void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const unsigned long N){
+
+    unsigned long t;
+
+    // get a random number of exactly secpar bits
+    randomNumber(p, secpar);
+    mpz_nextprime(p, p); // p is now prime
+
+    t = mpz_sizeinbase(p, 2); // actual bitsize of p
+    t = (N + t -1) / t; // ceil (N/t)
+
+    mpz_pow_ui(q, p, t); // q = p^t
+}

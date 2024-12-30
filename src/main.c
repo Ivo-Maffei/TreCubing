@@ -284,7 +284,9 @@ int main(int argc, char **argv) {
 
 	N = mpz_sizeinbase(q, 2);
 
-	printf("Testing a prime of size %lu\n", N);
+	printf("Testing a modulo of size %lu\n", N);
+	if (input.secpar)
+	    printf("The prime power has base of size %lu\n", mpz_sizeinbase(p, 2));
 
 	if (input.cubing) { // test repeated squarings
 	    mpz_t b;

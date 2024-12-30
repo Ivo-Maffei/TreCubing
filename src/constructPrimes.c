@@ -23,7 +23,7 @@ const unsigned long availablePrimeSizes[] = {
     100000
 };
 
-const unsigned long numAvailablePrimes = 13;
+const unsigned long numAvailablePrimes = 15;
 
 
 

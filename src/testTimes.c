@@ -129,8 +129,6 @@ void testTimesSq(mpz_t p, const unsigned long N, const int nIters, FILE * const 
 }
 
 
-
-
 void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool son, const bool sr, const int nIters, FILE * const fileptr){
     
     writeTimestamp(fileptr);

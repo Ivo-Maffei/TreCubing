@@ -1,5 +1,6 @@
 #include "constructPrimes.h"
 
+#include <assert.h>
 #include <stdbool.h> // for bool
 #include <stdio.h>
 #include "rand.h"
@@ -236,7 +237,7 @@ void constructPrime(mpz_t p, const unsigned long N) {
 // MUST ENSURE p=2 mod 3 otherwise cubing is not invertible in ZZ_q^*
 void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const unsigned long N){
 
-    unsigned long t;
+    unsigned long k;
 
     // get a random number of exactly secpar bits
     randomNumber(p, secpar);
@@ -244,8 +245,10 @@ void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const uns
 	mpz_nextprime(p, p); // p is now prime
     } while (mpz_fdiv_ui(p, 3l) != 2l); // try again untill we get a prime congruent 2 modulo 3
 
-    t = mpz_sizeinbase(p, 2); // actual bitsize of p
-    t = (N + t -1) / t; // ceil (N/t)
+    k = mpz_sizeinbase(p, 2); // actual bitsize of p
+    k = (N + k -1) / k; // ceil (N/k)
 
-    mpz_pow_ui(q, p, t); // q = p^t
+    assert(k>1);
+
+    mpz_pow_ui(q, p, k); // q = p^k
 }

@@ -25,6 +25,7 @@ static char doc[] = "Test different primitives for TRE by Cubing and outputs the
 static struct argp_option options[] = {
     // { <long name>, <ascii code for short name>, <name of argument>, <flags>, <documentation>, <group id>}
     { "iterations", 'n', "nIters", 0, "Specify the number of indipendent iterations to run (default: " STRINGIFY(DEFAULTITERS) ")" },
+    { "securityParam", 's', "secpar", 0, "If non-zero, this specifies that we are using a prime power modulo whose base has this bitsize" },
     { "primesize", 'p', "pSize", 0, "Specify the (approximate) size in bits for the modolus to use (default: test all valid sizes)" },
     { 0, 0, 0, 0, "Select one or more of the following 5 if you don't want to test all methods:", 1}, // this is a header for the next group
     { "cubing", 'c', 0, 0, "Test the cubing/cube root performance"},
@@ -44,6 +45,7 @@ struct input {
     char *filename;
     unsigned long nIters;
     unsigned long pSize;
+    unsigned long secpar;
     bool cubing;
     bool delay;
     bool delayThorp;
@@ -68,6 +70,14 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	    return EINVAL;
 	}
 	input->nIters = strtoul(arg, (char**) NULL, 10); // convert arg to unsigned long base 10 and ingnore other outputs [using (char**) NULL]
+	break;
+    }
+    case 's': {// handle security paramter
+	if (arg == 0) { // no value is given
+	    argp_error(state, "If --securityParam is specified, then a number must follow");
+	    return EINVAL;
+	}
+	input->secpar = strtoul(arg, (char**) NULL, 10);
 	break;
     }
     case 'p': {// handle primesize
@@ -207,10 +217,10 @@ int main(int argc, char **argv) {
 	numC = 1;
     }
 
-    mpz_t p;
-    unsigned long N; // bitsize of p
+    mpz_t q, p;
+    unsigned long N; // bitsize of q
 
-    mpz_init(p);
+    mpz_inits(q, p, NULL);
 
 
 
@@ -244,6 +254,11 @@ int main(int argc, char **argv) {
 	for (int i=0; i < numAvailablePrimes; ++i) printf("%lu ", availablePrimeSizes[i]);
 	printf("\n");
     }
+    if (input.secpar)
+	printf("Using prime powers with security parameter %lu\n", input.secpar);
+    else
+	printf("Using safe primes\n");
+
 
     // OPEN OUTPUT FILE
     FILE* fileptr = NULL;
@@ -263,8 +278,11 @@ int main(int argc, char **argv) {
 
 
     for(unsigned long i=0; i < nPrimes; ++i) {
-	constructPrime(p, primeSizes[i]);
-	N = mpz_sizeinbase(p, 2);
+	if (input.secpar)
+	    constructPrimePower(q, p, input.secpar, primeSizes[i]);
+	else constructPrime(q, primeSizes[i]);
+
+	N = mpz_sizeinbase(q, 2);
 
 	printf("Testing a prime of size %lu\n", N);
 
@@ -273,7 +291,10 @@ int main(int argc, char **argv) {
 	    mpz_init(b);
 
 	    // set b to be order of group
-	    mpz_sub_ui(b, p, 1l);
+	    if (input.secpar) {
+		mpz_divexact(b, q, p);
+		mpz_sub(b, q, b); // b <- q - q/p = p^k - p^(k-1) = \phi(q)
+	    } else mpz_sub_ui(b, q, 1l);
 
 	    // compute inverse of 3
 	    if (mpz_fdiv_ui(b, 3l) == 1)
@@ -282,7 +303,7 @@ int main(int argc, char **argv) {
 	    mpz_add_ui(b, b, 1l); // b <- b+1
 	    mpz_divexact_ui(b, b, 3l); // b <- b/3 = (1+b*((2b)%3))/3
 
-	    testTimesSq(p, b, N, input.nIters, fileptr);
+	    testTimesSq(q, b, N, input.nIters, fileptr);
 
 	    mpz_clear(b);
 	    fflush(fileptr);
@@ -290,14 +311,14 @@ int main(int argc, char **argv) {
 	}
 
 	if (input.enc) { // test both-end ecnryptions
-	    testTimesEnc(p, input.nIters, fileptr);
+	    testTimesEnc(q, input.nIters, fileptr);
 	    fflush(fileptr);
 	    printf("Tested both-ends encryption\n");
 	}
 
 	if (input.delay) {
 	    for (int ci = 0; ci < numC; ++ci) {
-		testTimesAll(p, 0, Cs[ci], input.nIters, fileptr);
+		testTimesAll(q, 0, Cs[ci], input.nIters, fileptr);
 		fflush(fileptr);
 	    }
 	    printf("Tested delay\n");
@@ -312,7 +333,7 @@ int main(int argc, char **argv) {
 	if (input.delayThorp) { // test overall delay
 	    for (int ri = 0; ri < numR; ++ri) {
 		for (int ci = 0; ci < numC; ++ci) {
-		    testTimesAll(p, Rs[ri], Cs[ci], input.nIters, fileptr);
+		    testTimesAll(q, Rs[ri], Cs[ci], input.nIters, fileptr);
 		    fflush(fileptr);
 		}
 	    }
@@ -321,7 +342,7 @@ int main(int argc, char **argv) {
 
 	if (input.fpeThorp || input.fpeSoN || input.fpeSR) {
 	    for (int ri = 0; ri < numR; ++ri) {
-		testTimesFpe(p, Rs[ri], input.fpeThorp, input.fpeSoN, input.fpeSR, input.nIters, fileptr);
+		testTimesFpe(q, Rs[ri], input.fpeThorp, input.fpeSoN, input.fpeSR, input.nIters, fileptr);
 		fflush(fileptr);
 	    }
 	    printf("Tested FPEs\n");
@@ -335,6 +356,6 @@ int main(int argc, char **argv) {
 
 
 
-    mpz_clear(p);
+    mpz_clears(q, p, NULL);
     return 0;
 }

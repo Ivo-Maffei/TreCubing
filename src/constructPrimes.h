@@ -7,6 +7,10 @@
 // p should already be initialised with the correct size
 void constructPrime(mpz_t p, const unsigned long N);
 
+// construct a prime power q = p^k such that p is a prime of (at least) secpar bits and
+// q has at least N bits
+void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const unsigned long N);
+
 extern const unsigned long numAvailablePrimes;
 
 extern const unsigned long availablePrimeSizes[30]; // assuming we never exceed length 30

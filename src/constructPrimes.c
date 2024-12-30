@@ -192,29 +192,41 @@ void constructPrime(mpz_t p, const unsigned long N) {
     case 1024:
     case 1000l: // fall trough to 2000l
     case 2000l:
-	return findPseudoSafePrime(p, N);
+	findPseudoSafePrime(p, N);
+	break;
     case 5000l:
-	return constructPrime5k(p);
+	constructPrime5k(p);
+	break;
     case 10000l:
-	return constructPrime10k(p);
+	constructPrime10k(p);
+	break;
     case 20000l:
-	return constructPrime20k(p);
+	constructPrime20k(p);
+	break;
     case 30000l:
-	return constructPrime30k(p);
+	constructPrime30k(p);
+	break;
     case 40000l:
-	return constructPrime40k(p);
+	constructPrime40k(p);
+	break;
     case 50000l:
-	return constructPrime50k(p);
+	constructPrime50k(p);
+	break;
     case 60000l:
-	return constructPrime60k(p);
+	constructPrime60k(p);
+	break;
     case 70000l:
-	return constructPrime70k(p);
+	constructPrime70k(p);
+	break;
     case 80000l:
-	return constructPrime80k(p);
+	constructPrime80k(p);
+	break;
     case 90000l:
-	return constructPrime90k(p);
+	constructPrime90k(p);
+	break;
     case 100000l:
-	return constructPrime100k(p);
+	constructPrime100k(p);
+	break;
     }
 }
 

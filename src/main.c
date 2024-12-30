@@ -7,7 +7,6 @@
 #include <stdlib.h> // convert strings to int/longs
 #include <string.h> // to parse strings
 
-#include <omp.h>
 
 #include "constructPrimes.h"
 #include "testTimes.h"
@@ -33,7 +32,7 @@ static struct argp_option options[] = {
     { "delayThorp", -2, 0, 0, "Test the performance of the whole delay/open method using Thorp as FPE"},
     { "encryption", 'e', 0, 0, "Test the both-ends encryption performance"},
     { "fpe", 'f', "fpeScheme",  OPTION_ARG_OPTIONAL, "Test the performance of the specified FPE methods as a comma separated list (if no list is provided, all methods are tested). Valid FPE schemes are: 'thorp', 'swapornot', 'sometimesrecurse'" },
-    { "rounds", 'R', "nRounds", 0, "Specify the number of round to use when testing FPE schemes. If this option is omitted, we test the values: 100, 0.5*primesize and primesize", 2 },
+    { "rounds", 'R', "nRounds", 0, "Specify the number of rounds to use when testing FPE schemes. If this option is omitted, we test the values: 100, 0.5*primesize and primesize", 2 },
     { "chain", 'C', "nChain", 0, "Specify how many delays to chain together when testing the whole delay process. If this option is omitted, we test values: 10 and 100" },
     { "clean", -1, 0, 0, "Clean the output file before writing to it", 1}, // we use -1 to avoid allowing a short version
     { 0 } // termination of this "vector"
@@ -61,7 +60,7 @@ struct input {
 error_t parser_fun(int key, char *arg, struct argp_state *state) {
 
     struct input *input = state->input; // state->input is a pointer to my struct input
-    
+
     switch(key){
     case 'n': {// handle iterations
 	if (arg == 0) { // no value is given
@@ -135,7 +134,7 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
     }
     case -1: { // clean option specified
 	input->clean = true;
-    }	
+    }
     case ARGP_KEY_ARG: {// handle non-optional argument
 	if (state->arg_num != 0) { // we have already parsed a non-optional argument (hence we already have a filenema)
 	    argp_error(state, "Only one output file can be specified"); // output error message and terminate the program
@@ -172,20 +171,11 @@ static struct argp argp_struct = { options, parser_fun, args_doc , doc };
 // ENTRYPOINT
 int main(int argc, char **argv) {
 
-    #ifdef _OMP
-    omp_set_num_threads(20);
-    omp_set_dynamic(1);
-    omp_set_nested(1);
-    omp_set_max_active_levels(5);
-
-    printf("Max number of threads: %d\n", omp_get_max_threads());
-    #endif
-    
     assert(GMP_NUMB_BITS == 64);
-    
+
     // create object to encapsulate all inputs
     struct input input = { .nIters = DEFAULTITERS };  // we give a default value of 30 to nIters; everything else deafaults to 0 (NULL, false)
-    
+
     error_t errorcode = argp_parse(&argp_struct, argc, argv, 0, NULL, &input); // first 0 are the optional flags. the NULL is for unparsed argumets
 
     // if any error found, stop
@@ -216,7 +206,7 @@ int main(int argc, char **argv) {
 	Cs[0] = input.nChain;
 	numC = 1;
     }
-    
+
     mpz_t p;
     unsigned long N; // bitsize of p
 
@@ -236,18 +226,18 @@ int main(int argc, char **argv) {
     printf("\n");
 
     printf("delay uses both-ends encryption: %s\ndelay uses Thorp: %s\n", BOOLSTR(input.delay), BOOLSTR(input.delayThorp));
-    
+
     printf("FPE methods: %s%s%s",
 	   input.fpeThorp ? "Thorp " : "",
 	   input.fpeSoN ? "Swap-or-Not " : "",
 	   input.fpeSR ? "SometimesRecurse" : "");
-    
+
     if (input.fpeThorp || input.fpeSoN || input.fpeSR) {
 	printf(" (using round lengths: %lu", Rs[0]);
 	if (numR > 1) printf(" primesize/2 primesize");
 	printf(")\n");
     } else printf("none\n");
-    
+
     printf("Prime sizes selected: ");
     if (input.pSize) printf("%lu\n", input.pSize);
     else {
@@ -265,15 +255,15 @@ int main(int argc, char **argv) {
 	printf("Cannot open file, aborting...\n");
 	return -2;
     }
-    
+
     fprintf(fileptr, "\n\n");
     for(int i=0; i<50; ++i) fprintf(fileptr, "=");
     fprintf(fileptr, "\nSTART TESTS using %lu iterations\n\n", input.nIters);
     fflush(fileptr);
 
 
-    
-    
+
+
     for(unsigned long i=0; i < nPrimes; ++i) {
 	constructPrime(p, primeSizes[i]);
 	N = mpz_sizeinbase(p, 2);
@@ -285,7 +275,7 @@ int main(int argc, char **argv) {
 	    fflush(fileptr);
 	    printf("Tested cubing\n");
 	}
-	
+
 	if (input.enc) { // test both-end ecnryptions
 	    testTimesEnc(p, input.nIters, fileptr);
 	    fflush(fileptr);
@@ -329,10 +319,9 @@ int main(int argc, char **argv) {
     fprintf(fileptr, "\n\nEND TEST\n");
     for(int i=0; i<50; ++i) fprintf(fileptr, "=");
     fclose(fileptr);
-    
-    
-    
+
+
+
     mpz_clear(p);
     return 0;
 }
-

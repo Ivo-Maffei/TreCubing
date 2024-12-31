@@ -190,7 +190,7 @@ void cycleEnc(mpz_t c, const mpz_t m, const mpz_t p, const uint8_t *key) {
 	    fprintf(stderr, "Both-Ends Enc failed\n");
 	    return;
 	}
-    } while (mpz_cmp(c, p) >= 0 || mpz_sgn(c) == 0); // repeat if c >= p or c == 0
+    } while (mpz_cmp(c, p) >= 0); // repeat if c >= p
 }
 
 
@@ -202,7 +202,7 @@ void cycleDec(mpz_t m, const mpz_t c, const mpz_t p, const uint8_t *key) {
 	    fprintf(stderr, "Both-Ends Dec failed\n");
 	    return;
 	}
-    } while (mpz_cmp(m, p) >= 0 || mpz_sgn(m) == 0);
+    } while (mpz_cmp(m, p) >= 0);
 }
 
 

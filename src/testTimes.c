@@ -168,7 +168,7 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
 }
 
 
-void testTimesAll(const mpz_t p, const unsigned long R, const unsigned long C, const int nIters, FILE * const fileptr) {
+void testTimesAll(const mpz_t p, const mpz_t b, const unsigned long R, const unsigned long C, const int nIters, FILE * const fileptr) {
 
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
@@ -209,7 +209,7 @@ void testTimesAll(const mpz_t p, const unsigned long R, const unsigned long C, c
 
 	TIMER_TIME(delay, delay(c, m, p, C, R, randSeed, key), fileptr);
 
-	TIMER_TIME(open, open(m2, c, p, C, R, randSeed, key), fileptr);
+	TIMER_TIME(open, open(m2, c, p, b, C, R, randSeed, key), fileptr);
 
 	if(mpz_cmp(m, m2) != 0){
 	    printf("ERROR!!!!!! delay open returned wrong message\n");

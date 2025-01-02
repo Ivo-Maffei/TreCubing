@@ -24,7 +24,7 @@ int initialiseOpenSSL() {
     return 0;
 }
 
-
+// N is the bitsize of the modulo (i.e. largest bitsize of m)
 int bothEndsEnc(mpz_t c, const mpz_t m, const uint64_t N, const uint8_t *key){
 
     int t;
@@ -36,6 +36,7 @@ int bothEndsEnc(mpz_t c, const mpz_t m, const uint64_t N, const uint8_t *key){
     const int offsetBytes = byteSize - encBytes; // number of bytes that we leave untouched (rounding up)
     const int bytePadding = N%8 ? 8 - (N%8) : 0; // number of extra bit to fill up the highest byte.
     const int nLimbs = (N+63) / 64; // num limbs to contain p
+    const int bufferSize = nLimbs * 8; // size in bytes of the buffer of nLimbs limbs
 
     if (ctx == NULL) {
 	if (initialiseOpenSSL() != 0){
@@ -43,9 +44,9 @@ int bothEndsEnc(mpz_t c, const mpz_t m, const uint64_t N, const uint8_t *key){
 	    return -1;
 	}
     }
-        
+
     // pass key and cipher to the context
-    if (1 != EVP_EncryptInit_ex2(ctx, aes256, key , NULL, NULL)){
+    if (1 != EVP_EncryptInit_ex2(ctx, aes256, key , NULL, NULL)){ // the 2 nulls are iv and params
 	fprintf(stderr, "Failed to init context\n");
 	return -1;
     }
@@ -55,12 +56,17 @@ int bothEndsEnc(mpz_t c, const mpz_t m, const uint64_t N, const uint8_t *key){
     // now do the actual encryption
     mpz_set(c, m); // set c to have the same value of m
     cptr = mpz_limbs_modify(c, nLimbs); // create read-write limbs array with ceil(N/64) libms
+
+    // zero new limbs
+    for (int i=mpz_size(m); i < nLimbs; ++i) cptr[i] = 0;
+
     buffer = malloc(nLimbs * sizeof(uint64_t)); // we need the size to be a limb multiple to use mpn_shift on buffer
+
     // we make sure that the top unused bytes are 0
-    for(int i=byteSize; i < nLimbs*8; ++i) buffer[i] = 0x00; 
+    for(int i=0; i < bufferSize; ++i) buffer[i] = 0x00;
 
     // encrypt the lower encBytes
-    if (1 != EVP_EncryptUpdate(ctx, buffer, &t, ((uint8_t*)cptr), encBytes)) {
+    if (!EVP_EncryptUpdate(ctx, buffer, &t, ((uint8_t*)cptr), encBytes)) {
 	fprintf(stderr, "First enc failed\n");
 	free(buffer);
 	return -1;
@@ -74,9 +80,11 @@ int bothEndsEnc(mpz_t c, const mpz_t m, const uint64_t N, const uint8_t *key){
     // encrypt the higher encBytes
     // to do so we need to shift everything so that the highest byte is fully used
     // note that we add bytePadding 0 bits in the lowest byte
-    mpn_lshift(((mp_limb_t*)buffer), ((mp_limb_t*)buffer), nLimbs, bytePadding);
+    if (bytePadding > 0) { //lshift is not supported if bytePadding is 0
+	mpn_lshift(((mp_limb_t*)buffer), ((mp_limb_t*)buffer), nLimbs, bytePadding);
+    }
 
-    if (1 != EVP_EncryptUpdate(ctx, ((uint8_t*)cptr)+offsetBytes, &t, buffer + offsetBytes, encBytes)){
+    if (!EVP_EncryptUpdate(ctx, ((uint8_t*)cptr)+offsetBytes, &t, buffer + offsetBytes, encBytes)){
 	fprintf(stderr, "Second enc failed\n");
 	free(buffer);
 	return -1;
@@ -89,17 +97,19 @@ int bothEndsEnc(mpz_t c, const mpz_t m, const uint64_t N, const uint8_t *key){
 
     // now we need to shift everything right removing the bytePadding zeros
     // note that we introduced bytePadding new bits at the top, but these are 0
-    mpn_rshift(cptr, cptr, nLimbs, bytePadding);
+    if (bytePadding > 0) {// rshift not supported for bytePadding == 0
+	mpn_rshift(cptr, cptr, nLimbs, bytePadding);
+    }
 
     // FINALISE EVERYTHING
-    if (1 != EVP_EncryptFinal_ex(ctx, buffer, &t)){
+    if (!EVP_EncryptFinal_ex(ctx, buffer, &t)){
 	fprintf(stderr, "Finalisation failed\n");
 	return -1;
     }
     assert(t == 0);
 
     mpz_limbs_finish(c, nLimbs);
-    
+
     free(buffer);
     return 0; // done!
 }
@@ -115,6 +125,7 @@ int bothEndsDec(mpz_t m, const mpz_t c, const uint64_t N, const unsigned char *k
     const int offsetBytes = byteSize - encBytes; // number of bytes that we leave untouched (rounding up)
     const int bytePadding = N%8 ? 8 - (N%8) : 0; // number of extra bit to fill up the highest byte.
     const int nLimbs = (N+63) / 64; // num limbs to contain p
+    const int bufferSize = nLimbs * 8; // size in bytes of the buffer of nLimbs limbs
 
     if (ctx == NULL) {
 	t = initialiseOpenSSL();
@@ -123,7 +134,7 @@ int bothEndsDec(mpz_t m, const mpz_t c, const uint64_t N, const unsigned char *k
 	    return -1;
 	}
     }
-       
+
     // pass key and cipher to the context
     if (1 != EVP_DecryptInit_ex2(ctx, aes256, key , NULL, NULL)){
 	fprintf(stderr, "Failed to init context\n");
@@ -135,18 +146,23 @@ int bothEndsDec(mpz_t m, const mpz_t c, const uint64_t N, const unsigned char *k
     // do actual decryption
     mpz_set(m, c);
     mptr = mpz_limbs_modify(m, nLimbs);
+
+    // zero new limbs
+    for (int i=mpz_size(c); i < nLimbs; ++i) mptr[i] = 0;
+
     buffer = malloc(nLimbs*sizeof(uint64_t)); // we need the size to be a limb multiple to use mpn_shift on buffer
     // we make sure that the top unused bytes are 0
-    for(int i=byteSize; i < nLimbs*8; ++i) buffer[i] = 0; 
+    for(int i=byteSize; i < bufferSize; ++i) buffer[i] = 0;
 
     // first decrypt the higher encBytes:
 
     // move up to fill the top byte
-    mpn_lshift(mptr, mptr, nLimbs, bytePadding);
+    // gmp does not support shifting by 0 bytes
+    if (bytePadding >0) mpn_lshift(mptr, mptr, nLimbs, bytePadding);
 
     memcpy(buffer, ((uint8_t*)mptr), offsetBytes); // copy lower bits
-    
-    if (1 != EVP_DecryptUpdate(ctx, buffer+offsetBytes, &t, ((uint8_t*)mptr)+offsetBytes, encBytes)){
+
+    if (!EVP_DecryptUpdate(ctx, buffer+offsetBytes, &t, ((uint8_t*)mptr)+offsetBytes, encBytes)){
 	fprintf(stderr, "First dec failed\n");
 	free(buffer);
 	return -1;
@@ -154,14 +170,14 @@ int bothEndsDec(mpz_t m, const mpz_t c, const uint64_t N, const unsigned char *k
     assert(t == encBytes);
 
     // shift down
-    mpn_rshift(((mp_limb_t*)buffer), ((mp_limb_t*)buffer), nLimbs, bytePadding);
+    // gmp assumings we are shifting by at least 1 bit
+    if (bytePadding >0) mpn_rshift(((mp_limb_t*)buffer), ((mp_limb_t*)buffer), nLimbs, bytePadding);
 
     // note that we are copying also the bytePadding highest bytes of the top significant byte
     // however, these are 0s
     memcpy(((uint8_t*)mptr) + encBytes, buffer + encBytes, offsetBytes);
-    
 
-    if (1 != EVP_DecryptUpdate(ctx, ((uint8_t*)mptr), &t, buffer, encBytes)) {
+    if (!EVP_DecryptUpdate(ctx, ((uint8_t*)mptr), &t, buffer, encBytes)) {
 	fprintf(stderr, "Second dec failed\n");
 	free(buffer);
 	return -1;
@@ -169,14 +185,14 @@ int bothEndsDec(mpz_t m, const mpz_t c, const uint64_t N, const unsigned char *k
     assert(t == encBytes);
 
     // FINALISE EVERYTHING
-    if (1 != EVP_DecryptFinal_ex(ctx, buffer, &t)){
+    if (!EVP_DecryptFinal_ex(ctx, buffer, &t)){
 	fprintf(stderr, "Finalisation dec failed\n");
 	return -1;
     }
     assert(t == 0);
 
     mpz_limbs_finish(m, nLimbs);
-    
+
     free(buffer);
     return 0;
 }
@@ -212,4 +228,3 @@ void cleanOpenSSL() {
     aes256 = NULL;
     ctx = NULL;
 }
-

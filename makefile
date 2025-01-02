@@ -47,7 +47,7 @@ $(BUILDDIR):
 
 # to create the test program we need all objects and we simply link them
 $(TARGET) : $(OBJECTS)
-	$(CC) $(CLFAGS)  -o $(TARGET) $(OBJECTS) $(LIBRARIES)
+	$(CC) $(CFLAGS)  -o $(TARGET) $(OBJECTS) $(LIBRARIES)
 
 
 # we have a "phony" target clean (menaing that clean is not a file to be created

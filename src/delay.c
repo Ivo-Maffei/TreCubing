@@ -4,11 +4,11 @@
 #include "fpe.h"
 #include "rand.h"
 
-// delay message m using cubing modulo p, chained C times with Thorp shuffle using R rounds of shuffling
-// seed is the seed to use with Throp and key is the AES key to use
-// if key is NULL, use Thorp, else use Both-Ends Encryption
-void delay(mpz_t r, const mpz_t m, const mpz_t p, const unsigned long C, const unsigned long R, const uint64_t seed, const uint8_t *key){
-    if (key != NULL) {
+// delay message m using cubing modulo p, chained C times with:
+// - Thorp shuffle using R rounds of shuffling if R != 0
+// - Both-Ends Encryption, if R == 0
+void delay(mpz_t r, const mpz_t m, const mpz_t p, const unsigned long C, const unsigned long R,  const uint8_t *key){
+    if (R == 0) {
 	initialiseOpenSSL();
     }
 
@@ -16,9 +16,8 @@ void delay(mpz_t r, const mpz_t m, const mpz_t p, const unsigned long C, const u
 
     for (unsigned long chainRound=0; chainRound<C; ++chainRound){
 
-	if (key == NULL){// use Thorp
-	    setSeed(seed);
-	    thorp(r, p, R); // shuffle
+	if (R != 0){// use Thorp
+	    thorp(r, r, p, R, key); // shuffle
 	} else {
 	    // both-ends encryption
 	    cycleEnc(r, r, p, key);
@@ -28,15 +27,15 @@ void delay(mpz_t r, const mpz_t m, const mpz_t p, const unsigned long C, const u
 	mpz_powm_ui(r, r, 3l, p);
     }
 
-    if (key != NULL) {
+    if (R == 0) {
 	cleanOpenSSL();
     }
 }
 
 // opens the puzzle c and place the result in m
-void open(mpz_t m, const mpz_t c, const mpz_t p, const mpz_t b, const unsigned long C, const unsigned long R, const uint64_t seed, const uint8_t *key){
+void open(mpz_t m, const mpz_t c, const mpz_t p, const mpz_t b, const unsigned long C, const unsigned long R, const uint8_t *key){
 
-    if (key != NULL) {
+    if (R == 0) {
 	initialiseOpenSSL();
     }
 
@@ -45,15 +44,14 @@ void open(mpz_t m, const mpz_t c, const mpz_t p, const mpz_t b, const unsigned l
     for (unsigned long chainRound=0; chainRound<C; ++chainRound){
 	// now cube root
 	mpz_powm(m, m, b, p);
-	if (key == NULL){ // use Thorp
-	    setSeed(seed);
-	    inverse_thorp(m, p, R); // shuffle
+	if (R != 0){ // use Thorp
+	    inverse_thorp(m, m, p, R, key); // shuffle
 	} else { // use BEE
 	    cycleDec(m, m, p, key);
 	}
     }
 
-    if (key != NULL) {
+    if (R == 0) {
 	cleanOpenSSL();
     }
 }

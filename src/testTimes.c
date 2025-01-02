@@ -234,6 +234,7 @@ void testTimesAll(const mpz_t p, const unsigned long R, const unsigned long C, c
     }
 }
 
+
 void testTimesEnc(const mpz_t p, const int nIters, FILE * const fileptr) {
 
     writeTimestamp(fileptr);

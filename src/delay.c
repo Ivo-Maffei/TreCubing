@@ -22,13 +22,10 @@ void delay(mpz_t r, const mpz_t m, const mpz_t p, const unsigned long C, const u
 
     for (unsigned long chainRound=0; chainRound<C; ++chainRound){
 
-	// delay the message
-	mpz_powm_ui(r, r, 3l, p);
-
-	if (key == NULL){// now the FPE
+	if (key == NULL){// use Thorp
 	    // first map to 0...p-2
 	    mpz_sub_ui(r, r, 1l);
-	
+
 	    setSeed(seed);
 	    thorp(r, N, R); // shuffle
 
@@ -39,8 +36,10 @@ void delay(mpz_t r, const mpz_t m, const mpz_t p, const unsigned long C, const u
 	    cycleEnc(r, r, p, key);
 	}
 
+	// delay the message
+	mpz_powm_ui(r, r, 3l, p);
     }
-       
+
     if (key == NULL) {
 	mpz_clears(N, NULL);
     } else {
@@ -68,8 +67,11 @@ void open(mpz_t m, const mpz_t c, const mpz_t p, const unsigned long C, const un
     mpz_set(m, c);
 
     for (unsigned long chainRound=0; chainRound<C; ++chainRound){
-	
-	if (key == NULL){ // first the FPE
+
+	// now cube root
+	mpz_powm(m, m, b, p);
+
+	if (key == NULL){ // use Thorp
 	    // first map to 0...p-2
 	    mpz_sub_ui(m, m, 1l);
 
@@ -78,17 +80,14 @@ void open(mpz_t m, const mpz_t c, const mpz_t p, const unsigned long C, const un
 
 	    // map back to 1 ... p-1
 	    mpz_add_ui(m, m, 1l);
-	} else {
+	} else { // use BEE
 	    cycleDec(m, m, p, key);
 	}
-
-	// now cube root
-	mpz_powm(m, m, b, p);
     }
 
     if (key != NULL) {
 	cleanOpenSSL();
     }
     mpz_clears(N, b, NULL);
-    
+
 }

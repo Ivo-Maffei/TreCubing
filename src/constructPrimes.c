@@ -228,6 +228,9 @@ void constructPrime(mpz_t p, const unsigned long N) {
     case 100000l:
 	constructPrime100k(p);
 	break;
+    default:
+	fprintf(stderr, "constructing primes of size %lu is not supported\n", N);
+	assert(0);
     }
 }
 
@@ -248,7 +251,7 @@ void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const uns
     k = mpz_sizeinbase(p, 2); // actual bitsize of p
     k = (N + k -1) / k; // ceil (N/k)
 
-    assert(k>1);
+    assert(k>1 && "Prime power is a trivial power");
 
     mpz_pow_ui(q, p, k); // q = p^k
 }

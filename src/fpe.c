@@ -4,55 +4,47 @@
 
 #include "rand.h"
 
-void thorp(mpz_t x, const mpz_t N, const unsigned long R){
+void thorp(mpz_t c, const mpz_t m, const mpz_t N, const unsigned long R, const uint8_t* key){
     uint64_t b;
 
+    mpz_set(c, m);
     for (unsigned long i=0; i<R; ++i){
+	mpz_mul_2exp(c, c, 1l);
 
-	b = nextRand();
-	mpz_mul_2exp(x, x, 1l);
+	// get ith bit of key
+	b = (uint64_t)(key[i/8+i%8]);
 
-	// if x >= N <--> x > y
-	if(mpz_cmp(x, N)>=0) {
-	    mpz_add_ui(x, x, 1l^b);
-	    mpz_sub(x, x, N);
-	    // x <- 2x + 1 - b mod N
+	// if c >= N <--> c > y
+	if(mpz_cmp(c, N)>=0) {
+	    mpz_add_ui(c, c, 1l^b);
+	    mpz_sub(c, c, N);
+	    // c <- 2c + 1 - b mod N
 	} else {
-	    mpz_add_ui(x, x, b);
-	    // x <- 2x +  b
+	    mpz_add_ui(c, c, b);
+	    // c <- 2c +  b
 	}
-	// as a single formula: x -> 2x + (2x>=N) xor b - N *(2x>=N)
+	// as a single formula: c -> 2c + (2c>=N) xor b - N *(2c>=N)
     }
 }
 
 
-void inverse_thorp(mpz_t x, const mpz_t N, const unsigned long R){
+void inverse_thorp(mpz_t m, const mpz_t c, const mpz_t N, const unsigned long R, const uint8_t* key){
+    uint64_t b;
 
-    // first we need to generate all the bits used
-    const unsigned long Nwords = (R+63l) / 64l;
-    uint64_t *b = (uint64_t*) malloc(Nwords * sizeof(uint64_t));
-
-    for (unsigned long i=0; i < Nwords; ++i){
-	b[i] = xorshf64();
-    }
-
-    uint64_t bit;
-
+    mpz_set(m, c);
     for(unsigned long i=R; i > 0; --i){
 
-	// to access the ith bit we need the bit in position i-1
-	bit = (b[(i-1l)/64] >> ((i-1l)%64)) & 1l;
+	// to access the ith bit of the key
+	b = (uint64_t)(key[i/8+i%8]);
 
-	if (mpz_tstbit(x, 0) ^ bit){
-	    // x is the result of 2x+b - N : i.e. floor((x+N) / 2)
-	    mpz_add(x, x, N);
-	} // otherise x is the result of 2x + 1 - b
+	if (mpz_tstbit(m, 0) ^ b){
+	    // m is the result of 2m+b - N : i.e. floor((m+N) / 2)
+	    mpz_add(m, m, N);
+	} // otherise m is the result of 2m + 1 - b
 
-	mpz_tdiv_q_2exp(x, x, 1l);
+	mpz_tdiv_q_2exp(m, m, 1l);
+	// as a single formula: y -> floor(y/2) + (y[0] xor b)*N
     }
-
-    // as a single formula: y -> floor(y/2) + (y[0] xor bit)*N
-    free(b);
 }
 
 

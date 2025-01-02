@@ -183,6 +183,7 @@ void testTimesAll(const mpz_t p, const mpz_t b, const unsigned long R, const uns
     mpz_t m, m2, c;
     uint64_t randSeed;
     uint8_t *key;
+    int keyLength;
 
     TIMER_INIT(delay, nIters);
     TIMER_INIT(open, nIters);
@@ -191,25 +192,25 @@ void testTimesAll(const mpz_t p, const mpz_t b, const unsigned long R, const uns
     mpz_init2(m2, mpz_sizeinbase(p, 2));
     mpz_init2(c, mpz_sizeinbase(p, 2));
 
-    if (R != 0) { // using Thorp -> create seed
-	randSeed = xorshf64(); // get a random seed
-	key = NULL;
-    } else { // using both-ends encryption -> create key
-	key = malloc(32*sizeof(uint8_t));
+    // using Thorp -> create key of R bits
+    if (R != 0) keyLength = (R+7)/8; // ceil(R/8)
+    // using both-ends encryption -> create key
+    else keyLength = 32;
 
-	for (int word=0; word < 4; ++word) {
-	    randSeed = xorshf64();
-	    memcpy(key + word*8, &randSeed, 8);
-	}
+    // create ceil(keyLength*8 / 64) random words of 64 bits
+    // and use them as the key
+    for (int word=0; word < (keyLength+7)/8; ++word) {
+	randSeed = xorshf64();
+	memcpy(key + word*8, &randSeed, 8);
     }
 
     for(int i=0; i < nIters; ++i){
 
 	randomMessage(m, p);
 
-	TIMER_TIME(delay, delay(c, m, p, C, R, randSeed, key), fileptr);
+	TIMER_TIME(delay, delay(c, m, p, C, R, key), fileptr);
 
-	TIMER_TIME(open, open(m2, c, p, b, C, R, randSeed, key), fileptr);
+	TIMER_TIME(open, open(m2, c, p, b, C, R, key), fileptr);
 
 	if(mpz_cmp(m, m2) != 0){
 	    printf("ERROR!!!!!! delay open returned wrong message\n");
@@ -226,8 +227,8 @@ void testTimesAll(const mpz_t p, const mpz_t b, const unsigned long R, const uns
  free:
     mpz_clears(m, m2, c, NULL);
     clearRandomness();
+    free(key);
     if (R == 0) {
-	free(key);
 	cleanOpenSSL();
     }
 }

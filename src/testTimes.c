@@ -134,9 +134,17 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
     TIMER_INIT(SR, nIters);
 
     mpz_t m;
+    int keyLength = (R+7)/8;
+    uint8_t* key = (uint8_t*) malloc( keyLength * sizeof(uint8_t));
+    assert(key);
+    uint64_t randSeed;
 
     mpz_init2(m, mpz_sizeinbase(N, 2));
 
+    for (int word=0; word < (keyLength+7)/8; ++word) {
+	randSeed = xorshf64();
+	memcpy(key + word*8, &randSeed, 8);
+    }
 
     for (int i=0; i<nIters; ++i){
 
@@ -144,7 +152,7 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
 	randomMessage(m, N);
 
 	if(t){
-	    TIMER_TIME(Th, thorp(m, N, R), fileptr);
+	    TIMER_TIME(Th, thorp(m, m, N, R, key), fileptr);
 	}
 
 	if(son){
@@ -165,6 +173,7 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
 
     mpz_clears(m, NULL);
     clearRandomness();
+    free(key);
 }
 
 
@@ -196,8 +205,10 @@ void testTimesAll(const mpz_t p, const mpz_t b, const unsigned long R, const uns
     if (R != 0) keyLength = (R+7)/8; // ceil(R/8)
     // using both-ends encryption -> create key
     else keyLength = 32;
+    key = (uint8_t*) malloc(keyLength*sizeof(uint8_t));
+    assert(key);
 
-    // create ceil(keyLength*8 / 64) random words of 64 bits
+    // create ceil(keyLength / 8) random words of 64 bits
     // and use them as the key
     for (int word=0; word < (keyLength+7)/8; ++word) {
 	randSeed = xorshf64();

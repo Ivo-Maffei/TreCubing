@@ -217,10 +217,10 @@ int main(int argc, char **argv) {
 	numC = 1;
     }
 
-    mpz_t q, p;
+    mpz_t q, p, b;
     unsigned long N; // bitsize of q
 
-    mpz_inits(q, p, NULL);
+    mpz_inits(q, p, b, NULL);
 
 
 
@@ -288,26 +288,23 @@ int main(int argc, char **argv) {
 	if (input.secpar)
 	    printf("The prime power has base of size %lu\n", mpz_sizeinbase(p, 2));
 
+	// compute b
+	// set b to be order of group
+	if (input.secpar) {
+	    mpz_divexact(b, q, p);
+	    mpz_sub(b, q, b); // b <- q - q/p = p^k - p^(k-1) = \phi(q)
+	} else mpz_sub_ui(b, q, 1l);
+
+	// compute inverse of 3
+	if (mpz_fdiv_ui(b, 3l) == 1)
+	    mpz_mul_2exp(b, b, 1l); // multiply b by 2
+
+	// otherwise b = 2 mod 3 and there is no need to multiply by 2
+	mpz_add_ui(b, b, 1l); // b <- b+1
+	mpz_divexact_ui(b, b, 3l); // b <- b/3 = (1+b*((2b)%3))/3
+
 	if (input.cubing) { // test repeated squarings
-	    mpz_t b;
-	    mpz_init(b);
-
-	    // set b to be order of group
-	    if (input.secpar) {
-		mpz_divexact(b, q, p);
-		mpz_sub(b, q, b); // b <- q - q/p = p^k - p^(k-1) = \phi(q)
-	    } else mpz_sub_ui(b, q, 1l);
-
-	    // compute inverse of 3
-	    if (mpz_fdiv_ui(b, 3l) == 1)
-		mpz_mul_2exp(b, b, 1l); // multiply b by 2
-	    // otherwise b = 2 mod 3 and there is no need to multiply by 2
-	    mpz_add_ui(b, b, 1l); // b <- b+1
-	    mpz_divexact_ui(b, b, 3l); // b <- b/3 = (1+b*((2b)%3))/3
-
 	    testTimesSq(q, b, N, input.nIters, fileptr);
-
-	    mpz_clear(b);
 	    fflush(fileptr);
 	    printf("Tested cubing\n");
 	}
@@ -320,12 +317,11 @@ int main(int argc, char **argv) {
 
 	if (input.delay) {
 	    for (int ci = 0; ci < numC; ++ci) {
-		testTimesAll(q, 0, Cs[ci], input.nIters, fileptr);
+		testTimesAll(q, b, 0, Cs[ci], input.nIters, fileptr);
 		fflush(fileptr);
 	    }
 	    printf("Tested delay\n");
 	}
-
 
 	if (numR > 1){ // populate N/2 and N in rounds
 	    Rs[1] = N / 2l;
@@ -335,7 +331,7 @@ int main(int argc, char **argv) {
 	if (input.delayThorp) { // test overall delay
 	    for (int ri = 0; ri < numR; ++ri) {
 		for (int ci = 0; ci < numC; ++ci) {
-		    testTimesAll(q, Rs[ri], Cs[ci], input.nIters, fileptr);
+		    testTimesAll(q, b, Rs[ri], Cs[ci], input.nIters, fileptr);
 		    fflush(fileptr);
 		}
 	    }
@@ -358,6 +354,6 @@ int main(int argc, char **argv) {
 
 
 
-    mpz_clears(q, p, NULL);
+    mpz_clears(q, p, b, NULL);
     return 0;
 }

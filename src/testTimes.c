@@ -60,7 +60,7 @@ void writeTimestamp(FILE* const fileptr) {
 // picks a random message m, computes m^3 mod p and then (m^3)^b mod p
 // prints out the time taken and stores the time as well
 // repeate for nIters and outputs means and std
-void testTimesSq(mpz_t p, mpz_t b, const unsigned long N, const int nIters, FILE * const fileptr) {
+void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters, FILE * const fileptr) {
 
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
@@ -71,8 +71,6 @@ void testTimesSq(mpz_t p, mpz_t b, const unsigned long N, const int nIters, FILE
     TIMER_INIT(Enc, nIters);
     TIMER_INIT(Dec, nIters);
     TIMER_INIT(SqGMP, nIters);
-
-
 
     // variables for the computation
     mpz_t m, m2, c, fexp;

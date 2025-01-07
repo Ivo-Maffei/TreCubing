@@ -71,6 +71,7 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
     TIMER_INIT(Enc, nIters);
     TIMER_INIT(Dec, nIters);
     TIMER_INIT(SqGMP, nIters);
+    TIMER_INIT(FastSqGMP, nIters);
 
     // variables for the computation
     mpz_t m, m2, c, fexp;
@@ -83,6 +84,7 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
     mpz_init2(fexp, N+1);
 
     const unsigned long nSquarings = mpz_sizeinbase(b, 2) - 1l;
+    fprintf(fileptr, "Number of squarings: %lu\n", nSquarings);
 
     // fast exponent
     mpz_set_ui(fexp, 1l);
@@ -108,11 +110,33 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
 	// repeated squarings only
 	TIMER_TIME(SqGMP, mpz_powm(m2, c, fexp, p), fileptr);
 
+	// try using the mpn_powm_2exp
+	size_t nlimbs = mpz_size(p);
+	mp_limb_t* mptr = mpz_limbs_modify(m, nlimbs);
+	const mp_limb_t* cptr = mpz_limbs_read(c);
+	const mp_limb_t* pptr = mpz_limbs_read(p);
+	size_t tsize = mpn_binvert_itch(nlimbs);
+	tsize = (tsize > 2*nlimbs) ? tsize : 2*nlimbs;
+	tsize += nlimbs; // just to be sure
+	mp_limb_t* tptr = (mp_limb_t*) malloc( tsize*sizeof(mp_limb_t));
+	if (!tptr) continue;
+
+	TIMER_TIME(FastSqGMP, mpn_powm_2exp(mptr, cptr, mpz_size(c), nSquarings, pptr, nlimbs, tptr), fileptr);
+
+	if (mpn_cmp(mptr, mpz_limbs_read(m2), mpz_size(m2)) != 0) {
+	    printf("ERROR\n");
+	}
+
+	free(tptr);
+
     }// end for loop
+
 
     TIMER_REPORT(Enc, fileptr);
     TIMER_REPORT(Dec, fileptr);
     TIMER_REPORT(SqGMP, fileptr);
+    TIMER_REPORT(FastSqGMP, fileptr);
+    fprintf(fileptr, "Number of squarings: %lu\n", nSquarings);
 
     writelineSep(fileptr);
 

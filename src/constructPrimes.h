@@ -5,11 +5,15 @@
 
 // construct a prime and stores it in p
 // p should already be initialised with the correct size
-void constructPrime(mpz_t p, const unsigned long N);
+void constructSafePrime(mpz_t p, const unsigned long N);
 
 // construct a prime power q = p^k such that p is a prime of (at least) secpar bits and
 // q has at least N bits
 void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const unsigned long N);
+
+void findOpensslSafePrime(mpz_t p, const unsigned long Nbits);
+void findPseudoSafePrime(mpz_t p, const unsigned long Nbits);
+void findAlmostSafePrime(mpz_t p, const unsigned long Nbits);
 
 extern const unsigned long numAvailablePrimes;
 

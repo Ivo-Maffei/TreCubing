@@ -29,7 +29,7 @@ const unsigned long numAvailablePrimes = 11;
 
 
 // p = 4133481*2^{5002} - 1
-void constructPrime5k(mpz_t p) {
+void constructSafePrime5k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 5002l);
     mpz_mul_ui(p, p, 4133481l);
@@ -38,7 +38,7 @@ void constructPrime5k(mpz_t p) {
 
 // p = 9402702309*10^{3000} - 1
 // bits: 9999
-void constructPrime10k(mpz_t p) {
+void constructSafePrime10k(mpz_t p) {
     mpz_set_ui(p, 10l);
     mpz_pow_ui(p, p, 3000l);
     mpz_mul_ui(p, p, 9402702309l);
@@ -47,7 +47,7 @@ void constructPrime10k(mpz_t p) {
 
 // p = 29553033*2^{19991} - 1
 // bits: 20016
-void constructPrime20k(mpz_t p) {
+void constructSafePrime20k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 19991l);
     mpz_mul_ui(p, p, 29553033l);
@@ -56,7 +56,7 @@ void constructPrime20k(mpz_t p) {
 
 // p = 415365* 2^{30053} - 1
 // bits: 30072
-void constructPrime30k(mpz_t p) {
+void constructSafePrime30k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 30053l);
     mpz_mul_ui(p, p, 415365l);
@@ -65,7 +65,7 @@ void constructPrime30k(mpz_t p) {
 
 // p = 774951567* 2^{40961} - 1
 // bits: 40991
-void constructPrime40k(mpz_t p) {
+void constructSafePrime40k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 40961l);
     mpz_mul_ui(p, p, 774951567l);
@@ -74,7 +74,7 @@ void constructPrime40k(mpz_t p) {
 
 // p = 4127632557* 2^{50002} - 1
 // bits: 50034
-void constructPrime50k(mpz_t p) {
+void constructSafePrime50k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 50002l);
     mpz_mul_ui(p, p, 4127632557l);
@@ -83,7 +83,7 @@ void constructPrime50k(mpz_t p) {
 
 // p = 3714089895285* 2^{60001} - 1
 // bits: 60043
-void constructPrime60k(mpz_t p) {
+void constructSafePrime60k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 60001l);
     mpz_mul_ui(p, p, 3714089895285l);
@@ -92,7 +92,7 @@ void constructPrime60k(mpz_t p) {
 
 // p = 256685167*2^{70002} - 1
 // bits: 70034
-void constructPrime70k(mpz_t p) {
+void constructSafePrime70k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 70002l);
     mpz_mul_ui(p, p, 2566851867l);
@@ -101,7 +101,7 @@ void constructPrime70k(mpz_t p) {
 
 // p = 1213822389 * 2^{81132} - 1
 // bits:
-void constructPrime80k(mpz_t p) {
+void constructSafePrime80k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 81132l);
     mpz_mul_ui(p, p, 1213822389l);
@@ -110,7 +110,7 @@ void constructPrime80k(mpz_t p) {
 
 // p = 3364553235* 2^{88889} - 1
 // bits:
-void constructPrime90k(mpz_t p) {
+void constructSafePrime90k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 88889l);
     mpz_mul_ui(p, p, 3364553235l);
@@ -119,7 +119,7 @@ void constructPrime90k(mpz_t p) {
 
 // p = 35909079387* 2^{100001} - 1
 // bits:
-void constructPrime100k(mpz_t p) {
+void constructSafePrime100k(mpz_t p) {
     mpz_set_ui(p, 1l);
     mpz_mul_2exp(p, p, 100001l);
     mpz_mul_ui(p, p, 35909079387l);
@@ -232,7 +232,7 @@ void findPseudoSafePrime(mpz_t p, const unsigned long Nbits) {
 // so for q=2 mod 3 -> m = 6k + 2
 // and for q=1 mod 3 -> m = 6k + 4
 // we could just use m= 6k + 4(q%3), but 6k + 2(3-(q%3)) is perfect
-void findAlmostSafePrime(mpz_t p, const unsigned long Nbits){
+void findAlmostSafePrime(mpz_t p, const unsigned long Nbits) {
     mpz_t q;
     unsigned long m; // note that we expect m = O(log p) = O(N) hence in ulong
     bool isPrime;
@@ -271,54 +271,50 @@ void findAlmostSafePrime(mpz_t p, const unsigned long Nbits){
 	    isPrime = true;
     }
 
-    fprintf(stderr, "m value %lu\n", m);
     mpz_clear(q);
 }
 
 
 // construct a prime and stores it in p
 // p should already be initialised with the correct size
-void constructPrime(mpz_t p, const unsigned long N) {
+void constructSafePrime(mpz_t p, const unsigned long N) {
     switch (N) {
     case 5000l:
-	constructPrime5k(p);
+	constructSafePrime5k(p);
 	break;
     case 10000l:
-	constructPrime10k(p);
+	constructSafePrime10k(p);
 	break;
     case 20000l:
-	constructPrime20k(p);
+	constructSafePrime20k(p);
 	break;
     case 30000l:
-	constructPrime30k(p);
+	constructSafePrime30k(p);
 	break;
     case 40000l:
-	constructPrime40k(p);
+	constructSafePrime40k(p);
 	break;
     case 50000l:
-	constructPrime50k(p);
+	constructSafePrime50k(p);
 	break;
     case 60000l:
-	constructPrime60k(p);
+	constructSafePrime60k(p);
 	break;
     case 70000l:
-	constructPrime70k(p);
+	constructSafePrime70k(p);
 	break;
     case 80000l:
-	constructPrime80k(p);
+	constructSafePrime80k(p);
 	break;
     case 90000l:
-	constructPrime90k(p);
+	constructSafePrime90k(p);
 	break;
     case 100000l:
-	constructPrime100k(p);
+	constructSafePrime100k(p);
 	break;
     default:
-	if (N < 2500l){
+	if (N < 5000l){
 	    findOpensslSafePrime(p, N);
-	}
-	else if (N < 5000l){
-	    findAlmostSafePrime(p, N);
 	}
 	else {
 	    fprintf(stderr, "constructing primes of size %lu is not supported\n", N);

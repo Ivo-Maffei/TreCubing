@@ -15,25 +15,26 @@
 #include "delay.h"
 #include "enc.h"
 #include "rand.h"
+#include "constructPrimes.h"
 
 
-#define TIMER_INIT(name, iters)	  \
+#define TIMER_INIT(name, iters)  \
     clock_t start_ ## name, end_ ## name; \
     unsigned long* const allTime_ ## name = (unsigned long*) malloc(iters*sizeof(unsigned long)); \
     double avgTime_ ## name, stdTime_ ## name; \
     const unsigned long nIters_ ## name = iters; \
     unsigned long current_iter_ ## name = 0l;
 
-#define TIMER_TIME(name, work, fp)			\
+#define TIMER_TIME(name, work, fp) { \
     start_ ## name = clock();\
     work; \
     end_ ## name = clock();\
     assert(current_iter_ ## name < nIters_ ## name); \
     allTime_ ## name[current_iter_ ## name] = end_ ## name - start_ ## name; \
     fprintf(fp, #name " took %.3fms\n", allTime_ ## name[current_iter_ ## name]/(double)CLOCKS_PER_SEC*1000.0); \
-    ++current_iter_ ## name;
+    ++current_iter_ ## name;}
 
-#define TIMER_REPORT(name, fp) \
+#define TIMER_REPORT(name, fp) { \
     avgTime_ ## name = 0.0; \
     for (size_t i =0; i < nIters_ ## name; ++i) avgTime_ ## name += allTime_ ## name[i]; \
     avgTime_ ## name /= (double)(nIters_ ## name); \
@@ -42,7 +43,7 @@
     stdTime_ ## name /= (double)(nIters_ ## name); \
     stdTime_ ## name = sqrt(stdTime_ ## name); \
     fprintf(fp, "mean and std " #name " time %.9fms (%.9fms)\n", avgTime_ ## name/(double)CLOCKS_PER_SEC*1000.0, stdTime_ ## name/(double)CLOCKS_PER_SEC*1000.0); \
-    free(allTime_ ## name);
+    free(allTime_ ## name); }
 
 
 // little helper to write a line of equal sings
@@ -55,6 +56,37 @@ void writeTimestamp(FILE* const fileptr) {
     time_t rawtime;
     time(&rawtime);
     fprintf(fileptr, "Current localtime: %s\n", asctime(localtime(&rawtime)));
+}
+
+void testModuloConstruction(const unsigned long N, const unsigned long secpar, const int nIters, FILE* const fileptr) {
+    writeTimestamp(fileptr);
+    writeTimestamp(stdout);
+    fprintf(fileptr, "Testing construction of moduli of %lu bits\n", N);
+
+    TIMER_INIT(GMPsafe, nIters);
+    TIMER_INIT(OSSLsafe, nIters);
+    TIMER_INIT(AlmostSafe, nIters);
+    TIMER_INIT(PrimePower, nIters);
+
+    mpz_t p, q;
+    mpz_init2(p, secpar+5);
+    mpz_init2(q, N+5);
+
+    for (int i=0; i < nIters; ++i){
+	TIMER_TIME(GMPsafe, findPseudoSafePrime(p, N), fileptr);
+	TIMER_TIME(OSSLsafe, findOpensslSafePrime(p, N), fileptr);
+	TIMER_TIME(AlmostSafe, findAlmostSafePrime(p, N), fileptr);
+	if (secpar) TIMER_TIME(PrimePower, constructPrimePower(q, p, secpar, N), fileptr);
+    }
+
+    TIMER_REPORT(GMPsafe, fileptr);
+    TIMER_REPORT(OSSLsafe, fileptr);
+    TIMER_REPORT(AlmostSafe, fileptr);
+    TIMER_REPORT(PrimePower, fileptr);
+
+    writelineSep(fileptr);
+
+    mpz_clears(p, q, NULL);
 }
 
 // picks a random message m, computes m^3 mod p and then (m^3)^b mod p

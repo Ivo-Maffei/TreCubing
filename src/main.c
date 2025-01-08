@@ -35,6 +35,7 @@ static struct argp_option options[] = {
     { "fpe", 'f', "fpeScheme",  OPTION_ARG_OPTIONAL, "Test the performance of the specified FPE methods as a comma separated list (if no list is provided, all methods are tested). Valid FPE schemes are: 'thorp', 'swapornot', 'sometimesrecurse'" },
     { "rounds", 'R', "nRounds", 0, "Specify the number of rounds to use when testing FPE schemes. If this option is omitted, we test the values: 100, 0.5*primesize and primesize", 2 },
     { "chain", 'C', "nChain", 0, "Specify how many delays to chain together when testing the whole delay process. If this option is omitted, we test values: 10 and 100" },
+    { "moduli", 'm', 0, 0, "Test the performance of different moduli creations" },
     { "clean", -1, 0, 0, "Clean the output file before writing to it", 1}, // we use -1 to avoid allowing a short version
     { 0 } // termination of this "vector"
 };
@@ -53,6 +54,7 @@ struct input {
     bool fpeSoN;
     bool fpeSR;
     bool enc;
+    bool moduli;
     unsigned long nRounds;
     unsigned long nChain;
     bool clean;
@@ -86,6 +88,10 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	    return EINVAL;
 	}
 	input->pSize = strtoul(arg, (char**) NULL, 10);
+	break;
+    }
+    case 'm': { // handle test of moduli
+	input->moduli = true;
 	break;
     }
     case 'c': {// handle cubing
@@ -158,9 +164,9 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	    argp_error(state, "No output file specified");
 	    return EINVAL;
 	}
-	if (!(input->cubing || input->delay || input->delayThorp || input->enc || input->fpeThorp || input->fpeSoN || input->fpeSR)) { // no specific test set
+	if (!(input->cubing || input->delay || input->delayThorp || input->enc || input->fpeThorp || input->fpeSoN || input->fpeSR || input->moduli)) { // no specific test set
 	    // set all tests to true
-	    input->cubing = input->delay = input->delayThorp = input->enc = input->fpeThorp = input->fpeSoN = input->fpeSR = true;
+	    input->cubing = input->delay = input->delayThorp = input->enc = input->fpeThorp = input->fpeSoN = input->fpeSR = input->moduli = true;
 	}
     }
     default:
@@ -278,30 +284,34 @@ int main(int argc, char **argv) {
 
 
     for(unsigned long i=0; i < nPrimes; ++i) {
-	if (input.secpar)
-	    constructPrimePower(q, p, input.secpar, primeSizes[i]);
-	else constructPrime(q, primeSizes[i]);
 
-	N = mpz_sizeinbase(q, 2);
+	if (input.moduli){
+	    testModuloConstruction(primeSizes[i], input.secpar, input.nIters, fileptr);
+	}
 
-	printf("Testing a modulo of size %lu\n", N);
-	if (input.secpar)
-	    printf("The prime power has base of size %lu\n", mpz_sizeinbase(p, 2));
+	// combute exponent to invert cubing
+	if (input.cubing | input.delay | input.delayThorp ) {
+	    if (input.secpar)
+		constructPrimePower(q, p, input.secpar, primeSizes[i]);
+	    else constructSafePrime(q, primeSizes[i]);
 
-	// compute b
-	// set b to be order of group
-	if (input.secpar) {
-	    mpz_divexact(b, q, p);
-	    mpz_sub(b, q, b); // b <- q - q/p = p^k - p^(k-1) = \phi(q)
-	} else mpz_sub_ui(b, q, 1l);
+	    N = mpz_sizeinbase(q, 2);
 
-	// compute inverse of 3
-	if (mpz_fdiv_ui(b, 3l) == 1)
-	    mpz_mul_2exp(b, b, 1l); // multiply b by 2
+	    // compute b
+	    // set b to be order of group
+	    if (input.secpar) {
+		mpz_divexact(b, q, p);
+		mpz_sub(b, q, b); // b <- q - q/p = p^k - p^(k-1) = \phi(q)
+	    } else mpz_sub_ui(b, q, 1l);
 
-	// otherwise b = 2 mod 3 and there is no need to multiply by 2
-	mpz_add_ui(b, b, 1l); // b <- b+1
-	mpz_divexact_ui(b, b, 3l); // b <- b/3 = (1+b*((2b)%3))/3
+	    // compute inverse of 3
+	    if (mpz_fdiv_ui(b, 3l) == 1)
+		mpz_mul_2exp(b, b, 1l); // multiply b by 2
+
+	    // otherwise b = 2 mod 3 and there is no need to multiply by 2
+	    mpz_add_ui(b, b, 1l); // b <- b+1
+	    mpz_divexact_ui(b, b, 3l); // b <- b/3 = (1+b*((2b)%3))/3
+	}
 
 	if (input.cubing) { // test repeated squarings
 	    testTimesSq(q, b, N, input.nIters, fileptr);

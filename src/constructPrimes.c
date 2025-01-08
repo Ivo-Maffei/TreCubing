@@ -2,8 +2,8 @@
 
 #include <assert.h>
 #include <stdbool.h> // for bool
-#include <stdio.h>
 #include "rand.h"
+#include <openssl/bn.h>
 
 const unsigned long availablePrimeSizes[] = {
     512,
@@ -124,6 +124,65 @@ void constructPrime100k(mpz_t p) {
     mpz_mul_2exp(p, p, 100001l);
     mpz_mul_ui(p, p, 35909079387l);
     mpz_sub_ui(p, p, 1l);
+}
+
+// use openssl for generating safe primes
+void findOpensslSafePrime(mpz_t p, const unsigned long Nbits) {
+    // we must have Nbits < 2^31 to fit an int
+    assert(Nbits < INT_MAX);
+
+    mp_limb_t temp_limb;
+    uint8_t temp_byte;
+    int bytelen, nlimbs, bigendian;
+    BIGNUM* ossl_num = BN_new();
+
+    assert(ossl_num);
+
+    // generate the safe prime
+    // the NULLs are for callback and requirements on type of prime
+    if (!BN_generate_prime_ex(ossl_num, Nbits, true, NULL, NULL, NULL)) {
+	fprintf(stderr, "ERROR with openssl prime generation\n");
+	mpz_set_ui(p, 0l);
+    }
+
+    // now convert BN to GMP
+    // get "dump" BN number into a byte buffer with most significant byte first
+    mp_limb_t* rawp = mpz_limbs_write(p, (Nbits+63)/64);
+    bytelen = BN_bn2bin(ossl_num, (uint8_t*)rawp);
+    nlimbs = (bytelen+7)/8;
+
+    // we need to swap to little endian limbs
+    // if each limb is in bigendian that concatenating 8 bytes will give you a correct limb
+    // otherwise we need to reverse the 8 bytes
+    temp_limb = 1l;
+    bigendian = !(((uint8_t*)&temp_limb)[0] & 1);
+
+    if (bigendian){ // reverse limbs
+	for (int i = 0; i < nlimbs / 2; ++i){
+	    // swap lowest ith limb with highest ith limb
+	    temp_limb = rawp[i];
+	    rawp[i] = rawp[nlimbs-1-i];
+	    rawp[nlimbs-1-i] = temp_limb;
+	}
+	// now rawp is in little endian
+	// however, we might have some extra zeros at the start
+	// so we need to rightshift (i.e. divive by 2)
+	if (nlimbs*64 - bytelen*8) mpn_rshift(rawp, rawp, nlimbs, nlimbs*64 - bytelen*8);
+	// the if statement is needed as we cannot use rshift with argument 0
+    } else { // revese bytes
+	for (int i=0; i < bytelen / 2; ++i){
+	    temp_byte = ((uint8_t*)rawp)[i];
+	    ((uint8_t*)rawp)[i] = ((uint8_t*)rawp)[bytelen-1-i];
+	    ((uint8_t*)rawp)[bytelen-1-i] = temp_byte;
+	}
+	// make sure the highest limb has zero in unused high bytes
+	for (int i=bytelen; i < nlimbs*8; ++i)
+	    ((uint8_t*)rawp)[i] = 0;
+    }
+
+    mpz_limbs_finish(p, nlimbs);
+
+    BN_free(ossl_num);
 }
 
 // finds a safe prime of the specified bitsize (sort of)
@@ -255,8 +314,9 @@ void constructPrime(mpz_t p, const unsigned long N) {
 	constructPrime100k(p);
 	break;
     default:
-	if (N < 2500l)
-	    findPseudoSafePrime(p, N);
+	if (N < 2500l){
+	    findOpensslSafePrime(p, N);
+	}
 	else if (N < 5000l){
 	    findAlmostSafePrime(p, N);
 	}

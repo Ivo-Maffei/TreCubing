@@ -132,7 +132,6 @@ void findPseudoSafePrime(mpz_t p, const unsigned long Nbits) {
 
     mpz_t q, t;
     bool isPrime;
-    unsigned long count = 0;
 
     mpz_inits(q, t , NULL);
 
@@ -141,7 +140,6 @@ void findPseudoSafePrime(mpz_t p, const unsigned long Nbits) {
 
     isPrime = false;
     while (!isPrime){
-	++count;
 	mpz_nextprime(q, q); // finds the next prime
 
 	// we will check if p=2q+1 is prime with the pocklington test
@@ -150,25 +148,72 @@ void findPseudoSafePrime(mpz_t p, const unsigned long Nbits) {
 	// note that if we fail, then q is not prime (either 2^{p-1} != 1 or 3 divides p)
 
 	// we check gcd(3, p)=1 by checking q%3 == 2
-	mpz_mod_ui(t, q, 3l); // compute t = q % 3
-	if( mpz_cmp_ui(t, 2l) != 0) continue; // not safe prime
+	// fdiv_ui returns the mod
+	if( mpz_fdiv_ui(q, 3l) != 2l) continue; // not safe prime
 
 	// now check 2^{p-1} = 1 mod p
-	// note that t is already 2
 	mpz_mul_2exp(p, q, 1l);
 	mpz_add_ui(p, p, 1l);
 	// p <- 2q+1
 
 	// we compute 2^p mod p which must be 2
+	mpz_set_ui(t, 2l);
 	mpz_powm(t, t, p, p);
 	if (mpz_cmp_ui(t, 2l) == 0l) { // found a safe prime
 	    isPrime = true;
 	}
 
-	if ( (count << 54) == 0) fprintf(stderr, ".");
     }
-    fprintf(stderr, "tested %lu primes\n", count);
+
     mpz_clears(q, t, NULL);
+}
+
+// gets a prime of type mq+1 where m is quite small
+// note that m=q mod 3 and m even
+// so for q=2 mod 3 -> m = 6k + 2
+// and for q=1 mod 3 -> m = 6k + 4
+// we could just use m= 6k + 4(q%3), but 6k + 2(3-(q%3)) is perfect
+void findAlmostSafePrime(mpz_t p, const unsigned long Nbits){
+    mpz_t q;
+    unsigned long m; // note that we expect m = O(log p) = O(N) hence in ulong
+    bool isPrime;
+
+    mpz_init(q);
+
+    // get a prime of Nbits
+    mpz_set_ui(q, 1l);
+    mpz_mul_2exp(q, q, Nbits-1);
+    mpz_nextprime(q, q);
+
+    // now look for m = 6k + 2(3-(q%3)) = 6(k+1) - 2(q%3)
+    // so we use 6k - 2(q%3) and start with k=1
+    m = -2*mpz_fdiv_ui(q, 3l); //fdiv_ui returns the mod and we will add 6 later
+    isPrime = false;
+    while (!isPrime){
+	m += 6;
+	// compute p = mq+1
+	mpz_mul_ui(p, q, m);
+	mpz_add_ui(p, p, 1l);
+
+	// check p prime using pocklinton's test
+	// i.e. check a^{p-1} =1 mod p and gcd(a^(p-1/q)-1, p) = 1
+	// we use a=2 for efficiency
+	mpz_ui_pow_ui(q, 2, m); // q <- 2^m
+	mpz_sub_ui(q, q, 1l); // q = 2^m -1
+
+	mpz_gcd(q, p, q); // q <- gcd(p, q)
+	if (mpz_cmp_ui(q, 1l) != 0) // q != 1
+	    continue; // p not prime
+
+	// we ceck 2^p = 2 mod p instead of 2^(p-1) = 1 mod p
+	mpz_set_ui(q, 2l);
+	mpz_powm(q, q, p, p);
+	if (mpz_cmp_ui(q, 2l) == 0) // found a prime!
+	    isPrime = true;
+    }
+
+    fprintf(stderr, "m value %lu\n", m);
+    mpz_clear(q);
 }
 
 
@@ -210,8 +255,11 @@ void constructPrime(mpz_t p, const unsigned long N) {
 	constructPrime100k(p);
 	break;
     default:
-	if (N < 5000l)
+	if (N < 2500l)
 	    findPseudoSafePrime(p, N);
+	else if (N < 5000l){
+	    findAlmostSafePrime(p, N);
+	}
 	else {
 	    fprintf(stderr, "constructing primes of size %lu is not supported\n", N);
 	    assert(0);

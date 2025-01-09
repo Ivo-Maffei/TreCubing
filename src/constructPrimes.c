@@ -193,7 +193,7 @@ void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
 // so for q=2 mod 3 -> m = 6k + 2
 // and for q=1 mod 3 -> m = 6k + 4
 // we could just use m= 6k + 4(q%3), but 6k + 2(3-(q%3)) is perfect
-void findAlmostSafePrime(mpz_t p, const unsigned long Nbits) {
+void constructAlmostSafePrime(mpz_t p, mpz_t b, const unsigned long Nbits) {
     mpz_t q;
     unsigned long m; // note that we expect m = O(log p) = O(N) hence in ulong
     bool isPrime;
@@ -230,13 +230,23 @@ void findAlmostSafePrime(mpz_t p, const unsigned long Nbits) {
 	    isPrime = true;
     }
 
+    // now p is a prime
+
+    // store the inverse of 3 mod p-1
+    // this is: (1 + 2(p-1))/3 = (2p-1)/3
+    if (b) {
+	mpz_mul_2exp(b, p, 1); // b <- 2p
+	mpz_sub_ui(b, b, 1);
+	mpz_divexact_ui(b, b, 3);
+    }
+
     mpz_clear(q);
 }
 
 
 // construct a prime and stores it in p
 // p should already be initialised with the correct size
-void constructSafePrime(mpz_t p, const unsigned long N) {
+void constructSafePrime(mpz_t p, mpz_t b, const unsigned long N) {
     switch (N) {
     case 5000l:
 	constructSafePrime5k(p);
@@ -280,15 +290,26 @@ void constructSafePrime(mpz_t p, const unsigned long N) {
 	    assert(0);
 	}
     }
+
+    // set b to the inverse of 3 mod p-1
+    // this is (2p-1)/3
+    if (b) {
+	mpz_mul_2exp(b, p, 1);
+	mpz_sub_ui(b, b, 1);
+	mpz_divexact_ui(b, b, 3);
+    }
 }
 
 
 // assuming secpar is not crazt high, we just compute a random number of secpar bits and find the next prime
 // use this as the basis for q
 // MUST ENSURE p=2 mod 3 otherwise cubing is not invertible in ZZ_q^*
-void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const unsigned long N){
+void constructPrimePower(mpz_t q, mpz_t b, const unsigned long secpar, const unsigned long N){
 
+    mpz_t p;
     unsigned long k;
+
+    mpz_init(p);
 
     // get a random number of exactly secpar bits
     do {
@@ -306,5 +327,22 @@ void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const uns
     // note that an extra multiplication could be needed
     if (mpz_sizeinbase(q, 2) < N - (k/2)) {
 	mpz_mul(q, q, p);
+	++k;
     }
+
+    // set b to the inverse of 3 mod \phi(q)
+    // \phi(q) mod 3 = 2^k mod 3 = 2^(k%2) mod 3
+    // so 2\phi(q) mod 3 = k+1 mod 2
+    // hence b = (1 + (2-(k%2))\phi(q))/3
+    if (b) {
+	mpz_divexact(b, q, p); // b <- p^(k-1)
+	mpz_sub_ui(p, p, 1); // p <- p-1
+	mpz_mul(b, b, p); // b is now phi(q) = p^(k-1)(p-1)
+
+	mpz_mul_ui(b, b, (k%2) & 1); // b <- b * ((k+1)%2)
+	mpz_add_ui(b, b, 1);
+	mpz_divexact_ui(b, b, 3);
+    }
+
+    mpz_clear(p);
 }

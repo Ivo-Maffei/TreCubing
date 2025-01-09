@@ -86,6 +86,7 @@ void testModuloConstruction(const unsigned long N, const unsigned long secpar, c
     mpz_clear(q);
 }
 
+
 // picks a random message m, computes m^3 mod p and then (m^3)^b mod p
 // prints out the time taken and stores the time as well
 // repeate for nIters and outputs means and std
@@ -96,15 +97,17 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
     fprintf(fileptr, "Testing cubing using a prime of %lu bits\n", N);
 
     // variable for timing
-
-    TIMER_INIT(Enc, nIters);
-    TIMER_INIT(Dec, nIters);
+    TIMER_INIT(Cubing, nIters);
+    TIMER_INIT(CubeRoot, nIters);
     TIMER_INIT(SqGMP, nIters);
     TIMER_INIT(FastSqGMP, nIters);
 
     // variables for the computation
     mpz_t m, m2, c, fexp;
-
+    const size_t nlimbs = mpz_size(p);
+    mp_limb_t *mptr, *tptr;
+    const mp_limb_t *cptr, *pptr;
+    size_t tsize;
 
     // initialse variables
     mpz_init2(m, N+1);
@@ -119,56 +122,55 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
     mpz_set_ui(fexp, 1l);
     mpz_mul_2exp(fexp, fexp, nSquarings);
 
+    // compute size for scratch space for low level exponentiation
+    tsize = mpn_binvert_itch(nlimbs);
+    tsize = (tsize > 2*nlimbs) ? tsize : 2*nlimbs;
+    tsize += nlimbs; // just to be sure
+
+    // allocate memory for low level exponentiation
+    tptr = (mp_limb_t*) malloc( tsize*sizeof(mp_limb_t));
+    assert(tptr);
+
     for (int i=0; i < nIters; ++i){
 
 	randomMessage(m, p);
 
 	// encryption
-	TIMER_TIME(Enc,	mpz_powm_ui(c, m, 3l, p), fileptr);
+	TIMER_TIME(Cubing, mpz_powm_ui(c, m, 3l, p), fileptr);
 
         // decryption
-	TIMER_TIME(Dec, mpz_powm(m2, c, b, p), fileptr);
+	TIMER_TIME(CubeRoot, mpz_powm(m2, c, b, p), fileptr);
 
 	//check correctness
         if (mpz_cmp(m2, m) != 0){
-            fprintf(fileptr, "ERROR: decryption is wrong!!!!");
-            fprintf(fileptr, "-> %i\n", mpz_cmp(m2, m));
-	    fprintf(stderr, "ERROR: repeated squaring failed\n");
+            fprintf(fileptr, "ERROR: cube root is wrong!!!! -> %i\n", mpz_cmp(m2, m) );
+	    fprintf(stderr, "ERROR: cube root failed\n");
         }
 
 	// repeated squarings only
 	TIMER_TIME(SqGMP, mpz_powm(m2, c, fexp, p), fileptr);
 
 	// try using the mpn_powm_2exp
-	size_t nlimbs = mpz_size(p);
-	mp_limb_t* mptr = mpz_limbs_modify(m, nlimbs);
-	const mp_limb_t* cptr = mpz_limbs_read(c);
-	const mp_limb_t* pptr = mpz_limbs_read(p);
-	size_t tsize = mpn_binvert_itch(nlimbs);
-	tsize = (tsize > 2*nlimbs) ? tsize : 2*nlimbs;
-	tsize += nlimbs; // just to be sure
-	mp_limb_t* tptr = (mp_limb_t*) malloc( tsize*sizeof(mp_limb_t));
-	if (!tptr) continue;
-
+	mptr = mpz_limbs_modify(m, nlimbs);
+	cptr = mpz_limbs_read(c);
+	pptr = mpz_limbs_read(p);
 	TIMER_TIME(FastSqGMP, mpn_powm_2exp(mptr, cptr, mpz_size(c), nSquarings, pptr, nlimbs, tptr), fileptr);
 
 	if (mpn_cmp(mptr, mpz_limbs_read(m2), mpz_size(m2)) != 0) {
 	    printf("ERROR\n");
 	}
-
-	free(tptr);
-
     }// end for loop
 
 
-    TIMER_REPORT(Enc, fileptr);
-    TIMER_REPORT(Dec, fileptr);
+    TIMER_REPORT(Cubing, fileptr);
+    TIMER_REPORT(CubeRoot, fileptr);
     TIMER_REPORT(SqGMP, fileptr);
     TIMER_REPORT(FastSqGMP, fileptr);
     fprintf(fileptr, "Number of squarings: %lu\n", nSquarings);
 
     writelineSep(fileptr);
 
+    free(tptr);
     mpz_clears(m, m2, c, fexp, NULL);
     clearRandomness();
 }

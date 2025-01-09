@@ -181,8 +181,45 @@ static struct argp argp_struct = { options, parser_fun, args_doc , doc };
 
 
 
+// tell user what we are going to test
+void printReceivedInput(struct input input) {
+    printf("Output test results to file: %s\n", input.filename);
+    printf("Testing %lu iterations of:\n", input.nIters);
+    printf("modulo: %s\ncubing: %s\nboth-end encryption: %s\ndelay: %s ", BOOLSTR(input.moduli), BOOLSTR(input.cubing), BOOLSTR(input.enc), BOOLSTR(input.delay || input.delayThorp));
 
+    if(input.delayThorp || input.delay) {
+	printf("(using chain lengths: ");
+	if (input.nChain) printf("%lu", input.nChain);
+	else printf("10, 100");
+	printf(")");
+    }
+    printf("\n");
 
+    printf("delay using both-ends encryption: %s\ndelay using Thorp: %s\n", BOOLSTR(input.delay), BOOLSTR(input.delayThorp));
+
+    printf("FPE methods: %s%s%s",
+	   input.fpeThorp ? "Thorp " : "",
+	   input.fpeSoN ? "Swap-or-Not " : "",
+	   input.fpeSR ? "SometimesRecurse" : "");
+
+    if (input.fpeThorp || input.fpeSoN || input.fpeSR) {
+	printf(" (using round lengths: ");
+	if (!input.nRounds) printf("100, primesize/2, primesize");
+	else printf("%lu", input.nRounds);
+	printf(")\n");
+    } else printf("none\n");
+
+    printf("Prime sizes selected: ");
+    if (input.pSize) printf("%lu\n", input.pSize);
+    else {
+	for (int i=0; i < numAvailablePrimes; ++i) printf("%lu ", availablePrimeSizes[i]);
+	printf("\n");
+    }
+    if (input.secpar)
+	printf("Using prime powers with security parameter %lu\n", input.secpar);
+    else
+	printf("Using safe primes\n");
+}
 
 // ENTRYPOINT
 int main(int argc, char **argv) {
@@ -202,6 +239,11 @@ int main(int argc, char **argv) {
     // instantiate the primes, chain lengths and rounds to test
     const unsigned long *primeSizes; // pointer to const
     unsigned long nPrimes;
+    int numR = 3;
+    int numC = 2;
+    unsigned long Rs[] = {100, 0, 0};
+    unsigned long Cs[] = {10, 100};
+
     if (input.pSize == 0) {
 	primeSizes = availablePrimeSizes;
 	nPrimes = numAvailablePrimes;
@@ -210,10 +252,6 @@ int main(int argc, char **argv) {
 	nPrimes = 1;
     }
 
-    unsigned long Rs[] = {100, 0, 0};
-    unsigned long Cs[] = {10, 100};
-    int numR = 3;
-    int numC = 2;
     if (input.nRounds != 0) { // user specified something != 0
 	Rs[0] = input.nRounds;
 	numR = 1;
@@ -223,48 +261,8 @@ int main(int argc, char **argv) {
 	numC = 1;
     }
 
-    mpz_t q, p, b;
-    unsigned long N; // bitsize of q
-
-    mpz_inits(q, p, b, NULL);
-
-
-
-    printf("Output test results to file: %s\n", input.filename);
-    printf("Testing %lu iterations of:\n", input.nIters);
-    printf("cubing: %s\nboth-end encryption: %s\ndelay: %s ", BOOLSTR(input.cubing), BOOLSTR(input.enc), BOOLSTR(input.delay || input.delayThorp));
-
-    if(input.delayThorp || input.delay) {
-	printf("(using chain lengths:");
-	for (int i=0; i< numC; ++i) printf(" %lu", Cs[i]);
-	printf(")");
-    }
-    printf("\n");
-
-    printf("delay uses both-ends encryption: %s\ndelay uses Thorp: %s\n", BOOLSTR(input.delay), BOOLSTR(input.delayThorp));
-
-    printf("FPE methods: %s%s%s",
-	   input.fpeThorp ? "Thorp " : "",
-	   input.fpeSoN ? "Swap-or-Not " : "",
-	   input.fpeSR ? "SometimesRecurse" : "");
-
-    if (input.fpeThorp || input.fpeSoN || input.fpeSR) {
-	printf(" (using round lengths: %lu", Rs[0]);
-	if (numR > 1) printf(" primesize/2 primesize");
-	printf(")\n");
-    } else printf("none\n");
-
-    printf("Prime sizes selected: ");
-    if (input.pSize) printf("%lu\n", input.pSize);
-    else {
-	for (int i=0; i < numAvailablePrimes; ++i) printf("%lu ", availablePrimeSizes[i]);
-	printf("\n");
-    }
-    if (input.secpar)
-	printf("Using prime powers with security parameter %lu\n", input.secpar);
-    else
-	printf("Using safe primes\n");
-
+    // tell use what we are going to do
+    printReceivedInput(input);
 
     // OPEN OUTPUT FILE
     FILE* fileptr = NULL;
@@ -282,6 +280,11 @@ int main(int argc, char **argv) {
     fprintf(fileptr, "\nSTART TESTS using %lu iterations\n\n", input.nIters);
     fflush(fileptr);
 
+    // ACTUALLY DO THE TESTS
+    mpz_t q, b;
+    unsigned long N; // bitsize of q
+
+    mpz_inits(q, b, NULL);
 
     for(unsigned long i=0; i < nPrimes; ++i) {
 
@@ -347,8 +350,6 @@ int main(int argc, char **argv) {
     for(int i=0; i<50; ++i) fprintf(fileptr, "=");
     fclose(fileptr);
 
-
-
-    mpz_clears(q, p, b, NULL);
+    mpz_clears(q, b, NULL);
     return 0;
 }

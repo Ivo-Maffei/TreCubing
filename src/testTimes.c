@@ -67,15 +67,14 @@ void testModuloConstruction(const unsigned long N, const unsigned long secpar, c
     TIMER_INIT(AlmostSafe, nIters);
     TIMER_INIT(PrimePower, nIters);
 
-    mpz_t p, q;
-    mpz_init2(p, secpar+5);
+    mpz_t q;
     mpz_init2(q, N+5);
 
     for (int i=0; i < nIters; ++i){
 
-	TIMER_TIME(OSSLsafe, findOpensslPrime(p, N, 1), fileptr);
-	TIMER_TIME(AlmostSafe, findAlmostSafePrime(p, N), fileptr);
-	if (secpar) TIMER_TIME(PrimePower, constructPrimePower(q, p, secpar, N), fileptr);
+	TIMER_TIME(OSSLsafe, findOpensslPrime(q, N, 1), fileptr);
+	TIMER_TIME(AlmostSafe, constructAlmostSafePrime(q, NULL, N), fileptr);
+	if (secpar) TIMER_TIME(PrimePower, constructPrimePower(q, NULL, secpar, N), fileptr);
     }
 
     TIMER_REPORT(OSSLsafe, fileptr);
@@ -84,7 +83,7 @@ void testModuloConstruction(const unsigned long N, const unsigned long secpar, c
 
     writelineSep(fileptr);
 
-    mpz_clears(p, q, NULL);
+    mpz_clear(q);
 }
 
 // picks a random message m, computes m^3 mod p and then (m^3)^b mod p

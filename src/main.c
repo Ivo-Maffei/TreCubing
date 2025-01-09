@@ -289,28 +289,13 @@ int main(int argc, char **argv) {
 	    testModuloConstruction(primeSizes[i], input.secpar, input.nIters, fileptr);
 	}
 
-	// combute exponent to invert cubing
+	// combute modulo and exponent for the cubing
 	if (input.cubing | input.delay | input.delayThorp ) {
 	    if (input.secpar)
-		constructPrimePower(q, p, input.secpar, primeSizes[i]);
-	    else constructSafePrime(q, primeSizes[i]);
+		constructPrimePower(q, b, input.secpar, primeSizes[i]);
+	    else constructSafePrime(q, b, primeSizes[i]);
 
 	    N = mpz_sizeinbase(q, 2);
-
-	    // compute b
-	    // set b to be order of group
-	    if (input.secpar) {
-		mpz_divexact(b, q, p);
-		mpz_sub(b, q, b); // b <- q - q/p = p^k - p^(k-1) = \phi(q)
-	    } else mpz_sub_ui(b, q, 1l);
-
-	    // compute inverse of 3
-	    if (mpz_fdiv_ui(b, 3l) == 1)
-		mpz_mul_2exp(b, b, 1l); // multiply b by 2
-
-	    // otherwise b = 2 mod 3 and there is no need to multiply by 2
-	    mpz_add_ui(b, b, 1l); // b <- b+1
-	    mpz_divexact_ui(b, b, 3l); // b <- b/3 = (1+b*((2b)%3))/3
 	}
 
 	if (input.cubing) { // test repeated squarings

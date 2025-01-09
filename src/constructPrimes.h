@@ -1,6 +1,7 @@
 #ifndef CONSTRUCT_PRIMES_H
 #define CONSTRUCT_PRIMES_H
 
+#include <stdbool.h> // for bool
 #include <gmp.h>
 
 // construct a prime and stores it in p
@@ -11,8 +12,7 @@ void constructSafePrime(mpz_t p, const unsigned long N);
 // q has at least N bits
 void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const unsigned long N);
 
-void findOpensslSafePrime(mpz_t p, const unsigned long Nbits);
-void findPseudoSafePrime(mpz_t p, const unsigned long Nbits);
+void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe);
 void findAlmostSafePrime(mpz_t p, const unsigned long Nbits);
 
 extern const unsigned long numAvailablePrimes;

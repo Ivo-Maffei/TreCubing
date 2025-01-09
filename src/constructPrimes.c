@@ -1,16 +1,17 @@
 #include "constructPrimes.h"
 
 #include <assert.h>
-#include <stdbool.h> // for bool
 #include "rand.h"
 #include <openssl/bn.h>
 
 const unsigned long availablePrimeSizes[] = {
+    256,
     512,
     1024,
     2048,
     3072,
-    5000,
+    4096,
+    //5000,
     10000,
     //    20000,
     30000,
@@ -23,7 +24,7 @@ const unsigned long availablePrimeSizes[] = {
     100000
 };
 
-const unsigned long numAvailablePrimes = 11;
+const unsigned long numAvailablePrimes = 12;
 
 
 
@@ -126,8 +127,9 @@ void constructSafePrime100k(mpz_t p) {
     mpz_sub_ui(p, p, 1l);
 }
 
-// use openssl for generating safe primes
-void findOpensslSafePrime(mpz_t p, const unsigned long Nbits) {
+
+// use openssl for generating primes
+void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
     // we must have Nbits < 2^31 to fit an int
     assert(Nbits < INT_MAX);
 
@@ -140,7 +142,7 @@ void findOpensslSafePrime(mpz_t p, const unsigned long Nbits) {
 
     // generate the safe prime
     // the NULLs are for callback and requirements on type of prime
-    if (!BN_generate_prime_ex(ossl_num, Nbits, true, NULL, NULL, NULL)) {
+    if (!BN_generate_prime_ex(ossl_num, Nbits, safe, NULL, NULL, NULL)) {
 	fprintf(stderr, "ERROR with openssl prime generation\n");
 	mpz_set_ui(p, 0l);
     }
@@ -185,47 +187,6 @@ void findOpensslSafePrime(mpz_t p, const unsigned long Nbits) {
     BN_free(ossl_num);
 }
 
-// finds a safe prime of the specified bitsize (sort of)
-// we assume such safe prime is larger than the 10 000th prime
-void findPseudoSafePrime(mpz_t p, const unsigned long Nbits) {
-
-    mpz_t q, t;
-    bool isPrime;
-
-    mpz_inits(q, t , NULL);
-
-    mpz_set_ui(q, 1l);
-    mpz_mul_2exp(q, q, Nbits-1); // q is 2^{Nbits-1}
-
-    isPrime = false;
-    while (!isPrime){
-	mpz_nextprime(q, q); // finds the next prime
-
-	// we will check if p=2q+1 is prime with the pocklington test
-	// i.e. if there is an integer a such that a^{p-1} = 1 mod p and gcd(a^2-1, p) =1, then p is prime
-	// we do the test for a=2 (we could pick a=3, so that a^2-1 is 8, hence we only need p to be odd, which it is!)
-	// note that if we fail, then q is not prime (either 2^{p-1} != 1 or 3 divides p)
-
-	// we check gcd(3, p)=1 by checking q%3 == 2
-	// fdiv_ui returns the mod
-	if( mpz_fdiv_ui(q, 3l) != 2l) continue; // not safe prime
-
-	// now check 2^{p-1} = 1 mod p
-	mpz_mul_2exp(p, q, 1l);
-	mpz_add_ui(p, p, 1l);
-	// p <- 2q+1
-
-	// we compute 2^p mod p which must be 2
-	mpz_set_ui(t, 2l);
-	mpz_powm(t, t, p, p);
-	if (mpz_cmp_ui(t, 2l) == 0l) { // found a safe prime
-	    isPrime = true;
-	}
-
-    }
-
-    mpz_clears(q, t, NULL);
-}
 
 // gets a prime of type mq+1 where m is quite small
 // note that m=q mod 3 and m even
@@ -240,9 +201,7 @@ void findAlmostSafePrime(mpz_t p, const unsigned long Nbits) {
     mpz_init(q);
 
     // get a prime of Nbits
-    mpz_set_ui(q, 1l);
-    mpz_mul_2exp(q, q, Nbits-1);
-    mpz_nextprime(q, q);
+    findOpensslPrime(q, Nbits, false);
 
     // now look for m = 6k + 2(3-(q%3)) = 6(k+1) - 2(q%3)
     // so we use 6k - 2(q%3) and start with k=1
@@ -314,7 +273,7 @@ void constructSafePrime(mpz_t p, const unsigned long N) {
 	break;
     default:
 	if (N < 5000l){
-	    findOpensslSafePrime(p, N);
+	    findOpensslPrime(p, N, true);
 	}
 	else {
 	    fprintf(stderr, "constructing primes of size %lu is not supported\n", N);
@@ -332,10 +291,10 @@ void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const uns
     unsigned long k;
 
     // get a random number of exactly secpar bits
-    randomNumber(p, secpar);
     do {
-	mpz_nextprime(p, p); // p is now prime
+	findOpensslPrime(p, secpar, false); // gets random prime of secpar bits
     } while (mpz_fdiv_ui(p, 3l) != 2l); // try again untill we get a prime congruent 2 modulo 3
+    // we could optimise the above by using openssl for the congruence condition as well
 
     k = mpz_sizeinbase(p, 2); // actual bitsize of p
     k = (N + k -1) / k; // ceil (N/k)
@@ -343,4 +302,9 @@ void constructPrimePower(mpz_t q, mpz_t p, const unsigned long secpar, const uns
     assert(k>1 && "Prime power is a trivial power");
 
     mpz_pow_ui(q, p, k); // q = p^k
+
+    // note that an extra multiplication could be needed
+    if (mpz_sizeinbase(q, 2) < N - (k/2)) {
+	mpz_mul(q, q, p);
+    }
 }

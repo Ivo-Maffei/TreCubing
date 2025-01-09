@@ -63,7 +63,6 @@ void testModuloConstruction(const unsigned long N, const unsigned long secpar, c
     writeTimestamp(stdout);
     fprintf(fileptr, "Testing construction of moduli of %lu bits\n", N);
 
-    TIMER_INIT(GMPsafe, nIters);
     TIMER_INIT(OSSLsafe, nIters);
     TIMER_INIT(AlmostSafe, nIters);
     TIMER_INIT(PrimePower, nIters);
@@ -73,13 +72,12 @@ void testModuloConstruction(const unsigned long N, const unsigned long secpar, c
     mpz_init2(q, N+5);
 
     for (int i=0; i < nIters; ++i){
-	TIMER_TIME(GMPsafe, findPseudoSafePrime(p, N), fileptr);
-	TIMER_TIME(OSSLsafe, findOpensslSafePrime(p, N), fileptr);
+
+	TIMER_TIME(OSSLsafe, findOpensslPrime(p, N, 1), fileptr);
 	TIMER_TIME(AlmostSafe, findAlmostSafePrime(p, N), fileptr);
 	if (secpar) TIMER_TIME(PrimePower, constructPrimePower(q, p, secpar, N), fileptr);
     }
 
-    TIMER_REPORT(GMPsafe, fileptr);
     TIMER_REPORT(OSSLsafe, fileptr);
     TIMER_REPORT(AlmostSafe, fileptr);
     TIMER_REPORT(PrimePower, fileptr);

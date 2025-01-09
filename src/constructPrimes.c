@@ -336,10 +336,9 @@ void constructPrimePower(mpz_t q, mpz_t b, const unsigned long secpar, const uns
     // hence b = (1 + (2-(k%2))\phi(q))/3
     if (b) {
 	mpz_divexact(b, q, p); // b <- p^(k-1)
-	mpz_sub_ui(p, p, 1); // p <- p-1
-	mpz_mul(b, b, p); // b is now phi(q) = p^(k-1)(p-1)
+	mpz_sub(b, q, b); // b = p^k - p^(k-1) = p^(k-1) (p-1)
 
-	mpz_mul_ui(b, b, (k%2) & 1); // b <- b * ((k+1)%2)
+	mpz_mul_ui(b, b, (k+1)%2); // b <- b * ((k+1)%2)
 	mpz_add_ui(b, b, 1);
 	mpz_divexact_ui(b, b, 3);
     }

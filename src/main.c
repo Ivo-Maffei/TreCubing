@@ -287,7 +287,7 @@ int main(int argc, char **argv) {
 	if (input.moduli){
 	    testModuloConstruction(primeSizes[i], input.secpar, input.nIters, fileptr);
 	    fflush(fileptr);
-	    printf("Tested both-ends encryption\n");
+	    printf("Tested modulo creation\n");
 	}
 
 	// combute modulo and exponent for the cubing

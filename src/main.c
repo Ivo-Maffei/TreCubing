@@ -286,6 +286,8 @@ int main(int argc, char **argv) {
 
 	if (input.moduli){
 	    testModuloConstruction(primeSizes[i], input.secpar, input.nIters, fileptr);
+	    fflush(fileptr);
+	    printf("Tested both-ends encryption\n");
 	}
 
 	// combute modulo and exponent for the cubing
@@ -295,6 +297,7 @@ int main(int argc, char **argv) {
 	    else constructSafePrime(q, b, primeSizes[i]);
 
 	    N = mpz_sizeinbase(q, 2);
+	    printf("Using a prime with exactly %lu bits\n", N);
 	}
 
 	if (input.cubing) { // test repeated squarings

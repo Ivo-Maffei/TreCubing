@@ -327,19 +327,21 @@ void constructPrimePower(mpz_t q, mpz_t b, const unsigned long secpar, const uns
     // note that an extra multiplication could be needed
     if (mpz_sizeinbase(q, 2) < N - (k/2)) {
 	mpz_mul(q, q, p);
-	++k;
+	++k; // preserve invariant q = p^k
     }
 
     // set b to the inverse of 3 mod \phi(q)
-    // \phi(q) mod 3 = 2^k mod 3 = 2^(k%2) mod 3
-    // so 2\phi(q) mod 3 = k+1 mod 2
-    // hence b = (1 + (2-(k%2))\phi(q))/3
+    // \phi(q) mod 3 = 2^(k-1) mod 3 = 2^(k-1%2) mod 3 = 1 + (k-1%2) = 2 - (k%2)
+    // so 2\phi(q) mod 3 = 2^(k%2) mod 3 = 1 + (k%2)
+    // note that (2\phi(q)%3) * \phi(q) = 2 mod 3
+    // hence b = (1 + (1+(k%2))\phi(q))/3
     if (b) {
 	mpz_divexact(b, q, p); // b <- p^(k-1)
-	mpz_sub(b, q, b); // b = p^k - p^(k-1) = p^(k-1) (p-1)
+	mpz_sub(b, q, b); // b = p^k - p^(k-1) = p^(k-1) (p-1) = \phi(q)
 
-	mpz_mul_ui(b, b, (k+1)%2); // b <- b * ((k+1)%2)
+	mpz_mul_ui(b, b, 1 + (k%2)); // b <- b *  (2\phi(q) mod 3) so that 1 + b = 0 mod 3
 	mpz_add_ui(b, b, 1);
+
 	mpz_divexact_ui(b, b, 3);
     }
 

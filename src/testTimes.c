@@ -176,7 +176,7 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
 }
 
 
-void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool son, const bool sr, const int nIters, FILE * const fileptr){
+void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool son, const int nIters, FILE * const fileptr){
 
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
@@ -186,7 +186,6 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
      // variable for timing
     TIMER_INIT(Th, nIters);
     TIMER_INIT(Sw, nIters);
-    TIMER_INIT(SR, nIters);
 
     mpz_t m;
     int keyLength = (R+7)/8;
@@ -202,8 +201,6 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
     }
 
     for (int i=0; i<nIters; ++i){
-
-
 	randomMessage(m, N);
 
 	if(t){
@@ -213,16 +210,11 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
 	if(son){
 	    TIMER_TIME(Sw, swapOrNot(m, N, R), fileptr);
 	}
-
-	if(sr){
-	    TIMER_TIME(SR, sometimesRecurse(m, N, R), fileptr);
-	}
     }
 
 
     TIMER_REPORT(Th, fileptr);
     TIMER_REPORT(Sw, fileptr);
-    TIMER_REPORT(SR, fileptr);
 
     writelineSep(fileptr);
 

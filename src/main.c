@@ -32,7 +32,7 @@ static struct argp_option options[] = {
     { "delay", 'd', 0, 0, "Test the performance of the whole delay/open method (using both-ends encryption)" },
     { "delayThorp", -2, 0, 0, "Test the performance of the whole delay/open method using Thorp as FPE"},
     { "encryption", 'e', 0, 0, "Test the both-ends encryption performance"},
-    { "fpe", 'f', "fpeScheme",  OPTION_ARG_OPTIONAL, "Test the performance of the specified FPE methods as a comma separated list (if no list is provided, all methods are tested). Valid FPE schemes are: 'thorp', 'swapornot', 'sometimesrecurse'" },
+    { "fpe", 'f', "fpeScheme",  OPTION_ARG_OPTIONAL, "Test the performance of the specified FPE methods as a comma separated list (if no list is provided, all methods are tested). Valid FPE schemes are: 'thorp', 'swapornot'" },
     { "rounds", 'R', "nRounds", 0, "Specify the number of rounds to use when testing FPE schemes. If this option is omitted, we test the values: 100, 0.5*primesize and primesize", 2 },
     { "chain", 'C', "nChain", 0, "Specify how many delays to chain together when testing the whole delay process. If this option is omitted, we test values: 10 and 100" },
     { "moduli", 'm', 0, 0, "Test the performance of different moduli creations" },
@@ -52,7 +52,6 @@ struct input {
     bool delayThorp;
     bool fpeThorp;
     bool fpeSoN;
-    bool fpeSR;
     bool enc;
     bool moduli;
     unsigned long nRounds;
@@ -114,7 +113,6 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	if (arg == 0){ // no value is given -> meaing test all
 	    input->fpeThorp = true;
 	    input->fpeSoN = true;
-	    input->fpeSR = true;
 	    return 0;
 	}
 	// other we need to handle one or more arguments passed
@@ -128,7 +126,6 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	while (ptr != NULL) {
 	    if (strcmp(ptr, "thorp") == 0) input->fpeThorp = true;
 	    else if (strcmp(ptr, "swapornot") == 0) input->fpeSoN = true;
-	    else if (strcmp(ptr, "sometimesrecurse") == 0) input->fpeSR = true;
 	    ptr = strtok(NULL, ","); // go to next token
 	}
 	break;
@@ -164,9 +161,9 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	    argp_error(state, "No output file specified");
 	    return EINVAL;
 	}
-	if (!(input->cubing || input->delay || input->delayThorp || input->enc || input->fpeThorp || input->fpeSoN || input->fpeSR || input->moduli)) { // no specific test set
+	if (!(input->cubing || input->delay || input->delayThorp || input->enc || input->fpeThorp || input->fpeSoN || input->moduli)) { // no specific test set
 	    // set all tests to true
-	    input->cubing = input->delay = input->delayThorp = input->enc = input->fpeThorp = input->fpeSoN = input->fpeSR = input->moduli = true;
+	    input->cubing = input->delay = input->delayThorp = input->enc = input->fpeThorp = input->fpeSoN = input->moduli = true;
 	}
     }
     default:
@@ -197,12 +194,11 @@ void printReceivedInput(struct input input) {
 
     printf("delay using both-ends encryption: %s\ndelay using Thorp: %s\n", BOOLSTR(input.delay), BOOLSTR(input.delayThorp));
 
-    printf("FPE methods: %s%s%s",
+    printf("FPE methods: %s%s",
 	   input.fpeThorp ? "Thorp " : "",
-	   input.fpeSoN ? "Swap-or-Not " : "",
-	   input.fpeSR ? "SometimesRecurse" : "");
+	   input.fpeSoN ? "Swap-or-Not " : "");
 
-    if (input.fpeThorp || input.fpeSoN || input.fpeSR) {
+    if (input.fpeThorp || input.fpeSoN ) {
 	printf(" (using round lengths: ");
 	if (!input.nRounds) printf("100, primesize/2, primesize");
 	else printf("%lu", input.nRounds);
@@ -336,9 +332,9 @@ int main(int argc, char **argv) {
 	    printf("Tested delay Thorp\n");
 	}
 
-	if (input.fpeThorp || input.fpeSoN || input.fpeSR) {
+	if (input.fpeThorp || input.fpeSoN) {
 	    for (int ri = 0; ri < numR; ++ri) {
-		testTimesFpe(q, Rs[ri], input.fpeThorp, input.fpeSoN, input.fpeSR, input.nIters, fileptr);
+		testTimesFpe(q, Rs[ri], input.fpeThorp, input.fpeSoN, input.nIters, fileptr);
 		fflush(fileptr);
 	    }
 	    printf("Tested FPEs\n");

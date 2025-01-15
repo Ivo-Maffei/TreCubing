@@ -135,6 +135,13 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
 
 	randomMessage(m, p);
 
+	// quick tests
+	// m in Z^*_p
+        mpz_gcd(c, m, p);
+	if (mpz_cmp_ui(c, 1l)){
+	    fprintf(stderr, "ERROR: message is not in correct group\n");
+	}
+
 	// encryption
 	TIMER_TIME(Cubing, mpz_powm_ui(c, m, 3l, p), fileptr);
 

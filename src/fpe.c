@@ -85,27 +85,3 @@ void swapOrNot(mpz_t x, const mpz_t N, const unsigned long R){
     mpz_clears(K, NULL);
     gmp_randclear(randState);
 }
-
-
-void sometimesRecurse(mpz_t x, const mpz_t N, const unsigned long R) {
-
-    mpz_t N2;
-
-    mpz_init2(N2, mpz_sizeinbase(N, 2));
-
-    mpz_tdiv_q_2exp(N2, N, 1l); // N2 <- N/2 truncated
-
-    swapOrNot(x, N, R);
-
-    while (mpz_cmp(x, N2) < 0  && mpz_cmp_ui(N2, 1l) != 0){
-	swapOrNot(x, N2, R);
-	mpz_tdiv_q_2exp(N2, N2, 1l); // N2 <- N/2 truncated
-    }
-
-    if (mpz_cmp_ui(N2, 1l) == 0)
-	mpz_set(x, 0l);
-
-
-    mpz_clears(N2, NULL);
-
-}

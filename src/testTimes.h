@@ -13,7 +13,7 @@ void testModuloConstruction(const unsigned long N, const unsigned long secpar, c
 void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters, FILE * const fileptr);
 
 // picks random numbers modulo p and encrypts them with R rounds of various FPE schemes
-void testTimesFpe(const mpz_t p, const unsigned long R, const bool t, const bool son, const bool sr, const int nIters, FILE * const fileptr);
+void testTimesFpe(const mpz_t p, const unsigned long R, const bool t, const bool son, const int nIters, FILE * const fileptr);
 
 // test the overall delay and open
 void testTimesAll(const mpz_t p, const mpz_t b, const unsigned long R, const unsigned long C, const int nIters, FILE * const fileptr);

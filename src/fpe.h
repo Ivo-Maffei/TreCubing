@@ -10,6 +10,4 @@ void inverse_thorp(mpz_t m, const mpz_t c, const mpz_t N, const unsigned long R,
 
 void swapOrNot(mpz_t x, const mpz_t N, const unsigned long R);
 
-void sometimesRecurse(mpz_t x, const mpz_t N, const unsigned long R);
-
 #endif

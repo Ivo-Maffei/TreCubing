@@ -1,0 +1,4515 @@
+
+
+==================================================
+START TESTS using 100 iterations
+
+Current localtime: Tue Jan 14 23:07:23 2025
+
+Testing cubing using a prime of 256 bits
+Number of squarings: 254
+Cubing took 0.008ms
+CubeRoot took 0.039ms
+SqGMP took 0.028ms
+FastSqGMP took 0.026ms
+Cubing took 0.000ms
+CubeRoot took 0.034ms
+SqGMP took 0.029ms
+FastSqGMP took 0.024ms
+Cubing took 0.000ms
+CubeRoot took 0.034ms
+SqGMP took 0.028ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.028ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.034ms
+SqGMP took 0.026ms
+FastSqGMP took 0.023ms
+Cubing took 0.002ms
+CubeRoot took 0.031ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.029ms
+FastSqGMP took 0.026ms
+Cubing took 0.000ms
+CubeRoot took 0.033ms
+SqGMP took 0.028ms
+FastSqGMP took 0.024ms
+Cubing took 0.000ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.037ms
+SqGMP took 0.029ms
+FastSqGMP took 0.027ms
+Cubing took 0.002ms
+CubeRoot took 0.035ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.033ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.028ms
+FastSqGMP took 0.025ms
+Cubing took 0.000ms
+CubeRoot took 0.034ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.002ms
+CubeRoot took 0.031ms
+SqGMP took 0.025ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.028ms
+FastSqGMP took 0.026ms
+Cubing took 0.000ms
+CubeRoot took 0.036ms
+SqGMP took 0.030ms
+FastSqGMP took 0.027ms
+Cubing took 0.001ms
+CubeRoot took 0.035ms
+SqGMP took 0.027ms
+FastSqGMP took 0.027ms
+Cubing took 0.002ms
+CubeRoot took 0.036ms
+SqGMP took 0.028ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.034ms
+SqGMP took 0.029ms
+FastSqGMP took 0.027ms
+Cubing took 0.002ms
+CubeRoot took 0.034ms
+SqGMP took 0.029ms
+FastSqGMP took 0.027ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.029ms
+FastSqGMP took 0.027ms
+Cubing took 0.000ms
+CubeRoot took 0.033ms
+SqGMP took 0.029ms
+FastSqGMP took 0.026ms
+Cubing took 0.000ms
+CubeRoot took 0.034ms
+SqGMP took 0.029ms
+FastSqGMP took 0.026ms
+Cubing took 0.001ms
+CubeRoot took 0.034ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.033ms
+SqGMP took 0.027ms
+FastSqGMP took 0.026ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.028ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.034ms
+SqGMP took 0.029ms
+FastSqGMP took 0.026ms
+Cubing took 0.000ms
+CubeRoot took 0.034ms
+SqGMP took 0.026ms
+FastSqGMP took 0.024ms
+Cubing took 0.002ms
+CubeRoot took 0.031ms
+SqGMP took 0.025ms
+FastSqGMP took 0.024ms
+Cubing took 0.002ms
+CubeRoot took 0.031ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.031ms
+SqGMP took 0.025ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.028ms
+FastSqGMP took 0.024ms
+Cubing took 0.002ms
+CubeRoot took 0.034ms
+SqGMP took 0.028ms
+FastSqGMP took 0.027ms
+Cubing took 0.002ms
+CubeRoot took 0.035ms
+SqGMP took 0.028ms
+FastSqGMP took 0.027ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.028ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.028ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.034ms
+SqGMP took 0.029ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.035ms
+SqGMP took 0.030ms
+FastSqGMP took 0.026ms
+Cubing took 0.001ms
+CubeRoot took 0.034ms
+SqGMP took 0.028ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.032ms
+SqGMP took 0.029ms
+FastSqGMP took 0.024ms
+Cubing took 0.002ms
+CubeRoot took 0.034ms
+SqGMP took 0.029ms
+FastSqGMP took 0.027ms
+Cubing took 0.002ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.028ms
+FastSqGMP took 0.027ms
+Cubing took 0.000ms
+CubeRoot took 0.033ms
+SqGMP took 0.028ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.028ms
+FastSqGMP took 0.026ms
+Cubing took 0.001ms
+CubeRoot took 0.034ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.027ms
+Cubing took 0.002ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.026ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.026ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.024ms
+Cubing took 0.002ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.000ms
+CubeRoot took 0.033ms
+SqGMP took 0.029ms
+FastSqGMP took 0.026ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.028ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.035ms
+SqGMP took 0.028ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.000ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.034ms
+SqGMP took 0.028ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.033ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.034ms
+SqGMP took 0.028ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.026ms
+FastSqGMP took 0.024ms
+Cubing took 0.002ms
+CubeRoot took 0.032ms
+SqGMP took 0.026ms
+FastSqGMP took 0.026ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.000ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.029ms
+FastSqGMP took 0.027ms
+Cubing took 0.002ms
+CubeRoot took 0.034ms
+SqGMP took 0.026ms
+FastSqGMP took 0.026ms
+Cubing took 0.002ms
+CubeRoot took 0.032ms
+SqGMP took 0.028ms
+FastSqGMP took 0.026ms
+Cubing took 0.002ms
+CubeRoot took 0.031ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.028ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.032ms
+SqGMP took 0.026ms
+FastSqGMP took 0.026ms
+Cubing took 0.001ms
+CubeRoot took 0.031ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.031ms
+SqGMP took 0.028ms
+FastSqGMP took 0.024ms
+Cubing took 0.000ms
+CubeRoot took 0.034ms
+SqGMP took 0.028ms
+FastSqGMP took 0.026ms
+Cubing took 0.000ms
+CubeRoot took 0.033ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.031ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.026ms
+FastSqGMP took 0.026ms
+Cubing took 0.000ms
+CubeRoot took 0.033ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.026ms
+Cubing took 0.002ms
+CubeRoot took 0.033ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.033ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.002ms
+CubeRoot took 0.034ms
+SqGMP took 0.027ms
+FastSqGMP took 0.024ms
+Cubing took 0.002ms
+CubeRoot took 0.031ms
+SqGMP took 0.026ms
+FastSqGMP took 0.025ms
+Cubing took 0.001ms
+CubeRoot took 0.032ms
+SqGMP took 0.027ms
+FastSqGMP took 0.025ms
+mean and std Cubing time 0.001240000ms (0.000960417ms)
+mean and std CubeRoot time 0.033000000ms (0.001326650ms)
+mean and std SqGMP time 0.027260000ms (0.001145600ms)
+mean and std FastSqGMP time 0.025120000ms (0.000992774ms)
+Number of squarings: 254
+==================================================
+
+Current localtime: Tue Jan 14 23:07:23 2025
+
+Testing cubing using a prime of 512 bits
+Number of squarings: 509
+Cubing took 0.003ms
+CubeRoot took 0.124ms
+SqGMP took 0.103ms
+FastSqGMP took 0.100ms
+Cubing took 0.002ms
+CubeRoot took 0.123ms
+SqGMP took 0.104ms
+FastSqGMP took 0.099ms
+Cubing took 0.001ms
+CubeRoot took 0.123ms
+SqGMP took 0.104ms
+FastSqGMP took 0.099ms
+Cubing took 0.002ms
+CubeRoot took 0.123ms
+SqGMP took 0.103ms
+FastSqGMP took 0.099ms
+Cubing took 0.001ms
+CubeRoot took 0.123ms
+SqGMP took 0.103ms
+FastSqGMP took 0.098ms
+Cubing took 0.001ms
+CubeRoot took 0.123ms
+SqGMP took 0.104ms
+FastSqGMP took 0.099ms
+Cubing took 0.002ms
+CubeRoot took 0.123ms
+SqGMP took 0.103ms
+FastSqGMP took 0.099ms
+Cubing took 0.001ms
+CubeRoot took 0.123ms
+SqGMP took 0.103ms
+FastSqGMP took 0.098ms
+Cubing took 0.002ms
+CubeRoot took 0.122ms
+SqGMP took 0.104ms
+FastSqGMP took 0.098ms
+Cubing took 0.001ms
+CubeRoot took 0.122ms
+SqGMP took 0.103ms
+FastSqGMP took 0.099ms
+Cubing took 0.001ms
+CubeRoot took 0.124ms
+SqGMP took 0.104ms
+FastSqGMP took 0.098ms
+Cubing took 0.002ms
+CubeRoot took 0.122ms
+SqGMP took 0.105ms
+FastSqGMP took 0.098ms
+Cubing took 0.001ms
+CubeRoot took 0.123ms
+SqGMP took 0.103ms
+FastSqGMP took 0.100ms
+Cubing took 0.001ms
+CubeRoot took 0.123ms
+SqGMP took 0.104ms
+FastSqGMP took 0.099ms
+Cubing took 0.002ms
+CubeRoot took 0.123ms
+SqGMP took 0.103ms
+FastSqGMP took 0.099ms
+Cubing took 0.001ms
+CubeRoot took 0.123ms
+SqGMP took 0.103ms
+FastSqGMP took 0.098ms
+Cubing took 0.002ms
+CubeRoot took 0.122ms
+SqGMP took 0.102ms
+FastSqGMP took 0.098ms
+Cubing took 0.001ms
+CubeRoot took 0.124ms
+SqGMP took 0.103ms
+FastSqGMP took 0.099ms
+Cubing took 0.001ms
+CubeRoot took 0.122ms
+SqGMP took 0.104ms
+FastSqGMP took 0.098ms
+Cubing took 0.002ms
+CubeRoot took 0.123ms
+SqGMP took 0.104ms
+FastSqGMP took 0.099ms
+Cubing took 0.001ms
+CubeRoot took 0.123ms
+SqGMP took 0.103ms
+FastSqGMP took 0.099ms
+Cubing took 0.002ms
+CubeRoot took 0.123ms
+SqGMP took 0.105ms
+FastSqGMP took 0.098ms
+Cubing took 0.001ms
+CubeRoot took 0.123ms
+SqGMP took 0.103ms
+FastSqGMP took 0.100ms
+Cubing took 0.001ms
+CubeRoot took 0.123ms
+SqGMP took 0.102ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.104ms
+SqGMP took 0.088ms
+FastSqGMP took 0.085ms
+Cubing took 0.001ms
+CubeRoot took 0.103ms
+SqGMP took 0.088ms
+FastSqGMP took 0.085ms
+Cubing took 0.001ms
+CubeRoot took 0.108ms
+SqGMP took 0.088ms
+FastSqGMP took 0.085ms
+Cubing took 0.001ms
+CubeRoot took 0.106ms
+SqGMP took 0.088ms
+FastSqGMP took 0.086ms
+Cubing took 0.001ms
+CubeRoot took 0.106ms
+SqGMP took 0.088ms
+FastSqGMP took 0.085ms
+Cubing took 0.000ms
+CubeRoot took 0.106ms
+SqGMP took 0.088ms
+FastSqGMP took 0.086ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.088ms
+FastSqGMP took 0.085ms
+Cubing took 0.001ms
+CubeRoot took 0.106ms
+SqGMP took 0.088ms
+FastSqGMP took 0.085ms
+Cubing took 0.001ms
+CubeRoot took 0.106ms
+SqGMP took 0.089ms
+FastSqGMP took 0.085ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.089ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.090ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.104ms
+SqGMP took 0.089ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.106ms
+SqGMP took 0.089ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.089ms
+FastSqGMP took 0.083ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.088ms
+FastSqGMP took 0.085ms
+Cubing took 0.001ms
+CubeRoot took 0.104ms
+SqGMP took 0.088ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.088ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.088ms
+FastSqGMP took 0.084ms
+Cubing took 0.000ms
+CubeRoot took 0.104ms
+SqGMP took 0.107ms
+FastSqGMP took 0.086ms
+Cubing took 0.001ms
+CubeRoot took 0.106ms
+SqGMP took 0.089ms
+FastSqGMP took 0.086ms
+Cubing took 0.001ms
+CubeRoot took 0.112ms
+SqGMP took 0.089ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.089ms
+FastSqGMP took 0.085ms
+Cubing took 0.001ms
+CubeRoot took 0.104ms
+SqGMP took 0.088ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.090ms
+FastSqGMP took 0.086ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.087ms
+FastSqGMP took 0.085ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.089ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.088ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.104ms
+SqGMP took 0.088ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.104ms
+SqGMP took 0.088ms
+FastSqGMP took 0.084ms
+Cubing took 0.002ms
+CubeRoot took 0.105ms
+SqGMP took 0.089ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.088ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.104ms
+SqGMP took 0.088ms
+FastSqGMP took 0.085ms
+Cubing took 0.001ms
+CubeRoot took 0.103ms
+SqGMP took 0.088ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.106ms
+SqGMP took 0.089ms
+FastSqGMP took 0.084ms
+Cubing took 0.001ms
+CubeRoot took 0.105ms
+SqGMP took 0.081ms
+FastSqGMP took 0.073ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.077ms
+FastSqGMP took 0.074ms
+Cubing took 0.002ms
+CubeRoot took 0.091ms
+SqGMP took 0.079ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.090ms
+SqGMP took 0.077ms
+FastSqGMP took 0.075ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.078ms
+FastSqGMP took 0.073ms
+Cubing took 0.001ms
+CubeRoot took 0.092ms
+SqGMP took 0.077ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.092ms
+SqGMP took 0.076ms
+FastSqGMP took 0.074ms
+Cubing took 0.000ms
+CubeRoot took 0.091ms
+SqGMP took 0.076ms
+FastSqGMP took 0.073ms
+Cubing took 0.000ms
+CubeRoot took 0.091ms
+SqGMP took 0.078ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.076ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.092ms
+SqGMP took 0.076ms
+FastSqGMP took 0.073ms
+Cubing took 0.001ms
+CubeRoot took 0.090ms
+SqGMP took 0.078ms
+FastSqGMP took 0.073ms
+Cubing took 0.002ms
+CubeRoot took 0.091ms
+SqGMP took 0.076ms
+FastSqGMP took 0.073ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.077ms
+FastSqGMP took 0.075ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.076ms
+FastSqGMP took 0.073ms
+Cubing took 0.001ms
+CubeRoot took 0.090ms
+SqGMP took 0.077ms
+FastSqGMP took 0.073ms
+Cubing took 0.000ms
+CubeRoot took 0.090ms
+SqGMP took 0.078ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.076ms
+FastSqGMP took 0.073ms
+Cubing took 0.001ms
+CubeRoot took 0.092ms
+SqGMP took 0.076ms
+FastSqGMP took 0.109ms
+Cubing took 0.002ms
+CubeRoot took 0.090ms
+SqGMP took 0.077ms
+FastSqGMP took 0.073ms
+Cubing took 0.001ms
+CubeRoot took 0.104ms
+SqGMP took 0.087ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.092ms
+SqGMP took 0.076ms
+FastSqGMP took 0.090ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.077ms
+FastSqGMP took 0.073ms
+Cubing took 0.000ms
+CubeRoot took 0.091ms
+SqGMP took 0.078ms
+FastSqGMP took 0.073ms
+Cubing took 0.000ms
+CubeRoot took 0.090ms
+SqGMP took 0.076ms
+FastSqGMP took 0.073ms
+Cubing took 0.000ms
+CubeRoot took 0.090ms
+SqGMP took 0.076ms
+FastSqGMP took 0.074ms
+Cubing took 0.000ms
+CubeRoot took 0.092ms
+SqGMP took 0.076ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.076ms
+FastSqGMP took 0.073ms
+Cubing took 0.000ms
+CubeRoot took 0.091ms
+SqGMP took 0.077ms
+FastSqGMP took 0.073ms
+Cubing took 0.002ms
+CubeRoot took 0.091ms
+SqGMP took 0.076ms
+FastSqGMP took 0.073ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.076ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.092ms
+SqGMP took 0.077ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.077ms
+FastSqGMP took 0.073ms
+Cubing took 0.002ms
+CubeRoot took 0.089ms
+SqGMP took 0.077ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.077ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.092ms
+SqGMP took 0.077ms
+FastSqGMP took 0.075ms
+Cubing took 0.001ms
+CubeRoot took 0.092ms
+SqGMP took 0.077ms
+FastSqGMP took 0.074ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.078ms
+FastSqGMP took 0.074ms
+Cubing took 0.002ms
+CubeRoot took 0.091ms
+SqGMP took 0.077ms
+FastSqGMP took 0.074ms
+Cubing took 0.000ms
+CubeRoot took 0.091ms
+SqGMP took 0.077ms
+FastSqGMP took 0.074ms
+Cubing took 0.002ms
+CubeRoot took 0.092ms
+SqGMP took 0.078ms
+FastSqGMP took 0.073ms
+Cubing took 0.001ms
+CubeRoot took 0.091ms
+SqGMP took 0.077ms
+FastSqGMP took 0.074ms
+mean and std Cubing time 0.001080000ms (0.000560000ms)
+mean and std CubeRoot time 0.103760000ms (0.012439550ms)
+mean and std SqGMP time 0.087490000ms (0.010545610ms)
+mean and std FastSqGMP time 0.083750000ms (0.010007372ms)
+Number of squarings: 509
+==================================================
+
+Current localtime: Tue Jan 14 23:07:23 2025
+
+Testing cubing using a prime of 1022 bits
+Number of squarings: 1019
+Cubing took 0.003ms
+CubeRoot took 0.490ms
+SqGMP took 0.394ms
+FastSqGMP took 0.350ms
+Cubing took 0.002ms
+CubeRoot took 0.431ms
+SqGMP took 0.369ms
+FastSqGMP took 0.356ms
+Cubing took 0.002ms
+CubeRoot took 0.431ms
+SqGMP took 0.369ms
+FastSqGMP took 0.352ms
+Cubing took 0.002ms
+CubeRoot took 0.439ms
+SqGMP took 0.383ms
+FastSqGMP took 0.354ms
+Cubing took 0.002ms
+CubeRoot took 0.429ms
+SqGMP took 0.368ms
+FastSqGMP took 0.357ms
+Cubing took 0.002ms
+CubeRoot took 0.432ms
+SqGMP took 0.364ms
+FastSqGMP took 0.355ms
+Cubing took 0.001ms
+CubeRoot took 0.429ms
+SqGMP took 0.366ms
+FastSqGMP took 0.357ms
+Cubing took 0.001ms
+CubeRoot took 0.418ms
+SqGMP took 0.323ms
+FastSqGMP took 0.312ms
+Cubing took 0.001ms
+CubeRoot took 0.380ms
+SqGMP took 0.334ms
+FastSqGMP took 0.321ms
+Cubing took 0.001ms
+CubeRoot took 0.385ms
+SqGMP took 0.328ms
+FastSqGMP took 0.312ms
+Cubing took 0.002ms
+CubeRoot took 0.382ms
+SqGMP took 0.325ms
+FastSqGMP took 0.319ms
+Cubing took 0.001ms
+CubeRoot took 0.381ms
+SqGMP took 0.327ms
+FastSqGMP took 0.318ms
+Cubing took 0.001ms
+CubeRoot took 0.383ms
+SqGMP took 0.330ms
+FastSqGMP took 0.312ms
+Cubing took 0.002ms
+CubeRoot took 0.395ms
+SqGMP took 0.334ms
+FastSqGMP took 0.322ms
+Cubing took 0.002ms
+CubeRoot took 0.383ms
+SqGMP took 0.327ms
+FastSqGMP took 0.310ms
+Cubing took 0.002ms
+CubeRoot took 0.349ms
+SqGMP took 0.298ms
+FastSqGMP took 0.287ms
+Cubing took 0.001ms
+CubeRoot took 0.351ms
+SqGMP took 0.300ms
+FastSqGMP took 0.292ms
+Cubing took 0.001ms
+CubeRoot took 0.353ms
+SqGMP took 0.299ms
+FastSqGMP took 0.286ms
+Cubing took 0.001ms
+CubeRoot took 0.353ms
+SqGMP took 0.297ms
+FastSqGMP took 0.286ms
+Cubing took 0.001ms
+CubeRoot took 0.352ms
+SqGMP took 0.300ms
+FastSqGMP took 0.291ms
+Cubing took 0.002ms
+CubeRoot took 0.353ms
+SqGMP took 0.301ms
+FastSqGMP took 0.284ms
+Cubing took 0.001ms
+CubeRoot took 0.350ms
+SqGMP took 0.295ms
+FastSqGMP took 0.290ms
+Cubing took 0.001ms
+CubeRoot took 0.352ms
+SqGMP took 0.297ms
+FastSqGMP took 0.291ms
+Cubing took 0.001ms
+CubeRoot took 0.343ms
+SqGMP took 0.275ms
+FastSqGMP took 0.263ms
+Cubing took 0.002ms
+CubeRoot took 0.319ms
+SqGMP took 0.273ms
+FastSqGMP took 0.266ms
+Cubing took 0.001ms
+CubeRoot took 0.320ms
+SqGMP took 0.278ms
+FastSqGMP took 0.269ms
+Cubing took 0.001ms
+CubeRoot took 0.322ms
+SqGMP took 0.279ms
+FastSqGMP took 0.268ms
+Cubing took 0.001ms
+CubeRoot took 0.325ms
+SqGMP took 0.274ms
+FastSqGMP took 0.263ms
+Cubing took 0.001ms
+CubeRoot took 0.318ms
+SqGMP took 0.278ms
+FastSqGMP took 0.267ms
+Cubing took 0.001ms
+CubeRoot took 0.323ms
+SqGMP took 0.286ms
+FastSqGMP took 0.267ms
+Cubing took 0.001ms
+CubeRoot took 0.324ms
+SqGMP took 0.279ms
+FastSqGMP took 0.269ms
+Cubing took 0.001ms
+CubeRoot took 0.322ms
+SqGMP took 0.275ms
+FastSqGMP took 0.264ms
+Cubing took 0.001ms
+CubeRoot took 0.322ms
+SqGMP took 0.263ms
+FastSqGMP took 0.246ms
+Cubing took 0.001ms
+CubeRoot took 0.303ms
+SqGMP took 0.258ms
+FastSqGMP took 0.246ms
+Cubing took 0.001ms
+CubeRoot took 0.299ms
+SqGMP took 0.261ms
+FastSqGMP took 0.251ms
+Cubing took 0.001ms
+CubeRoot took 0.303ms
+SqGMP took 0.258ms
+FastSqGMP took 0.250ms
+Cubing took 0.001ms
+CubeRoot took 0.301ms
+SqGMP took 0.283ms
+FastSqGMP took 0.254ms
+Cubing took 0.002ms
+CubeRoot took 0.303ms
+SqGMP took 0.257ms
+FastSqGMP took 0.246ms
+Cubing took 0.001ms
+CubeRoot took 0.300ms
+SqGMP took 0.258ms
+FastSqGMP took 0.247ms
+Cubing took 0.001ms
+CubeRoot took 0.307ms
+SqGMP took 0.255ms
+FastSqGMP took 0.248ms
+Cubing took 0.001ms
+CubeRoot took 0.301ms
+SqGMP took 0.258ms
+FastSqGMP took 0.246ms
+Cubing took 0.001ms
+CubeRoot took 0.298ms
+SqGMP took 0.256ms
+FastSqGMP took 0.250ms
+Cubing took 0.001ms
+CubeRoot took 0.302ms
+SqGMP took 0.256ms
+FastSqGMP took 0.246ms
+Cubing took 0.001ms
+CubeRoot took 0.303ms
+SqGMP took 0.259ms
+FastSqGMP took 0.248ms
+Cubing took 0.001ms
+CubeRoot took 0.301ms
+SqGMP took 0.249ms
+FastSqGMP took 0.228ms
+Cubing took 0.001ms
+CubeRoot took 0.280ms
+SqGMP took 0.240ms
+FastSqGMP took 0.232ms
+Cubing took 0.001ms
+CubeRoot took 0.280ms
+SqGMP took 0.236ms
+FastSqGMP took 0.227ms
+Cubing took 0.001ms
+CubeRoot took 0.276ms
+SqGMP took 0.241ms
+FastSqGMP took 0.234ms
+Cubing took 0.002ms
+CubeRoot took 0.277ms
+SqGMP took 0.241ms
+FastSqGMP took 0.229ms
+Cubing took 0.002ms
+CubeRoot took 0.277ms
+SqGMP took 0.242ms
+FastSqGMP took 0.230ms
+Cubing took 0.000ms
+CubeRoot took 0.279ms
+SqGMP took 0.237ms
+FastSqGMP took 0.230ms
+Cubing took 0.001ms
+CubeRoot took 0.279ms
+SqGMP took 0.237ms
+FastSqGMP took 0.228ms
+Cubing took 0.001ms
+CubeRoot took 0.277ms
+SqGMP took 0.238ms
+FastSqGMP took 0.228ms
+Cubing took 0.001ms
+CubeRoot took 0.278ms
+SqGMP took 0.238ms
+FastSqGMP took 0.228ms
+Cubing took 0.001ms
+CubeRoot took 0.280ms
+SqGMP took 0.241ms
+FastSqGMP took 0.231ms
+Cubing took 0.001ms
+CubeRoot took 0.283ms
+SqGMP took 0.240ms
+FastSqGMP took 0.229ms
+Cubing took 0.001ms
+CubeRoot took 0.277ms
+SqGMP took 0.237ms
+FastSqGMP took 0.228ms
+Cubing took 0.001ms
+CubeRoot took 0.280ms
+SqGMP took 0.240ms
+FastSqGMP took 0.230ms
+Cubing took 0.000ms
+CubeRoot took 0.277ms
+SqGMP took 0.236ms
+FastSqGMP took 0.229ms
+Cubing took 0.001ms
+CubeRoot took 0.282ms
+SqGMP took 0.237ms
+FastSqGMP took 0.228ms
+Cubing took 0.002ms
+CubeRoot took 0.278ms
+SqGMP took 0.236ms
+FastSqGMP took 0.229ms
+Cubing took 0.002ms
+CubeRoot took 0.281ms
+SqGMP took 0.242ms
+FastSqGMP took 0.230ms
+Cubing took 0.001ms
+CubeRoot took 0.279ms
+SqGMP took 0.253ms
+FastSqGMP took 0.232ms
+Cubing took 0.001ms
+CubeRoot took 0.270ms
+SqGMP took 0.239ms
+FastSqGMP took 0.221ms
+Cubing took 0.001ms
+CubeRoot took 0.269ms
+SqGMP took 0.245ms
+FastSqGMP took 0.242ms
+Cubing took 0.002ms
+CubeRoot took 0.269ms
+SqGMP took 0.228ms
+FastSqGMP took 0.220ms
+Cubing took 0.002ms
+CubeRoot took 0.267ms
+SqGMP took 0.228ms
+FastSqGMP took 0.225ms
+Cubing took 0.002ms
+CubeRoot took 0.270ms
+SqGMP took 0.230ms
+FastSqGMP took 0.225ms
+Cubing took 0.002ms
+CubeRoot took 0.272ms
+SqGMP took 0.229ms
+FastSqGMP took 0.221ms
+Cubing took 0.002ms
+CubeRoot took 0.272ms
+SqGMP took 0.229ms
+FastSqGMP took 0.221ms
+Cubing took 0.002ms
+CubeRoot took 0.272ms
+SqGMP took 0.230ms
+FastSqGMP took 0.222ms
+Cubing took 0.001ms
+CubeRoot took 0.265ms
+SqGMP took 0.225ms
+FastSqGMP took 0.216ms
+Cubing took 0.000ms
+CubeRoot took 0.265ms
+SqGMP took 0.227ms
+FastSqGMP took 0.221ms
+Cubing took 0.001ms
+CubeRoot took 0.263ms
+SqGMP took 0.224ms
+FastSqGMP took 0.218ms
+Cubing took 0.001ms
+CubeRoot took 0.264ms
+SqGMP took 0.224ms
+FastSqGMP took 0.216ms
+Cubing took 0.001ms
+CubeRoot took 0.277ms
+SqGMP took 0.225ms
+FastSqGMP took 0.218ms
+Cubing took 0.000ms
+CubeRoot took 0.264ms
+SqGMP took 0.232ms
+FastSqGMP took 0.221ms
+Cubing took 0.002ms
+CubeRoot took 0.263ms
+SqGMP took 0.230ms
+FastSqGMP took 0.218ms
+Cubing took 0.002ms
+CubeRoot took 0.262ms
+SqGMP took 0.225ms
+FastSqGMP took 0.216ms
+Cubing took 0.001ms
+CubeRoot took 0.264ms
+SqGMP took 0.225ms
+FastSqGMP took 0.218ms
+Cubing took 0.001ms
+CubeRoot took 0.262ms
+SqGMP took 0.230ms
+FastSqGMP took 0.218ms
+Cubing took 0.000ms
+CubeRoot took 0.265ms
+SqGMP took 0.246ms
+FastSqGMP took 0.221ms
+Cubing took 0.001ms
+CubeRoot took 0.267ms
+SqGMP took 0.229ms
+FastSqGMP took 0.217ms
+Cubing took 0.001ms
+CubeRoot took 0.263ms
+SqGMP took 0.230ms
+FastSqGMP took 0.221ms
+Cubing took 0.001ms
+CubeRoot took 0.264ms
+SqGMP took 0.225ms
+FastSqGMP took 0.218ms
+Cubing took 0.000ms
+CubeRoot took 0.262ms
+SqGMP took 0.224ms
+FastSqGMP took 0.216ms
+Cubing took 0.001ms
+CubeRoot took 0.261ms
+SqGMP took 0.221ms
+FastSqGMP took 0.213ms
+Cubing took 0.001ms
+CubeRoot took 0.259ms
+SqGMP took 0.221ms
+FastSqGMP took 0.216ms
+Cubing took 0.001ms
+CubeRoot took 0.263ms
+SqGMP took 0.224ms
+FastSqGMP took 0.214ms
+Cubing took 0.001ms
+CubeRoot took 0.261ms
+SqGMP took 0.221ms
+FastSqGMP took 0.213ms
+Cubing took 0.001ms
+CubeRoot took 0.261ms
+SqGMP took 0.225ms
+FastSqGMP took 0.221ms
+Cubing took 0.001ms
+CubeRoot took 0.261ms
+SqGMP took 0.223ms
+FastSqGMP took 0.213ms
+Cubing took 0.001ms
+CubeRoot took 0.262ms
+SqGMP took 0.224ms
+FastSqGMP took 0.216ms
+Cubing took 0.001ms
+CubeRoot took 0.262ms
+SqGMP took 0.221ms
+FastSqGMP took 0.215ms
+Cubing took 0.001ms
+CubeRoot took 0.257ms
+SqGMP took 0.221ms
+FastSqGMP took 0.213ms
+Cubing took 0.000ms
+CubeRoot took 0.262ms
+SqGMP took 0.222ms
+FastSqGMP took 0.217ms
+Cubing took 0.001ms
+CubeRoot took 0.263ms
+SqGMP took 0.224ms
+FastSqGMP took 0.216ms
+Cubing took 0.001ms
+CubeRoot took 0.258ms
+SqGMP took 0.220ms
+FastSqGMP took 0.212ms
+Cubing took 0.001ms
+CubeRoot took 0.258ms
+SqGMP took 0.222ms
+FastSqGMP took 0.212ms
+Cubing took 0.002ms
+CubeRoot took 0.258ms
+SqGMP took 0.220ms
+FastSqGMP took 0.213ms
+mean and std Cubing time 0.001200000ms (0.000565685ms)
+mean and std CubeRoot time 0.306570000ms (0.053241010ms)
+mean and std SqGMP time 0.261960000ms (0.043975657ms)
+mean and std FastSqGMP time 0.251220000ms (0.041448662ms)
+Number of squarings: 1019
+==================================================
+
+Current localtime: Tue Jan 14 23:07:23 2025
+
+Testing cubing using a prime of 2043 bits
+Number of squarings: 2040
+Cubing took 0.021ms
+CubeRoot took 1.644ms
+SqGMP took 1.443ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.437ms
+FastSqGMP took 1.390ms
+Cubing took 0.003ms
+CubeRoot took 1.637ms
+SqGMP took 1.438ms
+FastSqGMP took 1.394ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.436ms
+FastSqGMP took 1.392ms
+Cubing took 0.002ms
+CubeRoot took 1.639ms
+SqGMP took 1.437ms
+FastSqGMP took 1.389ms
+Cubing took 0.002ms
+CubeRoot took 1.642ms
+SqGMP took 1.436ms
+FastSqGMP took 1.389ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.436ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.681ms
+SqGMP took 1.481ms
+FastSqGMP took 1.399ms
+Cubing took 0.003ms
+CubeRoot took 1.639ms
+SqGMP took 1.435ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.438ms
+FastSqGMP took 1.395ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.437ms
+FastSqGMP took 1.390ms
+Cubing took 0.003ms
+CubeRoot took 1.650ms
+SqGMP took 1.472ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.641ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.639ms
+SqGMP took 1.436ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.644ms
+SqGMP took 1.475ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.640ms
+SqGMP took 1.443ms
+FastSqGMP took 1.393ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.438ms
+FastSqGMP took 1.390ms
+Cubing took 0.003ms
+CubeRoot took 1.639ms
+SqGMP took 1.437ms
+FastSqGMP took 1.395ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.438ms
+FastSqGMP took 1.392ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.438ms
+FastSqGMP took 1.396ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.439ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.639ms
+SqGMP took 1.438ms
+FastSqGMP took 1.419ms
+Cubing took 0.002ms
+CubeRoot took 1.643ms
+SqGMP took 1.437ms
+FastSqGMP took 1.390ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.480ms
+FastSqGMP took 1.404ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.437ms
+FastSqGMP took 1.422ms
+Cubing took 0.002ms
+CubeRoot took 1.640ms
+SqGMP took 1.474ms
+FastSqGMP took 1.393ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.436ms
+FastSqGMP took 1.389ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.436ms
+FastSqGMP took 1.388ms
+Cubing took 0.002ms
+CubeRoot took 1.642ms
+SqGMP took 1.438ms
+FastSqGMP took 1.388ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.650ms
+SqGMP took 1.438ms
+FastSqGMP took 1.390ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.660ms
+SqGMP took 1.442ms
+FastSqGMP took 1.389ms
+Cubing took 0.003ms
+CubeRoot took 1.637ms
+SqGMP took 1.437ms
+FastSqGMP took 1.389ms
+Cubing took 0.002ms
+CubeRoot took 1.639ms
+SqGMP took 1.437ms
+FastSqGMP took 1.396ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.437ms
+FastSqGMP took 1.388ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.436ms
+FastSqGMP took 1.394ms
+Cubing took 0.002ms
+CubeRoot took 1.639ms
+SqGMP took 1.459ms
+FastSqGMP took 1.493ms
+Cubing took 0.003ms
+CubeRoot took 1.654ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.504ms
+FastSqGMP took 1.396ms
+Cubing took 0.002ms
+CubeRoot took 1.643ms
+SqGMP took 1.438ms
+FastSqGMP took 1.403ms
+Cubing took 0.003ms
+CubeRoot took 1.651ms
+SqGMP took 1.447ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.442ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.449ms
+FastSqGMP took 1.399ms
+Cubing took 0.002ms
+CubeRoot took 1.646ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.437ms
+FastSqGMP took 1.397ms
+Cubing took 0.002ms
+CubeRoot took 1.636ms
+SqGMP took 1.436ms
+FastSqGMP took 1.390ms
+Cubing took 0.003ms
+CubeRoot took 1.636ms
+SqGMP took 1.459ms
+FastSqGMP took 1.400ms
+Cubing took 0.002ms
+CubeRoot took 1.641ms
+SqGMP took 1.437ms
+FastSqGMP took 1.390ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.438ms
+FastSqGMP took 1.390ms
+Cubing took 0.002ms
+CubeRoot took 1.643ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.647ms
+SqGMP took 1.456ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.442ms
+FastSqGMP took 1.390ms
+Cubing took 0.002ms
+CubeRoot took 1.657ms
+SqGMP took 1.438ms
+FastSqGMP took 1.390ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.439ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.650ms
+SqGMP took 1.443ms
+FastSqGMP took 1.392ms
+Cubing took 0.002ms
+CubeRoot took 1.635ms
+SqGMP took 1.436ms
+FastSqGMP took 1.390ms
+Cubing took 0.002ms
+CubeRoot took 1.641ms
+SqGMP took 1.439ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.449ms
+FastSqGMP took 1.401ms
+Cubing took 0.002ms
+CubeRoot took 1.650ms
+SqGMP took 1.438ms
+FastSqGMP took 1.590ms
+Cubing took 0.002ms
+CubeRoot took 1.765ms
+SqGMP took 1.437ms
+FastSqGMP took 1.390ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.443ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.653ms
+SqGMP took 1.467ms
+FastSqGMP took 1.400ms
+Cubing took 0.004ms
+CubeRoot took 1.638ms
+SqGMP took 1.443ms
+FastSqGMP took 1.390ms
+Cubing took 0.003ms
+CubeRoot took 1.639ms
+SqGMP took 1.437ms
+FastSqGMP took 1.390ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.436ms
+FastSqGMP took 1.403ms
+Cubing took 0.002ms
+CubeRoot took 1.649ms
+SqGMP took 1.448ms
+FastSqGMP took 1.389ms
+Cubing took 0.002ms
+CubeRoot took 1.639ms
+SqGMP took 1.450ms
+FastSqGMP took 1.390ms
+Cubing took 0.002ms
+CubeRoot took 1.643ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.640ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.677ms
+SqGMP took 1.438ms
+FastSqGMP took 1.392ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.435ms
+FastSqGMP took 1.388ms
+Cubing took 0.004ms
+CubeRoot took 1.635ms
+SqGMP took 1.442ms
+FastSqGMP took 1.389ms
+Cubing took 0.003ms
+CubeRoot took 1.638ms
+SqGMP took 1.438ms
+FastSqGMP took 1.397ms
+Cubing took 0.002ms
+CubeRoot took 1.636ms
+SqGMP took 1.436ms
+FastSqGMP took 1.394ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.436ms
+FastSqGMP took 1.389ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.641ms
+SqGMP took 1.452ms
+FastSqGMP took 1.390ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.437ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.643ms
+SqGMP took 1.439ms
+FastSqGMP took 1.392ms
+Cubing took 0.002ms
+CubeRoot took 1.639ms
+SqGMP took 1.436ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.442ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.667ms
+SqGMP took 1.437ms
+FastSqGMP took 1.392ms
+Cubing took 0.003ms
+CubeRoot took 1.667ms
+SqGMP took 1.435ms
+FastSqGMP took 1.397ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.636ms
+SqGMP took 1.436ms
+FastSqGMP took 1.393ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.443ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.640ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.644ms
+SqGMP took 1.436ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.438ms
+FastSqGMP took 1.390ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.442ms
+FastSqGMP took 1.391ms
+Cubing took 0.003ms
+CubeRoot took 1.637ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.444ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.637ms
+SqGMP took 1.437ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.437ms
+FastSqGMP took 1.394ms
+Cubing took 0.003ms
+CubeRoot took 1.636ms
+SqGMP took 1.437ms
+FastSqGMP took 1.391ms
+Cubing took 0.002ms
+CubeRoot took 1.638ms
+SqGMP took 1.469ms
+FastSqGMP took 1.389ms
+Cubing took 0.002ms
+CubeRoot took 1.642ms
+SqGMP took 1.438ms
+FastSqGMP took 1.391ms
+mean and std Cubing time 0.002530000ms (0.001925902ms)
+mean and std CubeRoot time 1.642800000ms (0.014701020ms)
+mean and std SqGMP time 1.442520000ms (0.011793625ms)
+mean and std FastSqGMP time 1.395590000ms (0.022549543ms)
+Number of squarings: 2040
+==================================================
+
+Current localtime: Tue Jan 14 23:07:23 2025
+
+Testing cubing using a prime of 3070 bits
+Number of squarings: 3067
+Cubing took 0.008ms
+CubeRoot took 5.173ms
+SqGMP took 4.517ms
+FastSqGMP took 4.433ms
+Cubing took 0.004ms
+CubeRoot took 5.166ms
+SqGMP took 4.515ms
+FastSqGMP took 4.419ms
+Cubing took 0.005ms
+CubeRoot took 5.175ms
+SqGMP took 4.569ms
+FastSqGMP took 4.461ms
+Cubing took 0.005ms
+CubeRoot took 5.207ms
+SqGMP took 4.557ms
+FastSqGMP took 4.441ms
+Cubing took 0.004ms
+CubeRoot took 5.185ms
+SqGMP took 4.551ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.167ms
+SqGMP took 4.516ms
+FastSqGMP took 4.416ms
+Cubing took 0.005ms
+CubeRoot took 5.159ms
+SqGMP took 4.523ms
+FastSqGMP took 4.411ms
+Cubing took 0.004ms
+CubeRoot took 5.164ms
+SqGMP took 4.514ms
+FastSqGMP took 4.413ms
+Cubing took 0.004ms
+CubeRoot took 5.237ms
+SqGMP took 4.535ms
+FastSqGMP took 4.422ms
+Cubing took 0.005ms
+CubeRoot took 5.160ms
+SqGMP took 4.520ms
+FastSqGMP took 4.409ms
+Cubing took 0.004ms
+CubeRoot took 5.163ms
+SqGMP took 4.515ms
+FastSqGMP took 4.419ms
+Cubing took 0.005ms
+CubeRoot took 5.218ms
+SqGMP took 4.516ms
+FastSqGMP took 4.467ms
+Cubing took 0.004ms
+CubeRoot took 5.158ms
+SqGMP took 4.518ms
+FastSqGMP took 4.415ms
+Cubing took 0.004ms
+CubeRoot took 5.191ms
+SqGMP took 4.542ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.171ms
+SqGMP took 4.520ms
+FastSqGMP took 4.418ms
+Cubing took 0.004ms
+CubeRoot took 5.159ms
+SqGMP took 4.521ms
+FastSqGMP took 4.410ms
+Cubing took 0.005ms
+CubeRoot took 5.165ms
+SqGMP took 4.579ms
+FastSqGMP took 4.417ms
+Cubing took 0.004ms
+CubeRoot took 5.159ms
+SqGMP took 4.524ms
+FastSqGMP took 4.428ms
+Cubing took 0.004ms
+CubeRoot took 5.168ms
+SqGMP took 4.519ms
+FastSqGMP took 4.413ms
+Cubing took 0.004ms
+CubeRoot took 5.163ms
+SqGMP took 4.517ms
+FastSqGMP took 4.415ms
+Cubing took 0.004ms
+CubeRoot took 5.162ms
+SqGMP took 4.518ms
+FastSqGMP took 4.413ms
+Cubing took 0.004ms
+CubeRoot took 5.166ms
+SqGMP took 4.516ms
+FastSqGMP took 4.416ms
+Cubing took 0.004ms
+CubeRoot took 5.162ms
+SqGMP took 4.542ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.165ms
+SqGMP took 4.517ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.167ms
+SqGMP took 4.533ms
+FastSqGMP took 4.417ms
+Cubing took 0.005ms
+CubeRoot took 5.162ms
+SqGMP took 4.519ms
+FastSqGMP took 4.415ms
+Cubing took 0.004ms
+CubeRoot took 5.165ms
+SqGMP took 4.512ms
+FastSqGMP took 4.425ms
+Cubing took 0.005ms
+CubeRoot took 5.179ms
+SqGMP took 4.521ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.164ms
+SqGMP took 4.523ms
+FastSqGMP took 4.426ms
+Cubing took 0.004ms
+CubeRoot took 5.162ms
+SqGMP took 4.522ms
+FastSqGMP took 4.416ms
+Cubing took 0.005ms
+CubeRoot took 5.160ms
+SqGMP took 4.543ms
+FastSqGMP took 4.411ms
+Cubing took 0.005ms
+CubeRoot took 5.164ms
+SqGMP took 4.516ms
+FastSqGMP took 4.430ms
+Cubing took 0.005ms
+CubeRoot took 5.161ms
+SqGMP took 4.529ms
+FastSqGMP took 4.411ms
+Cubing took 0.005ms
+CubeRoot took 5.161ms
+SqGMP took 4.517ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.161ms
+SqGMP took 4.519ms
+FastSqGMP took 4.409ms
+Cubing took 0.005ms
+CubeRoot took 5.162ms
+SqGMP took 4.516ms
+FastSqGMP took 4.414ms
+Cubing took 0.005ms
+CubeRoot took 5.165ms
+SqGMP took 4.517ms
+FastSqGMP took 4.418ms
+Cubing took 0.005ms
+CubeRoot took 5.160ms
+SqGMP took 4.518ms
+FastSqGMP took 4.407ms
+Cubing took 0.005ms
+CubeRoot took 5.165ms
+SqGMP took 4.513ms
+FastSqGMP took 4.414ms
+Cubing took 0.005ms
+CubeRoot took 5.158ms
+SqGMP took 4.513ms
+FastSqGMP took 4.411ms
+Cubing took 0.004ms
+CubeRoot took 5.163ms
+SqGMP took 4.515ms
+FastSqGMP took 4.411ms
+Cubing took 0.004ms
+CubeRoot took 5.197ms
+SqGMP took 4.513ms
+FastSqGMP took 4.415ms
+Cubing took 0.004ms
+CubeRoot took 5.159ms
+SqGMP took 4.521ms
+FastSqGMP took 4.412ms
+Cubing took 0.005ms
+CubeRoot took 5.161ms
+SqGMP took 4.517ms
+FastSqGMP took 4.414ms
+Cubing took 0.005ms
+CubeRoot took 5.167ms
+SqGMP took 4.532ms
+FastSqGMP took 4.419ms
+Cubing took 0.004ms
+CubeRoot took 5.187ms
+SqGMP took 4.663ms
+FastSqGMP took 4.425ms
+Cubing took 0.004ms
+CubeRoot took 5.162ms
+SqGMP took 4.514ms
+FastSqGMP took 4.430ms
+Cubing took 0.004ms
+CubeRoot took 5.166ms
+SqGMP took 4.518ms
+FastSqGMP took 4.427ms
+Cubing took 0.005ms
+CubeRoot took 5.168ms
+SqGMP took 4.514ms
+FastSqGMP took 4.417ms
+Cubing took 0.004ms
+CubeRoot took 5.159ms
+SqGMP took 4.516ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.192ms
+SqGMP took 4.531ms
+FastSqGMP took 4.413ms
+Cubing took 0.005ms
+CubeRoot took 5.160ms
+SqGMP took 4.516ms
+FastSqGMP took 4.412ms
+Cubing took 0.005ms
+CubeRoot took 5.162ms
+SqGMP took 4.517ms
+FastSqGMP took 4.410ms
+Cubing took 0.004ms
+CubeRoot took 5.179ms
+SqGMP took 4.515ms
+FastSqGMP took 4.431ms
+Cubing took 0.004ms
+CubeRoot took 5.161ms
+SqGMP took 4.524ms
+FastSqGMP took 4.425ms
+Cubing took 0.005ms
+CubeRoot took 5.175ms
+SqGMP took 4.514ms
+FastSqGMP took 4.418ms
+Cubing took 0.004ms
+CubeRoot took 5.163ms
+SqGMP took 4.517ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.161ms
+SqGMP took 4.514ms
+FastSqGMP took 4.412ms
+Cubing took 0.005ms
+CubeRoot took 5.162ms
+SqGMP took 4.513ms
+FastSqGMP took 4.853ms
+Cubing took 0.014ms
+CubeRoot took 5.164ms
+SqGMP took 4.541ms
+FastSqGMP took 4.414ms
+Cubing took 0.004ms
+CubeRoot took 5.166ms
+SqGMP took 4.515ms
+FastSqGMP took 4.418ms
+Cubing took 0.005ms
+CubeRoot took 5.158ms
+SqGMP took 4.518ms
+FastSqGMP took 4.410ms
+Cubing took 0.004ms
+CubeRoot took 5.170ms
+SqGMP took 4.514ms
+FastSqGMP took 4.416ms
+Cubing took 0.004ms
+CubeRoot took 5.163ms
+SqGMP took 4.521ms
+FastSqGMP took 4.411ms
+Cubing took 0.005ms
+CubeRoot took 5.201ms
+SqGMP took 4.516ms
+FastSqGMP took 4.411ms
+Cubing took 0.004ms
+CubeRoot took 5.167ms
+SqGMP took 4.515ms
+FastSqGMP took 4.415ms
+Cubing took 0.004ms
+CubeRoot took 5.161ms
+SqGMP took 4.518ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.195ms
+SqGMP took 4.516ms
+FastSqGMP took 4.416ms
+Cubing took 0.005ms
+CubeRoot took 5.161ms
+SqGMP took 4.520ms
+FastSqGMP took 4.454ms
+Cubing took 0.005ms
+CubeRoot took 5.166ms
+SqGMP took 4.515ms
+FastSqGMP took 4.413ms
+Cubing took 0.004ms
+CubeRoot took 5.165ms
+SqGMP took 4.515ms
+FastSqGMP took 4.420ms
+Cubing took 0.004ms
+CubeRoot took 5.161ms
+SqGMP took 4.522ms
+FastSqGMP took 4.414ms
+Cubing took 0.005ms
+CubeRoot took 5.167ms
+SqGMP took 4.518ms
+FastSqGMP took 4.418ms
+Cubing took 0.004ms
+CubeRoot took 5.195ms
+SqGMP took 4.522ms
+FastSqGMP took 4.415ms
+Cubing took 0.005ms
+CubeRoot took 5.164ms
+SqGMP took 4.518ms
+FastSqGMP took 4.415ms
+Cubing took 0.004ms
+CubeRoot took 5.167ms
+SqGMP took 4.518ms
+FastSqGMP took 4.419ms
+Cubing took 0.004ms
+CubeRoot took 5.162ms
+SqGMP took 4.523ms
+FastSqGMP took 4.415ms
+Cubing took 0.005ms
+CubeRoot took 5.168ms
+SqGMP took 4.518ms
+FastSqGMP took 4.466ms
+Cubing took 0.004ms
+CubeRoot took 5.164ms
+SqGMP took 4.523ms
+FastSqGMP took 4.415ms
+Cubing took 0.004ms
+CubeRoot took 5.167ms
+SqGMP took 4.522ms
+FastSqGMP took 4.425ms
+Cubing took 0.004ms
+CubeRoot took 5.160ms
+SqGMP took 4.518ms
+FastSqGMP took 4.421ms
+Cubing took 0.005ms
+CubeRoot took 5.161ms
+SqGMP took 4.523ms
+FastSqGMP took 4.415ms
+Cubing took 0.004ms
+CubeRoot took 5.217ms
+SqGMP took 4.514ms
+FastSqGMP took 4.468ms
+Cubing took 0.004ms
+CubeRoot took 5.163ms
+SqGMP took 4.518ms
+FastSqGMP took 4.413ms
+Cubing took 0.004ms
+CubeRoot took 5.168ms
+SqGMP took 4.516ms
+FastSqGMP took 4.411ms
+Cubing took 0.004ms
+CubeRoot took 5.162ms
+SqGMP took 4.560ms
+FastSqGMP took 4.413ms
+Cubing took 0.005ms
+CubeRoot took 5.160ms
+SqGMP took 4.522ms
+FastSqGMP took 4.413ms
+Cubing took 0.004ms
+CubeRoot took 5.290ms
+SqGMP took 4.514ms
+FastSqGMP took 4.419ms
+Cubing took 0.005ms
+CubeRoot took 5.161ms
+SqGMP took 4.521ms
+FastSqGMP took 4.414ms
+Cubing took 0.004ms
+CubeRoot took 5.170ms
+SqGMP took 4.516ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.165ms
+SqGMP took 4.516ms
+FastSqGMP took 4.430ms
+Cubing took 0.004ms
+CubeRoot took 5.160ms
+SqGMP took 4.521ms
+FastSqGMP took 4.442ms
+Cubing took 0.005ms
+CubeRoot took 5.164ms
+SqGMP took 4.517ms
+FastSqGMP took 4.410ms
+Cubing took 0.004ms
+CubeRoot took 5.160ms
+SqGMP took 4.517ms
+FastSqGMP took 4.412ms
+Cubing took 0.004ms
+CubeRoot took 5.165ms
+SqGMP took 4.516ms
+FastSqGMP took 4.408ms
+Cubing took 0.005ms
+CubeRoot took 5.164ms
+SqGMP took 4.514ms
+FastSqGMP took 4.417ms
+Cubing took 0.005ms
+CubeRoot took 5.161ms
+SqGMP took 4.520ms
+FastSqGMP took 4.409ms
+Cubing took 0.004ms
+CubeRoot took 5.161ms
+SqGMP took 4.516ms
+FastSqGMP took 4.414ms
+Cubing took 0.005ms
+CubeRoot took 5.162ms
+SqGMP took 4.520ms
+FastSqGMP took 4.409ms
+Cubing took 0.004ms
+CubeRoot took 5.159ms
+SqGMP took 4.514ms
+FastSqGMP took 4.416ms
+mean and std Cubing time 0.004520000ms (0.001126765ms)
+mean and std CubeRoot time 5.169680000ms (0.018443904ms)
+mean and std SqGMP time 4.522970000ms (0.018260589ms)
+mean and std FastSqGMP time 4.422980000ms (0.044903002ms)
+Number of squarings: 3067
+==================================================
+
+Current localtime: Tue Jan 14 23:07:25 2025
+
+Testing cubing using a prime of 4083 bits
+Number of squarings: 4081
+Cubing took 0.008ms
+CubeRoot took 11.641ms
+SqGMP took 10.227ms
+FastSqGMP took 9.995ms
+Cubing took 0.007ms
+CubeRoot took 11.704ms
+SqGMP took 10.188ms
+FastSqGMP took 10.045ms
+Cubing took 0.007ms
+CubeRoot took 11.638ms
+SqGMP took 10.190ms
+FastSqGMP took 9.996ms
+Cubing took 0.006ms
+CubeRoot took 11.607ms
+SqGMP took 10.168ms
+FastSqGMP took 10.072ms
+Cubing took 0.007ms
+CubeRoot took 11.601ms
+SqGMP took 10.189ms
+FastSqGMP took 9.994ms
+Cubing took 0.007ms
+CubeRoot took 11.618ms
+SqGMP took 10.160ms
+FastSqGMP took 10.009ms
+Cubing took 0.007ms
+CubeRoot took 11.602ms
+SqGMP took 10.213ms
+FastSqGMP took 9.999ms
+Cubing took 0.007ms
+CubeRoot took 11.606ms
+SqGMP took 10.165ms
+FastSqGMP took 10.074ms
+Cubing took 0.007ms
+CubeRoot took 11.649ms
+SqGMP took 10.182ms
+FastSqGMP took 9.991ms
+Cubing took 0.007ms
+CubeRoot took 11.603ms
+SqGMP took 10.186ms
+FastSqGMP took 9.995ms
+Cubing took 0.007ms
+CubeRoot took 11.709ms
+SqGMP took 10.167ms
+FastSqGMP took 10.019ms
+Cubing took 0.007ms
+CubeRoot took 11.603ms
+SqGMP took 10.173ms
+FastSqGMP took 9.994ms
+Cubing took 0.007ms
+CubeRoot took 11.599ms
+SqGMP took 10.163ms
+FastSqGMP took 10.026ms
+Cubing took 0.007ms
+CubeRoot took 12.033ms
+SqGMP took 10.162ms
+FastSqGMP took 9.994ms
+Cubing took 0.006ms
+CubeRoot took 11.608ms
+SqGMP took 10.164ms
+FastSqGMP took 10.022ms
+Cubing took 0.006ms
+CubeRoot took 11.604ms
+SqGMP took 10.186ms
+FastSqGMP took 10.017ms
+Cubing took 0.007ms
+CubeRoot took 11.609ms
+SqGMP took 10.167ms
+FastSqGMP took 10.023ms
+Cubing took 0.006ms
+CubeRoot took 11.604ms
+SqGMP took 10.167ms
+FastSqGMP took 10.024ms
+Cubing took 0.007ms
+CubeRoot took 11.604ms
+SqGMP took 10.166ms
+FastSqGMP took 10.032ms
+Cubing took 0.006ms
+CubeRoot took 11.600ms
+SqGMP took 10.165ms
+FastSqGMP took 10.019ms
+Cubing took 0.006ms
+CubeRoot took 11.602ms
+SqGMP took 10.166ms
+FastSqGMP took 10.029ms
+Cubing took 0.007ms
+CubeRoot took 11.602ms
+SqGMP took 10.165ms
+FastSqGMP took 9.991ms
+Cubing took 0.008ms
+CubeRoot took 11.601ms
+SqGMP took 10.171ms
+FastSqGMP took 10.027ms
+Cubing took 0.007ms
+CubeRoot took 11.617ms
+SqGMP took 10.279ms
+FastSqGMP took 10.026ms
+Cubing took 0.007ms
+CubeRoot took 11.611ms
+SqGMP took 10.180ms
+FastSqGMP took 10.011ms
+Cubing took 0.008ms
+CubeRoot took 11.637ms
+SqGMP took 10.179ms
+FastSqGMP took 10.040ms
+Cubing took 0.007ms
+CubeRoot took 11.637ms
+SqGMP took 10.187ms
+FastSqGMP took 10.011ms
+Cubing took 0.007ms
+CubeRoot took 11.642ms
+SqGMP took 10.182ms
+FastSqGMP took 9.998ms
+Cubing took 0.006ms
+CubeRoot took 11.601ms
+SqGMP took 10.170ms
+FastSqGMP took 9.994ms
+Cubing took 0.007ms
+CubeRoot took 11.647ms
+SqGMP took 10.167ms
+FastSqGMP took 9.995ms
+Cubing took 0.007ms
+CubeRoot took 11.625ms
+SqGMP took 10.167ms
+FastSqGMP took 9.995ms
+Cubing took 0.007ms
+CubeRoot took 11.634ms
+SqGMP took 10.158ms
+FastSqGMP took 9.997ms
+Cubing took 0.008ms
+CubeRoot took 11.608ms
+SqGMP took 10.177ms
+FastSqGMP took 9.996ms
+Cubing took 0.006ms
+CubeRoot took 11.632ms
+SqGMP took 10.165ms
+FastSqGMP took 9.990ms
+Cubing took 0.007ms
+CubeRoot took 11.602ms
+SqGMP took 10.167ms
+FastSqGMP took 9.995ms
+Cubing took 0.006ms
+CubeRoot took 11.700ms
+SqGMP took 10.165ms
+FastSqGMP took 9.996ms
+Cubing took 0.007ms
+CubeRoot took 11.602ms
+SqGMP took 10.163ms
+FastSqGMP took 9.994ms
+Cubing took 0.006ms
+CubeRoot took 11.640ms
+SqGMP took 10.162ms
+FastSqGMP took 9.998ms
+Cubing took 0.007ms
+CubeRoot took 11.604ms
+SqGMP took 10.177ms
+FastSqGMP took 9.994ms
+Cubing took 0.007ms
+CubeRoot took 11.682ms
+SqGMP took 10.213ms
+FastSqGMP took 9.996ms
+Cubing took 0.007ms
+CubeRoot took 11.605ms
+SqGMP took 10.166ms
+FastSqGMP took 9.990ms
+Cubing took 0.007ms
+CubeRoot took 11.604ms
+SqGMP took 10.273ms
+FastSqGMP took 9.994ms
+Cubing took 0.006ms
+CubeRoot took 11.602ms
+SqGMP took 10.198ms
+FastSqGMP took 9.995ms
+Cubing took 0.007ms
+CubeRoot took 11.673ms
+SqGMP took 10.211ms
+FastSqGMP took 9.990ms
+Cubing took 0.007ms
+CubeRoot took 11.601ms
+SqGMP took 10.166ms
+FastSqGMP took 10.376ms
+Cubing took 0.006ms
+CubeRoot took 11.669ms
+SqGMP took 10.207ms
+FastSqGMP took 9.998ms
+Cubing took 0.007ms
+CubeRoot took 11.602ms
+SqGMP took 10.158ms
+FastSqGMP took 9.995ms
+Cubing took 0.006ms
+CubeRoot took 11.632ms
+SqGMP took 10.200ms
+FastSqGMP took 10.003ms
+Cubing took 0.006ms
+CubeRoot took 11.604ms
+SqGMP took 10.164ms
+FastSqGMP took 9.994ms
+Cubing took 0.007ms
+CubeRoot took 11.601ms
+SqGMP took 10.196ms
+FastSqGMP took 9.995ms
+Cubing took 0.007ms
+CubeRoot took 11.599ms
+SqGMP took 10.164ms
+FastSqGMP took 9.994ms
+Cubing took 0.006ms
+CubeRoot took 11.599ms
+SqGMP took 10.160ms
+FastSqGMP took 10.023ms
+Cubing took 0.008ms
+CubeRoot took 11.607ms
+SqGMP took 10.169ms
+FastSqGMP took 9.998ms
+Cubing took 0.007ms
+CubeRoot took 11.601ms
+SqGMP took 10.164ms
+FastSqGMP took 10.029ms
+Cubing took 0.007ms
+CubeRoot took 11.604ms
+SqGMP took 10.182ms
+FastSqGMP took 10.056ms
+Cubing took 0.007ms
+CubeRoot took 11.679ms
+SqGMP took 10.161ms
+FastSqGMP took 10.017ms
+Cubing took 0.006ms
+CubeRoot took 11.600ms
+SqGMP took 10.160ms
+FastSqGMP took 9.998ms
+Cubing took 0.008ms
+CubeRoot took 11.671ms
+SqGMP took 10.166ms
+FastSqGMP took 10.011ms
+Cubing took 0.007ms
+CubeRoot took 11.613ms
+SqGMP took 10.159ms
+FastSqGMP took 10.012ms
+Cubing took 0.007ms
+CubeRoot took 11.601ms
+SqGMP took 10.166ms
+FastSqGMP took 10.024ms
+Cubing took 0.007ms
+CubeRoot took 11.603ms
+SqGMP took 10.162ms
+FastSqGMP took 9.994ms
+Cubing took 0.006ms
+CubeRoot took 11.604ms
+SqGMP took 10.165ms
+FastSqGMP took 10.028ms
+Cubing took 0.007ms
+CubeRoot took 11.603ms
+SqGMP took 10.162ms
+FastSqGMP took 9.994ms
+Cubing took 0.006ms
+CubeRoot took 11.601ms
+SqGMP took 10.172ms
+FastSqGMP took 9.989ms
+Cubing took 0.007ms
+CubeRoot took 11.661ms
+SqGMP took 10.166ms
+FastSqGMP took 9.990ms
+Cubing took 0.007ms
+CubeRoot took 11.605ms
+SqGMP took 10.160ms
+FastSqGMP took 9.991ms
+Cubing took 0.008ms
+CubeRoot took 11.639ms
+SqGMP took 10.162ms
+FastSqGMP took 10.030ms
+Cubing took 0.007ms
+CubeRoot took 11.602ms
+SqGMP took 10.166ms
+FastSqGMP took 9.997ms
+Cubing took 0.007ms
+CubeRoot took 11.637ms
+SqGMP took 10.162ms
+FastSqGMP took 9.992ms
+Cubing took 0.008ms
+CubeRoot took 11.607ms
+SqGMP took 10.169ms
+FastSqGMP took 9.995ms
+Cubing took 0.006ms
+CubeRoot took 11.627ms
+SqGMP took 10.199ms
+FastSqGMP took 10.097ms
+Cubing took 0.007ms
+CubeRoot took 11.603ms
+SqGMP took 10.166ms
+FastSqGMP took 9.998ms
+Cubing took 0.007ms
+CubeRoot took 11.608ms
+SqGMP took 10.165ms
+FastSqGMP took 10.070ms
+Cubing took 0.007ms
+CubeRoot took 11.600ms
+SqGMP took 10.167ms
+FastSqGMP took 9.996ms
+Cubing took 0.007ms
+CubeRoot took 11.650ms
+SqGMP took 10.196ms
+FastSqGMP took 9.993ms
+Cubing took 0.007ms
+CubeRoot took 11.600ms
+SqGMP took 10.165ms
+FastSqGMP took 9.990ms
+Cubing took 0.007ms
+CubeRoot took 11.736ms
+SqGMP took 10.410ms
+FastSqGMP took 9.992ms
+Cubing took 0.007ms
+CubeRoot took 11.598ms
+SqGMP took 10.167ms
+FastSqGMP took 9.992ms
+Cubing took 0.007ms
+CubeRoot took 11.627ms
+SqGMP took 10.162ms
+FastSqGMP took 9.995ms
+Cubing took 0.006ms
+CubeRoot took 11.642ms
+SqGMP took 10.165ms
+FastSqGMP took 9.994ms
+Cubing took 0.007ms
+CubeRoot took 11.606ms
+SqGMP took 10.194ms
+FastSqGMP took 9.995ms
+Cubing took 0.007ms
+CubeRoot took 11.604ms
+SqGMP took 10.164ms
+FastSqGMP took 9.998ms
+Cubing took 0.007ms
+CubeRoot took 11.599ms
+SqGMP took 10.198ms
+FastSqGMP took 9.996ms
+Cubing took 0.007ms
+CubeRoot took 11.602ms
+SqGMP took 10.163ms
+FastSqGMP took 9.997ms
+Cubing took 0.007ms
+CubeRoot took 11.612ms
+SqGMP took 10.186ms
+FastSqGMP took 9.993ms
+Cubing took 0.006ms
+CubeRoot took 11.610ms
+SqGMP took 10.163ms
+FastSqGMP took 9.993ms
+Cubing took 0.007ms
+CubeRoot took 11.653ms
+SqGMP took 10.251ms
+FastSqGMP took 9.988ms
+Cubing took 0.008ms
+CubeRoot took 11.601ms
+SqGMP took 10.171ms
+FastSqGMP took 9.999ms
+Cubing took 0.007ms
+CubeRoot took 11.600ms
+SqGMP took 10.246ms
+FastSqGMP took 9.995ms
+Cubing took 0.007ms
+CubeRoot took 11.602ms
+SqGMP took 10.172ms
+FastSqGMP took 9.999ms
+Cubing took 0.007ms
+CubeRoot took 11.614ms
+SqGMP took 10.188ms
+FastSqGMP took 9.993ms
+Cubing took 0.007ms
+CubeRoot took 11.648ms
+SqGMP took 10.167ms
+FastSqGMP took 10.015ms
+Cubing took 0.007ms
+CubeRoot took 11.607ms
+SqGMP took 10.161ms
+FastSqGMP took 10.028ms
+Cubing took 0.007ms
+CubeRoot took 11.601ms
+SqGMP took 10.167ms
+FastSqGMP took 9.997ms
+Cubing took 0.007ms
+CubeRoot took 11.601ms
+SqGMP took 10.164ms
+FastSqGMP took 10.021ms
+Cubing took 0.006ms
+CubeRoot took 11.599ms
+SqGMP took 10.165ms
+FastSqGMP took 9.996ms
+Cubing took 0.007ms
+CubeRoot took 11.600ms
+SqGMP took 10.165ms
+FastSqGMP took 10.029ms
+Cubing took 0.007ms
+CubeRoot took 11.608ms
+SqGMP took 10.160ms
+FastSqGMP took 9.993ms
+Cubing took 0.008ms
+CubeRoot took 11.609ms
+SqGMP took 10.166ms
+FastSqGMP took 10.027ms
+Cubing took 0.007ms
+CubeRoot took 11.600ms
+SqGMP took 10.163ms
+FastSqGMP took 9.997ms
+mean and std Cubing time 0.006880000ms (0.000552811ms)
+mean and std CubeRoot time 11.623640000ms (0.049833025ms)
+mean and std SqGMP time 10.178800000ms (0.032499846ms)
+mean and std FastSqGMP time 10.010710000ms (0.042199833ms)
+Number of squarings: 4081
+==================================================
+
+Current localtime: Tue Jan 14 23:07:28 2025
+
+Testing cubing using a prime of 10112 bits
+Number of squarings: 63
+Cubing took 0.056ms
+CubeRoot took 0.900ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.696ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.686ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.715ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.882ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.693ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.709ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.881ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.712ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.712ms
+FastSqGMP took 0.691ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.684ms
+Cubing took 0.029ms
+CubeRoot took 0.880ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.710ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.712ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.878ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.712ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.741ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.735ms
+FastSqGMP took 0.712ms
+Cubing took 0.031ms
+CubeRoot took 0.893ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.715ms
+FastSqGMP took 0.686ms
+Cubing took 0.029ms
+CubeRoot took 0.903ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.734ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.712ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.878ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.684ms
+Cubing took 0.029ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.683ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.725ms
+FastSqGMP took 0.703ms
+Cubing took 0.029ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.715ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.686ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.712ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.710ms
+FastSqGMP took 0.687ms
+Cubing took 0.029ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.710ms
+FastSqGMP took 0.686ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.718ms
+FastSqGMP took 0.700ms
+Cubing took 0.029ms
+CubeRoot took 0.909ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.734ms
+FastSqGMP took 0.725ms
+Cubing took 0.031ms
+CubeRoot took 0.880ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.725ms
+FastSqGMP took 0.686ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.029ms
+CubeRoot took 0.877ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.712ms
+FastSqGMP took 0.686ms
+Cubing took 0.029ms
+CubeRoot took 0.878ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.871ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.687ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.875ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.741ms
+FastSqGMP took 0.685ms
+Cubing took 0.030ms
+CubeRoot took 0.911ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.731ms
+FastSqGMP took 0.686ms
+Cubing took 0.029ms
+CubeRoot took 0.875ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.710ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.714ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.883ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.710ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.723ms
+FastSqGMP took 0.715ms
+Cubing took 0.031ms
+CubeRoot took 0.890ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.722ms
+FastSqGMP took 0.686ms
+Cubing took 0.029ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.710ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.712ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.876ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.684ms
+Cubing took 0.029ms
+CubeRoot took 0.877ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.712ms
+FastSqGMP took 0.686ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.721ms
+FastSqGMP took 0.741ms
+Cubing took 0.029ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.732ms
+FastSqGMP took 0.702ms
+Cubing took 0.029ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.714ms
+FastSqGMP took 0.684ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.029ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.722ms
+FastSqGMP took 0.689ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.029ms
+CubeRoot took 0.884ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.737ms
+FastSqGMP took 0.699ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.722ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.713ms
+FastSqGMP took 0.684ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.687ms
+Cubing took 0.043ms
+CubeRoot took 0.893ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.697ms
+Cubing took 0.042ms
+CubeRoot took 0.897ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.700ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.713ms
+FastSqGMP took 0.686ms
+Cubing took 0.028ms
+CubeRoot took 0.879ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.683ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.712ms
+FastSqGMP took 0.700ms
+Cubing took 0.029ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.875ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.715ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.683ms
+Cubing took 0.028ms
+CubeRoot took 0.880ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.731ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.710ms
+FastSqGMP took 0.685ms
+Cubing took 0.032ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.686ms
+Cubing took 0.028ms
+CubeRoot took 0.881ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.029ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.715ms
+FastSqGMP took 0.683ms
+Cubing took 0.029ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.712ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.711ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.683ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.726ms
+FastSqGMP took 0.700ms
+Cubing took 0.028ms
+CubeRoot took 0.875ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.712ms
+FastSqGMP took 0.691ms
+Cubing took 0.029ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.712ms
+FastSqGMP took 0.685ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.710ms
+FastSqGMP took 0.712ms
+Cubing took 0.029ms
+CubeRoot took 0.872ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.712ms
+FastSqGMP took 0.685ms
+Cubing took 0.029ms
+CubeRoot took 0.876ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.706ms
+Cubing took 0.028ms
+CubeRoot took 0.873ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.711ms
+FastSqGMP took 0.684ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 0.710ms
+FastSqGMP took 0.686ms
+Cubing took 0.028ms
+CubeRoot took 0.874ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 0.710ms
+FastSqGMP took 0.686ms
+mean and std Cubing time 0.029100000ms (0.003419064ms)
+mean and std CubeRoot time 0.876200000ms (0.007621024ms)
+mean and std SqGMP time 0.714410000ms (0.007488785ms)
+mean and std FastSqGMP time 0.688400000ms (0.009260670ms)
+Number of squarings: 63
+==================================================
+
+Current localtime: Tue Jan 14 23:07:28 2025
+
+Testing cubing using a prime of 29994 bits
+Number of squarings: 63
+Cubing took 0.179ms
+CubeRoot took 4.756ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.846ms
+FastSqGMP took 3.590ms
+Cubing took 0.157ms
+CubeRoot took 4.760ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 4.062ms
+FastSqGMP took 3.596ms
+Cubing took 0.164ms
+CubeRoot took 4.756ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.841ms
+FastSqGMP took 3.595ms
+Cubing took 0.175ms
+CubeRoot took 4.726ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.839ms
+FastSqGMP took 3.573ms
+Cubing took 0.158ms
+CubeRoot took 4.825ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.893ms
+FastSqGMP took 3.601ms
+Cubing took 0.157ms
+CubeRoot took 4.734ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.858ms
+FastSqGMP took 3.576ms
+Cubing took 0.156ms
+CubeRoot took 4.725ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.846ms
+FastSqGMP took 3.568ms
+Cubing took 0.157ms
+CubeRoot took 4.786ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.850ms
+FastSqGMP took 3.571ms
+Cubing took 0.156ms
+CubeRoot took 4.735ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.839ms
+FastSqGMP took 3.636ms
+Cubing took 0.157ms
+CubeRoot took 4.731ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.845ms
+FastSqGMP took 3.610ms
+Cubing took 0.157ms
+CubeRoot took 4.797ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.840ms
+FastSqGMP took 3.567ms
+Cubing took 0.156ms
+CubeRoot took 4.758ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.891ms
+FastSqGMP took 3.574ms
+Cubing took 0.158ms
+CubeRoot took 4.727ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.860ms
+FastSqGMP took 3.571ms
+Cubing took 0.158ms
+CubeRoot took 4.798ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.853ms
+FastSqGMP took 3.569ms
+Cubing took 0.157ms
+CubeRoot took 4.810ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.841ms
+FastSqGMP took 3.570ms
+Cubing took 0.156ms
+CubeRoot took 4.774ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.844ms
+FastSqGMP took 3.570ms
+Cubing took 0.157ms
+CubeRoot took 4.785ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.843ms
+FastSqGMP took 3.620ms
+Cubing took 0.156ms
+CubeRoot took 4.732ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.839ms
+FastSqGMP took 3.585ms
+Cubing took 0.157ms
+CubeRoot took 4.727ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.844ms
+FastSqGMP took 3.567ms
+Cubing took 0.156ms
+CubeRoot took 4.808ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.844ms
+FastSqGMP took 3.569ms
+Cubing took 0.156ms
+CubeRoot took 4.736ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.879ms
+FastSqGMP took 3.631ms
+Cubing took 0.156ms
+CubeRoot took 4.752ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.848ms
+FastSqGMP took 3.615ms
+Cubing took 0.157ms
+CubeRoot took 4.811ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.842ms
+FastSqGMP took 3.567ms
+Cubing took 0.157ms
+CubeRoot took 4.728ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.865ms
+FastSqGMP took 3.602ms
+Cubing took 0.156ms
+CubeRoot took 4.727ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.859ms
+FastSqGMP took 3.570ms
+Cubing took 0.156ms
+CubeRoot took 4.792ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.879ms
+FastSqGMP took 3.568ms
+Cubing took 0.156ms
+CubeRoot took 4.771ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.855ms
+FastSqGMP took 3.573ms
+Cubing took 0.156ms
+CubeRoot took 4.752ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.846ms
+FastSqGMP took 3.569ms
+Cubing took 0.157ms
+CubeRoot took 4.796ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.845ms
+FastSqGMP took 3.611ms
+Cubing took 0.157ms
+CubeRoot took 4.745ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.840ms
+FastSqGMP took 3.588ms
+Cubing took 0.157ms
+CubeRoot took 4.728ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.844ms
+FastSqGMP took 3.601ms
+Cubing took 0.156ms
+CubeRoot took 4.798ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.853ms
+FastSqGMP took 3.569ms
+Cubing took 0.156ms
+CubeRoot took 4.730ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.839ms
+FastSqGMP took 3.598ms
+Cubing took 0.176ms
+CubeRoot took 4.755ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.848ms
+FastSqGMP took 3.585ms
+Cubing took 0.156ms
+CubeRoot took 4.797ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.851ms
+FastSqGMP took 3.569ms
+Cubing took 0.156ms
+CubeRoot took 4.733ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.859ms
+FastSqGMP took 3.632ms
+Cubing took 0.156ms
+CubeRoot took 4.769ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.860ms
+FastSqGMP took 3.568ms
+Cubing took 0.156ms
+CubeRoot took 4.775ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.853ms
+FastSqGMP took 3.568ms
+Cubing took 0.156ms
+CubeRoot took 4.759ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.889ms
+FastSqGMP took 3.574ms
+Cubing took 0.157ms
+CubeRoot took 4.748ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.848ms
+FastSqGMP took 3.571ms
+Cubing took 0.157ms
+CubeRoot took 4.797ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.853ms
+FastSqGMP took 3.569ms
+Cubing took 0.157ms
+CubeRoot took 4.795ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.872ms
+FastSqGMP took 3.574ms
+Cubing took 0.156ms
+CubeRoot took 4.740ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.844ms
+FastSqGMP took 3.569ms
+Cubing took 0.157ms
+CubeRoot took 4.778ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.916ms
+FastSqGMP took 3.601ms
+Cubing took 0.157ms
+CubeRoot took 4.739ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.841ms
+FastSqGMP took 3.587ms
+Cubing took 0.157ms
+CubeRoot took 4.727ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.848ms
+FastSqGMP took 3.571ms
+Cubing took 0.157ms
+CubeRoot took 4.818ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.862ms
+FastSqGMP took 3.615ms
+Cubing took 0.158ms
+CubeRoot took 4.735ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.843ms
+FastSqGMP took 3.639ms
+Cubing took 0.158ms
+CubeRoot took 4.736ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.847ms
+FastSqGMP took 3.585ms
+Cubing took 0.157ms
+CubeRoot took 4.798ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.849ms
+FastSqGMP took 3.569ms
+Cubing took 0.156ms
+CubeRoot took 4.734ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.913ms
+FastSqGMP took 3.590ms
+Cubing took 0.156ms
+CubeRoot took 4.730ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.856ms
+FastSqGMP took 3.570ms
+Cubing took 0.156ms
+CubeRoot took 4.848ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.842ms
+FastSqGMP took 3.569ms
+Cubing took 0.157ms
+CubeRoot took 4.776ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.841ms
+FastSqGMP took 3.574ms
+Cubing took 0.156ms
+CubeRoot took 4.742ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.847ms
+FastSqGMP took 3.566ms
+Cubing took 0.157ms
+CubeRoot took 4.795ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.851ms
+FastSqGMP took 3.622ms
+Cubing took 0.177ms
+CubeRoot took 4.741ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.845ms
+FastSqGMP took 3.583ms
+Cubing took 0.156ms
+CubeRoot took 4.764ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.848ms
+FastSqGMP took 3.569ms
+Cubing took 0.158ms
+CubeRoot took 4.761ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.845ms
+FastSqGMP took 3.570ms
+Cubing took 0.157ms
+CubeRoot took 4.733ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.842ms
+FastSqGMP took 3.569ms
+Cubing took 0.156ms
+CubeRoot took 4.731ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.840ms
+FastSqGMP took 3.600ms
+Cubing took 0.157ms
+CubeRoot took 4.790ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.839ms
+FastSqGMP took 3.573ms
+Cubing took 0.157ms
+CubeRoot took 4.725ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.883ms
+FastSqGMP took 3.575ms
+Cubing took 0.158ms
+CubeRoot took 4.733ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.841ms
+FastSqGMP took 3.568ms
+Cubing took 0.155ms
+CubeRoot took 4.766ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.840ms
+FastSqGMP took 3.578ms
+Cubing took 0.157ms
+CubeRoot took 4.725ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.841ms
+FastSqGMP took 3.571ms
+Cubing took 0.157ms
+CubeRoot took 4.725ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.843ms
+FastSqGMP took 3.568ms
+Cubing took 0.157ms
+CubeRoot took 4.764ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.848ms
+FastSqGMP took 3.639ms
+Cubing took 0.157ms
+CubeRoot took 4.735ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.841ms
+FastSqGMP took 3.569ms
+Cubing took 0.156ms
+CubeRoot took 4.729ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.839ms
+FastSqGMP took 3.572ms
+Cubing took 0.157ms
+CubeRoot took 4.757ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.844ms
+FastSqGMP took 3.571ms
+Cubing took 0.156ms
+CubeRoot took 4.727ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.845ms
+FastSqGMP took 3.568ms
+Cubing took 0.158ms
+CubeRoot took 4.733ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.841ms
+FastSqGMP took 3.570ms
+Cubing took 0.157ms
+CubeRoot took 4.804ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.841ms
+FastSqGMP took 3.574ms
+Cubing took 0.156ms
+CubeRoot took 4.727ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.841ms
+FastSqGMP took 3.573ms
+Cubing took 0.156ms
+CubeRoot took 4.725ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.845ms
+FastSqGMP took 3.577ms
+Cubing took 0.156ms
+CubeRoot took 4.769ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.848ms
+FastSqGMP took 3.584ms
+Cubing took 0.156ms
+CubeRoot took 4.736ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.839ms
+FastSqGMP took 3.592ms
+Cubing took 0.156ms
+CubeRoot took 4.730ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.855ms
+FastSqGMP took 3.573ms
+Cubing took 0.156ms
+CubeRoot took 4.762ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.857ms
+FastSqGMP took 3.568ms
+Cubing took 0.155ms
+CubeRoot took 4.759ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.852ms
+FastSqGMP took 3.583ms
+Cubing took 0.157ms
+CubeRoot took 4.739ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.847ms
+FastSqGMP took 3.566ms
+Cubing took 0.157ms
+CubeRoot took 4.763ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.845ms
+FastSqGMP took 3.959ms
+Cubing took 0.157ms
+CubeRoot took 4.726ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.844ms
+FastSqGMP took 3.607ms
+Cubing took 0.156ms
+CubeRoot took 4.725ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.889ms
+FastSqGMP took 3.568ms
+Cubing took 0.157ms
+CubeRoot took 4.762ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.840ms
+FastSqGMP took 3.568ms
+Cubing took 0.157ms
+CubeRoot took 4.731ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.840ms
+FastSqGMP took 3.575ms
+Cubing took 0.157ms
+CubeRoot took 4.727ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.846ms
+FastSqGMP took 3.569ms
+Cubing took 0.156ms
+CubeRoot took 4.762ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.842ms
+FastSqGMP took 3.568ms
+Cubing took 0.156ms
+CubeRoot took 4.764ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.841ms
+FastSqGMP took 3.568ms
+Cubing took 0.157ms
+CubeRoot took 4.732ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.842ms
+FastSqGMP took 3.572ms
+Cubing took 0.156ms
+CubeRoot took 4.758ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.840ms
+FastSqGMP took 3.574ms
+Cubing took 0.157ms
+CubeRoot took 4.727ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.844ms
+FastSqGMP took 3.568ms
+Cubing took 0.157ms
+CubeRoot took 4.731ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.841ms
+FastSqGMP took 3.570ms
+Cubing took 0.158ms
+CubeRoot took 4.759ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.853ms
+FastSqGMP took 3.573ms
+Cubing took 0.156ms
+CubeRoot took 4.727ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.840ms
+FastSqGMP took 3.571ms
+Cubing took 0.156ms
+CubeRoot took 4.728ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.843ms
+FastSqGMP took 3.568ms
+Cubing took 0.157ms
+CubeRoot took 4.760ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.843ms
+FastSqGMP took 3.569ms
+Cubing took 0.156ms
+CubeRoot took 4.730ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 3.840ms
+FastSqGMP took 3.567ms
+Cubing took 0.157ms
+CubeRoot took 4.731ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 3.873ms
+FastSqGMP took 3.573ms
+mean and std Cubing time 0.157500000ms (0.004063250ms)
+mean and std CubeRoot time 4.754730000ms (0.028631750ms)
+mean and std SqGMP time 3.852810000ms (0.026016032ms)
+mean and std FastSqGMP time 3.584670000ms (0.041911348ms)
+Number of squarings: 63
+==================================================
+
+Current localtime: Tue Jan 14 23:07:29 2025
+
+Testing cubing using a prime of 49977 bits
+Number of squarings: 63
+Cubing took 0.365ms
+CubeRoot took 9.786ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.791ms
+FastSqGMP took 7.360ms
+Cubing took 0.336ms
+CubeRoot took 9.609ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.789ms
+FastSqGMP took 7.364ms
+Cubing took 0.336ms
+CubeRoot took 9.678ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.785ms
+FastSqGMP took 7.286ms
+Cubing took 0.338ms
+CubeRoot took 9.579ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.778ms
+FastSqGMP took 7.382ms
+Cubing took 0.336ms
+CubeRoot took 9.674ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.792ms
+FastSqGMP took 7.325ms
+Cubing took 0.338ms
+CubeRoot took 9.585ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.778ms
+FastSqGMP took 7.367ms
+Cubing took 0.336ms
+CubeRoot took 9.661ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.795ms
+FastSqGMP took 7.286ms
+Cubing took 0.340ms
+CubeRoot took 9.599ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.818ms
+FastSqGMP took 7.418ms
+Cubing took 0.335ms
+CubeRoot took 9.679ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.801ms
+FastSqGMP took 7.294ms
+Cubing took 0.336ms
+CubeRoot took 9.593ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.776ms
+FastSqGMP took 7.359ms
+Cubing took 0.335ms
+CubeRoot took 9.647ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.792ms
+FastSqGMP took 7.277ms
+Cubing took 0.341ms
+CubeRoot took 9.577ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.776ms
+FastSqGMP took 7.360ms
+Cubing took 0.336ms
+CubeRoot took 9.675ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.787ms
+FastSqGMP took 7.318ms
+Cubing took 0.341ms
+CubeRoot took 9.579ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.777ms
+FastSqGMP took 7.351ms
+Cubing took 0.336ms
+CubeRoot took 9.651ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.775ms
+FastSqGMP took 7.278ms
+Cubing took 0.343ms
+CubeRoot took 9.613ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.771ms
+FastSqGMP took 7.366ms
+Cubing took 0.335ms
+CubeRoot took 9.666ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.794ms
+FastSqGMP took 7.288ms
+Cubing took 0.336ms
+CubeRoot took 9.585ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.785ms
+FastSqGMP took 7.362ms
+Cubing took 0.336ms
+CubeRoot took 9.678ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.789ms
+FastSqGMP took 7.284ms
+Cubing took 0.336ms
+CubeRoot took 9.595ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.777ms
+FastSqGMP took 7.345ms
+Cubing took 0.334ms
+CubeRoot took 9.640ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.802ms
+FastSqGMP took 7.284ms
+Cubing took 0.339ms
+CubeRoot took 9.585ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.782ms
+FastSqGMP took 7.359ms
+Cubing took 0.336ms
+CubeRoot took 9.683ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.798ms
+FastSqGMP took 7.285ms
+Cubing took 0.341ms
+CubeRoot took 9.604ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.793ms
+FastSqGMP took 7.373ms
+Cubing took 0.341ms
+CubeRoot took 9.697ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.791ms
+FastSqGMP took 7.294ms
+Cubing took 0.336ms
+CubeRoot took 9.595ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.781ms
+FastSqGMP took 7.389ms
+Cubing took 0.346ms
+CubeRoot took 9.660ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.794ms
+FastSqGMP took 7.284ms
+Cubing took 0.340ms
+CubeRoot took 9.586ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.793ms
+FastSqGMP took 7.389ms
+Cubing took 0.349ms
+CubeRoot took 9.673ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.788ms
+FastSqGMP took 7.295ms
+Cubing took 0.337ms
+CubeRoot took 9.592ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.778ms
+FastSqGMP took 7.395ms
+Cubing took 0.335ms
+CubeRoot took 9.602ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.786ms
+FastSqGMP took 7.289ms
+Cubing took 0.341ms
+CubeRoot took 9.574ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 8.145ms
+FastSqGMP took 7.372ms
+Cubing took 0.358ms
+CubeRoot took 9.636ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.799ms
+FastSqGMP took 7.300ms
+Cubing took 0.336ms
+CubeRoot took 9.594ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.795ms
+FastSqGMP took 7.369ms
+Cubing took 0.335ms
+CubeRoot took 9.601ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.773ms
+FastSqGMP took 7.291ms
+Cubing took 0.335ms
+CubeRoot took 9.606ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.779ms
+FastSqGMP took 7.402ms
+Cubing took 0.350ms
+CubeRoot took 9.652ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.815ms
+FastSqGMP took 7.283ms
+Cubing took 0.341ms
+CubeRoot took 9.588ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.802ms
+FastSqGMP took 7.364ms
+Cubing took 0.335ms
+CubeRoot took 9.588ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.830ms
+FastSqGMP took 7.391ms
+Cubing took 0.340ms
+CubeRoot took 9.583ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.780ms
+FastSqGMP took 7.371ms
+Cubing took 0.335ms
+CubeRoot took 9.593ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.779ms
+FastSqGMP took 7.337ms
+Cubing took 0.341ms
+CubeRoot took 9.622ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.782ms
+FastSqGMP took 7.351ms
+Cubing took 0.335ms
+CubeRoot took 9.591ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.826ms
+FastSqGMP took 7.313ms
+Cubing took 0.340ms
+CubeRoot took 9.593ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.866ms
+FastSqGMP took 7.356ms
+Cubing took 0.337ms
+CubeRoot took 9.629ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.785ms
+FastSqGMP took 7.291ms
+Cubing took 0.337ms
+CubeRoot took 9.591ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.784ms
+FastSqGMP took 7.359ms
+Cubing took 0.336ms
+CubeRoot took 9.590ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.834ms
+FastSqGMP took 7.330ms
+Cubing took 0.336ms
+CubeRoot took 9.579ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.771ms
+FastSqGMP took 7.357ms
+Cubing took 0.335ms
+CubeRoot took 9.605ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.839ms
+FastSqGMP took 7.303ms
+Cubing took 0.359ms
+CubeRoot took 9.597ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.782ms
+FastSqGMP took 7.360ms
+Cubing took 0.334ms
+CubeRoot took 9.588ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.820ms
+FastSqGMP took 7.322ms
+Cubing took 0.336ms
+CubeRoot took 9.575ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.772ms
+FastSqGMP took 7.382ms
+Cubing took 0.336ms
+CubeRoot took 9.589ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.844ms
+FastSqGMP took 7.305ms
+Cubing took 0.335ms
+CubeRoot took 9.606ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.784ms
+FastSqGMP took 7.355ms
+Cubing took 0.334ms
+CubeRoot took 9.622ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.846ms
+FastSqGMP took 7.283ms
+Cubing took 0.335ms
+CubeRoot took 9.599ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.770ms
+FastSqGMP took 7.310ms
+Cubing took 0.335ms
+CubeRoot took 9.581ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.775ms
+FastSqGMP took 7.301ms
+Cubing took 0.334ms
+CubeRoot took 9.664ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.772ms
+FastSqGMP took 7.316ms
+Cubing took 0.335ms
+CubeRoot took 9.580ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.782ms
+FastSqGMP took 7.281ms
+Cubing took 0.336ms
+CubeRoot took 9.579ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.794ms
+FastSqGMP took 7.309ms
+Cubing took 0.335ms
+CubeRoot took 9.591ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.776ms
+FastSqGMP took 7.284ms
+Cubing took 0.335ms
+CubeRoot took 9.609ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.769ms
+FastSqGMP took 7.327ms
+Cubing took 0.335ms
+CubeRoot took 9.640ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.797ms
+FastSqGMP took 7.285ms
+Cubing took 0.336ms
+CubeRoot took 9.582ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.803ms
+FastSqGMP took 7.287ms
+Cubing took 0.336ms
+CubeRoot took 9.596ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.779ms
+FastSqGMP took 7.320ms
+Cubing took 0.335ms
+CubeRoot took 9.582ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.769ms
+FastSqGMP took 7.311ms
+Cubing took 0.337ms
+CubeRoot took 9.580ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.771ms
+FastSqGMP took 7.284ms
+Cubing took 0.335ms
+CubeRoot took 9.626ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.768ms
+FastSqGMP took 7.313ms
+Cubing took 0.335ms
+CubeRoot took 9.588ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.801ms
+FastSqGMP took 7.292ms
+Cubing took 0.334ms
+CubeRoot took 9.585ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.774ms
+FastSqGMP took 7.367ms
+Cubing took 0.334ms
+CubeRoot took 9.588ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.801ms
+FastSqGMP took 7.286ms
+Cubing took 0.336ms
+CubeRoot took 9.580ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 8.168ms
+FastSqGMP took 7.316ms
+Cubing took 0.335ms
+CubeRoot took 9.587ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.811ms
+FastSqGMP took 7.286ms
+Cubing took 0.335ms
+CubeRoot took 9.589ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.778ms
+FastSqGMP took 7.318ms
+Cubing took 0.335ms
+CubeRoot took 9.587ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.791ms
+FastSqGMP took 7.296ms
+Cubing took 0.336ms
+CubeRoot took 9.611ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.775ms
+FastSqGMP took 7.318ms
+Cubing took 0.334ms
+CubeRoot took 9.585ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.781ms
+FastSqGMP took 7.290ms
+Cubing took 0.334ms
+CubeRoot took 9.583ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.779ms
+FastSqGMP took 7.351ms
+Cubing took 0.335ms
+CubeRoot took 9.613ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.782ms
+FastSqGMP took 7.288ms
+Cubing took 0.335ms
+CubeRoot took 9.584ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.774ms
+FastSqGMP took 7.310ms
+Cubing took 0.335ms
+CubeRoot took 9.595ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.774ms
+FastSqGMP took 7.283ms
+Cubing took 0.335ms
+CubeRoot took 9.580ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.771ms
+FastSqGMP took 7.314ms
+Cubing took 0.335ms
+CubeRoot took 9.584ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.773ms
+FastSqGMP took 7.317ms
+Cubing took 0.335ms
+CubeRoot took 9.581ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.803ms
+FastSqGMP took 7.290ms
+Cubing took 0.335ms
+CubeRoot took 9.580ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.774ms
+FastSqGMP took 7.281ms
+Cubing took 0.334ms
+CubeRoot took 9.580ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.805ms
+FastSqGMP took 7.315ms
+Cubing took 0.334ms
+CubeRoot took 9.581ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.774ms
+FastSqGMP took 7.281ms
+Cubing took 0.335ms
+CubeRoot took 9.579ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.767ms
+FastSqGMP took 7.313ms
+Cubing took 0.336ms
+CubeRoot took 9.611ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.775ms
+FastSqGMP took 7.289ms
+Cubing took 0.334ms
+CubeRoot took 9.598ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.765ms
+FastSqGMP took 7.335ms
+Cubing took 0.335ms
+CubeRoot took 9.593ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.784ms
+FastSqGMP took 7.339ms
+Cubing took 0.335ms
+CubeRoot took 9.590ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.778ms
+FastSqGMP took 7.318ms
+Cubing took 0.336ms
+CubeRoot took 9.590ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.783ms
+FastSqGMP took 7.292ms
+Cubing took 0.335ms
+CubeRoot took 9.626ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.779ms
+FastSqGMP took 7.320ms
+Cubing took 0.335ms
+CubeRoot took 9.590ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 7.783ms
+FastSqGMP took 7.288ms
+Cubing took 0.336ms
+CubeRoot took 9.590ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.778ms
+FastSqGMP took 7.344ms
+Cubing took 0.335ms
+CubeRoot took 9.587ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.784ms
+FastSqGMP took 7.291ms
+Cubing took 0.335ms
+CubeRoot took 9.588ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.779ms
+FastSqGMP took 7.319ms
+Cubing took 0.336ms
+CubeRoot took 9.591ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.820ms
+FastSqGMP took 7.293ms
+Cubing took 0.335ms
+CubeRoot took 9.594ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 7.777ms
+FastSqGMP took 7.319ms
+mean and std Cubing time 0.337200000ms (0.005065570ms)
+mean and std CubeRoot time 9.607150000ms (0.035479114ms)
+mean and std SqGMP time 7.796100000ms (0.054846969ms)
+mean and std FastSqGMP time 7.322400000ms (0.035740733ms)
+Number of squarings: 63
+==================================================
+
+Current localtime: Tue Jan 14 23:07:32 2025
+
+Testing cubing using a prime of 69926 bits
+Number of squarings: 63
+Cubing took 0.633ms
+CubeRoot took 15.529ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.585ms
+FastSqGMP took 11.940ms
+Cubing took 0.569ms
+CubeRoot took 15.497ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.572ms
+FastSqGMP took 11.731ms
+Cubing took 0.549ms
+CubeRoot took 15.557ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.635ms
+FastSqGMP took 11.758ms
+Cubing took 0.550ms
+CubeRoot took 15.501ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.620ms
+FastSqGMP took 11.747ms
+Cubing took 0.550ms
+CubeRoot took 15.473ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.617ms
+FastSqGMP took 11.768ms
+Cubing took 0.555ms
+CubeRoot took 15.485ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.603ms
+FastSqGMP took 11.731ms
+Cubing took 0.548ms
+CubeRoot took 15.478ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.615ms
+FastSqGMP took 11.784ms
+Cubing took 0.548ms
+CubeRoot took 15.746ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.556ms
+FastSqGMP took 11.779ms
+Cubing took 0.552ms
+CubeRoot took 15.477ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.609ms
+FastSqGMP took 11.812ms
+Cubing took 0.568ms
+CubeRoot took 15.490ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.526ms
+FastSqGMP took 11.799ms
+Cubing took 0.548ms
+CubeRoot took 15.511ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.672ms
+FastSqGMP took 11.764ms
+Cubing took 0.554ms
+CubeRoot took 15.512ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.625ms
+FastSqGMP took 11.749ms
+Cubing took 0.560ms
+CubeRoot took 15.532ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.626ms
+FastSqGMP took 11.810ms
+Cubing took 0.557ms
+CubeRoot took 15.500ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.645ms
+FastSqGMP took 11.746ms
+Cubing took 0.581ms
+CubeRoot took 15.476ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.574ms
+FastSqGMP took 11.834ms
+Cubing took 0.553ms
+CubeRoot took 15.498ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.600ms
+FastSqGMP took 11.732ms
+Cubing took 0.548ms
+CubeRoot took 15.471ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.576ms
+FastSqGMP took 11.826ms
+Cubing took 0.568ms
+CubeRoot took 15.519ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.595ms
+FastSqGMP took 11.724ms
+Cubing took 0.546ms
+CubeRoot took 15.477ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.663ms
+FastSqGMP took 11.773ms
+Cubing took 0.549ms
+CubeRoot took 15.497ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.557ms
+FastSqGMP took 11.773ms
+Cubing took 0.549ms
+CubeRoot took 15.478ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.640ms
+FastSqGMP took 11.780ms
+Cubing took 0.566ms
+CubeRoot took 15.499ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.522ms
+FastSqGMP took 11.760ms
+Cubing took 0.547ms
+CubeRoot took 15.472ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.612ms
+FastSqGMP took 11.802ms
+Cubing took 0.552ms
+CubeRoot took 15.498ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.540ms
+FastSqGMP took 11.718ms
+Cubing took 0.553ms
+CubeRoot took 15.456ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.614ms
+FastSqGMP took 11.785ms
+Cubing took 0.547ms
+CubeRoot took 15.458ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.604ms
+FastSqGMP took 11.769ms
+Cubing took 0.552ms
+CubeRoot took 15.515ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.580ms
+FastSqGMP took 11.779ms
+Cubing took 0.552ms
+CubeRoot took 15.484ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.630ms
+FastSqGMP took 11.772ms
+Cubing took 0.567ms
+CubeRoot took 15.525ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.528ms
+FastSqGMP took 11.763ms
+Cubing took 0.552ms
+CubeRoot took 15.482ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.658ms
+FastSqGMP took 11.783ms
+Cubing took 0.568ms
+CubeRoot took 15.517ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.552ms
+FastSqGMP took 11.711ms
+Cubing took 0.547ms
+CubeRoot took 15.524ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.645ms
+FastSqGMP took 11.751ms
+Cubing took 0.580ms
+CubeRoot took 15.875ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.641ms
+FastSqGMP took 11.823ms
+Cubing took 0.569ms
+CubeRoot took 15.511ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.553ms
+FastSqGMP took 11.759ms
+Cubing took 0.549ms
+CubeRoot took 15.479ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.654ms
+FastSqGMP took 11.777ms
+Cubing took 0.562ms
+CubeRoot took 15.494ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.520ms
+FastSqGMP took 11.778ms
+Cubing took 0.548ms
+CubeRoot took 15.502ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.644ms
+FastSqGMP took 11.800ms
+Cubing took 0.557ms
+CubeRoot took 15.490ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.519ms
+FastSqGMP took 11.791ms
+Cubing took 0.546ms
+CubeRoot took 15.490ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.633ms
+FastSqGMP took 11.767ms
+Cubing took 0.561ms
+CubeRoot took 15.528ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.611ms
+FastSqGMP took 11.750ms
+Cubing took 0.551ms
+CubeRoot took 15.488ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.624ms
+FastSqGMP took 11.802ms
+Cubing took 0.549ms
+CubeRoot took 15.554ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.600ms
+FastSqGMP took 11.730ms
+Cubing took 0.548ms
+CubeRoot took 15.478ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.600ms
+FastSqGMP took 11.825ms
+Cubing took 0.550ms
+CubeRoot took 15.518ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.599ms
+FastSqGMP took 11.732ms
+Cubing took 0.547ms
+CubeRoot took 15.509ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.581ms
+FastSqGMP took 11.846ms
+Cubing took 0.548ms
+CubeRoot took 15.515ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.647ms
+FastSqGMP took 11.795ms
+Cubing took 0.583ms
+CubeRoot took 15.506ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.619ms
+FastSqGMP took 11.792ms
+Cubing took 0.572ms
+CubeRoot took 15.510ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.645ms
+FastSqGMP took 11.748ms
+Cubing took 0.559ms
+CubeRoot took 15.483ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.669ms
+FastSqGMP took 11.817ms
+Cubing took 0.553ms
+CubeRoot took 15.519ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.529ms
+FastSqGMP took 11.762ms
+Cubing took 0.546ms
+CubeRoot took 15.474ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.616ms
+FastSqGMP took 11.727ms
+Cubing took 0.553ms
+CubeRoot took 15.481ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.584ms
+FastSqGMP took 11.826ms
+Cubing took 0.565ms
+CubeRoot took 15.520ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.621ms
+FastSqGMP took 11.718ms
+Cubing took 0.552ms
+CubeRoot took 15.468ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.642ms
+FastSqGMP took 11.809ms
+Cubing took 0.564ms
+CubeRoot took 15.500ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.543ms
+FastSqGMP took 11.773ms
+Cubing took 0.553ms
+CubeRoot took 15.407ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.551ms
+FastSqGMP took 11.730ms
+Cubing took 0.552ms
+CubeRoot took 15.483ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.522ms
+FastSqGMP took 12.117ms
+Cubing took 0.547ms
+CubeRoot took 15.447ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.520ms
+FastSqGMP took 11.719ms
+Cubing took 0.547ms
+CubeRoot took 15.443ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.517ms
+FastSqGMP took 11.750ms
+Cubing took 0.546ms
+CubeRoot took 15.412ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.517ms
+FastSqGMP took 11.713ms
+Cubing took 0.547ms
+CubeRoot took 15.439ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.520ms
+FastSqGMP took 11.711ms
+Cubing took 0.547ms
+CubeRoot took 15.418ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.520ms
+FastSqGMP took 11.741ms
+Cubing took 0.546ms
+CubeRoot took 15.405ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.523ms
+FastSqGMP took 11.710ms
+Cubing took 0.547ms
+CubeRoot took 15.417ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.523ms
+FastSqGMP took 11.709ms
+Cubing took 0.547ms
+CubeRoot took 15.410ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.519ms
+FastSqGMP took 11.705ms
+Cubing took 0.548ms
+CubeRoot took 15.454ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.523ms
+FastSqGMP took 11.708ms
+Cubing took 0.545ms
+CubeRoot took 15.405ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.522ms
+FastSqGMP took 11.748ms
+Cubing took 0.546ms
+CubeRoot took 15.404ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.518ms
+FastSqGMP took 11.725ms
+Cubing took 0.547ms
+CubeRoot took 15.407ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.553ms
+FastSqGMP took 11.710ms
+Cubing took 0.548ms
+CubeRoot took 15.406ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.534ms
+FastSqGMP took 11.705ms
+Cubing took 0.547ms
+CubeRoot took 15.448ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.524ms
+FastSqGMP took 11.707ms
+Cubing took 0.547ms
+CubeRoot took 15.412ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.559ms
+FastSqGMP took 11.709ms
+Cubing took 0.546ms
+CubeRoot took 15.411ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.518ms
+FastSqGMP took 11.711ms
+Cubing took 0.548ms
+CubeRoot took 15.454ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.703ms
+FastSqGMP took 11.743ms
+Cubing took 0.580ms
+CubeRoot took 15.439ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.532ms
+FastSqGMP took 11.756ms
+Cubing took 0.548ms
+CubeRoot took 15.430ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.538ms
+FastSqGMP took 11.730ms
+Cubing took 0.548ms
+CubeRoot took 15.423ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.567ms
+FastSqGMP took 11.729ms
+Cubing took 0.549ms
+CubeRoot took 15.426ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.554ms
+FastSqGMP took 11.727ms
+Cubing took 0.548ms
+CubeRoot took 15.436ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.527ms
+FastSqGMP took 11.728ms
+Cubing took 0.547ms
+CubeRoot took 15.440ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.534ms
+FastSqGMP took 11.770ms
+Cubing took 0.548ms
+CubeRoot took 15.419ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.554ms
+FastSqGMP took 11.729ms
+Cubing took 0.548ms
+CubeRoot took 15.420ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.569ms
+FastSqGMP took 12.096ms
+Cubing took 0.547ms
+CubeRoot took 15.427ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.540ms
+FastSqGMP took 11.727ms
+Cubing took 0.547ms
+CubeRoot took 15.441ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.542ms
+FastSqGMP took 11.736ms
+Cubing took 0.548ms
+CubeRoot took 15.461ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.568ms
+FastSqGMP took 11.728ms
+Cubing took 0.550ms
+CubeRoot took 15.423ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.539ms
+FastSqGMP took 11.726ms
+Cubing took 0.548ms
+CubeRoot took 15.420ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.529ms
+FastSqGMP took 11.723ms
+Cubing took 0.548ms
+CubeRoot took 15.418ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.538ms
+FastSqGMP took 11.733ms
+Cubing took 0.547ms
+CubeRoot took 15.421ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.529ms
+FastSqGMP took 11.724ms
+Cubing took 0.548ms
+CubeRoot took 15.421ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.530ms
+FastSqGMP took 11.724ms
+Cubing took 0.548ms
+CubeRoot took 15.421ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.527ms
+FastSqGMP took 11.720ms
+Cubing took 0.548ms
+CubeRoot took 15.419ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.531ms
+FastSqGMP took 11.724ms
+Cubing took 0.547ms
+CubeRoot took 15.420ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.528ms
+FastSqGMP took 11.733ms
+Cubing took 0.548ms
+CubeRoot took 15.430ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.531ms
+FastSqGMP took 11.726ms
+Cubing took 0.548ms
+CubeRoot took 15.447ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.531ms
+FastSqGMP took 11.725ms
+Cubing took 0.547ms
+CubeRoot took 15.429ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.535ms
+FastSqGMP took 11.754ms
+Cubing took 0.548ms
+CubeRoot took 15.427ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.531ms
+FastSqGMP took 11.756ms
+Cubing took 0.547ms
+CubeRoot took 15.431ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.556ms
+FastSqGMP took 11.740ms
+Cubing took 0.548ms
+CubeRoot took 15.492ms
+ERROR: cube root is wrong!!!! -> 1
+SqGMP took 12.537ms
+FastSqGMP took 11.728ms
+Cubing took 0.548ms
+CubeRoot took 15.468ms
+ERROR: cube root is wrong!!!! -> -1
+SqGMP took 12.532ms
+FastSqGMP took 11.725ms
+mean and std Cubing time 0.553270000ms (0.011789703ms)
+mean and std CubeRoot time 15.473570000ms (0.063130223ms)
+mean and std SqGMP time 12.573050000ms (0.048260828ms)
+mean and std FastSqGMP time 11.761880000ms (0.062950025ms)
+Number of squarings: 63
+==================================================
+

@@ -290,15 +290,14 @@ int main(int argc, char **argv) {
 	    printf("Tested modulo creation\n");
 	}
 
-	// combute modulo and exponent for the cubing
-	if (input.cubing | input.delay | input.delayThorp ) {
-	    if (input.secpar)
-		constructPrimePower(q, b, input.secpar, primeSizes[i]);
-	    else constructSafePrime(q, b, primeSizes[i]);
+	// combpute modulo and exponent for the cubing
+	if (input.secpar)
+	    constructPrimePower(q, b, input.secpar, primeSizes[i]);
+	else constructSafePrime(q, b, primeSizes[i]);
 
-	    N = mpz_sizeinbase(q, 2);
-	    printf("Using a prime with exactly %lu bits\n", N);
-	}
+	N = mpz_sizeinbase(q, 2);
+	printf("Using a prime with exactly %lu bits\n", N);
+
 
 	if (input.cubing) { // test repeated squarings
 	    testTimesSq(q, b, N, input.nIters, fileptr);

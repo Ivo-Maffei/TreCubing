@@ -2,10 +2,11 @@
 
 #include <openssl/evp.h>
 #include <string.h> // memcpy
-#define NDEBUG
+//#define NDEBUG
 #include <assert.h>
 
 static EVP_CIPHER* aes256 = NULL;
+static EVP_CIPHER* aes256ofb = NULL;
 static EVP_CIPHER_CTX* ctx = NULL;
 
 int initialiseOpenSSL() {
@@ -18,6 +19,12 @@ int initialiseOpenSSL() {
     aes256 = EVP_CIPHER_fetch(NULL, "AES-256-ECB", NULL); // fetch any implementation for the default library context
     if (aes256 == NULL) { // something failed
 	fprintf(stderr, "AES fetch failed\n");
+	return -1; // exit
+    }
+
+    aes256ofb = EVP_CIPHER_fetch(NULL, "AES-256-OFB", NULL); // fetch any implementation for the default library context
+    if (aes256 == NULL) { // something failed
+	fprintf(stderr, "AES-OFB fetch failed\n");
 	return -1; // exit
     }
 
@@ -221,9 +228,69 @@ void cycleDec(mpz_t m, const mpz_t c, const mpz_t p, const uint8_t *key) {
     } while (mpz_cmp(m, p) >= 0);
 }
 
+// encrypt m with a AES-OFB where the IV is the first 128-bits of the key
+int streamCipher(mpz_t c, const mpz_t m, const uint64_t N, const uint8_t *key) {
+
+    const int nLimbs = (N+63) / 64; // num limbs to contain the modulo
+    const int bufferSize = nLimbs * 8;
+    mp_limb_t* cptr;
+    uint8_t * buffer;
+    int t;
+
+    if (ctx == NULL) {
+	if (initialiseOpenSSL() != 0){
+	    fprintf(stderr, "Initialisation failed\n");
+	    return -1;
+	}
+    }
+
+    // pass key and cipher to the context
+    // the first 16 bytes (128-bits) of the key are the IV!
+    if (1 != EVP_EncryptInit_ex2(ctx, aes256ofb, key+16 , key, NULL)){ // the null is params
+	fprintf(stderr, "Failed to init context\n");
+	return -1;
+    }
+    EVP_CIPHER_CTX_set_padding(ctx, 0); // disable padding
+
+    // to encrypt m, we first copy it to a buffer of the correct size
+    // since m might be shorter
+    buffer = (uint8_t*) malloc(nLimbs*sizeof(uint64_t));
+
+    cptr = mpz_limbs_read(m);
+    for (size_t i=0; i < mpz_size(m); ++i) {
+	((mp_limb_t*) buffer)[i] = cptr[i];
+    }
+    // now zero everything else
+    for (size_t i=mpz_size(m)*8; i < bufferSize; ++i) {
+	buffer[i]=0;
+    }
+
+    // prepare ciphertext
+    cptr = mpz_limbs_modify(c, nLimbs);
+
+    if (!EVP_EncryptUpdate(ctx, ((uint8_t*)cptr), &t, buffer, bufferSize)) {
+	fprintf(stderr, "Enc failed\n");
+	free(buffer);
+	return -1;
+    }
+    assert(t==bufferSize);
+
+    // FINALISE EVERYTHING
+    if (!EVP_EncryptFinal_ex(ctx, ((uint8_t*)cptr), &t)){
+	fprintf(stderr, "Finalisation failed\n");
+	return -1;
+    }
+    assert(t==0);
+
+    mpz_limbs_finish(c, nLimbs);
+    free(buffer);
+    return 0; // done!
+}
+
 
 void cleanOpenSSL() {
     if (aes256) EVP_CIPHER_free(aes256);
+    if (aes256ofb) EVP_CIPHER_free(aes256ofb);
     if (ctx)EVP_CIPHER_CTX_free(ctx);
     aes256 = NULL;
     ctx = NULL;

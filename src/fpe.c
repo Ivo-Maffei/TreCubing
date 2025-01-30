@@ -62,26 +62,28 @@ void inverse_thorp(mpz_t m, const mpz_t c, const mpz_t q, const unsigned long R,
 }
 
 
-void swapOrNot(mpz_t x, const mpz_t N, const unsigned long R){
+void swapOrNot(mpz_t x, const mpz_t N, const unsigned long R, const uint8_t* key){
 
     uint64_t b;
     mpz_t K;
     gmp_randstate_t randState;
 
-    mpz_init2(K, mpz_sizeinbase(N, 2));
+    mpz_init(K);
     gmp_randinit_mt(randState);
+    gmp_randseed_ui(randState, xorshf64());
+
+    mpz_urandomm(K, randState, N);
 
     for (unsigned long i=0; i<R; ++i){
-	b = nextRand();
+	b = (uint64_t)(key[i/8]>>(i%8))&1l;
 
 	if (b) { // b==1
-	    mpz_urandomm(K, randState, N);
 	    mpz_sub(x, K, x);
 	    if (mpz_sgn(x) < 0) mpz_add(x, x, N);
 	    // x <- K-x mod N
 	}
     }
 
-    mpz_clears(K, NULL);
+    mpz_clear(K);
     gmp_randclear(randState);
 }

@@ -58,6 +58,7 @@ void writeTimestamp(FILE* const fileptr) {
     fprintf(fileptr, "Current localtime: %s\n", asctime(localtime(&rawtime)));
 }
 
+
 void testModuloConstruction(const unsigned long N, const unsigned long secpar, const int nIters, FILE* const fileptr) {
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
@@ -85,7 +86,6 @@ void testModuloConstruction(const unsigned long N, const unsigned long secpar, c
 
     mpz_clear(q);
 }
-
 
 // picks a random message m, computes m^3 mod p and then (m^3)^b mod p
 // prints out the time taken and stores the time as well
@@ -189,13 +189,16 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
     writeTimestamp(stdout);
 
     fprintf(fileptr, "Testing FPE methods assuming a modulus of %lu bits and with %lu rounds\n", mpz_sizeinbase(N, 2), R);
+    fprintf(stderr, "Testing FPE methods assuming a modulus of %lu bits and with %lu rounds\n", mpz_sizeinbase(N, 2), R);
 
      // variable for timing
     TIMER_INIT(Th, nIters);
     TIMER_INIT(Sw, nIters);
+    TIMER_INIT(Stream, nIters);
 
     mpz_t m;
-    int keyLength = (R+7)/8;
+    int keyLength = (R+7)/8; // key is the sequence of coin flips or at least long enough for AES256-OFB
+    if (keyLength < 48) keyLength = 48; // 256 key + 128 IV
     uint8_t* key = (uint8_t*) malloc( keyLength * sizeof(uint8_t));
     assert(key);
     uint64_t randSeed;
@@ -215,13 +218,17 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
 	}
 
 	if(son){
-	    TIMER_TIME(Sw, swapOrNot(m, N, R), fileptr);
+	    TIMER_TIME(Sw, swapOrNot(m, N, R, key), fileptr);
 	}
+
+	TIMER_TIME(Stream, streamCipher(m, m, mpz_sizeinbase(N, 2), key), fileptr);
     }
 
 
     TIMER_REPORT(Th, fileptr);
     TIMER_REPORT(Sw, fileptr);
+    TIMER_REPORT(Stream, fileptr);
+
 
     writelineSep(fileptr);
 

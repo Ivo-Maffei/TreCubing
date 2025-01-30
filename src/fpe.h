@@ -8,6 +8,6 @@ void thorp(mpz_t c, const mpz_t m, const mpz_t N, const unsigned long R, const u
 
 void inverse_thorp(mpz_t m, const mpz_t c, const mpz_t N, const unsigned long R, const uint8_t* key);
 
-void swapOrNot(mpz_t x, const mpz_t N, const unsigned long R);
+void swapOrNot(mpz_t x, const mpz_t N, const unsigned long R, const uint8_t* key);
 
 #endif

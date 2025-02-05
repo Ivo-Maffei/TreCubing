@@ -305,10 +305,14 @@ int main(int argc, char **argv) {
 	    printf("Tested cubing\n");
 	}
 
-	if (input.enc) { // test both-end ecnryptions
-	    testTimesEnc(q, input.nIters, fileptr);
-	    fflush(fileptr);
-	    printf("Tested both-ends encryption\n");
+	if (input.enc) { // test AES256-OFB ecnryptions
+	    if (!input.secpar) {
+		fprintf(stderr, "Cannot test encryption without a security parameter\n");
+	    } else {
+		testTimesEnc(primeSizes[i], input.secpar, input.nIters, fileptr);
+		fflush(fileptr);
+		printf("Tested AES256-OFB encryption\n");
+	    }
 	}
 
 	if (input.delay) {

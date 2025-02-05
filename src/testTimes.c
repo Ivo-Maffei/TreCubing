@@ -7,7 +7,7 @@
 #include <math.h>
 #include <string.h> // for memcpy
 
-#define NDEBUG
+//#define NDEBUG
 #include <assert.h>
 
 
@@ -73,8 +73,8 @@ void testModuloConstruction(const unsigned long N, const unsigned long secpar, c
 
     for (int i=0; i < nIters; ++i){
 
-	TIMER_TIME(OSSLsafe, findOpensslPrime(q, N, 1), fileptr);
-	TIMER_TIME(AlmostSafe, constructAlmostSafePrime(q, NULL, N), fileptr);
+	//TIMER_TIME(OSSLsafe, findOpensslPrime(q, N, 1), fileptr);
+	//TIMER_TIME(AlmostSafe, constructAlmostSafePrime(q, NULL, N), fileptr);
 	if (secpar) TIMER_TIME(PrimePower, constructPrimePower(q, NULL, secpar, N), fileptr);
     }
 
@@ -194,11 +194,9 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
      // variable for timing
     TIMER_INIT(Th, nIters);
     TIMER_INIT(Sw, nIters);
-    TIMER_INIT(Stream, nIters);
 
     mpz_t m;
     int keyLength = (R+7)/8; // key is the sequence of coin flips or at least long enough for AES256-OFB
-    if (keyLength < 48) keyLength = 48; // 256 key + 128 IV
     uint8_t* key = (uint8_t*) malloc( keyLength * sizeof(uint8_t));
     assert(key);
     uint64_t randSeed;
@@ -220,15 +218,11 @@ void testTimesFpe(const mpz_t N, const unsigned long R, const bool t, const bool
 	if(son){
 	    TIMER_TIME(Sw, swapOrNot(m, N, R, key), fileptr);
 	}
-
-	TIMER_TIME(Stream, streamCipher(m, m, mpz_sizeinbase(N, 2), key), fileptr);
     }
 
 
     TIMER_REPORT(Th, fileptr);
     TIMER_REPORT(Sw, fileptr);
-    TIMER_REPORT(Stream, fileptr);
-
 
     writelineSep(fileptr);
 
@@ -306,21 +300,18 @@ void testTimesAll(const mpz_t p, const mpz_t b, const unsigned long R, const uns
 }
 
 
-void testTimesEnc(const mpz_t p, const int nIters, FILE * const fileptr) {
+void testTimesEnc(const size_t N, const size_t secpar, const int nIters, FILE * const fileptr) {
 
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
 
-    fprintf(fileptr, "Testing both-ends encryption with a prime of size %lu\n", mpz_sizeinbase(p, 2));
+    fprintf(fileptr, "Testing AES256-OFB encryption with a prime of size %lu\n", N);
 
-    mpz_t m, m2, c;
+    mpz_t m, M;
 
-    TIMER_INIT(encryption, nIters);
-    TIMER_INIT(decryption, nIters);
+    TIMER_INIT(streamCipher, nIters);
 
-    mpz_init2(m, mpz_sizeinbase(p, 2));
-    mpz_init2(m2, mpz_sizeinbase(p, 2));
-    mpz_init2(c, mpz_sizeinbase(p, 2));
+    mpz_inits(m, M, NULL);
 
     if (0 != initialiseOpenSSL()){
 	fprintf(stderr, "Failed to initialise OpenSSL\n");
@@ -329,32 +320,27 @@ void testTimesEnc(const mpz_t p, const int nIters, FILE * const fileptr) {
     }
 
     for (int i = 0; i < nIters; ++i) {
-	randomMessage(m, p);
+	constructPrimePower(M, NULL, secpar, N);
+
+	randomMessage(m, M);
 
 	// construct random key of 256 bits (32 bytes or 4 64-bits words)
-	uint8_t key[32];
-	for (int i = 0; i < 4; ++i) {
+	// and 128 bits of IV (so 48 bytes total)
+	uint8_t key[48];
+	for (int i = 0; i < 6; ++i) {
 	    uint64_t t = xorshf64(); // get a random 64-bit word
 	    memcpy(key + i*8, &t, 8);
 	}
 
-	TIMER_TIME(encryption, cycleEnc(c, m, p, key), fileptr);
-	TIMER_TIME(decryption, cycleDec(m2, c, p, key), fileptr);
+	TIMER_TIME(streamCipher, streamCipher(m, m, M, key), fileptr);
 
-	if(mpz_cmp(m, m2) != 0) {
-	    fprintf(stderr, "ERROR!!!!!! enc dec returned wrong message\n");
-	    fprintf(fileptr, "ERROR!!!!!! enc dec returned wrong message\n");
-	    goto free;
-	}
     }
 
-    TIMER_REPORT(encryption, fileptr);
-    TIMER_REPORT(decryption, fileptr);
+    TIMER_REPORT(streamCipher, fileptr);
 
     writelineSep(fileptr);
-
  free:
-    mpz_clears(m, m2, c, NULL);
+    mpz_clears(m, M, NULL);
     clearRandomness();
     cleanOpenSSL();
 }

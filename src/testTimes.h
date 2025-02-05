@@ -21,7 +21,8 @@ void testTimesAll(const mpz_t p, const mpz_t b, const unsigned long R, const uns
 // test LLL reduction
 //void testLLL(const mpz_t p, const unsigned long s, const unsigned long n, const int nIters);
 
-// test bothEnds encryption
-void testTimesEnc(const mpz_t p, const int nIters, FILE * const fileptr);
+// test stream cipher encryption AES256-OFB with cycle walking
+// we generate new moduli at each iteration to avoid biases in the modulo
+void testTimesEnc(const size_t N, const size_t secpar, const int nIters, FILE * const fileptr);
 
 #endif

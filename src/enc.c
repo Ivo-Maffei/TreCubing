@@ -2,6 +2,7 @@
 
 #include <openssl/evp.h>
 #include <string.h> // memcpy
+#include <stdbool.h>
 //#define NDEBUG
 #include <assert.h>
 
@@ -228,14 +229,20 @@ void cycleDec(mpz_t m, const mpz_t c, const mpz_t p, const uint8_t *key) {
     } while (mpz_cmp(m, p) >= 0);
 }
 
-// encrypt m with a AES-OFB where the IV is the first 128-bits of the key
-int streamCipher(mpz_t c, const mpz_t m, const uint64_t N, const uint8_t *key) {
+// encrypt m with a cycle walking AES-OFB where the IV is the first 128-bits of the key
+int streamCipher(mpz_t c, const mpz_t m, const mpz_t M, const uint8_t *key) {
 
-    const int nLimbs = (N+63) / 64; // num limbs to contain the modulo
+    const uint64_t N = mpz_sizeinbase(M, 2);
+    const int nbytes = (N+7)/8;
+    const int bitsPadding = nbytes*8 - N;
+    const int nLimbs = mpz_size(M); // num limbs to contain the modulo
     const int bufferSize = nLimbs * 8;
     mp_limb_t* cptr;
+    const mp_limb_t* modptr;
     uint8_t * buffer;
-    int t;
+    int t = 1;
+    bool lendian = ((uint8_t*)&t)[0] & 1; // check if int is stored LSB first or MSB
+    assert(lendian); // no need to handle big endian as all my machines are little endian
 
     if (ctx == NULL) {
 	if (initialiseOpenSSL() != 0){
@@ -255,25 +262,34 @@ int streamCipher(mpz_t c, const mpz_t m, const uint64_t N, const uint8_t *key) {
     // to encrypt m, we first copy it to a buffer of the correct size
     // since m might be shorter
     buffer = (uint8_t*) malloc(nLimbs*sizeof(uint64_t));
+    modptr = mpz_limbs_read(M);
 
-    cptr = mpz_limbs_read(m);
-    for (size_t i=0; i < mpz_size(m); ++i) {
-	((mp_limb_t*) buffer)[i] = cptr[i];
-    }
-    // now zero everything else
-    for (size_t i=mpz_size(m)*8; i < bufferSize; ++i) {
-	buffer[i]=0;
-    }
-
-    // prepare ciphertext
+    // copy over m to c
+    mpz_set(c, m);
     cptr = mpz_limbs_modify(c, nLimbs);
-
-    if (!EVP_EncryptUpdate(ctx, ((uint8_t*)cptr), &t, buffer, bufferSize)) {
-	fprintf(stderr, "Enc failed\n");
-	free(buffer);
-	return -1;
+    // now zero everything else
+    for (size_t i=mpz_size(m); i < nLimbs; ++i) {
+	cptr[i]=0;
     }
-    assert(t==bufferSize);
+    // now cptr does contain only m
+
+    do {
+	memcpy(buffer, cptr, bufferSize); // copy bufferSize bytes (nLimbs limbs) to buffer
+
+	// we only need to encrpt N bits, so encrypt nbytes and zero the top bits
+	// note that this is possible since we are storing 64-bits words in little endian
+	// otherwise the first byte of the last limb is the top-most byte!
+	if (!EVP_EncryptUpdate(ctx, ((uint8_t*)cptr), &t, buffer, nbytes)) {
+	    fprintf(stderr, "Enc failed\n");
+	    free(buffer);
+	    return -1;
+	}
+	assert(t==nbytes);
+
+	// we encrypted nbytes, but only need N bits
+	// so we zero the top nbytes*8-N bits
+	((uint8_t*)cptr)[nbytes-1] &= (0xff>>(bitsPadding));
+    } while (mpn_cmp(cptr, modptr, nLimbs) >= 0); // cptr >= modptr
 
     // FINALISE EVERYTHING
     if (!EVP_EncryptFinal_ex(ctx, ((uint8_t*)cptr), &t)){

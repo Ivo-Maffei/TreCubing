@@ -16,6 +16,7 @@
 #include "enc.h"
 #include "rand.h"
 #include "constructPrimes.h"
+#include "hash.h"
 
 
 #define TIMER_INIT(name, iters)  \
@@ -305,7 +306,7 @@ void testTimesEnc(const size_t N, const size_t secpar, const int nIters, FILE * 
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
 
-    fprintf(fileptr, "Testing AES256-OFB encryption with a prime of size %lu\n", N);
+    fprintf(fileptr, "Testing AES256-OFB encryption with a modulo of size %lu\n", N);
 
     mpz_t m, M;
 
@@ -343,4 +344,40 @@ void testTimesEnc(const size_t N, const size_t secpar, const int nIters, FILE * 
     mpz_clears(m, M, NULL);
     clearRandomness();
     cleanOpenSSL();
+}
+
+void testTimesHash(const mpz_t M, const int nIters, FILE* const fileptr){
+
+    writeTimestamp(fileptr);
+    writeTimestamp(stdout);
+
+    fprintf(fileptr, "Testing hasing (SHA3-256) with modulo of size %lu\n", mpz_sizeinbase(M, 2));
+
+    mpz_t m;
+    uint8_t* digest;
+
+    TIMER_INIT(hashing, nIters);
+
+    mpz_init(m);
+    digest = (uint8_t*) malloc(32); // digest is 32 bytes = 256 bits
+
+    if (0 != initialiseHashing() ){
+	fprintf(stderr, "Error initialising OpenSSL\n");
+	fprintf(fileptr, "Error initialising OpenSSL\n");
+	goto free;
+    }
+
+    for (int i=0; i < nIters; ++i){
+	randomMessage(m, M);
+
+	TIMER_TIME(hashing, hash(digest, m), fileptr);
+    }
+
+    TIMER_REPORT(hashing, fileptr);
+
+    writelineSep(fileptr);
+
+ free:
+    mpz_clear(m);
+    free(digest);
 }

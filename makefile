@@ -17,7 +17,7 @@ LIBRARIES = -L/usr/local/lib -lgmp -largp -lcrypto
 # example main.o : main.c testTimes.o --> meaning that we need to rebuild main.o every ttime main.c or testTimes.o changes
 all: $(TARGET)
 
-testTimes.o : $(apprefix $(SRCDIR)/, fpe.h delay.h enc.h rand.h constructPrimes.h)
+testTimes.o : $(apprefix $(SRCDIR)/, fpe.h delay.h enc.h rand.h constructPrimes.h hash.h)
 
 fpe.o : $(SRCDIR)/rand.h
 
@@ -47,7 +47,7 @@ $(BUILDDIR):
 
 # to create the test program we need all objects and we simply link them
 $(TARGET) : $(OBJECTS)
-	$(CC) $(CFLAGS)  -o $(TARGET) $(OBJECTS) $(LIBRARIES)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS) $(LIBRARIES)
 
 
 # we have a "phony" target clean (menaing that clean is not a file to be created

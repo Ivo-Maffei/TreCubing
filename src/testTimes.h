@@ -18,11 +18,11 @@ void testTimesFpe(const mpz_t p, const unsigned long R, const bool t, const bool
 // test the overall delay and open
 void testTimesAll(const mpz_t p, const mpz_t b, const unsigned long R, const unsigned long C, const int nIters, FILE * const fileptr);
 
-// test LLL reduction
-//void testLLL(const mpz_t p, const unsigned long s, const unsigned long n, const int nIters);
-
 // test stream cipher encryption AES256-OFB with cycle walking
 // we generate new moduli at each iteration to avoid biases in the modulo
 void testTimesEnc(const size_t N, const size_t secpar, const int nIters, FILE * const fileptr);
+
+// test the times it takes to hash random messages modulo M
+void testTimesHash(const mpz_t M, const int nIters, FILE* const fileptr);
 
 #endif

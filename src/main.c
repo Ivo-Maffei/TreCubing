@@ -31,7 +31,8 @@ static struct argp_option options[] = {
     { "cubing", 'c', 0, 0, "Test the cubing/cube root performance"},
     { "delay", 'd', 0, 0, "Test the performance of the whole delay/open method (using both-ends encryption)" },
     { "delayThorp", -2, 0, 0, "Test the performance of the whole delay/open method using Thorp as FPE"},
-    { "encryption", 'e', 0, 0, "Test the both-ends encryption performance"},
+    { "encryption", 'e', 0, 0, "Test the stream cipher encryption performance"},
+    { "hashing", 'x', 0, 0, "Test the hashing performance"},
     { "fpe", 'f', "fpeScheme",  OPTION_ARG_OPTIONAL, "Test the performance of the specified FPE methods as a comma separated list (if no list is provided, all methods are tested). Valid FPE schemes are: 'thorp', 'swapornot'" },
     { "rounds", 'R', "nRounds", 0, "Specify the number of rounds to use when testing FPE schemes. If this option is omitted, we test the values: 100, 0.5*primesize and primesize", 2 },
     { "chain", 'C', "nChain", 0, "Specify how many delays to chain together when testing the whole delay process. If this option is omitted, we test values: 10 and 100" },
@@ -53,6 +54,7 @@ struct input {
     bool fpeThorp;
     bool fpeSoN;
     bool enc;
+    bool hashing;
     bool moduli;
     unsigned long nRounds;
     unsigned long nChain;
@@ -105,8 +107,12 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	input->delayThorp = true;
 	break;
     }
-    case 'e': { // handel encryption
+    case 'e': { // handle encryption
 	input->enc = true;
+	break;
+    }
+    case 'x': { // handle hashing
+	input->hashing = true;
 	break;
     }
     case 'f': {// handle fpe
@@ -161,9 +167,9 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	    argp_error(state, "No output file specified");
 	    return EINVAL;
 	}
-	if (!(input->cubing || input->delay || input->delayThorp || input->enc || input->fpeThorp || input->fpeSoN || input->moduli)) { // no specific test set
+	if (!(input->cubing || input->delay || input->delayThorp || input->enc || input->fpeThorp || input->fpeSoN || input->moduli || input->hashing)) { // no specific test set
 	    // set all tests to true
-	    input->cubing = input->delay = input->delayThorp = input->enc = input->fpeThorp = input->fpeSoN = input->moduli = true;
+	    input->cubing = input->delay = input->delayThorp = input->enc = input->fpeThorp = input->fpeSoN = input->moduli = input->hashing = true;
 	}
     }
     default:
@@ -182,7 +188,7 @@ static struct argp argp_struct = { options, parser_fun, args_doc , doc };
 void printReceivedInput(struct input input) {
     printf("Output test results to file: %s\n", input.filename);
     printf("Testing %lu iterations of:\n", input.nIters);
-    printf("modulo: %s\ncubing: %s\nboth-end encryption: %s\ndelay: %s ", BOOLSTR(input.moduli), BOOLSTR(input.cubing), BOOLSTR(input.enc), BOOLSTR(input.delay || input.delayThorp));
+    printf("modulo: %s\ncubing: %s\nstream encryption: %s\nhashing: %s\ndelay: %s ", BOOLSTR(input.moduli), BOOLSTR(input.cubing), BOOLSTR(input.enc), BOOLSTR(input.hashing), BOOLSTR(input.delay || input.delayThorp));
 
     if(input.delayThorp || input.delay) {
 	printf("(using chain lengths: ");
@@ -192,7 +198,7 @@ void printReceivedInput(struct input input) {
     }
     printf("\n");
 
-    printf("delay using both-ends encryption: %s\ndelay using Thorp: %s\n", BOOLSTR(input.delay), BOOLSTR(input.delayThorp));
+    printf("delay using stream encryption: %s\ndelay using Thorp: %s\n", BOOLSTR(input.delay), BOOLSTR(input.delayThorp));
 
     printf("FPE methods: %s%s",
 	   input.fpeThorp ? "Thorp " : "",
@@ -313,6 +319,12 @@ int main(int argc, char **argv) {
 		fflush(fileptr);
 		printf("Tested AES256-OFB encryption\n");
 	    }
+	}
+
+	if (input.hashing) {
+	    testTimesHash(q, input.nIters, fileptr);
+	    fflush(fileptr);
+	    printf("Testing hahsing\n");
 	}
 
 	if (input.delay) {

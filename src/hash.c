@@ -38,7 +38,7 @@ size_t hash(uint8_t* digest, const mpz_t input){
     }
 
     // hash mpz_size(input)*8 bytes of inputs and save them in digest
-    // digestLength will be the number of bytes of the hashed value (should bve 32)
+    // digestLength will be the number of bytes of the hashed value (should be 32)
     // use sha256 with default implementation
     EVP_Digest(mpz_limbs_read(input), mpz_size(input)*8, digest, &digestLength, sha256, NULL);
     assert(digestLength == 32);

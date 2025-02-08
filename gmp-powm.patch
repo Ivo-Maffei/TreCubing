@@ -1,7 +1,7 @@
-diff --git a/mpn/generic/powm.c b/Users/ivo.maffei/gmp-6.3.0/mpn/generic/powm.c
+diff --git a/mpn/generic/powm.c b/mpn/generic/powm.c
 index 1e30f2f..57b5bb0 100644
 --- a/mpn/generic/powm.c
-+++ b/Users/ivo.maffei/gmp-6.3.0/mpn/generic/powm.c
++++ b/gmp-6.3.0/mpn/generic/powm.c
 @@ -86,7 +86,7 @@ see https://www.gnu.org/licenses/.  */
  
  #undef MPN_REDC_0

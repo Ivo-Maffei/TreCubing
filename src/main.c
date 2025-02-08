@@ -17,10 +17,10 @@
 #define BOOLSTR(bool) bool ? "yes" : "no"
 
 // setup global variables for the argument parsing
-const char * argp_program_version = "trecubing v1.0";
-const char * argp_program_bug_address = "ivo.maffei@cs.ox.ac.uk";
+const char * argp_program_version = "trecubing v2.0";
+const char * argp_program_bug_address = "ivo.maffei@uni.lu";
 static char args_doc[] = "[FILENAME|stdout]"; // mandatory arguments
-static char doc[] = "Test different primitives for TRE by Cubing and outputs the test results in the file provided.";
+static char doc[] = "Test different primitives for Time-Lock Puzzles via Cubing and outputs the test results in the file provided.";
 
 static struct argp_option options[] = {
     // { <long name>, <ascii code for short name>, <name of argument>, <flags>, <documentation>, <group id>}

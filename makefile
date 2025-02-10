@@ -17,11 +17,7 @@ LIBRARIES = -L/usr/local/lib -lgmp -largp -lcrypto
 # example main.o : main.c testTimes.o --> meaning that we need to rebuild main.o every ttime main.c or testTimes.o changes
 all: $(TARGET)
 
-testTimes.o : $(apprefix $(SRCDIR)/, fpe.h delay.h enc.h rand.h constructPrimes.h hash.h)
-
-fpe.o : $(SRCDIR)/rand.h
-
-delay.o : $(SRCDIR)/fpe.h
+testTimes.o : $(apprefix $(SRCDIR)/, enc.h rand.h constructPrimes.h hash.h)
 
 main.o : $(addprefix $(SRCDIR)/, testTimes.h constructPrimes.h)
 

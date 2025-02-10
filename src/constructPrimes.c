@@ -10,21 +10,13 @@ const unsigned long availablePrimeSizes[] = {
     1024,
     2048,
     3072,
-    4096,
-    //5000,
     10000,
-    //    20000,
-    30000,
-    // 40000,
     50000,
-    // 60000,
     70000,
-    // 80000,
-    90000,
     100000
 };
 
-const unsigned long numAvailablePrimes = 12;
+const unsigned long numAvailablePrimes = 9;
 
 
 
@@ -127,8 +119,8 @@ void constructSafePrime100k(mpz_t p) {
     mpz_sub_ui(p, p, 1l);
 }
 
-
 // use openssl for generating primes
+// TODO: if not safe, we still want p=2 mod 3
 void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
     // we must have Nbits < 2^31 to fit an int
     assert(Nbits < INT_MAX);
@@ -187,63 +179,6 @@ void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
     BN_free(ossl_num);
 }
 
-
-// gets a prime of type mq+1 where m is quite small
-// note that m=q mod 3 and m even
-// so for q=2 mod 3 -> m = 6k + 2
-// and for q=1 mod 3 -> m = 6k + 4
-// we could just use m= 6k + 4(q%3), but 6k + 2(3-(q%3)) is perfect
-void constructAlmostSafePrime(mpz_t p, mpz_t b, const unsigned long Nbits) {
-    mpz_t q;
-    unsigned long m; // note that we expect m = O(log p) = O(N) hence in ulong
-    bool isPrime;
-
-    mpz_init(q);
-
-    // get a prime of Nbits
-    findOpensslPrime(q, Nbits, false);
-
-    // now look for m = 6k + 2(3-(q%3)) = 6(k+1) - 2(q%3)
-    // so we use 6k - 2(q%3) and start with k=1
-    m = -2*mpz_fdiv_ui(q, 3l); //fdiv_ui returns the mod and we will add 6 later
-    isPrime = false;
-    while (!isPrime){
-	m += 6;
-	// compute p = mq+1
-	mpz_mul_ui(p, q, m);
-	mpz_add_ui(p, p, 1l);
-
-	// check p prime using pocklinton's test
-	// i.e. check a^{p-1} =1 mod p and gcd(a^(p-1/q)-1, p) = 1
-	// we use a=2 for efficiency
-	mpz_ui_pow_ui(q, 2, m); // q <- 2^m
-	mpz_sub_ui(q, q, 1l); // q = 2^m -1
-
-	mpz_gcd(q, p, q); // q <- gcd(p, q)
-	if (mpz_cmp_ui(q, 1l) != 0) // q != 1
-	    continue; // p not prime
-
-	// we ceck 2^p = 2 mod p instead of 2^(p-1) = 1 mod p
-	mpz_set_ui(q, 2l);
-	mpz_powm(q, q, p, p);
-	if (mpz_cmp_ui(q, 2l) == 0) // found a prime!
-	    isPrime = true;
-    }
-
-    // now p is a prime
-
-    // store the inverse of 3 mod p-1
-    // this is: (1 + 2(p-1))/3 = (2p-1)/3
-    if (b) {
-	mpz_mul_2exp(b, p, 1); // b <- 2p
-	mpz_sub_ui(b, b, 1);
-	mpz_divexact_ui(b, b, 3);
-    }
-
-    mpz_clear(q);
-}
-
-
 // construct a prime and stores it in p
 // p should already be initialised with the correct size
 void constructSafePrime(mpz_t p, mpz_t b, const unsigned long N) {
@@ -282,7 +217,7 @@ void constructSafePrime(mpz_t p, mpz_t b, const unsigned long N) {
 	constructSafePrime100k(p);
 	break;
     default:
-	if (N < 5000l){
+	if (N < 3500l){
 	    findOpensslPrime(p, N, true);
 	}
 	else {
@@ -299,7 +234,6 @@ void constructSafePrime(mpz_t p, mpz_t b, const unsigned long N) {
 	mpz_divexact_ui(b, b, 3);
     }
 }
-
 
 // assuming secpar is not crazt high, we just compute a random number of secpar bits and find the next prime
 // use this as the basis for q

@@ -11,13 +11,8 @@ void constructSafePrime(mpz_t p, mpz_t b, const unsigned long N);
 // if b!= NULL, set b to be the inverse of 3 mod \phi(q) = p^(k-1)(p-1)
 void constructPrimePower(mpz_t q, mpz_t b, const unsigned long secpar, const unsigned long N);
 
-// construct a prime p=mq+1 for p prime and small m and if b != NULL,
-// set b to be the inverse of 3 mod \phi(p) = p-1
-void constructAlmostSafePrime(mpz_t p, mpz_t b, const unsigned long Nbits);
-
 // returns a random prime of Nbits bits, if safe is set, a safe prime is returned
 void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe);
-
 
 extern const unsigned long numAvailablePrimes;
 

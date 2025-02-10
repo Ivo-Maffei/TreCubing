@@ -29,14 +29,9 @@ static struct argp_option options[] = {
     { "primesize", 'p', "pSize", 0, "Specify the (approximate) size in bits for the modolus to use (default: test all valid sizes)" },
     { 0, 0, 0, 0, "Select one or more of the following 5 if you don't want to test all methods:", 1}, // this is a header for the next group
     { "cubing", 'c', 0, 0, "Test the cubing/cube root performance"},
-    { "delay", 'd', 0, 0, "Test the performance of the whole delay/open method (using both-ends encryption)" },
-    { "delayThorp", -2, 0, 0, "Test the performance of the whole delay/open method using Thorp as FPE"},
     { "encryption", 'e', 0, 0, "Test the stream cipher encryption performance"},
     { "hashing", 'x', 0, 0, "Test the hashing performance"},
-    { "fpe", 'f', "fpeScheme",  OPTION_ARG_OPTIONAL, "Test the performance of the specified FPE methods as a comma separated list (if no list is provided, all methods are tested). Valid FPE schemes are: 'thorp', 'swapornot'" },
-    { "rounds", 'R', "nRounds", 0, "Specify the number of rounds to use when testing FPE schemes. If this option is omitted, we test the values: 100, 0.5*primesize and primesize", 2 },
-    { "chain", 'C', "nChain", 0, "Specify how many delays to chain together when testing the whole delay process. If this option is omitted, we test values: 10 and 100" },
-    { "moduli", 'm', 0, 0, "Test the performance of different moduli creations" },
+    { "moduli", 'm', 0, 0, "Test the performance of prime power modulo creations" },
     { "clean", -1, 0, 0, "Clean the output file before writing to it", 1}, // we use -1 to avoid allowing a short version
     { 0 } // termination of this "vector"
 };
@@ -49,15 +44,9 @@ struct input {
     unsigned long pSize;
     unsigned long secpar;
     bool cubing;
-    bool delay;
-    bool delayThorp;
-    bool fpeThorp;
-    bool fpeSoN;
     bool enc;
     bool hashing;
     bool moduli;
-    unsigned long nRounds;
-    unsigned long nChain;
     bool clean;
 };
 
@@ -99,14 +88,6 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	input->cubing = true;
 	break;
     }
-    case 'd': {// handle delay
-	input->delay = true;
-	break;
-    }
-    case -2: { // handle delayThorp
-	input->delayThorp = true;
-	break;
-    }
     case 'e': { // handle encryption
 	input->enc = true;
 	break;
@@ -114,42 +95,6 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
     case 'x': { // handle hashing
 	input->hashing = true;
 	break;
-    }
-    case 'f': {// handle fpe
-	if (arg == 0){ // no value is given -> meaing test all
-	    input->fpeThorp = true;
-	    input->fpeSoN = true;
-	    return 0;
-	}
-	// other we need to handle one or more arguments passed
-
-	// first we need to copy the read-only arg to a temp local string
-	char string[strlen(arg) + 1]; // create temp string
-	strcpy(string, arg);
-
-	// we use strtok to separate the string into token separated by commas
-	char *ptr = strtok(string, ",");
-	while (ptr != NULL) {
-	    if (strcmp(ptr, "thorp") == 0) input->fpeThorp = true;
-	    else if (strcmp(ptr, "swapornot") == 0) input->fpeSoN = true;
-	    ptr = strtok(NULL, ","); // go to next token
-	}
-	break;
-    }
-    case 'R': {// handle rounds
-	if (arg == 0) { // no value is given
-	    argp_error(state, "If --rounds is specified, then a number must follow");
-	    return EINVAL;
-	}
-	input->nRounds = strtoul(arg, (char**) NULL, 10);
-	break;
-    }
-    case 'C': { // handle chain length
-	if (arg == 0) { // no value is given
-	    argp_error(state, "If --chain is specified, then a number must follow");
-	    return EINVAL;
-	}
-	input->nChain = strtoul(arg, (char**) NULL, 10);
     }
     case -1: { // clean option specified
 	input->clean = true;
@@ -167,9 +112,9 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	    argp_error(state, "No output file specified");
 	    return EINVAL;
 	}
-	if (!(input->cubing || input->delay || input->delayThorp || input->enc || input->fpeThorp || input->fpeSoN || input->moduli || input->hashing)) { // no specific test set
+	if (!(input->cubing || input->enc || input->moduli || input->hashing)) { // no specific test set
 	    // set all tests to true
-	    input->cubing = input->delay = input->delayThorp = input->enc = input->fpeThorp = input->fpeSoN = input->moduli = input->hashing = true;
+	    input->cubing = input->enc = input->moduli = input->hashing = true;
 	}
     }
     default:
@@ -188,28 +133,7 @@ static struct argp argp_struct = { options, parser_fun, args_doc , doc };
 void printReceivedInput(struct input input) {
     printf("Output test results to file: %s\n", input.filename);
     printf("Testing %lu iterations of:\n", input.nIters);
-    printf("modulo: %s\ncubing: %s\nstream encryption: %s\nhashing: %s\ndelay: %s ", BOOLSTR(input.moduli), BOOLSTR(input.cubing), BOOLSTR(input.enc), BOOLSTR(input.hashing), BOOLSTR(input.delay || input.delayThorp));
-
-    if(input.delayThorp || input.delay) {
-	printf("(using chain lengths: ");
-	if (input.nChain) printf("%lu", input.nChain);
-	else printf("10, 100");
-	printf(")");
-    }
-    printf("\n");
-
-    printf("delay using stream encryption: %s\ndelay using Thorp: %s\n", BOOLSTR(input.delay), BOOLSTR(input.delayThorp));
-
-    printf("FPE methods: %s%s",
-	   input.fpeThorp ? "Thorp " : "",
-	   input.fpeSoN ? "Swap-or-Not " : "");
-
-    if (input.fpeThorp || input.fpeSoN ) {
-	printf(" (using round lengths: ");
-	if (!input.nRounds) printf("100, primesize/2, primesize");
-	else printf("%lu", input.nRounds);
-	printf(")\n");
-    } else printf("none\n");
+    printf("modulo: %s\ncubing: %s\nstream encryption: %s\nhashing: %s\n", BOOLSTR(input.moduli), BOOLSTR(input.cubing), BOOLSTR(input.enc), BOOLSTR(input.hashing));
 
     printf("Prime sizes selected: ");
     if (input.pSize) printf("%lu\n", input.pSize);
@@ -241,26 +165,13 @@ int main(int argc, char **argv) {
     // instantiate the primes, chain lengths and rounds to test
     const unsigned long *primeSizes; // pointer to const
     unsigned long nPrimes;
-    int numR = 3;
-    int numC = 2;
-    unsigned long Rs[] = {100, 0, 0};
-    unsigned long Cs[] = {10, 100};
-
+    
     if (input.pSize == 0) {
 	primeSizes = availablePrimeSizes;
 	nPrimes = numAvailablePrimes;
     } else {
 	primeSizes = &input.pSize;
 	nPrimes = 1;
-    }
-
-    if (input.nRounds != 0) { // user specified something != 0
-	Rs[0] = input.nRounds;
-	numR = 1;
-    }
-    if (input.nChain != 0) {
-	Cs[0] = input.nChain;
-	numC = 1;
     }
 
     // tell use what we are going to do
@@ -325,37 +236,6 @@ int main(int argc, char **argv) {
 	    testTimesHash(q, input.nIters, fileptr);
 	    fflush(fileptr);
 	    printf("Testing hahsing\n");
-	}
-
-	if (input.delay) {
-	    for (int ci = 0; ci < numC; ++ci) {
-		testTimesAll(q, b, 0, Cs[ci], input.nIters, fileptr);
-		fflush(fileptr);
-	    }
-	    printf("Tested delay\n");
-	}
-
-	if (numR > 1){ // populate N/2 and N in rounds
-	    Rs[1] = N / 2l;
-	    Rs[2] = N;
-	}
-
-	if (input.delayThorp) { // test overall delay
-	    for (int ri = 0; ri < numR; ++ri) {
-		for (int ci = 0; ci < numC; ++ci) {
-		    testTimesAll(q, b, Rs[ri], Cs[ci], input.nIters, fileptr);
-		    fflush(fileptr);
-		}
-	    }
-	    printf("Tested delay Thorp\n");
-	}
-
-	if (input.fpeThorp || input.fpeSoN) {
-	    for (int ri = 0; ri < numR; ++ri) {
-		testTimesFpe(q, Rs[ri], input.fpeThorp, input.fpeSoN, input.nIters, fileptr);
-		fflush(fileptr);
-	    }
-	    printf("Tested FPEs\n");
 	}
 
     }

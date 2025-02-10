@@ -15,25 +15,6 @@ static gmp_randstate_t *randomState = NULL;
 static uint64_t xorshfstate = INITIAL_SEED;
 static uint64_t currentRandomWord, randomBitsUsed=64;
 
-void randomNumber(mpz_t n, const unsigned long nbits) {
-    if (randomState == NULL) {
-	randomState = (gmp_randstate_t*) malloc(sizeof(gmp_randstate_t));
-	gmp_randinit_default(*randomState);
-    }
-
-    // we get a random number up to 2^(n-1)-1 (i.e. at most n-1 bits)
-    // and then add 2^(n-1) to get a number of n bits
-    mpz_t temp;
-    mpz_init(temp);
-    mpz_urandomb(temp, *randomState, nbits-1);
-
-    mpz_set_ui(n, 1l);
-    mpz_mul_2exp(n, n, nbits-1);
-    mpz_add(n, n, temp);
-
-    mpz_clear(temp);
-}
-
 void randomMessage(mpz_t m, const mpz_t p) {
     if (randomState == NULL) {
 	randomState = (gmp_randstate_t*) malloc(sizeof(gmp_randstate_t));
@@ -59,7 +40,6 @@ void clearRandomness() {
     }
 }
 
-
 void setSeed(uint64_t seed) {
     randomBitsUsed = 64; // this forces nextRand to use a new word
     xorshfstate = seed;
@@ -74,15 +54,3 @@ uint64_t xorshf64() {
     return xorshfstate;
 }
 
-// this function returns the next random bit
-// we use this to minimise the calls to xorshf64
-uint64_t nextRand() {
-    currentRandomWord >>= 1l; // shift right by 1
-    ++randomBitsUsed; // increase number of used bits
-
-    if (randomBitsUsed >= 64){ // all bits used
-	randomBitsUsed = 0;
-	currentRandomWord = xorshf64();
-    }
-    return currentRandomWord & 1l;
-}

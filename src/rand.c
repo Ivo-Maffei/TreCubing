@@ -53,4 +53,3 @@ uint64_t xorshf64() {
     xorshfstate ^= xorshfstate << 17;
     return xorshfstate;
 }
-

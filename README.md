@@ -25,8 +25,8 @@ You can view a list of various options by running `./trecubing --help`.
 Here is an example of its output.
 ```
 Usage: trecubing [OPTION...] [FILENAME|stdout]
-Test different primitives for Time-Lock Puzzles via Cubing and outputs the test results in the
-file provided.
+Test different primitives for Time-Lock Puzzles via Cubing and outputs the test
+results in the file provided.
 
   -n, --iterations=nIters    Specify the number of indipendent iterations to
                              run (default: 100)
@@ -36,27 +36,12 @@ file provided.
                              prime power modulo whose base has this bitsize
 
  Select one or more of the following 5 if you don't want to test all methods:
-      --clean                Clean the output file before writing to it
   -c, --cubing               Test the cubing/cube root performance
-      --delayThorp           Test the performance of the whole delay/open
-                             method using Thorp as FPE
-  -d, --delay                Test the performance of the whole delay/open
-                             method (using both-ends encryption)
+      --clean                Clean the output file before writing to it
   -e, --encryption           Test the stream cipher encryption performance
-  -f, --fpe[=fpeScheme]      Test the performance of the specified FPE methods
-                             as a comma separated list (if no list is provided,
-                             all methods are tested). Valid FPE schemes are:
-                             'thorp', 'swapornot'
+  -m, --moduli               Test the performance of prime power modulo
+                             creations
   -x, --hashing              Test the hashing performance
-
-  -C, --chain=nChain         Specify how many delays to chain together when
-                             testing the whole delay process. If this option is
-                             omitted, we test values: 10 and 100
-  -m, --moduli               Test the performance of different moduli creations
-
-  -R, --rounds=nRounds       Specify the number of rounds to use when testing
-                             FPE schemes. If this option is omitted, we test
-                             the values: 100, 0.5*primesize and primesize
 
   -?, --help                 Give this help list
       --usage                Give a short usage message

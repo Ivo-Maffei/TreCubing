@@ -4,6 +4,7 @@ It accompanies the paper "Time-Lock Puzzles via Cubing" by Ivo Maffei and Andrew
 
 This project provides naive and insecure implementations, as it purpose was only to provide rough time estimates.
 
+See the file in `tests output` for an example output of the program.
 
 # Dependencies
 This program relies on the following libraries (other versions might work, but were not tested):

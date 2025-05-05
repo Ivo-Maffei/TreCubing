@@ -5,7 +5,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-void testModuloConstruction(const unsigned long N, const unsigned long secpar, const int nIters, FILE* const fileptr);
+void testModuloConstruction(const unsigned long N, const unsigned long nprimes, const unsigned long secpar, const int nIters, FILE* const fileptr);
 
 // picks a random message m, computes m^3 mod p and then (m^3)^b mod p
 // prints out the time taken and stores the time as well

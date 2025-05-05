@@ -179,6 +179,66 @@ void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
     BN_free(ossl_num);
 }
 
+// assume Nbits <= 64
+void gmpnextPrime(mpz_t p, const unsigned long Nbits) {
+    uint64_t start = xorshf64() >> (64-Nbits+1);
+    start = (1<<(Nbits-1)) & start;
+    mpz_set_ui(p, start);
+    do {
+	mpz_nextprime(p, p);
+    } while (mpz_fdiv_ui(p, 3l) != 2l);
+}
+
+void constructmPower(mpz_t q, mpz_t b, const unsigned long secpar, const int nprimes, const unsigned long N) {
+    unsigned long k;
+    mpz_t* ps = malloc(nprimes*sizeof(mpz_t));
+
+    mpz_set_ui(q, 1);
+
+    // get primes
+    for (int i=0; i< nprimes; ++i) {
+	mpz_init(ps[i]);
+	gmpnextPrime(ps[i], secpar/nprimes);
+	mpz_mul(q, q, ps[i]);
+    }
+
+    // find out k
+    k = mpz_sizeinbase(q, 2);
+    k = (N+k-1) / k; // ceil(N/k)
+
+    mpz_pow_ui(q, q, k);
+
+    // now we must compute the inverse of 3 mod \phi(q)
+    // recall b = (1+l*\phi(q))/3; so we need l*\phi(q) = 2 mod 3
+    // recall \phi(q) = prod_{i=1}^{nprimes} p_i^{k-1} (p_i-1)
+    // recall p_i = 2 mod 3; so \phi(q) = 2^{nprimes(k-1)} mod 3
+    // so let l= 2^x, then l*\phi(q) = 2^{nprimes(k-1)+x} mod 3
+    // we just need nprimes(k-1)+x to be odd; so x = 1-((nprimes(k-1))%2)
+    // hence b = [1 + (2-(nprimes(k-1))%2)*\phi(q)]/3
+
+    if (b) {
+	// compute \phi(q)
+	mpz_set_ui(b, 1);
+	for (int i=0; i<nprimes; ++i) {
+	    mpz_mul(b, b, ps[i]);
+	} // b = m
+	mpz_pow_ui(b, b, k-1); // b = m^{k-1}
+	for (int i=0; i<nprimes; ++i) {
+	    //b = b*(p-1) = - (b - bp)
+	    mpz_submul(b, b, ps[i]);
+	    mpz_neg(b, b);
+	} // b = \phi(q)
+
+	mpz_mul_ui(b, b, 2-(nprimes*(k-1))%2); // b = l*\phi
+
+	mpz_add_ui(b, b, 1);
+
+	mpz_divexact_ui(b, b, 3);
+    }
+
+    for (int i=0; i< nprimes; ++i) mpz_clear(ps[i]);
+}
+
 // construct a prime and stores it in p
 // p should already be initialised with the correct size
 void constructSafePrime(mpz_t p, mpz_t b, const unsigned long N) {

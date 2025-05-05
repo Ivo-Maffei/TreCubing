@@ -58,20 +58,23 @@ void writeTimestamp(FILE* const fileptr) {
 }
 
 
-void testModuloConstruction(const unsigned long N, const unsigned long secpar, const int nIters, FILE* const fileptr) {
+void testModuloConstruction(const unsigned long N, const unsigned long nprimes, const unsigned long secpar, const int nIters, FILE* const fileptr) {
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
     fprintf(fileptr, "Testing construction of moduli of %lu bits\n", N);
 
     TIMER_INIT(PrimePower, nIters);
+    TIMER_INIT(mPower, nIters);
 
     mpz_t q;
     mpz_init2(q, N+5);
 
     for (int i=0; i < nIters; ++i){
+	if (nprimes) TIMER_TIME(mPower, constructmPower(q, NULL, nprimes, secpar, N), fileptr);
 	if (secpar) TIMER_TIME(PrimePower, constructPrimePower(q, NULL, secpar, N), fileptr);
     }
 
+    TIMER_REPORT(mPower, fileptr);
     TIMER_REPORT(PrimePower, fileptr);
 
     writelineSep(fileptr);

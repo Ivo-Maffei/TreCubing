@@ -112,5 +112,6 @@ void cleanOpenSSL() {
     if (aes256ofb) EVP_CIPHER_free(aes256ofb);
     if (ctx)EVP_CIPHER_CTX_free(ctx);
     aes256 = NULL;
+    aes256ofb = NULL;
     ctx = NULL;
 }

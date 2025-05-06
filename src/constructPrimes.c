@@ -23,7 +23,7 @@ const unsigned long availablePrimeSizes[] = {
 const unsigned long numAvailablePrimes = 9;
 
 void clearPrimesDB(){
-    if (dbprimes != NULL) free(dbprimes);
+    if (dbprimes) free(dbprimes);
     dbprimes=NULL;
 }
 

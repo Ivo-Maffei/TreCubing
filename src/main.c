@@ -138,10 +138,6 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 
 static struct argp argp_struct = { options, parser_fun, args_doc , doc };
 
-
-
-
-
 // tell user what we are going to test
 void printReceivedInput(struct input input) {
     printf("Output test results to file: %s\n", input.filename);

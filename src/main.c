@@ -29,7 +29,7 @@ static struct argp_option options[] = {
     // { <long name>, <ascii code for short name>, <name of argument>, <flags>, <documentation>, <group id>}
     { "iterations", 'n', "nIters", 0, "Specify the number of indipendent iterations to run (default: " STRINGIFY(DEFAULTITERS) ")" },
     { "securityParam", 's', "secpar", 0, "If non-zero, this specifies the bit-size of the based used for moduli using prime powers or product of primes powers" },
-    { "numberPrimes", 'k', "nprimes", 0, "If non-zero, this specifies the number of primes to use for the product-of-primes moduli" },
+    { "numberPrimes", 'k', "nprimes", 0, "If non-zero, this specifies the number of primes to use for m2^k moduli" },
     { "primesize", 'p', "pSize", 0, "Specify the (approximate) size in bits for the modolus to use (default: test all valid sizes)" },
     { 0, 0, 0, 0, "Select one or more of the following 5 if you don't want to test all methods:", 1}, // this is a header for the next group
     { "cubing", 'c', 0, 0, "Test the cubing/cube root performance"},
@@ -46,7 +46,7 @@ struct input {
     char *filename;
     unsigned long nIters;
     unsigned long pSize;
-    unsigned long nprimes;
+    unsigned int nprimes;
     unsigned long secpar;
     bool cubing;
     bool enc;
@@ -79,7 +79,7 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
     }
     case 'k': { // handle number of primes
 	if (arg == 0){ // no value is given
-	    argp_error(state, "If --securityParam is specified, then a number must follow");
+	    argp_error(state, "If --numberPrimes is specified, then a number must follow");
 	    return EINVAL;
 	}
 	input->nprimes = strtoul(arg, (char**) NULL, 10);
@@ -129,10 +129,6 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	    // set all tests to true
 	    input->cubing = input->enc = input->moduli = input->hashing = true;
 	}
-	if (input->nprimes && !input->secpar) {
-	    argp_error(state, "Specified a number of primes for the modulo, but not their size");
-	    return EINVAL;
-	}
     }
     default:
 	return ARGP_ERR_UNKNOWN;
@@ -159,7 +155,7 @@ void printReceivedInput(struct input input) {
 	printf("\n");
     }
     if (input.nprimes)
-	printf("Using product of prime powers with %lu primes and security paramter %lu\n", input.nprimes, input.secpar);
+	printf("Using product of prime powers with %lu 32-bit primes\n", input.nprimes);
     else if (input.secpar)
 	printf("Using prime powers with security parameter %lu\n", input.secpar);
     else
@@ -229,7 +225,7 @@ int main(int argc, char **argv) {
 	    printf("Tested modulo creation\n");
 	}
 
-	// combpute modulo and exponent for the cubing
+	// compute modulo and exponent for the cubing
 	if (input.nprimes)
 	    constructmPower(q, b, input.nprimes, primeSizes[i]);
 	else if (input.secpar)
@@ -247,10 +243,10 @@ int main(int argc, char **argv) {
 	}
 
 	if (input.enc) { // test AES256-OFB ecnryptions
-	    if (!input.secpar) {
-		fprintf(stderr, "Cannot test encryption without a security parameter\n");
+	    if (!(input.secpar || input.nprimes)) {
+		fprintf(stderr, "Cannot test encryption without an modulo that can be generated quickly\n");
 	    } else {
-		testTimesEnc(primeSizes[i], input.secpar, input.nIters, fileptr);
+		testTimesEnc(primeSizes[i], input.nprimes, input.secpar, input.nIters, fileptr);
 		fflush(fileptr);
 		printf("Tested AES256-OFB encryption\n");
 	    }

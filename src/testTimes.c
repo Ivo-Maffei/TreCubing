@@ -57,8 +57,7 @@ void writeTimestamp(FILE* const fileptr) {
     fprintf(fileptr, "Current localtime: %s\n", asctime(localtime(&rawtime)));
 }
 
-// TODO: nprimes is no longer used
-void testModuloConstruction(const unsigned long N, const unsigned long nprimes, const unsigned long secpar, const int nIters, FILE* const fileptr) {
+void testModuloConstruction(const unsigned long N, const unsigned int nprimes, const unsigned long secpar, const int nIters, FILE* const fileptr) {
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
     fprintf(fileptr, "Testing construction of moduli of %lu bits\n", N);
@@ -69,8 +68,12 @@ void testModuloConstruction(const unsigned long N, const unsigned long nprimes, 
     mpz_t q;
     mpz_init2(q, N+5);
 
+    if (nprimes !=0 && secpar != 0 && nprimes != (secpar+31)/32) {
+	fprintf(fileptr, "We are constructing moduli m2^k and p^k with different securities\n");
+    }
+
     for (int i=0; i < nIters; ++i){
-	if (nprimes) TIMER_TIME(mPower, constructmPower(q, NULL, (secpar+31)/32, N), fileptr);
+	if (nprimes) TIMER_TIME(mPower, constructmPower(q, NULL, nprimes, N), fileptr);
 	if (secpar) TIMER_TIME(PrimePower, constructPrimePower(q, NULL, secpar, N), fileptr);
     }
 
@@ -164,8 +167,7 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
     clearRandomness();
 }
 
-
-void testTimesEnc(const size_t N, const size_t secpar, const int nIters, FILE * const fileptr) {
+void testTimesEnc(const size_t N, const unsigned int nprimes, const size_t secpar, const int nIters, FILE * const fileptr) {
 
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
@@ -185,7 +187,8 @@ void testTimesEnc(const size_t N, const size_t secpar, const int nIters, FILE * 
     }
 
     for (int i = 0; i < nIters; ++i) {
-	constructPrimePower(M, NULL, secpar, N);
+	if (nprimes) constructmPower(M, NULL, nprimes, N);
+	else constructPrimePower(M, NULL, secpar, N);
 
 	randomMessage(m, M);
 

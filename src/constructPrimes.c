@@ -6,7 +6,7 @@
 
 #define N_BEST_PRIMES 49091941
 
-const uint32_t* dbprimes = NULL;
+uint32_t* dbprimes = NULL;
 
 const unsigned long availablePrimeSizes[] = {
     256,

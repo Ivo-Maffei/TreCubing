@@ -255,13 +255,14 @@ void constructmPower(mpz_t q, mpz_t b, const int nprimes, const unsigned long N)
 	// compute \phi(q)
 	mpz_set_ui(b, 1);
 	for (int i=0; i<nprimes; ++i) {
-	    mpz_mul_ui(b, b, ps[i]-1);
+	    mpz_mul_ui(b, b, (unsigned long)(ps[i]-1));
 	} // b = \phi(m)
 	mpz_mul_2exp(b, b, k-1); // b = \phi(m2^k)
 
 	mpz_mul_ui(b, b, 1+(k%2));
 	mpz_add_ui(b, b, 1);
 
+	if (mpz_fdiv_ui(b, 3) != 0) fprintf(stderr, "b is not divisible by 3\n");
 	mpz_divexact_ui(b, b, 3);
     }
 

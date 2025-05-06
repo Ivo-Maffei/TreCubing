@@ -4,8 +4,8 @@
 #include <gmp.h>
 #include <stdint.h>
 
-// random function that returns a random message m in ZZ_p^*
-void randomMessage(mpz_t m, const mpz_t p);
+// random function that returns a random message m in ZZ^*_q
+void randomMessage(mpz_t m, const mpz_t q);
 
 // frees any space allocated for randomness
 void clearRandomness();

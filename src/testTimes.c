@@ -200,7 +200,7 @@ void testTimesEnc(const size_t N, const unsigned int nprimes, const size_t secpa
 	    memcpy(key + i*8, &t, 8);
 	}
 
-	TIMER_TIME(streamCipher, streamCipher(m, m, M, key), fileptr);
+	TIMER_TIME(streamCipher, streamCipher(m, m, M, key, nprimes != 0), fileptr);
 
     }
 

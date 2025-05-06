@@ -15,7 +15,7 @@ static gmp_randstate_t *randomState = NULL;
 static uint64_t xorshfstate = INITIAL_SEED;
 static uint64_t currentRandomWord, randomBitsUsed=64;
 
-void randomMessage(mpz_t m, const mpz_t p) {
+void randomMessage(mpz_t m, const mpz_t q) {
     if (randomState == NULL) {
 	randomState = (gmp_randstate_t*) malloc(sizeof(gmp_randstate_t));
 	gmp_randinit_default(*randomState);
@@ -23,10 +23,11 @@ void randomMessage(mpz_t m, const mpz_t p) {
 
     mpz_t temp;
     mpz_init(temp);
-    mpz_sub_ui(temp, p, 1l); // temp <- p-1
-    mpz_urandomm(m, *randomState, temp); // random message in the range 0 ... p-2
 
-    mpz_add_ui(m, m, 1l); // random message in the range 1 ... p-1
+    do {
+	mpz_urandomm(m, *randomState, q); // random message in the range 0 ... q
+	mpz_gcd(temp, m, q); // temp <- gcd(m,q)
+    } while (mpz_cmp_ui(temp, 1) != 0); // temp != 1 <-> m not in ZZ^*_q
 
     mpz_clear(temp);
 }

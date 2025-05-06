@@ -215,6 +215,9 @@ int main(int argc, char **argv) {
 
     mpz_inits(q, b, NULL);
 
+    // initialise xorshf64
+    //    setSeed(rand());
+
     for(unsigned long i=0; i < nPrimes; ++i) {
 
 	if (input.moduli){

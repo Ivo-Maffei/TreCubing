@@ -5,3 +5,4 @@ old
 trecubing
 trecubingomp
 build/*
+*.32b

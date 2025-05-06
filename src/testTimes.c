@@ -57,7 +57,7 @@ void writeTimestamp(FILE* const fileptr) {
     fprintf(fileptr, "Current localtime: %s\n", asctime(localtime(&rawtime)));
 }
 
-
+// TODO: nprimes is no longer used
 void testModuloConstruction(const unsigned long N, const unsigned long nprimes, const unsigned long secpar, const int nIters, FILE* const fileptr) {
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
@@ -70,7 +70,7 @@ void testModuloConstruction(const unsigned long N, const unsigned long nprimes, 
     mpz_init2(q, N+5);
 
     for (int i=0; i < nIters; ++i){
-	if (nprimes) TIMER_TIME(mPower, constructmPower(q, NULL, nprimes, secpar, N), fileptr);
+	if (nprimes) TIMER_TIME(mPower, constructmPower(q, NULL, (secpar+31)/32, N), fileptr);
 	if (secpar) TIMER_TIME(PrimePower, constructPrimePower(q, NULL, secpar, N), fileptr);
     }
 
@@ -244,4 +244,5 @@ void testTimesHash(const mpz_t M, const int nIters, FILE* const fileptr){
  free:
     mpz_clear(m);
     free(digest);
+    cleanHashing();
 }

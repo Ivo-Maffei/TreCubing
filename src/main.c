@@ -10,6 +10,9 @@
 
 #include "constructPrimes.h"
 #include "testTimes.h"
+#include "rand.h"
+#include "enc.h"
+#include "hash.h"
 
 #define DEFAULTITERS 100
 #define STRINGIFY(x) STRINGIFY2(x) // we need all this bloatware to make it work
@@ -228,7 +231,7 @@ int main(int argc, char **argv) {
 
 	// combpute modulo and exponent for the cubing
 	if (input.nprimes)
-	    constructmPower(q, b, input.nprimes, input.secpar, primeSizes[i]);
+	    constructmPower(q, b, input.nprimes, primeSizes[i]);
 	else if (input.secpar)
 	    constructPrimePower(q, b, input.secpar, primeSizes[i]);
 	else constructSafePrime(q, b, primeSizes[i]);
@@ -266,5 +269,9 @@ int main(int argc, char **argv) {
     fclose(fileptr);
 
     mpz_clears(q, b, NULL);
+    cleanOpenSSL();
+    cleanHashing();
+    clearRandomness();
+    clearPrimesDB();
     return 0;
 }

@@ -4,6 +4,10 @@
 #include "rand.h"
 #include <openssl/bn.h>
 
+#define N_BEST_PRIMES 49091941
+
+const uint32_t* dbprimes = NULL;
+
 const unsigned long availablePrimeSizes[] = {
     256,
     512,
@@ -18,8 +22,10 @@ const unsigned long availablePrimeSizes[] = {
 
 const unsigned long numAvailablePrimes = 9;
 
-
-
+void clearPrimesDB(){
+    if (dbprimes != NULL) free(dbprimes);
+    dbprimes=NULL;
+}
 
 // p = 4133481*2^{5002} - 1
 void constructSafePrime5k(mpz_t p) {
@@ -179,64 +185,87 @@ void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
     BN_free(ossl_num);
 }
 
-// assume Nbits <= 64
-void gmpnextPrime(mpz_t p, const unsigned long Nbits) {
-    uint64_t start = xorshf64() >> (64-Nbits+1);
-    start = (1<<(Nbits-1)) & start;
-    mpz_set_ui(p, start);
-    do {
-	mpz_nextprime(p, p);
-    } while (mpz_fdiv_ui(p, 3l) != 2l);
+
+// get 32 bit primes using the saved database
+int get32bprimes(uint32_t* primes, const int numprimes){
+
+    if (dbprimes == NULL){
+	FILE *db;
+	dbprimes = malloc(N_BEST_PRIMES*sizeof(uint32_t));
+	if (dbprimes == NULL){
+	    fprintf(stderr, "ERROR failed to initialise prime database\n");
+	    return 1;
+	}
+	db = fopen("bestprimes.32b", "rb");
+	if (!db) return 1;
+
+	size_t e = fread(dbprimes, sizeof(*dbprimes), N_BEST_PRIMES, db);
+	if (e != N_BEST_PRIMES) {
+	    fprintf(stderr, "ERROR read less primes: %lu instead of %lu\n", e, N_BEST_PRIMES);
+	    return 1;
+	}
+	fclose(db);
+    }
+
+    uint32_t place;
+
+    for (int i=0; i<numprimes; ++i){
+	place = rand() % N_BEST_PRIMES;
+
+	primes[i] = dbprimes[place];
+	// if we already found such prime, then decrease i so that we replace it
+	for (int j=0; j<i; ++j) if (primes[j] == primes[i]) { --i; break;}
+    }
+
+    return 0;
 }
 
-void constructmPower(mpz_t q, mpz_t b, const unsigned long secpar, const int nprimes, const unsigned long N) {
-    unsigned long k;
-    mpz_t* ps = malloc(nprimes*sizeof(mpz_t));
+void constructmPower(mpz_t q, mpz_t b, const int nprimes, const unsigned long N) {
+
+    mp_bitcnt_t k;
+    uint32_t* ps = malloc(nprimes*sizeof(uint32_t));
+
+    if (ps == NULL){
+	fprintf(stderr, "ERRROR initialising temporary primes\n");
+	return;
+    }
+
+    if (get32bprimes(ps, nprimes) != 0) {
+	fprintf(stderr, "Error with prime generations\n");
+	return;
+    }
 
     mpz_set_ui(q, 1);
 
-    // get primes
-    for (int i=0; i< nprimes; ++i) {
-	mpz_init(ps[i]);
-	gmpnextPrime(ps[i], secpar/nprimes);
-	mpz_mul(q, q, ps[i]);
+    for (int i =0; i<nprimes; ++i) {
+	mpz_mul_ui(q, q, (unsigned long)(ps[i]));
     }
 
-    // find out k
-    k = mpz_sizeinbase(q, 2);
-    k = (N+k-1) / k; // ceil(N/k)
-
-    mpz_pow_ui(q, q, k);
+    k = N - mpz_sizeinbase(q, 2);
+    
+    mpz_mul_2exp(q, q, k);
 
     // now we must compute the inverse of 3 mod \phi(q)
     // recall b = (1+l*\phi(q))/3; so we need l*\phi(q) = 2 mod 3
-    // recall \phi(q) = prod_{i=1}^{nprimes} p_i^{k-1} (p_i-1)
-    // recall p_i = 2 mod 3; so \phi(q) = 2^{nprimes(k-1)} mod 3
-    // so let l= 2^x, then l*\phi(q) = 2^{nprimes(k-1)+x} mod 3
-    // we just need nprimes(k-1)+x to be odd; so x = 1-((nprimes(k-1))%2)
-    // hence b = [1 + (2-(nprimes(k-1))%2)*\phi(q)]/3
+    // recall \phi(q) = 2^{k-1} prod_{i=1}^{nprimes} (p_i-1)
+    // recall p_i = 2 mod 3; so \phi(q) = 2^{k-1} mod 3
+    // hence b = [1 + (2-(k-1)%2)*\phi(q)]/3 = [1 + (1+k%2)*\phi(q)]/3
 
     if (b) {
 	// compute \phi(q)
 	mpz_set_ui(b, 1);
 	for (int i=0; i<nprimes; ++i) {
-	    mpz_mul(b, b, ps[i]);
-	} // b = m
-	mpz_pow_ui(b, b, k-1); // b = m^{k-1}
-	for (int i=0; i<nprimes; ++i) {
-	    //b = b*(p-1) = - (b - bp)
-	    mpz_submul(b, b, ps[i]);
-	    mpz_neg(b, b);
-	} // b = \phi(q)
+	    mpz_mul_ui(b, b, ps[i]-1);
+	} // b = \phi(m)
+	mpz_mul_2exp(b, b, k-1); // b = \phi(m2^k)
 
-	mpz_mul_ui(b, b, 2-(nprimes*(k-1))%2); // b = l*\phi
-
+	mpz_mul_ui(b, b, 1+(k%2));
 	mpz_add_ui(b, b, 1);
 
 	mpz_divexact_ui(b, b, 3);
     }
 
-    for (int i=0; i< nprimes; ++i) mpz_clear(ps[i]);
+    free(ps);
 }
 
 // construct a prime and stores it in p

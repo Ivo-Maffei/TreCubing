@@ -152,11 +152,12 @@ void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
     // we must have Nbits < 2^31 to fit an int
     assert(Nbits < INT_MAX);
 
-    mp_limb_t temp_limb;
-    uint8_t temp_byte;
-    int bytelen, nlimbs, bigendian;
-    clock_t start, end;
+    int bytelen, nlimbs;
     BIGNUM* ossl_num, *bn_2, *bn_3;
+
+    // check if we are using little endian
+    mp_limb_t temp_limb=1;
+    assert(((uint8_t*)&temp_limb)[0] & 1);
 
     ossl_num  = BN_new();
     bn_2 = BN_new();
@@ -174,39 +175,13 @@ void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
     }
 
     // now convert BN to GMP
-    // get "dump" BN number into a byte buffer with most significant byte first
-    mp_limb_t* rawp = mpz_limbs_write(p, (Nbits+63)/64);
-    bytelen = BN_bn2bin(ossl_num, (uint8_t*)rawp);
-    nlimbs = (bytelen+7)/8;
+    // get "dump" BN number into a byte buffer
+    nlimbs = (Nbits+63)/64;
+    mp_limb_t* rawp = mpz_limbs_write(p, nlimbs);
 
-    // we need to swap to little endian limbs
-    // if each limb is in bigendian that concatenating 8 bytes will give you a correct limb
-    // otherwise we need to reverse the 8 bytes
-    temp_limb = 1l;
-    bigendian = !(((uint8_t*)&temp_limb)[0] & 1);
-
-    if (bigendian){ // reverse limbs
-	for (int i = 0; i < nlimbs / 2; ++i){
-	    // swap lowest ith limb with highest ith limb
-	    temp_limb = rawp[i];
-	    rawp[i] = rawp[nlimbs-1-i];
-	    rawp[nlimbs-1-i] = temp_limb;
-	}
-	// now rawp is in little endian
-	// however, we might have some extra zeros at the start
-	// so we need to rightshift (i.e. divive by 2)
-	if (nlimbs*64 - bytelen*8) mpn_rshift(rawp, rawp, nlimbs, nlimbs*64 - bytelen*8);
-	// the if statement is needed as we cannot use rshift with argument 0
-    } else { // revese bytes
-	for (int i=0; i < bytelen / 2; ++i){
-	    temp_byte = ((uint8_t*)rawp)[i];
-	    ((uint8_t*)rawp)[i] = ((uint8_t*)rawp)[bytelen-1-i];
-	    ((uint8_t*)rawp)[bytelen-1-i] = temp_byte;
-	}
-	// make sure the highest limb has zero in unused high bytes
-	for (int i=bytelen; i < nlimbs*8; ++i)
-	    ((uint8_t*)rawp)[i] = 0;
-    }
+    // our machine is in little endian, so this works perfect
+    bytelen = BN_bn2lebinpad(ossl_num, (uint8_t*)rawp, nlimbs * 8); // BN_bn2bin(ossl_num, (uint8_t*)rawp);
+    nlimbs = (bytelen+7)/8; // actual limbs used
 
     mpz_limbs_finish(p, nlimbs);
 

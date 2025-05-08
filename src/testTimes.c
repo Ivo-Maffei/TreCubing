@@ -83,6 +83,8 @@ void testModuloConstruction(const unsigned long N, const unsigned int nprimes, c
     TIMER_REPORT(mPower, fileptr);
     TIMER_REPORT(PrimePower, fileptr);
 
+    fprintf(fileptr, "Tested construction of moduli of %lu bits\n", N);
+
     writelineSep(fileptr);
 
     mpz_clear(q);
@@ -162,6 +164,7 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
     TIMER_REPORT(CubeRoot, fileptr);
     TIMER_REPORT(FastSqGMP, fileptr);
     fprintf(fileptr, "Number of squarings: %lu\n", nSquarings);
+    fprintf(fileptr, "Tested cubing using a prime of %lu bits\n", N);
 
     writelineSep(fileptr);
 
@@ -209,6 +212,8 @@ void testTimesEnc(const size_t N, const unsigned int nprimes, const size_t secpa
 
     TIMER_REPORT(streamCipher, fileptr);
 
+    fprintf(fileptr, "Tested AES256-OFB encryption with a modulo of size %lu\n", N);
+
     writelineSep(fileptr);
  free:
     mpz_clears(m, M, NULL);
@@ -244,6 +249,8 @@ void testTimesHash(const mpz_t M, const int nIters, FILE* const fileptr){
     }
 
     TIMER_REPORT(hashing, fileptr);
+
+    fprintf(fileptr, "Tested hasing (SHA3-256) with modulo of size %lu\n", mpz_sizeinbase(M, 2));
 
     writelineSep(fileptr);
 

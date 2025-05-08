@@ -7,6 +7,8 @@
 
 void clearPrimesDB();
 
+int loadPrimesDB();
+
 // construct a safe prime p, and if b!= NULL, set b to be the inverse of 3 mod p-1
 void constructSafePrime(mpz_t p, mpz_t b, const unsigned long N);
 

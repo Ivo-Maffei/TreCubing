@@ -27,6 +27,27 @@ void clearPrimesDB(){
     dbprimes=NULL;
 }
 
+int loadPrimesDB(){
+    if (dbprimes) return 0; // already initialised
+
+    FILE *db;
+    dbprimes = malloc(N_BEST_PRIMES*sizeof(uint32_t));
+    if (dbprimes == NULL){
+	fprintf(stderr, "ERROR failed to initialise prime database\n");
+	return 1;
+    }
+    db = fopen("bestprimes.32b", "rb");
+    if (!db) return 1;
+
+    size_t e = fread(dbprimes, sizeof(*dbprimes), N_BEST_PRIMES, db);
+    if (e != N_BEST_PRIMES) {
+	fprintf(stderr, "ERROR read less primes: %lu instead of %lu\n", e, N_BEST_PRIMES);
+	return 1;
+    }
+    fclose(db);
+    return 0;
+}
+
 // p = 4133481*2^{5002} - 1
 void constructSafePrime5k(mpz_t p) {
     mpz_set_ui(p, 1l);
@@ -134,13 +155,20 @@ void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
     mp_limb_t temp_limb;
     uint8_t temp_byte;
     int bytelen, nlimbs, bigendian;
-    BIGNUM* ossl_num = BN_new();
+    clock_t start, end;
+    BIGNUM* ossl_num, *bn_2, *bn_3;
 
-    assert(ossl_num);
+    ossl_num  = BN_new();
+    bn_2 = BN_new();
+    bn_3 = BN_new();
+
+    assert(ossl_num && bn_2 && bn_3);
+    BN_set_word(bn_2, 2);
+    BN_set_word(bn_3, 3);
 
     // generate the safe prime
     // the NULLs are for callback and requirements on type of prime
-    if (!BN_generate_prime_ex(ossl_num, Nbits, safe, NULL, NULL, NULL)) {
+    if (!BN_generate_prime_ex(ossl_num, Nbits, safe,  bn_3, bn_2, NULL)) {
 	fprintf(stderr, "ERROR with openssl prime generation\n");
 	mpz_set_ui(p, 0l);
     }
@@ -183,29 +211,16 @@ void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
     mpz_limbs_finish(p, nlimbs);
 
     BN_free(ossl_num);
+    BN_free(bn_2);
+    BN_free(bn_3);
 }
 
 
 // get 32 bit primes using the saved database
 int get32bprimes(uint32_t* primes, const int numprimes){
 
-    if (dbprimes == NULL){
-	FILE *db;
-	dbprimes = malloc(N_BEST_PRIMES*sizeof(uint32_t));
-	if (dbprimes == NULL){
-	    fprintf(stderr, "ERROR failed to initialise prime database\n");
-	    return 1;
-	}
-	db = fopen("bestprimes.32b", "rb");
-	if (!db) return 1;
-
-	size_t e = fread(dbprimes, sizeof(*dbprimes), N_BEST_PRIMES, db);
-	if (e != N_BEST_PRIMES) {
-	    fprintf(stderr, "ERROR read less primes: %lu instead of %lu\n", e, N_BEST_PRIMES);
-	    return 1;
-	}
-	fclose(db);
-    }
+    int fail = loadPrimesDB();
+    if (fail) return fail;
 
     uint32_t place;
 
@@ -242,7 +257,7 @@ void constructmPower(mpz_t q, mpz_t b, const int nprimes, const unsigned long N)
     }
 
     k = N - mpz_sizeinbase(q, 2);
-    
+
     mpz_mul_2exp(q, q, k);
 
     // now we must compute the inverse of 3 mod \phi(q)
@@ -336,10 +351,7 @@ void constructPrimePower(mpz_t q, mpz_t b, const unsigned long secpar, const uns
     mpz_init(p);
 
     // get a random number of exactly secpar bits
-    do {
-	findOpensslPrime(p, secpar, false); // gets random prime of secpar bits
-    } while (mpz_fdiv_ui(p, 3l) != 2l); // try again untill we get a prime congruent 2 modulo 3
-    // we could optimise the above by using openssl for the congruence condition as well
+    findOpensslPrime(p, secpar, false); // gets random prime of secpar bits congruent to 2 modulo 3
 
     k = mpz_sizeinbase(p, 2); // actual bitsize of p
     k = (N + k -1) / k; // ceil (N/k)

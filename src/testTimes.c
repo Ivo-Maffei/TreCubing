@@ -58,6 +58,7 @@ void writeTimestamp(FILE* const fileptr) {
 }
 
 void testModuloConstruction(const unsigned long N, const unsigned int nprimes, const unsigned long secpar, const int nIters, FILE* const fileptr) {
+
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
     fprintf(fileptr, "Testing construction of moduli of %lu bits\n", N);
@@ -71,6 +72,8 @@ void testModuloConstruction(const unsigned long N, const unsigned int nprimes, c
     if (nprimes !=0 && secpar != 0 && nprimes != (secpar+31)/32) {
 	fprintf(fileptr, "We are constructing moduli m2^k and p^k with different securities\n");
     }
+
+    loadPrimesDB();
 
     for (int i=0; i < nIters; ++i){
 	if (nprimes) TIMER_TIME(mPower, constructmPower(q, NULL, nprimes, N), fileptr);

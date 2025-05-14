@@ -14,6 +14,8 @@ This program relies on the following libraries (other versions might work, but w
   - [GNU Make](https://www.gnu.org/software/make/) version 3.81
   - [GCC](https://gcc.gnu.org/) version 14.2
 
+*WARNING*: some parts of the code are optimised for running on machines storing values in little endian order. Big endian is not currently supported. 
+
 # Installation
   1. Install all the dependencies above. (On MacOS you can use [homebrew](https://brew.sh/).)
   2. Edit the `makefile` to choose your C compiler and the include paths.
@@ -33,10 +35,12 @@ results in the file provided.
                              run (default: 100)
   -p, --primesize=pSize      Specify the (approximate) size in bits for the
                              modolus to use (default: test all valid sizes)
-  -s, --securityParam=secpar If non-zero, this specifies that we are using a
-                             prime power modulo whose base has this bitsize
+  -s, --securityParam=secpar Specify the bit-size of the based used for moduli
+                             using prime powers or product of primes powers
+                             (default: 128 bits)
 
- Select one or more of the following 5 if you don't want to test all methods:
+ Select one or more of the following options if you don't want to test all
+ methods:
   -c, --cubing               Test the cubing/cube root performance
       --clean                Clean the output file before writing to it
   -e, --encryption           Test the stream cipher encryption performance
@@ -50,6 +54,4 @@ results in the file provided.
 
 Mandatory or optional arguments to long options are also mandatory or optional
 for any corresponding short options.
-
-Report bugs to ivo.maffei@uni.lu.
 ```

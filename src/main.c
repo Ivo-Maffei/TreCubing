@@ -21,7 +21,6 @@
 
 // setup global variables for the argument parsing
 const char * argp_program_version = "trecubing v2.0";
-const char * argp_program_bug_address = "ivo.maffei@uni.lu";
 static char args_doc[] = "[FILENAME|stdout]"; // mandatory arguments
 static char doc[] = "Test different primitives for Time-Lock Puzzles via Cubing and outputs the test results in the file provided.";
 

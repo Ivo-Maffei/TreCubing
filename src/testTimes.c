@@ -57,30 +57,21 @@ void writeTimestamp(FILE* const fileptr) {
     fprintf(fileptr, "Current localtime: %s\n", asctime(localtime(&rawtime)));
 }
 
-void testModuloConstruction(const unsigned long N, const unsigned int nprimes, const unsigned long secpar, const int nIters, FILE* const fileptr) {
+void testModuloConstruction(const unsigned long N, const unsigned long secpar, const int nIters, FILE* const fileptr) {
 
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
     fprintf(fileptr, "Testing construction of moduli of %lu bits\n", N);
 
     TIMER_INIT(PrimePower, nIters);
-    TIMER_INIT(mPower, nIters);
 
     mpz_t q;
     mpz_init2(q, N+5);
 
-    if (nprimes !=0 && secpar != 0 && nprimes != (secpar+31)/32) {
-	fprintf(fileptr, "We are constructing moduli m2^k and p^k with different securities\n");
-    }
-
-    loadPrimesDB();
-
     for (int i=0; i < nIters; ++i){
-	if (nprimes) TIMER_TIME(mPower, constructmPower(q, NULL, nprimes, N), fileptr);
-	if (secpar) TIMER_TIME(PrimePower, constructPrimePower(q, NULL, secpar, N), fileptr);
+	TIMER_TIME(PrimePower, constructPrimePower(q, NULL, secpar, N), fileptr);
     }
 
-    TIMER_REPORT(mPower, fileptr);
     TIMER_REPORT(PrimePower, fileptr);
 
     fprintf(fileptr, "Tested construction of moduli of %lu bits\n", N);
@@ -90,10 +81,10 @@ void testModuloConstruction(const unsigned long N, const unsigned int nprimes, c
     mpz_clear(q);
 }
 
-// picks a random message m, computes m^3 mod p and then (m^3)^b mod p
+// picks a random message m, computes m^3 mod q and then (m^3)^b mod q
 // prints out the time taken and stores the time as well
 // repeate for nIters and outputs means and std
-void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters, FILE * const fileptr) {
+void testTimesSq(const mpz_t q, const mpz_t b, const unsigned long N, const int nIters, FILE * const fileptr) {
 
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
@@ -106,9 +97,9 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
 
     // variables for the computation
     mpz_t m, m2, c;
-    const size_t nlimbs = mpz_size(p);
+    const size_t nlimbs = mpz_size(q);
     mp_limb_t *mptr, *tptr;
-    const mp_limb_t *cptr, *pptr;
+    const mp_limb_t *cptr, *qptr;
     size_t tsize;
 
     // initialse variables
@@ -130,20 +121,20 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
 
     for (int i=0; i < nIters; ++i){
 
-	randomMessage(m, p);
+	randomMessage(m, q);
 
 	// quick tests
-	// m in Z^*_p
-        mpz_gcd(c, m, p);
+	// m in Z^*_q
+        mpz_gcd(c, m, q);
 	if (mpz_cmp_ui(c, 1l)){
 	    fprintf(stderr, "ERROR: message is not in correct group\n");
 	}
 
 	// encryption
-	TIMER_TIME(Cubing, mpz_powm_ui(c, m, 3l, p), fileptr);
+	TIMER_TIME(Cubing, mpz_powm_ui(c, m, 3l, q), fileptr);
 
         // decryption
-	TIMER_TIME(CubeRoot, mpz_powm(m2, c, b, p), fileptr);
+	TIMER_TIME(CubeRoot, mpz_powm(m2, c, b, q), fileptr);
 
 	//check correctness
         if (mpz_cmp(m2, m) != 0){
@@ -154,8 +145,8 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
 	// try using the mpn_powm_2exp
 	mptr = mpz_limbs_modify(m, nlimbs);
 	cptr = mpz_limbs_read(c);
-	pptr = mpz_limbs_read(p);
-	TIMER_TIME(FastSqGMP, mpn_powm_2exp(mptr, cptr, mpz_size(c), nSquarings, pptr, nlimbs, tptr), fileptr);
+	qptr = mpz_limbs_read(q);
+	TIMER_TIME(FastSqGMP, mpn_powm_2exp(mptr, cptr, mpz_size(c), nSquarings, qptr, nlimbs, tptr), fileptr);
 
     }// end for loop
 
@@ -173,7 +164,7 @@ void testTimesSq(mpz_t p, const mpz_t b, const unsigned long N, const int nIters
     clearRandomness();
 }
 
-void testTimesEnc(const size_t N, const unsigned int nprimes, const size_t secpar, const int nIters, FILE * const fileptr) {
+void testTimesEnc(const size_t N, const size_t secpar, const int nIters, FILE * const fileptr) {
 
     writeTimestamp(fileptr);
     writeTimestamp(stdout);
@@ -193,8 +184,7 @@ void testTimesEnc(const size_t N, const unsigned int nprimes, const size_t secpa
     }
 
     for (int i = 0; i < nIters; ++i) {
-	if (nprimes) constructmPower(M, NULL, nprimes, N);
-	else constructPrimePower(M, NULL, secpar, N);
+	constructPrimePower(M, NULL, secpar, N);
 
 	randomMessage(m, M);
 
@@ -206,7 +196,7 @@ void testTimesEnc(const size_t N, const unsigned int nprimes, const size_t secpa
 	    memcpy(key + i*8, &t, 8);
 	}
 
-	TIMER_TIME(streamCipher, streamCipher(m, m, M, key, nprimes != 0), fileptr);
+	TIMER_TIME(streamCipher, streamCipher(m, m, M, key), fileptr);
 
     }
 
@@ -215,6 +205,7 @@ void testTimesEnc(const size_t N, const unsigned int nprimes, const size_t secpa
     fprintf(fileptr, "Tested AES256-OFB encryption with a modulo of size %lu\n", N);
 
     writelineSep(fileptr);
+    
  free:
     mpz_clears(m, M, NULL);
     clearRandomness();

@@ -28,10 +28,9 @@ static char doc[] = "Test different primitives for Time-Lock Puzzles via Cubing 
 static struct argp_option options[] = {
     // { <long name>, <ascii code for short name>, <name of argument>, <flags>, <documentation>, <group id>}
     { "iterations", 'n', "nIters", 0, "Specify the number of indipendent iterations to run (default: " STRINGIFY(DEFAULTITERS) ")" },
-    { "securityParam", 's', "secpar", 0, "If non-zero, this specifies the bit-size of the based used for moduli using prime powers or product of primes powers" },
-    { "numberPrimes", 'k', "nprimes", 0, "If non-zero, this specifies the number of primes to use for m2^k moduli" },
+    { "securityParam", 's', "secpar", 0, "Specify the bit-size of the based used for moduli using prime powers or product of primes powers (default: 128 bits)" },
     { "primesize", 'p', "pSize", 0, "Specify the (approximate) size in bits for the modolus to use (default: test all valid sizes)" },
-    { 0, 0, 0, 0, "Select one or more of the following 5 if you don't want to test all methods:", 1}, // this is a header for the next group
+    { 0, 0, 0, 0, "Select one or more of the following options if you don't want to test all methods:", 1}, // this is a header for the next group
     { "cubing", 'c', 0, 0, "Test the cubing/cube root performance"},
     { "encryption", 'e', 0, 0, "Test the stream cipher encryption performance"},
     { "hashing", 'x', 0, 0, "Test the hashing performance"},
@@ -46,7 +45,6 @@ struct input {
     char *filename;
     unsigned long nIters;
     unsigned long pSize;
-    unsigned int nprimes;
     unsigned long secpar;
     bool cubing;
     bool enc;
@@ -75,14 +73,6 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	    return EINVAL;
 	}
 	input->secpar = strtoul(arg, (char**) NULL, 10);
-	break;
-    }
-    case 'k': { // handle number of primes
-	if (arg == 0){ // no value is given
-	    argp_error(state, "If --numberPrimes is specified, then a number must follow");
-	    return EINVAL;
-	}
-	input->nprimes = strtoul(arg, (char**) NULL, 10);
 	break;
     }
     case 'p': {// handle primesize
@@ -129,6 +119,7 @@ error_t parser_fun(int key, char *arg, struct argp_state *state) {
 	    // set all tests to true
 	    input->cubing = input->enc = input->moduli = input->hashing = true;
 	}
+	break;
     }
     default:
 	return ARGP_ERR_UNKNOWN;
@@ -150,12 +141,7 @@ void printReceivedInput(struct input input) {
 	for (int i=0; i < numAvailablePrimes; ++i) printf("%lu ", availablePrimeSizes[i]);
 	printf("\n");
     }
-    if (input.nprimes)
-	printf("Using product of prime powers with %lu 32-bit primes\n", input.nprimes);
-    else if (input.secpar)
-	printf("Using prime powers with security parameter %lu\n", input.secpar);
-    else
-	printf("Using safe primes\n");
+    printf("Using prime powers with security parameter %lu\n", input.secpar);
 }
 
 // ENTRYPOINT
@@ -185,6 +171,8 @@ int main(int argc, char **argv) {
 	nPrimes = 1;
     }
 
+    if (input.secpar == 0) input.secpar = 128;
+
     // tell use what we are going to do
     printReceivedInput(input);
 
@@ -211,26 +199,21 @@ int main(int argc, char **argv) {
     mpz_inits(q, b, NULL);
 
     // initialise xorshf64
-    //    setSeed(rand());
+    setSeed(rand());
 
     for(unsigned long i=0; i < nPrimes; ++i) {
 
 	if (input.moduli){
-	    testModuloConstruction(primeSizes[i], input.nprimes, input.secpar, input.nIters, fileptr);
+	    testModuloConstruction(primeSizes[i], input.secpar, input.nIters, fileptr);
 	    fflush(fileptr);
 	    printf("Tested modulo creation\n");
 	}
 
 	// compute modulo and exponent for the cubing
-	if (input.nprimes)
-	    constructmPower(q, b, input.nprimes, primeSizes[i]);
-	else if (input.secpar)
-	    constructPrimePower(q, b, input.secpar, primeSizes[i]);
-	else constructSafePrime(q, b, primeSizes[i]);
-
+	constructPrimePower(q, b, input.secpar, primeSizes[i]);
+	
 	N = mpz_sizeinbase(q, 2);
 	printf("Using a prime with exactly %lu bits\n", N);
-
 
 	if (input.cubing) { // test repeated squarings
 	    testTimesSq(q, b, N, input.nIters, fileptr);
@@ -239,13 +222,9 @@ int main(int argc, char **argv) {
 	}
 
 	if (input.enc) { // test AES256-OFB ecnryptions
-	    if (!(input.secpar || input.nprimes)) {
-		fprintf(stderr, "Cannot test encryption without an modulo that can be generated quickly\n");
-	    } else {
-		testTimesEnc(primeSizes[i], input.nprimes, input.secpar, input.nIters, fileptr);
-		fflush(fileptr);
-		printf("Tested AES256-OFB encryption\n");
-	    }
+	    testTimesEnc(primeSizes[i], input.secpar, input.nIters, fileptr);
+	    fflush(fileptr);
+	    printf("Tested AES256-OFB encryption\n");
 	}
 
 	if (input.hashing) {
@@ -264,6 +243,6 @@ int main(int argc, char **argv) {
     cleanOpenSSL();
     cleanHashing();
     clearRandomness();
-    clearPrimesDB();
+        
     return 0;
 }

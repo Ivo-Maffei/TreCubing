@@ -32,7 +32,7 @@ int initialiseOpenSSL() {
 }
 
 // encrypt m with a cycle walking AES-OFB where the IV is the first 128-bits of the key
-int streamCipher(mpz_t c, const mpz_t m, const mpz_t M, const uint8_t *key, const bool m2k) {
+int streamCipher(mpz_t c, const mpz_t m, const mpz_t M, const uint8_t *key) {
 
     const uint64_t N = mpz_sizeinbase(M, 2);
     const int nbytes = (N+7)/8;
@@ -40,14 +40,12 @@ int streamCipher(mpz_t c, const mpz_t m, const mpz_t M, const uint8_t *key, cons
     const int nLimbs = mpz_size(M); // num limbs to contain the modulo
     const int bufferSize = nLimbs * 8;
     mp_limb_t* cptr;
-    mpz_t temp;
+    const mp_limb_t* modptr;
     uint8_t * buffer;
-    bool ok;
+
     int t = 1; // set to 1 so we can check endianess
     bool lendian = ((uint8_t*)&t)[0] & 1; // check if int is stored LSB first or MSB
     assert(lendian); // no need to handle big endian as all my machines are little endian
-
-    mpz_init(temp);
 
     if (ctx == NULL) {
 	if (initialiseOpenSSL() != 0){
@@ -64,8 +62,9 @@ int streamCipher(mpz_t c, const mpz_t m, const mpz_t M, const uint8_t *key, cons
     }
     EVP_CIPHER_CTX_set_padding(ctx, 0); // disable padding
 
-
     buffer = (uint8_t*) malloc(nLimbs*sizeof(uint64_t));
+
+    modptr = mpz_limbs_read(M);
 
     // to encrypt m, we first copy it to cptr
     mpz_set(c, m);
@@ -94,13 +93,9 @@ int streamCipher(mpz_t c, const mpz_t m, const mpz_t M, const uint8_t *key, cons
 	((uint8_t*)cptr)[nbytes-1] &= (0xff>>(bitsPadding));
 
 	// now we need to repeat if the resulting ciphertext is not in ZZ^*_M
-	mpz_limbs_finish(c, nLimbs); // this only sets the internal field related to the sign and size of c
-	ok = (!m2k || mpz_tstbit(c, 0)) && mpz_cmp(c, M) < 0;
-	if (ok && m2k) {
-	    mpz_gcd(temp, c, M);
-	    ok = mpz_cmp_ui(temp, 1) == 0;
-	}
-    } while (!ok);
+	// since M = p^k, then the probabilty that x in ZZ_M is not in ZZ^*_M is negligible (1/p)
+	// hence we just check that the ciphertext is less than M
+    } while (mpn_cmp(cptr, modptr, nLimbs) >= 0);
 
     // FINALISE EVERYTHING
     if (!EVP_EncryptFinal_ex(ctx, ((uint8_t*)cptr), &t)){
@@ -110,7 +105,6 @@ int streamCipher(mpz_t c, const mpz_t m, const mpz_t M, const uint8_t *key, cons
     assert(t==0);
 
     free(buffer);
-    mpz_clear(temp);
     return 0; // done!
 }
 

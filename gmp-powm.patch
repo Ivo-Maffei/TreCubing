@@ -2,15 +2,6 @@ diff --git a/mpn/generic/powm.c b/mpn/generic/powm.c
 index 1e30f2f..57b5bb0 100644
 --- a/mpn/generic/powm.c
 +++ b/gmp-6.3.0/mpn/generic/powm.c
-@@ -86,7 +86,7 @@ see https://www.gnu.org/licenses/.  */
- 
- #undef MPN_REDC_0
- #define MPN_REDC_0(r0, u1, u0, m0, invm)				\
--  do {									\
-+    do {								\
-     mp_limb_t _p1, _u1, _u0, _m0, _r0, _dummy;				\
-     _u0 = (u0);								\
-     _m0 = (m0);								\
 @@ -1001,3 +1001,356 @@ mpn_powm (mp_ptr rp, mp_srcptr bp, mp_size_t bn,
  
    TMP_FREE;
@@ -89,7 +80,7 @@ index 1e30f2f..57b5bb0 100644
 +	MPN_SQR (tp, rp, n);						\
 +	MPN_REDUCE (rp, tp, mp, n, mip);				\
 +	if (--ebi == 0)							\
-+	    goto done;							\
++	    goto fastdone;						\
 +    }
 +
 +
@@ -346,7 +337,7 @@ index 1e30f2f..57b5bb0 100644
 +    }
 +#endif  /* WANT_REDC_2 */
 +
-+ done:
++fastdone:
 +
 +  MPN_COPY (tp, rp, n);
 +  MPN_ZERO (tp + n, n);

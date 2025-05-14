@@ -68,6 +68,10 @@ void testModuloConstruction(const unsigned long N, const unsigned long secpar, c
     mpz_t q;
     mpz_init2(q, N+5);
 
+    // the first call will take a bit longer since it needs to initialise OpenSSL
+    // so we don't time it
+    constructPrimePower(q, NULL, secpar, N);
+
     for (int i=0; i < nIters; ++i){
 	TIMER_TIME(PrimePower, constructPrimePower(q, NULL, secpar, N), fileptr);
     }

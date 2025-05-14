@@ -15,6 +15,7 @@
 #include "hash.h"
 
 #define DEFAULTITERS 100
+#define DEFAULTSECPAR 128
 #define STRINGIFY(x) STRINGIFY2(x) // we need all this bloatware to make it work
 #define STRINGIFY2(x) #x
 #define BOOLSTR(bool) bool ? "yes" : "no"
@@ -149,7 +150,7 @@ int main(int argc, char **argv) {
     assert(GMP_NUMB_BITS == 64);
 
     // create object to encapsulate all inputs
-    struct input input = { .nIters = DEFAULTITERS };  // we give a default value of 30 to nIters; everything else deafaults to 0 (NULL, false)
+    struct input input = { .nIters = DEFAULTITERS, .secpar = DEFAULTSECPAR };  // we give a default values to nIters and secpar; everything else deafaults to 0 (NULL, false)
 
     error_t errorcode = argp_parse(&argp_struct, argc, argv, 0, NULL, &input); // first 0 are the optional flags. the NULL is for unparsed argumets
 
@@ -169,8 +170,6 @@ int main(int argc, char **argv) {
 	primeSizes = &input.pSize;
 	nPrimes = 1;
     }
-
-    if (input.secpar == 0) input.secpar = 128;
 
     // tell use what we are going to do
     printReceivedInput(input);

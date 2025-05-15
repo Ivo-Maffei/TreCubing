@@ -19,7 +19,6 @@ const unsigned long availablePrimeSizes[] = {
 const unsigned long numAvailablePrimes = 9;
 
 // use openssl for generating primes
-// TODO: if not safe, we still want p=2 mod 3
 void findOpensslPrime(mpz_t p, const unsigned long Nbits, const bool safe) {
     // we must have Nbits < 2^31 to fit an int
     assert(Nbits < INT_MAX);

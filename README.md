@@ -1,6 +1,5 @@
 # Description
 This is a simple program to test the speed of the different components used to build a modular-exponentiation-based TLP.
-It accompanies the paper "Time-Lock Puzzles via Cubing" by Ivo Maffei and Andrew W. Roscoe.
 
 This project provides naive and insecure implementations, as it purpose was only to provide rough time estimates.
 

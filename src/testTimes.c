@@ -176,6 +176,7 @@ void testTimesEnc(const size_t N, const size_t secpar, const int nIters, FILE * 
     fprintf(fileptr, "Testing AES256-OFB encryption with a modulo of size %lu\n", N);
 
     mpz_t m, M;
+    uint8_t key[48];
 
     TIMER_INIT(streamCipher, nIters);
 
@@ -187,20 +188,23 @@ void testTimesEnc(const size_t N, const size_t secpar, const int nIters, FILE * 
 	goto free;
     }
 
-    for (int i = 0; i < nIters; ++i) {
+    for (int i = 0; i < nIters+5; ++i) {
 	constructPrimePower(M, NULL, secpar, N);
 
 	randomMessage(m, M);
 
 	// construct random key of 256 bits (32 bytes or 4 64-bits words)
 	// and 128 bits of IV (so 48 bytes total)
-	uint8_t key[48];
 	for (int i = 0; i < 6; ++i) {
 	    uint64_t t = xorshf64(); // get a random 64-bit word
 	    memcpy(key + i*8, &t, 8);
 	}
 
-	TIMER_TIME(streamCipher, streamCipher(m, m, M, key), fileptr);
+	// don't time the first few cycles to let OpenSSL "warm up"
+	if (i < 5) streamCipher(m, m, M, key);
+	else {
+	    TIMER_TIME(streamCipher, streamCipher(m, m, M, key), fileptr);
+	}
 
     }
 
@@ -237,10 +241,14 @@ void testTimesHash(const mpz_t M, const int nIters, FILE* const fileptr){
 	goto free;
     }
 
-    for (int i=0; i < nIters; ++i){
+    for (int i=0; i < nIters+5; ++i){
 	randomMessage(m, M);
 
-	TIMER_TIME(hashing, hash(digest, m), fileptr);
+	// don't time the first few times to let OpenSSL warm up
+	if (i < 5) hash(digest, m);
+	else {
+	    TIMER_TIME(hashing, hash(digest, m), fileptr);
+	}
     }
 
     TIMER_REPORT(hashing, fileptr);
